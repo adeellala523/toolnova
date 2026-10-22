@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator — Create & Download QR Codes Free | ToolNova</title>
+<meta name="description" content="Free QR code generator. Type any text or URL, generate a QR code instantly and download it as a PNG for menus, flyers, business cards and product labels.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/qr-code-generator/">
+<link rel="stylesheet" href="../style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do QR codes generated here expire?","acceptedAnswer":{"@type":"Answer","text":"No. The QR code simply encodes the text or URL you entered, printed into the image itself. It works forever, as long as the link or text stays valid."}},
+{"@type":"Question","name":"What is the best size for printing a QR code?","acceptedAnswer":{"@type":"Answer","text":"Download the PNG and print it at least 1 inch (2.5 cm) square for close-up scanning, larger for posters or signs viewed from a distance."}},
+{"@type":"Question","name":"Can I make a QR code for a Wi-Fi password or phone number?","acceptedAnswer":{"@type":"Answer","text":"Yes — paste any text, a tel: phone link or a URL. Whatever you enter is exactly what a scanner will read."}},
+{"@type":"Question","name":"Is there a limit on scans?","acceptedAnswer":{"@type":"Answer","text":"No. Because the code contains your data directly (not a redirect through our site), there are no scan limits and no tracking."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › QR Code Generator</p>
+  <div class="pagehead">
+    <h1>QR Code Generator</h1>
+    <p class="lead">Turn any link or text into a scannable QR code in seconds. Perfect for restaurant menus, business cards, Wi-Fi sharing, event posters and product packaging — then download a clean PNG.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="qrText">Text or URL</label>
+    <input type="text" id="qrText" placeholder="https://your-website.com" value="https://adeellala523.github.io/toolnova/">
+    <label for="qrSize">Size</label>
+    <select id="qrSize"><option value="256">256 × 256</option><option value="512" selected>512 × 512</option><option value="1024">1024 × 1024</option></select>
+    <div style="text-align:center;margin-top:16px">
+      <div id="qrBox" style="display:inline-block;background:#fff;padding:14px;border-radius:12px;line-height:0"></div>
+    </div>
+    <div style="text-align:center"><button class="btn" id="genBtn">🔳 Generate QR Code</button><button class="btn teal" id="dlBtn">⬇️ Download PNG</button></div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the QR Code Generator</h2>
+    <ol>
+      <li>Type or paste the URL or text you want the code to contain.</li>
+      <li>Pick a size — 512 × 512 is plenty for most documents and screens; choose 1024 for print.</li>
+      <li>Click “Generate QR Code” and test it with your phone’s camera.</li>
+      <li>Click “Download PNG” and use the image anywhere: menus, flyers, labels, slides.</li>
+    </ol>
+    <h2>Smart Ways People Use QR Codes</h2>
+    <p>Restaurants link codes on tables to digital menus, cafés share Wi-Fi without spelling out passwords, and realtors put codes on yard signs that open the full listing. Small shops print one on the counter for Google reviews — scans jump review counts because nobody has to type a long URL. Teachers add codes to worksheets, and event organizers link straight to RSVP pages. One rule of thumb: keep the destination short and mobile-friendly, place the code where people can reach it with a phone, and always test your printed code before a big print run. A quiet border of white space around the code helps every scanner read it reliably.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>Do QR codes generated here expire?</h3><p>No. The code encodes your text directly in the image, so it works forever as long as the link stays valid.</p></div>
+    <div class="faq"><h3>What size should I print?</h3><p>At least 1 inch (2.5 cm) square for close-up scanning — larger for posters viewed from a distance.</p></div>
+    <div class="faq"><h3>Can I encode a phone number or Wi-Fi details?</h3><p>Yes — paste any text, a tel: link or a URL. A scanner reads exactly what you entered.</p></div>
+    <div class="faq"><h3>Is there a scan limit or tracking?</h3><p>No scan limits and no tracking — the code points straight at your content, not through our site.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../password-generator/">Password Generator</a><a href="../image-compressor/">Image Compressor</a><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var qr=null;
+function make(){
+  var text=document.getElementById('qrText').value.trim();
+  var size=parseInt(document.getElementById('qrSize').value,10);
+  var box=document.getElementById('qrBox'),msg=document.getElementById('msg');
+  if(!text){msg.innerHTML='<span class="err">Please enter some text or a URL first.</span>';return;}
+  if(typeof QRCode==='undefined'){msg.innerHTML='<span class="err">The QR library could not load. Check your connection and try again.</span>';return;}
+  box.innerHTML='';msg.textContent='';
+  qr=new QRCode(box,{text:text,width:size,height:size,correctLevel:QRCode.CorrectLevel.M});
+}
+document.getElementById('genBtn').addEventListener('click',make);
+document.getElementById('qrSize').addEventListener('change',make);
+document.getElementById('dlBtn').addEventListener('click',function(){
+  var msg=document.getElementById('msg');
+  var canvas=document.querySelector('#qrBox canvas');
+  var img=document.querySelector('#qrBox img');
+  var url=null;
+  if(canvas){url=canvas.toDataURL('image/png');}
+  else if(img&&img.src){url=img.src;}
+  if(!url){msg.innerHTML='<span class="err">Generate a QR code first, then download it.</span>';return;}
+  // Draw onto a padded canvas so the PNG has a white quiet zone
+  var src=new Image();
+  src.onload=function(){
+    var pad=Math.round(src.width*0.06);
+    var c=document.createElement('canvas');c.width=src.width+pad*2;c.height=src.height+pad*2;
+    var ctx=c.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,c.width,c.height);
+    ctx.drawImage(src,pad,pad);
+    var a=document.createElement('a');a.download='toolnova-qr-code.png';a.href=c.toDataURL('image/png');a.click();
+    msg.innerHTML='<span class="ok">PNG downloaded ✔</span>';
+  };
+  src.src=url;
+});
+make();
+</script>
+</body>
+</html>
