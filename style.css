@@ -140,3 +140,7 @@ table.legal td,table.legal th{border:1px solid var(--line);padding:9px 12px;text
 .feature h3{margin:8px 0 6px;font-size:1.05rem;color:var(--text)}
 .feature p{color:var(--muted);font-size:.92rem}
 @media(max-width:640px){.badges{gap:6px}.badge{font-size:.8rem;padding:6px 11px}}
+.tchips{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}
+.tchip{background:#fff;border:1px solid var(--line);color:var(--text);font-weight:700;font-size:.9rem;padding:8px 16px;border-radius:999px;cursor:pointer;box-shadow:0 2px 8px rgba(14,124,134,.05)}
+.tchip:hover{border-color:var(--accent);color:var(--accent)}
+.tchip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
