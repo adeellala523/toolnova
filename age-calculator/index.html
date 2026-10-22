@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator — Exact Age in Years, Months & Days | ToolNova</title>
+<meta name="description" content="Free age calculator. Enter your date of birth and get your exact age in years, months and days, total days alive, and the weekday you were born.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/age-calculator/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is my exact age calculated?","acceptedAnswer":{"@type":"Answer","text":"We subtract your birth date from today's date and break the difference into full years, then full months, then remaining days — the same method used on official forms."}},
+{"@type":"Question","name":"Can I calculate age at a future or past date?","acceptedAnswer":{"@type":"Answer","text":"Yes. Change the 'age at date' field to any date — handy for school admission cut-offs, retirement planning or visa eligibility checks."}},
+{"@type":"Question","name":"What is my total days alive?","acceptedAnswer":{"@type":"Answer","text":"It is the total number of days from your birth date to the selected date, including leap days. The calculator shows it along with total weeks and approximate hours."}},
+{"@type":"Question","name":"Is my date of birth stored?","acceptedAnswer":{"@type":"Answer","text":"No. The calculation runs in your browser only, and nothing is sent to a server."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Age Calculator</p>
+  <div class="pagehead">
+    <h1>Age Calculator</h1>
+    <p class="lead">Find your exact age down to the day. Enter a date of birth and get years, months and days — plus total days alive, the weekday you were born, and a countdown to your next birthday.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="row">
+      <div><label for="dob">Date of birth</label><input type="date" id="dob"></div>
+      <div><label for="atDate">Age at date</label><input type="date" id="atDate"></div>
+    </div>
+    <button class="btn" id="calcBtn">🎂 Calculate Age</button>
+    <div class="stats">
+      <div class="stat"><b id="rYears">—</b><span>Years</span></div>
+      <div class="stat"><b id="rMonths">—</b><span>Months</span></div>
+      <div class="stat"><b id="rDays">—</b><span>Days</span></div>
+      <div class="stat"><b id="rTotalDays">—</b><span>Total days</span></div>
+      <div class="stat"><b id="rWeeks">—</b><span>Total weeks</span></div>
+      <div class="stat"><b id="rBorn">—</b><span>Born on</span></div>
+      <div class="stat"><b id="rNext">—</b><span>Next birthday in</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Age Calculator</h2>
+    <ol>
+      <li>Pick the date of birth (or any start date) in the first field.</li>
+      <li>Leave the second field as today, or set another date to check age at that moment.</li>
+      <li>Click “Calculate Age” to see the full breakdown.</li>
+      <li>Use the totals for forms that ask for age in days, weeks or completed years.</li>
+    </ol>
+    <h2>Why Exact Age Matters</h2>
+    <p>Plenty of official decisions hinge on precise age, not just the year you were born. School admissions use cut-off dates (“must be 5 by September 1”), sports leagues group kids by exact age, and employers and pension plans calculate eligibility in completed years and months. Drivers’ licenses, voting, insurance premiums and medical dosing can all depend on the exact figure. Counting by hand across leap years is error-prone — a person born in 2000 has lived through seven leap days already. This calculator handles the calendar math for you, including month lengths and leap years, and works for any pair of dates: try two historical dates to measure the span between events.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How is my exact age calculated?</h3><p>We subtract your birth date from the target date and split the difference into full years, full months, then remaining days — the same method used on official forms.</p></div>
+    <div class="faq"><h3>Can I calculate age at a future or past date?</h3><p>Yes. Change the “age at date” field to any date — useful for school cut-offs, retirement planning or visa checks.</p></div>
+    <div class="faq"><h3>What is “total days alive”?</h3><p>The number of days from your birth date to the selected date, leap days included. We also show total weeks.</p></div>
+    <div class="faq"><h3>Is my date of birth stored?</h3><p>No. The calculation runs in your browser only; nothing is sent to a server.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../emi-calculator/">EMI / Loan Calculator</a><a href="../percentage-calculator/">Percentage Calculator</a><a href="../unit-converter/">Unit Converter</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+function pad(n){return (n<10?'0':'')+n;}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+document.getElementById('atDate').value=todayStr();
+function parseLocal(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function calc(){
+  var dobV=document.getElementById('dob').value, atV=document.getElementById('atDate').value;
+  var msg=document.getElementById('msg');
+  if(!dobV){msg.innerHTML='<span class="err">Please choose a date of birth first.</span>';return;}
+  if(!atV)atV=todayStr();
+  var dob=parseLocal(dobV), at=parseLocal(atV);
+  if(at<dob){msg.innerHTML='<span class="err">The “age at date” is before the birth date. Please check the dates.</span>';return;}
+  var y=at.getFullYear()-dob.getFullYear();
+  var m=at.getMonth()-dob.getMonth();
+  var d=at.getDate()-dob.getDate();
+  if(d<0){ m--; var prev=new Date(at.getFullYear(),at.getMonth(),0); d+=prev.getDate(); }
+  if(m<0){ y--; m+=12; }
+  var totalDays=Math.floor((at-dob)/86400000);
+  var weeks=Math.floor(totalDays/7);
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var next=new Date(at.getFullYear(),dob.getMonth(),dob.getDate());
+  if(next<=at)next.setFullYear(next.getFullYear()+1);
+  var toNext=Math.ceil((next-at)/86400000);
+  document.getElementById('rYears').textContent=y;
+  document.getElementById('rMonths').textContent=m;
+  document.getElementById('rDays').textContent=d;
+  document.getElementById('rTotalDays').textContent=totalDays.toLocaleString('en-US');
+  document.getElementById('rWeeks').textContent=weeks.toLocaleString('en-US');
+  document.getElementById('rBorn').textContent=days[dob.getDay()];
+  document.getElementById('rNext').textContent=toNext+' days';
+  msg.innerHTML='<span class="ok">Exact age: '+y+' years, '+m+' months and '+d+' days.</span>';
+}
+document.getElementById('calcBtn').addEventListener('click',calc);
+document.getElementById('dob').addEventListener('change',calc);
+document.getElementById('atDate').addEventListener('change',calc);
+</script>
+</body>
+</html>
