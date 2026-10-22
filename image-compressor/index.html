@@ -92,6 +92,13 @@
   <div class="toolbox">
     <label for="file">Choose an image (JPEG, PNG or WebP)</label>
     <input type="file" id="file" accept="image/*">
+    <label>Compress to an exact size</label>
+    <div class="tchips">
+      <button type="button" class="tchip" data-kb="20">20 KB</button>
+      <button type="button" class="tchip" data-kb="50">50 KB</button>
+      <button type="button" class="tchip" data-kb="100">100 KB</button>
+      <button type="button" class="tchip" data-kb="200">200 KB</button>
+    </div>
     <label for="quality">Quality: <span id="qVal">80</span>%</label>
     <input type="range" id="quality" min="10" max="100" value="80">
     <label for="format">Output format</label>
@@ -149,7 +156,7 @@
     <div class="faq"><h3>Can I compress several images at once?</h3><p>This tool handles one image at a time so you can check each result. There's no limit on how many you process in a row.</p></div>
     <div class="faq"><h3>Why didn't my PNG get much smaller?</h3><p>PNG compression is lossless — it can't discard detail the way JPEG can, so photographic PNGs stay large. If transparency doesn't matter, re-save the image as JPEG or WebP instead and you'll see a dramatic drop.</p></div>
     <h2>Related Tools</h2>
-    <div class="related"><a href="../qr-code-generator/">QR Code Generator</a><a href="../color-converter/">Color Converter</a><a href="../word-counter/">Word Counter</a><a href="../guides/compress-images-without-losing-quality/">📖 Guide: How to Compress Images Without Ruining Their Quality</a></div>
+    <div class="related"><a href="../compress-image-to-50kb/">🎯 Compress Image to 50KB</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../color-converter/">Color Converter</a><a href="../word-counter/">Word Counter</a><a href="../guides/compress-images-without-losing-quality/">📖 Guide: How to Compress Images Without Ruining Their Quality</a></div>
   </section>
 </div>
 
@@ -208,6 +215,50 @@ document.getElementById('file').addEventListener('change',function(){
 });
 document.getElementById('quality').addEventListener('input',compress);
 document.getElementById('format').addEventListener('change',compress);
+function encodeAt(w,h,q,format){
+  return new Promise(function(res){
+    var c=document.createElement('canvas');c.width=w;c.height=h;
+    var ctx=c.getContext('2d');
+    if(format==='image/jpeg'){ctx.fillStyle='#ffffff';ctx.fillRect(0,0,w,h);}
+    ctx.drawImage(origImg,0,0,w,h);
+    c.toBlob(function(b){res({blob:b,w:w,h:h,q:q});},format,q/100);
+  });
+}
+function applyResult(r,kb){
+  outBlob=r.blob;
+  outName='toolnova-'+kb+'kb.jpg';
+  document.getElementById('imgAfter').src=URL.createObjectURL(r.blob);
+  document.getElementById('afterSize').textContent=fmt(r.blob.size);
+  var savedPct=origBytes?Math.max(0,Math.round((1-r.blob.size/origBytes)*100)):0;
+  document.getElementById('saved').textContent=savedPct+'%';
+  document.getElementById('dims').textContent=r.w+' × '+r.h;
+  document.getElementById('qVal').textContent=r.q;
+  document.getElementById('quality').value=r.q;
+  document.getElementById('dlBtn').disabled=false;
+  document.getElementById('msg').innerHTML='<span class="ok">Compressed to '+fmt(r.blob.size)+' (target ≤ '+kb+' KB) at quality '+r.q+'% — '+r.w+' × '+r.h+' px. JPEG keeps photos this small; PNG can\u2019t hit exact targets.</span>';
+}
+function hitTarget(kb){
+  var msg=document.getElementById('msg');
+  if(!origImg){msg.innerHTML='<span class="err">Choose an image first, then pick a target size.</span>';return;}
+  msg.textContent='Compressing to '+kb+' KB — this can take a few seconds on large photos…';
+  document.getElementById('format').value='image/jpeg';
+  var target=kb*1024,W=origImg.naturalWidth,H=origImg.naturalHeight;
+  (async function(){
+    var best=null,scale=1;
+    while(scale>=0.15&&!best){
+      var w=Math.round(W*scale),h=Math.round(H*scale),lo=5,hi=95;
+      while(lo<=hi){
+        var mid=Math.floor((lo+hi)/2);
+        var r=await encodeAt(w,h,mid,'image/jpeg');
+        if(r.blob.size<=target){best=r;lo=mid+1;}else{hi=mid-1;}
+      }
+      scale*=0.8;
+    }
+    if(best){applyResult(best,kb);}
+    else{msg.innerHTML='<span class="err">Even the smallest setting couldn\u2019t reach '+kb+' KB for this image. Try a photo with fewer pixels or a higher target.</span>';}
+  })();
+}
+document.querySelectorAll('.tchip').forEach(function(b){b.addEventListener('click',function(){hitTarget(parseInt(b.dataset.kb,10));});});
 document.getElementById('dlBtn').addEventListener('click',function(){
   if(!outBlob)return;
   var a=document.createElement('a');a.download=outName;a.href=URL.createObjectURL(outBlob);a.click();
