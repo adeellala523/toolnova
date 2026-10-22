@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter — Count Words, Characters & Reading Time | ToolNova</title>
+<meta name="description" content="Free online word counter. Count words, characters (with and without spaces), sentences, paragraphs and estimated reading time — live as you type.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/word-counter/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I count words in my essay?","acceptedAnswer":{"@type":"Answer","text":"Paste or type your essay into the box above. The word count, character count and reading time update instantly as you type — there is no button to press."}},
+{"@type":"Question","name":"Does the word counter include spaces in the character count?","acceptedAnswer":{"@type":"Answer","text":"It shows both: total characters including spaces, and characters without spaces, so you can meet either kind of limit (for example social media posts or application forms)."}},
+{"@type":"Question","name":"How is reading time calculated?","acceptedAnswer":{"@type":"Answer","text":"Reading time is estimated at an average adult reading speed of about 200 words per minute, and speaking time at about 130 words per minute."}},
+{"@type":"Question","name":"Is my text uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Counting happens entirely in your browser. Your text never leaves your device."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Word Counter</p>
+  <div class="pagehead">
+    <h1>Word Counter</h1>
+    <p class="lead">Paste or type any text and instantly see the word count, character count, sentence and paragraph counts, plus estimated reading and speaking time. Results update live with every keystroke.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="text">Your text</label>
+    <textarea id="text" placeholder="Start typing or paste your text here…" style="min-height:170px"></textarea>
+    <div class="stats">
+      <div class="stat"><b id="sWords">0</b><span>Words</span></div>
+      <div class="stat"><b id="sChars">0</b><span>Characters</span></div>
+      <div class="stat"><b id="sCharsNS">0</b><span>Chars (no spaces)</span></div>
+      <div class="stat"><b id="sSent">0</b><span>Sentences</span></div>
+      <div class="stat"><b id="sPara">0</b><span>Paragraphs</span></div>
+      <div class="stat"><b id="sRead">0 min</b><span>Reading time</span></div>
+      <div class="stat"><b id="sSpeak">0 min</b><span>Speaking time</span></div>
+      <div class="stat"><b id="sLong">—</b><span>Longest word</span></div>
+    </div>
+    <button class="btn alt" id="clearBtn">Clear text</button>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Word Counter</h2>
+    <ol>
+      <li>Type directly into the box, or paste text from an essay, article, resume or social media draft.</li>
+      <li>Watch the counters update in real time — no button press needed.</li>
+      <li>Check the reading time if you are preparing a speech, presentation or video script.</li>
+      <li>Edit your text until it fits the limit you need, then copy it back to your document.</li>
+    </ol>
+    <h2>Who Needs a Word Count?</h2>
+    <p>Students use it to hit essay and assignment lengths (a typical college essay is 500–1,000 words). Writers and bloggers use it to keep articles scannable — most readers finish pieces that take under 7 minutes. Job seekers trim resumes to one page, and social media managers fit posts into character limits: 280 characters on X (Twitter), 2,200 on Instagram captions and about 3,000 on LinkedIn posts. Public speakers rely on the speaking-time estimate so a 10-minute talk lands at roughly 1,300 words. Whatever you write, knowing the count before you submit saves embarrassing overruns and last-minute cuts.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How do I count words in my essay?</h3><p>Paste or type your essay into the box above. The word count, character count and reading time update instantly as you type — there is no button to press.</p></div>
+    <div class="faq"><h3>Does it include spaces in the character count?</h3><p>It shows both: total characters including spaces, and characters without spaces, so you can meet either kind of limit.</p></div>
+    <div class="faq"><h3>How is reading time calculated?</h3><p>Reading time uses an average adult speed of about 200 words per minute; speaking time uses about 130 words per minute.</p></div>
+    <div class="faq"><h3>Is my text uploaded anywhere?</h3><p>No. Counting happens entirely in your browser. Your text never leaves your device.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../case-converter/">Case Converter</a><a href="../remove-duplicate-lines/">Remove Duplicate Lines</a><a href="../lorem-ipsum-generator/">Lorem Ipsum Generator</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var t=document.getElementById('text');
+function fmt(min){ if(min<=0) return '0 min'; if(min<1) return '< 1 min'; return Math.round(min*10)/10+' min'; }
+function count(){
+  var v=t.value;
+  var words=v.trim()? v.trim().split(/\s+/):[];
+  var chars=v.length;
+  var charsNS=v.replace(/\s/g,'').length;
+  var sent=v.trim()? (v.match(/[.!?]+(\s|$)/g)||[]).length + (/[.!?]$/.test(v.trim())?0:0) : 0;
+  if(v.trim()&&sent===0) sent=1;
+  var para=v.trim()? v.split(/\n\s*\n/).filter(function(p){return p.trim();}).length:0;
+  var longest='—',max=0;
+  words.forEach(function(w){var c=w.replace(/[^A-Za-z0-9'-]/g,''); if(c.length>max){max=c.length;longest=c;}});
+  document.getElementById('sWords').textContent=words.length;
+  document.getElementById('sChars').textContent=chars;
+  document.getElementById('sCharsNS').textContent=charsNS;
+  document.getElementById('sSent').textContent=sent;
+  document.getElementById('sPara').textContent=para;
+  document.getElementById('sRead').textContent=fmt(words.length/200);
+  document.getElementById('sSpeak').textContent=fmt(words.length/130);
+  document.getElementById('sLong').textContent=longest;
+}
+t.addEventListener('input',count);
+document.getElementById('clearBtn').addEventListener('click',function(){t.value='';count();t.focus();});
+count();
+</script>
+</body>
+</html>
