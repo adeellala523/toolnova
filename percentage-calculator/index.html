@@ -7,25 +7,75 @@
 <meta name="description" content="Free percentage calculator with three modes: what is X% of Y, X is what percent of Y, and percentage increase or decrease between two numbers.">
 <link rel="canonical" href="https://adeellala523.github.io/toolnova/percentage-calculator/">
 <link rel="stylesheet" href="../style.css">
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How do I calculate a percentage of a number?","acceptedAnswer":{"@type":"Answer","text":"Multiply the number by the percentage, then divide by 100. For example, 20% of 150 is 150 × 20 ÷ 100 = 30. The first mode above does this instantly."}},
-{"@type":"Question","name":"How do I find the percentage increase between two numbers?","acceptedAnswer":{"@type":"Answer","text":"Subtract the old value from the new value, divide by the old value, and multiply by 100. A rise from 80 to 100 is (20 ÷ 80) × 100 = 25% increase."}},
-{"@type":"Question","name":"How do I work out a discount price?","acceptedAnswer":{"@type":"Answer","text":"Use mode 1 to find the discount amount (for example 30% of $80 = $24), then subtract it from the original price ($80 − $24 = $56)."}},
-{"@type":"Question","name":"What is the difference between percent and percentage points?","acceptedAnswer":{"@type":"Answer","text":"A change from 5% to 7% is a 2 percentage-point rise, but a 40% relative increase. Percentages compare relatively; percentage points compare the raw difference."}}]}
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How do I calculate a percentage of a number?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Multiply the number by the percentage divided by 100. For example, 15% of 240 = 240 \u00d7 0.15 = 36. The first calculator on this page does it instantly, including decimals."
+}
+},
+{
+"@type": "Question",
+"name": "What's the difference between percentage change and percentage difference?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Percentage change compares an old value to a new one over time and has a direction \u2014 up or down. It always divides by the old value. (Percentage difference, used when neither value is \u201cfirst\u201d, divides by the average instead \u2014 this page's third tool is the everyday change version.)"
+}
+},
+{
+"@type": "Question",
+"name": "How do I turn a fraction or score into a percentage?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Divide the part by the whole and multiply by 100 \u2014 that's the second calculator. 37 \u00f7 45 = 0.822, which is 82.2%."
+}
+},
+{
+"@type": "Question",
+"name": "Why doesn't a 20% rise followed by a 20% fall get me back to the start?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Because the two percentages act on different amounts. 100 rising 20% becomes 120; 20% of 120 is 24, so falling 20% lands at 96. The bases differ, so the amounts differ."
+}
+},
+{
+"@type": "Question",
+"name": "How do I calculate a tip or tax quickly?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "For a tip, use the first calculator: 18% of a $64 bill is $11.52. For tax, calculate the percentage of the pre-tax price and add it on \u2014 or multiply the price by 1 plus the rate (\u00d7 1.08 for 8%)."
+}
+},
+{
+"@type": "Question",
+"name": "Can the calculator handle decimals and negative changes?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Enter rates like 7.5% and values of any size. For the change calculator, if the new value is smaller, the result shows as a negative percentage \u2014 a decrease."
+}
+}
+]
+}
 </script>
 </head>
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
-  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+  <nav class="main"><a href="../">Home</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
 </div></header>
 
 <div class="wrap">
   <p class="crumb"><a href="../">Home</a> › Percentage Calculator</p>
   <div class="pagehead">
     <h1>Percentage Calculator</h1>
-    <p class="lead">Three everyday percentage problems, solved instantly: find a percent of a number, discover what percent one number is of another, and measure the percentage increase or decrease between two values.</p>
+    <p class="lead">Three everyday percentage problems, solved instantly: what is X% of Y, X is what percent of Y, and the percentage change from one value to another. Discounts, tips, taxes, test scores and price rises — this is the math daily life keeps asking for.</p>
   </div>
 
   <div class="toolbox">
@@ -50,25 +100,46 @@
   </div>
 
   <section class="block">
+    <h2>The Three Questions Behind Almost Every Percentage</h2>
+    <p>Strip away the context and nearly every real-world percentage problem is one of three questions. <strong>"What is X% of Y?"</strong> — a 20% discount on an $85 jacket, a 15% tip on a $64 dinner, 8% sales tax. <strong>"X is what percent of Y?"</strong> — you scored 43 of 50 on a test, your team won 31 of 82 games, a task is 17 of 20 steps done. <strong>"What's the percentage change from X to Y?"</strong> — rent went from $1,200 to $1,320, a stock moved from $48 to $42, your salary rose from $52,000 to $55,900. This page puts all three side by side, because in practice people constantly mix them up — especially the second and third.</p>
+<p>Percentages feel slippery because they're relative: the same $10 is 50% of $20 and 1% of $1,000. They also hide a famous trap — percentages don't cancel out symmetrically. A price that rises 20% then falls 20% doesn't return to where it started, and this calculator is the quickest way to prove that to yourself (try it: 100 up 20% is 120; 120 down 20% is 96).</p>
     <h2>How to Use the Percentage Calculator</h2>
     <ol>
-      <li>Pick the mode that matches your question — the three boxes cover nearly every daily case.</li>
-      <li>Type the two numbers; the answer appears as soon as both are filled in.</li>
-      <li>For discounts: mode 1 gives the amount off; subtract it from the ticket price.</li>
-      <li>For grades: mode 2 turns a score like 42 out of 50 into 84%.</li>
-    </ol>
-    <h2>Percentages in Real Life</h2>
-    <p>Percentages run modern life: sale discounts and coupons, tips and sales tax at checkout, exam scores, interest on savings and credit cards, rent increases, battery levels and investment returns. They are powerful because they compare values fairly — a $20 discount means little until you know it is 40% off a $50 jacket or just 2% off a $1,000 phone. The trickiest daily case is change: if a stock rises 50% then falls 50%, it is not back where it started (100 → 150 → 75). Working through the three modes above a few times makes these numbers second nature.</p>
+<li>Find the section matching your question — the three calculators are numbered and labeled in plain language.</li>
+<li>Enter your two numbers. Decimals are fine: 7.5% tax and 12.75 prices work exactly as you'd expect.</li>
+<li>Read the result as you type. There's no equals button to hunt for.</li>
+<li>Sanity-check big answers with a rough estimate — 10% is easy to find (just move the decimal), and most percentages are near a multiple of it.</li>
+</ol>
+    <h2>A Worked Example for Each Question</h2>
+    <div class="example"><p><strong>Discount:</strong> What is 30% off $129.99? The first calculator says 30% of 129.99 is 39.00 — so you pay $129.99 − $39.00 = <strong>$90.99</strong>.</p>
+<p><strong>Score:</strong> You answered 37 of 45 questions correctly. The second calculator: 37 is <strong>82.2%</strong> of 45 — a solid B in most grading schemes.</p>
+<p><strong>Change:</strong> Your monthly grocery spend went from $640 to $736. The third calculator reports a <strong>15% increase</strong> — (736 − 640) ÷ 640 × 100. Whether that's inflation or lifestyle creep, at least now it's a number you can act on.</p></div>
+    <h2>Tips for Not Getting Fooled by Percentages</h2>
+    <ul>
+<li><strong>"Percent of" vs "percentage points" are different.</strong> An interest rate rising from 4% to 5% is up 1 percentage point — but a 25% relative increase. News headlines exploit the confusion constantly.</li>
+<li><strong>Anchor with 10%.</strong> To estimate any percentage mentally: find 10% (move the decimal one place), then scale — 30% is three times that, 5% is half of it.</li>
+<li><strong>Successive changes multiply, they don't add.</strong> A 10% raise followed by a 10% raise is a 21% total increase, not 20% — each applies to a bigger base.</li>
+<li><strong>Always ask "percent of what?"</strong> "50% more" is meaningless until the base is named. It's the oldest trick in advertising.</li>
+</ul>
+    <h2>Common Mistakes to Avoid</h2>
+    <ul>
+<li><strong>Reversing the change formula.</strong> Percentage change is always (new − old) ÷ old. Dividing by the new value instead gives a different, wrong answer — and the error grows with bigger changes.</li>
+<li><strong>Believing up-then-down returns to zero.</strong> Up 50% then down 50% leaves you 25% below the start. The down percentage acts on the inflated value.</li>
+<li><strong>Adding percentages of different bases.</strong> "20% off, then another 10% off" is 28% off total, not 30% — the second discount applies to the already-reduced price.</li>
+<li><strong>Confusing a discount with the price paid.</strong> 30% off $100 is a $30 discount and a $70 payment. Reading the calculator's "30% of" result as the final price is the classic checkout error.</li>
+</ul>
   </section>
 
   <section class="block">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq"><h3>How do I calculate a percentage of a number?</h3><p>Multiply the number by the percentage and divide by 100. Example: 20% of 150 = 150 × 20 ÷ 100 = 30.</p></div>
-    <div class="faq"><h3>How do I find the percentage increase?</h3><p>Subtract old from new, divide by the old value, multiply by 100. From 80 to 100 is a 25% increase.</p></div>
-    <div class="faq"><h3>How do I work out a discount price?</h3><p>Find the percent of the price in mode 1, then subtract: 30% of $80 is $24 off, so you pay $56.</p></div>
-    <div class="faq"><h3>Percent vs. percentage points — what is the difference?</h3><p>Going from 5% to 7% is +2 percentage points, which is a 40% relative increase. The words are not interchangeable.</p></div>
+    <div class="faq"><h3>How do I calculate a percentage of a number?</h3><p>Multiply the number by the percentage divided by 100. For example, 15% of 240 = 240 × 0.15 = 36. The first calculator on this page does it instantly, including decimals.</p></div>
+    <div class="faq"><h3>What's the difference between percentage change and percentage difference?</h3><p>Percentage change compares an old value to a new one over time and has a direction — up or down. It always divides by the old value. (Percentage difference, used when neither value is “first”, divides by the average instead — this page's third tool is the everyday change version.)</p></div>
+    <div class="faq"><h3>How do I turn a fraction or score into a percentage?</h3><p>Divide the part by the whole and multiply by 100 — that's the second calculator. 37 ÷ 45 = 0.822, which is 82.2%.</p></div>
+    <div class="faq"><h3>Why doesn't a 20% rise followed by a 20% fall get me back to the start?</h3><p>Because the two percentages act on different amounts. 100 rising 20% becomes 120; 20% of 120 is 24, so falling 20% lands at 96. The bases differ, so the amounts differ.</p></div>
+    <div class="faq"><h3>How do I calculate a tip or tax quickly?</h3><p>For a tip, use the first calculator: 18% of a $64 bill is $11.52. For tax, calculate the percentage of the pre-tax price and add it on — or multiply the price by 1 plus the rate (× 1.08 for 8%).</p></div>
+    <div class="faq"><h3>Can the calculator handle decimals and negative changes?</h3><p>Yes. Enter rates like 7.5% and values of any size. For the change calculator, if the new value is smaller, the result shows as a negative percentage — a decrease.</p></div>
     <h2>Related Tools</h2>
-    <div class="related"><a href="../emi-calculator/">EMI / Loan Calculator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../unit-converter/">Unit Converter</a></div>
+    <div class="related"><a href="../emi-calculator/">EMI Calculator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../unit-converter/">Unit Converter</a></div>
   </section>
 </div>
 
@@ -76,6 +147,7 @@
   <div class="cols">
     <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
     <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../guides/bmi-explained/">BMI Explained</a><a href="../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a></div>
     <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
   </div>
   <p class="copy">© 2026 ToolNova. All rights reserved.</p>
