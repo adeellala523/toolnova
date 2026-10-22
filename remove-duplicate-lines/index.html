@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Duplicate Lines — Dedupe & Sort Text Online | ToolNova</title>
+<meta name="description" content="Free tool to remove duplicate lines from text. Paste a list, dedupe it, sort alphabetically if you like, ignore case or trim spaces, and copy the clean result.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/remove-duplicate-lines/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How does the duplicate line remover work?","acceptedAnswer":{"@type":"Answer","text":"Paste your text, click the button, and the tool keeps the first occurrence of each unique line and removes every later repeat. Options let you sort the result, ignore letter case, and trim spaces before comparing."}},
+{"@type":"Question","name":"What counts as a duplicate?","acceptedAnswer":{"@type":"Answer","text":"Lines that are identical character-for-character. With 'ignore case' on, 'Apple' and 'apple' count as duplicates; with 'trim spaces' on, lines that differ only by surrounding spaces do too."}},
+{"@type":"Question","name":"Can I dedupe a large list, like email addresses or SKUs?","acceptedAnswer":{"@type":"Answer","text":"Yes. The tool runs locally in your browser and comfortably handles tens of thousands of lines — mailing lists, product codes, keywords and log files included."}},
+{"@type":"Question","name":"Is my list uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Processing happens entirely on your device, so customer emails or private data in your list never leave the browser."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Remove Duplicate Lines</p>
+  <div class="pagehead">
+    <h1>Remove Duplicate Lines</h1>
+    <p class="lead">Clean up messy lists in seconds. Paste any text — emails, keywords, names, codes — remove the repeated lines, optionally sort the result, and copy a tidy, unique list.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="input">Paste your list (one item per line)</label>
+    <textarea id="input" placeholder="apple&#10;banana&#10;apple&#10;orange&#10;banana" style="min-height:150px"></textarea>
+    <div class="checks">
+      <label><input type="checkbox" id="optSort"> Sort A → Z</label>
+      <label><input type="checkbox" id="optCase"> Ignore case</label>
+      <label><input type="checkbox" id="optTrim" checked> Trim spaces</label>
+      <label><input type="checkbox" id="optEmpty" checked> Remove blank lines</label>
+    </div>
+    <button class="btn" id="runBtn">🧹 Remove Duplicates</button>
+    <button class="btn teal" id="copyBtn">📋 Copy Result</button>
+    <button class="btn alt" id="clearBtn">Clear</button>
+    <div class="stats">
+      <div class="stat"><b id="rBefore">0</b><span>Lines before</span></div>
+      <div class="stat"><b id="rAfter">0</b><span>Unique lines</span></div>
+      <div class="stat"><b id="rRemoved">0</b><span>Duplicates removed</span></div>
+    </div>
+    <label for="output" style="margin-top:16px">Clean list</label>
+    <textarea id="output" readonly placeholder="Your unique lines will appear here…" style="min-height:150px"></textarea>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Duplicate Line Remover</h2>
+    <ol>
+      <li>Paste your text into the input box — one item per line works best.</li>
+      <li>Choose options: sort the result, ignore letter case, trim spaces, drop blank lines.</li>
+      <li>Click “Remove Duplicates” and check the before/after counts.</li>
+      <li>Copy the clean list back into your spreadsheet, document or tool.</li>
+    </ol>
+    <h2>Everyday Jobs This Finishes in Seconds</h2>
+    <p>Duplicates sneak into every kind of list. Merge two mailing lists and hundreds of subscribers appear twice — send to them twice and you look like spam. Combine keyword exports from different SEO tools and the same phrase shows up in five rows. Developers dedupe log files, user IDs and configuration entries; warehouse teams clean SKU and barcode lists before inventory counts; teachers merge class rosters from multiple sources. Doing it by hand in a spreadsheet means sorting, eyeballing and risking a missed row. This tool compares every line exactly (or loosely, with the case and trim options) and shows you precisely how many repeats it removed, so you can trust the result.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How does it work?</h3><p>It keeps the first occurrence of each unique line and removes every repeat. Options let you sort, ignore case and trim spaces first.</p></div>
+    <div class="faq"><h3>What counts as a duplicate?</h3><p>Identical lines. With “ignore case” on, “Apple” and “apple” match; with “trim spaces” on, surrounding spaces are ignored too.</p></div>
+    <div class="faq"><h3>Can it handle a large list?</h3><p>Yes — it runs locally and handles tens of thousands of lines, from mailing lists to log files.</p></div>
+    <div class="faq"><h3>Is my list uploaded?</h3><p>No. Everything is processed on your device.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../case-converter/">Case Converter</a><a href="../word-counter/">Word Counter</a><a href="../json-formatter/">JSON Formatter</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var inp=document.getElementById('input'),out=document.getElementById('output'),msg=document.getElementById('msg');
+function run(){
+  var raw=inp.value;
+  var lines=raw.length? raw.split(/\r?\n/):[];
+  var trim=document.getElementById('optTrim').checked;
+  var ignoreCase=document.getElementById('optCase').checked;
+  var dropEmpty=document.getElementById('optEmpty').checked;
+  var seen={},result=[];
+  lines.forEach(function(line){
+    var display=trim?line.trim():line;
+    if(dropEmpty&&display==='')return;
+    var key=ignoreCase?display.toLowerCase():display;
+    if(!seen[key]){seen[key]=true;result.push(display);}
+  });
+  if(document.getElementById('optSort').checked){
+    result.sort(function(a,b){return a.toLowerCase()<b.toLowerCase()?-1:a.toLowerCase()>b.toLowerCase()?1:0;});
+  }
+  out.value=result.join('\n');
+  var nonEmpty=lines.filter(function(l){return l.trim()!=='';}).length;
+  document.getElementById('rBefore').textContent=lines.length;
+  document.getElementById('rAfter').textContent=result.length;
+  document.getElementById('rRemoved').textContent=Math.max(0,nonEmpty-result.length);
+  msg.innerHTML=result.length?'<span class="ok">Done ✔ '+result.length+' unique lines.</span>':'';
+}
+document.getElementById('runBtn').addEventListener('click',run);
+['optSort','optCase','optTrim','optEmpty'].forEach(function(id){document.getElementById(id).addEventListener('change',run);});
+document.getElementById('clearBtn').addEventListener('click',function(){inp.value='';out.value='';run();});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  if(!out.value){msg.innerHTML='<span class="err">Nothing to copy yet — remove duplicates first.</span>';return;}
+  function done(){msg.innerHTML='<span class="ok">Clean list copied ✔</span>';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out.value).then(done,function(){out.select();document.execCommand('copy');done();});}
+  else{out.select();document.execCommand('copy');done();}
+});
+</script>
+</body>
+</html>
