@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Compressor — Reduce Image Size Online Free | ToolNova</title>
+<meta name="description" content="Free image compressor. Upload a JPEG or PNG, adjust quality, compare before and after file sizes, and download the compressed image. Files never leave your device.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/image-compressor/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Are my images uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Compression happens entirely in your browser using the HTML canvas. Your image is never uploaded, stored or shared."}},
+{"@type":"Question","name":"Which quality setting should I use?","acceptedAnswer":{"@type":"Answer","text":"80% is a great balance for photos — usually 50–70% smaller with no visible difference. Try 60% for thumbnails and web listings where size matters most."}},
+{"@type":"Question","name":"What formats are supported?","acceptedAnswer":{"@type":"Answer","text":"You can open JPEG, PNG and WebP images. The compressed file is saved as JPEG (or PNG if you choose PNG output), which is ideal for photos."}},
+{"@type":"Question","name":"Why compress images at all?","acceptedAnswer":{"@type":"Answer","text":"Smaller images upload faster, fit email and form size limits, save storage and make web pages load much quicker — all while looking the same to the eye."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Image Compressor</p>
+  <div class="pagehead">
+    <h1>Image Compressor</h1>
+    <p class="lead">Shrink photos and graphics so they upload faster and fit size limits — without installing anything. Drag the quality slider, watch the savings, and download the result. Your file never leaves your device.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="file">Choose an image (JPEG, PNG or WebP)</label>
+    <input type="file" id="file" accept="image/*">
+    <label for="quality">Quality: <span id="qVal">80</span>%</label>
+    <input type="range" id="quality" min="10" max="100" value="80">
+    <label for="format">Output format</label>
+    <select id="format"><option value="image/jpeg">JPEG (smallest for photos)</option><option value="image/png">PNG (keeps transparency look)</option><option value="image/webp">WebP (modern, very small)</option></select>
+    <div class="stats">
+      <div class="stat"><b id="beforeSize">—</b><span>Original size</span></div>
+      <div class="stat"><b id="afterSize">—</b><span>Compressed size</span></div>
+      <div class="stat"><b id="saved">—</b><span>Saved</span></div>
+      <div class="stat"><b id="dims">—</b><span>Dimensions</span></div>
+    </div>
+    <div id="previewRow" style="display:none;gap:14px;flex-wrap:wrap;margin-top:14px" >
+      <div style="flex:1;min-width:200px"><p style="color:var(--muted);font-size:.88rem;margin-bottom:6px">Original</p><img id="imgBefore" alt="Original" style="max-width:100%;border-radius:10px;border:1px solid var(--line)"></div>
+      <div style="flex:1;min-width:200px"><p style="color:var(--muted);font-size:.88rem;margin-bottom:6px">Compressed</p><img id="imgAfter" alt="Compressed" style="max-width:100%;border-radius:10px;border:1px solid var(--line)"></div>
+    </div>
+    <button class="btn teal" id="dlBtn" disabled>⬇️ Download Compressed Image</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Image Compressor</h2>
+    <ol>
+      <li>Click “Choose an image” and pick a photo from your device.</li>
+      <li>Move the quality slider — 80% is the sweet spot for most photos.</li>
+      <li>Compare the before/after sizes and previews. Lower quality means a smaller file.</li>
+      <li>Click “Download Compressed Image” to save it.</li>
+    </ol>
+    <h2>When Smaller Images Help</h2>
+    <p>Phone cameras now produce 3–8 MB photos, which are overkill for most uses. Marketplaces and classified sites often cap uploads at 2–5 MB, job application portals can reject anything over 1 MB, and email attachments stall above 10 MB. Website owners compress images because page speed decides search rankings — a hero photo at 200 KB instead of 3 MB can cut load time by seconds. Social apps quietly recompress your uploads anyway, so compressing first keeps you in control of quality. Because this tool works entirely in your browser, even sensitive images — IDs, documents, family photos — stay completely private.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>Are my images uploaded to a server?</h3><p>No. Compression happens entirely in your browser. Your image is never uploaded, stored or shared.</p></div>
+    <div class="faq"><h3>Which quality setting should I use?</h3><p>80% balances size and looks for photos. Use 60% for thumbnails and listings where file size matters most.</p></div>
+    <div class="faq"><h3>What formats are supported?</h3><p>You can open JPEG, PNG and WebP files, and save as JPEG, PNG or WebP.</p></div>
+    <div class="faq"><h3>Why compress images at all?</h3><p>Smaller images upload faster, fit form and email limits, save storage, and make web pages load much quicker.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../qr-code-generator/">QR Code Generator</a><a href="../unit-converter/">Unit Converter</a><a href="../remove-duplicate-lines/">Remove Duplicate Lines</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var origImg=null,origBytes=0,outBlob=null,outName='compressed.jpg';
+function fmt(bytes){ if(!bytes&&bytes!==0)return '—'; if(bytes<1024)return bytes+' B'; if(bytes<1048576)return (bytes/1024).toFixed(1)+' KB'; return (bytes/1048576).toFixed(2)+' MB'; }
+function compress(){
+  if(!origImg)return;
+  var q=parseInt(document.getElementById('quality').value,10);
+  document.getElementById('qVal').textContent=q;
+  var format=document.getElementById('format').value;
+  var c=document.createElement('canvas');
+  c.width=origImg.naturalWidth;c.height=origImg.naturalHeight;
+  var ctx=c.getContext('2d');
+  if(format==='image/jpeg'){ctx.fillStyle='#ffffff';ctx.fillRect(0,0,c.width,c.height);}
+  ctx.drawImage(origImg,0,0);
+  c.toBlob(function(blob){
+    if(!blob)return;
+    outBlob=blob;
+    var ext=format==='image/png'?'.png':format==='image/webp'?'.webp':'.jpg';
+    outName='toolnova-compressed'+ext;
+    document.getElementById('imgAfter').src=URL.createObjectURL(blob);
+    document.getElementById('afterSize').textContent=fmt(blob.size);
+    var savedPct=origBytes? Math.max(0,Math.round((1-blob.size/origBytes)*100)):0;
+    document.getElementById('saved').textContent=savedPct+'%';
+    document.getElementById('dlBtn').disabled=false;
+  },format,q/100);
+}
+document.getElementById('file').addEventListener('change',function(){
+  var f=this.files[0],msg=document.getElementById('msg');
+  if(!f)return;
+  if(!/^image\//.test(f.type)){msg.innerHTML='<span class="err">That file is not an image. Please choose a JPEG, PNG or WebP.</span>';return;}
+  msg.textContent='';
+  origBytes=f.size;
+  var url=URL.createObjectURL(f);
+  var img=new Image();
+  img.onload=function(){
+    origImg=img;
+    document.getElementById('imgBefore').src=url;
+    document.getElementById('previewRow').style.display='flex';
+    document.getElementById('beforeSize').textContent=fmt(origBytes);
+    document.getElementById('dims').textContent=img.naturalWidth+' × '+img.naturalHeight;
+    compress();
+  };
+  img.src=url;
+});
+document.getElementById('quality').addEventListener('input',compress);
+document.getElementById('format').addEventListener('change',compress);
+document.getElementById('dlBtn').addEventListener('click',function(){
+  if(!outBlob)return;
+  var a=document.createElement('a');a.download=outName;a.href=URL.createObjectURL(outBlob);a.click();
+});
+</script>
+</body>
+</html>
