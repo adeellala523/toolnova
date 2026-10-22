@@ -7,25 +7,75 @@
 <meta name="description" content="Free unit converter for length (meters, feet, inches, miles), weight (kg, pounds, ounces) and temperature (Celsius, Fahrenheit, Kelvin). Instant, accurate results.">
 <link rel="canonical" href="https://adeellala523.github.io/toolnova/unit-converter/">
 <link rel="stylesheet" href="../style.css">
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How do I convert Celsius to Fahrenheit?","acceptedAnswer":{"@type":"Answer","text":"Multiply the Celsius value by 9/5 and add 32. For example, 20°C = 68°F. The temperature category above does it instantly, including Kelvin."}},
-{"@type":"Question","name":"How many inches are in a foot, and feet in a meter?","acceptedAnswer":{"@type":"Answer","text":"One foot is exactly 12 inches. One meter equals about 3.281 feet, and one inch is exactly 2.54 centimeters by international definition."}},
-{"@type":"Question","name":"How do I convert pounds to kilograms?","acceptedAnswer":{"@type":"Answer","text":"Divide pounds by 2.20462 — or multiply kilograms by 2.20462 to go the other way. One pound is exactly 0.45359237 kilograms."}},
-{"@type":"Question","name":"Are the conversions exact?","acceptedAnswer":{"@type":"Answer","text":"Yes. The converter uses the official international definitions (1 inch = 2.54 cm, 1 pound = 0.45359237 kg) and shows results to 6 significant decimals."}}]}
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How do I convert Celsius to Fahrenheit?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Multiply by 9/5 and add 32. For example, 25\u00b0C \u00d7 9/5 = 45, + 32 = 77\u00b0F. The converter does it instantly, including Kelvin \u2014 but for a mental estimate, doubling Celsius and adding 30 gets you close (25\u00b0C \u2192 \u224880\u00b0F)."
+}
+},
+{
+"@type": "Question",
+"name": "How many centimeters are in an inch?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Exactly 2.54 \u2014 it's defined that way internationally, not measured approximately. A foot (12 inches) is therefore exactly 30.48 cm, and a yard exactly 0.9144 m."
+}
+},
+{
+"@type": "Question",
+"name": "Why does temperature convert differently from length and weight?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Length and weight scales share a true zero, so conversions are simple multiplications. Celsius and Fahrenheit set their zeros at different points (and Kelvin at absolute zero), so converting needs an offset as well as a scale factor \u2014 add or subtract 32 as well as multiplying."
+}
+},
+{
+"@type": "Question",
+"name": "Which units does this converter support?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Length: millimeters, centimeters, meters, kilometers, inches, feet, yards and miles. Weight: grams, kilograms, tonnes, ounces, pounds and stone. Temperature: Celsius, Fahrenheit and Kelvin."
+}
+},
+{
+"@type": "Question",
+"name": "How accurate are the results?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The conversion factors are the exact international definitions (2.54 cm per inch, 0.45359237 kg per pound), and results are shown rounded sensibly for everyday use. For engineering work, convert here and keep extra decimal places from the equation shown."
+}
+},
+{
+"@type": "Question",
+"name": "What's the fastest way to estimate pounds from kilograms mentally?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Double the kilograms, then add 10% of that doubled figure. 80 kg \u2192 160 \u2192 +16 \u2192 176 lb. The exact answer is 176.4 lb \u2014 close enough for luggage and gym plates."
+}
+}
+]
+}
 </script>
 </head>
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
-  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+  <nav class="main"><a href="../">Home</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
 </div></header>
 
 <div class="wrap">
   <p class="crumb"><a href="../">Home</a> › Unit Converter</p>
   <div class="pagehead">
     <h1>Unit Converter</h1>
-    <p class="lead">Convert between metric and imperial units without the mental math. Length, weight and temperature — pick a category, enter a value, and swap direction with one click.</p>
+    <p class="lead">Convert length, weight and temperature between metric and imperial units — meters to feet, kilograms to pounds, Celsius to Fahrenheit and more — with a swap button for instant reverse conversions. The translator for a world that refuses to agree on measurements.</p>
   </div>
 
   <div class="toolbox">
@@ -45,35 +95,47 @@
   </div>
 
   <section class="block">
+    <h2>Two Measurement Worlds, One Converter</h2>
+    <p>Most of the world measures in metric: meters, kilograms, Celsius. The United States — plus a stubborn pocket of everyday British usage — runs on inches, pounds and Fahrenheit. Everyone else lives in the collision zone: recipes from American blogs weighed in cups and ounces, luggage limits in kilograms, a height asked for in feet and inches on a form, a weather forecast in a unit you don't think in. Conversion errors in these moments range from funny (a cake with ten times the flour) to famous — NASA lost a $125 million Mars orbiter in 1999 because one team's software output pound-force seconds while another expected newton-seconds.</p>
+<p>This converter covers the three categories daily life actually needs. <strong>Length:</strong> millimeters through miles, including the inches-feet-yards chain. <strong>Weight:</strong> grams, kilograms, tonnes, ounces, pounds and stone. <strong>Temperature:</strong> Celsius, Fahrenheit and Kelvin — handled by formula rather than a simple ratio, because temperature scales start at different zeros, which is why it's the category everyone gets wrong by hand.</p>
     <h2>How to Use the Unit Converter</h2>
     <ol>
-      <li>Select a category: length, weight or temperature.</li>
-      <li>Type the value and choose the “from” and “to” units.</li>
-      <li>Read the result instantly — it updates as you type.</li>
-      <li>Use “Swap Units” to reverse the conversion without re-entering anything.</li>
-    </ol>
-    <h2>Quick Reference</h2>
-    <table class="legal">
-      <tr><th>Conversion</th><th>Equals</th></tr>
-      <tr><td>1 inch</td><td>2.54 cm (exact)</td></tr>
-      <tr><td>1 foot</td><td>30.48 cm · 12 inches</td></tr>
-      <tr><td>1 mile</td><td>1.609 km</td></tr>
-      <tr><td>1 pound</td><td>0.4536 kg · 16 ounces</td></tr>
-      <tr><td>1 kilogram</td><td>2.205 pounds</td></tr>
-      <tr><td>0°C</td><td>32°F · 273.15 K</td></tr>
-      <tr><td>100°C</td><td>212°F · 373.15 K</td></tr>
-    </table>
-    <p>The United States is one of the few countries still using imperial units daily, while science, medicine and most of the world run on metric — so conversions pop up everywhere: recipes in grams vs. cups and ounces, height on a driver’s license in feet and inches, luggage limits in kilograms, and weather forecasts in Fahrenheit. Bookmark this page and the back-and-forth stops being a chore.</p>
+<li>Pick a category — Length, Weight or Temperature. The unit lists update to match.</li>
+<li>Type your value, then choose the From and To units.</li>
+<li>Read the converted result, shown with the full equation so you can see exactly what was computed.</li>
+<li>Hit the swap button (⇅) to reverse the conversion instantly — perfect for checking your answer or pricing both directions.</li>
+</ol>
+    <h2>A Worked Example for Each Category</h2>
+    <div class="example"><p><strong>Length:</strong> You're 5 feet 10 inches and a form wants centimeters. Convert 70 inches (5×12 + 10): <strong>177.8 cm</strong>.</p>
+<p><strong>Weight:</strong> Your suitcase reads 154 lb on a US scale and the airline limit is in kilograms. 154 lb = <strong>69.9 kg</strong> — better check that limit twice.</p>
+<p><strong>Temperature:</strong> A recipe says bake at 350°F; your oven is Celsius. 350°F = <strong>176.7°C</strong> — call it 175°C, Gas Mark 4. And normal body temperature, 98.6°F, is the 37°C you already knew.</p></div>
+    <h2>Reference Points Worth Memorizing</h2>
+    <ul>
+<li><strong>1 inch = 2.54 cm</strong> exactly — the anchor of the whole length system. A foot is 30.48 cm, a mile is 1.609 km.</li>
+<li><strong>1 kg ≈ 2.205 lb.</strong> For a quick estimate, double the kilograms and add a tenth: 70 kg → 140 + 14 = 154 lb, almost exact.</li>
+<li><strong>Water boils at 100°C / 212°F</strong> and freezes at 0°C / 32°F. Room temperature is about 20–22°C (68–72°F).</li>
+<li><strong>1 stone = 14 lb = 6.35 kg</strong> — still the everyday unit for body weight in the UK.</li>
+<li><strong>−40° is where Celsius and Fahrenheit meet</strong> — the one temperature that's identical in both, and a fact that wins pub quizzes.</li>
+</ul>
+    <h2>Common Mistakes to Avoid</h2>
+    <ul>
+<li><strong>Converting temperature like a ratio.</strong> 20°C is not “twice” 10°C in Fahrenheit terms, because the scales don't share a zero. Use the formulas — or this tool — never a multiplier.</li>
+<li><strong>Confusing fluid ounces with ounces of weight.</strong> One measures volume, the other mass; they coincide only for water, approximately. This converter handles weight; for cooking volumes, check whether your recipe means cups or grams.</li>
+<li><strong>Rounding mid-calculation.</strong> Converting a converted number compounds rounding errors. Always start again from the original value.</li>
+<li><strong>Forgetting which ton you mean.</strong> A metric tonne is 1,000 kg; a US ton is 2,000 lb (907 kg); a British long ton is 2,240 lb. In shipping and industry, that 10% gap matters.</li>
+</ul>
   </section>
 
   <section class="block">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq"><h3>How do I convert Celsius to Fahrenheit?</h3><p>Multiply by 9/5 and add 32. Example: 20°C = 68°F. The temperature mode also handles Kelvin.</p></div>
-    <div class="faq"><h3>How many feet are in a meter?</h3><p>About 3.281 feet. One inch is exactly 2.54 cm by international definition.</p></div>
-    <div class="faq"><h3>How do I convert pounds to kilograms?</h3><p>Divide pounds by 2.20462. One pound is exactly 0.45359237 kg.</p></div>
-    <div class="faq"><h3>Are results exact?</h3><p>Yes — official definitions are used, with up to 6 decimal places shown.</p></div>
+    <div class="faq"><h3>How do I convert Celsius to Fahrenheit?</h3><p>Multiply by 9/5 and add 32. For example, 25°C × 9/5 = 45, + 32 = 77°F. The converter does it instantly, including Kelvin — but for a mental estimate, doubling Celsius and adding 30 gets you close (25°C → ≈80°F).</p></div>
+    <div class="faq"><h3>How many centimeters are in an inch?</h3><p>Exactly 2.54 — it's defined that way internationally, not measured approximately. A foot (12 inches) is therefore exactly 30.48 cm, and a yard exactly 0.9144 m.</p></div>
+    <div class="faq"><h3>Why does temperature convert differently from length and weight?</h3><p>Length and weight scales share a true zero, so conversions are simple multiplications. Celsius and Fahrenheit set their zeros at different points (and Kelvin at absolute zero), so converting needs an offset as well as a scale factor — add or subtract 32 as well as multiplying.</p></div>
+    <div class="faq"><h3>Which units does this converter support?</h3><p>Length: millimeters, centimeters, meters, kilometers, inches, feet, yards and miles. Weight: grams, kilograms, tonnes, ounces, pounds and stone. Temperature: Celsius, Fahrenheit and Kelvin.</p></div>
+    <div class="faq"><h3>How accurate are the results?</h3><p>The conversion factors are the exact international definitions (2.54 cm per inch, 0.45359237 kg per pound), and results are shown rounded sensibly for everyday use. For engineering work, convert here and keep extra decimal places from the equation shown.</p></div>
+    <div class="faq"><h3>What's the fastest way to estimate pounds from kilograms mentally?</h3><p>Double the kilograms, then add 10% of that doubled figure. 80 kg → 160 → +16 → 176 lb. The exact answer is 176.4 lb — close enough for luggage and gym plates.</p></div>
     <h2>Related Tools</h2>
-    <div class="related"><a href="../bmi-calculator/">BMI Calculator</a><a href="../percentage-calculator/">Percentage Calculator</a><a href="../image-compressor/">Image Compressor</a></div>
+    <div class="related"><a href="../percentage-calculator/">Percentage Calculator</a><a href="../emi-calculator/">EMI Calculator</a><a href="../age-calculator/">Age Calculator</a></div>
   </section>
 </div>
 
@@ -81,6 +143,7 @@
   <div class="cols">
     <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
     <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../guides/bmi-explained/">BMI Explained</a><a href="../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a></div>
     <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
   </div>
   <p class="copy">© 2026 ToolNova. All rights reserved.</p>
