@@ -9,24 +9,73 @@
 <link rel="stylesheet" href="../style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Do QR codes generated here expire?","acceptedAnswer":{"@type":"Answer","text":"No. The QR code simply encodes the text or URL you entered, printed into the image itself. It works forever, as long as the link or text stays valid."}},
-{"@type":"Question","name":"What is the best size for printing a QR code?","acceptedAnswer":{"@type":"Answer","text":"Download the PNG and print it at least 1 inch (2.5 cm) square for close-up scanning, larger for posters or signs viewed from a distance."}},
-{"@type":"Question","name":"Can I make a QR code for a Wi-Fi password or phone number?","acceptedAnswer":{"@type":"Answer","text":"Yes — paste any text, a tel: phone link or a URL. Whatever you enter is exactly what a scanner will read."}},
-{"@type":"Question","name":"Is there a limit on scans?","acceptedAnswer":{"@type":"Answer","text":"No. Because the code contains your data directly (not a redirect through our site), there are no scan limits and no tracking."}}]}
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Do QR codes generated here expire?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. The code encodes your text or URL directly in the image, so it works forever \u2014 there's no service in the middle that could shut it off. The only thing that can break it is the destination itself changing or disappearing."
+}
+},
+{
+"@type": "Question",
+"name": "What size should I choose?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "The preview always shows at a comfortable size on screen; the size you pick is the resolution of the downloaded PNG. 256 is fine for a screen or document, 512 covers most uses, and 1024 gives print shops crisp edges for posters and signage."
+}
+},
+{
+"@type": "Question",
+"name": "Can I make a QR code for Wi-Fi or a phone number?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Paste any text and the scanner will read exactly that. For a phone number use the tel: format (for example tel:+15551234567); plain text works for notes, serial numbers and instructions."
+}
+},
+{
+"@type": "Question",
+"name": "Is there a limit on how many times my code can be scanned?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "None at all. Scans aren't routed through ToolNova, so there's no tracking, no counter and no cap."
+}
+},
+{
+"@type": "Question",
+"name": "Why does my code look blurry when printed big?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "You probably downloaded the small 256 size and stretched it. Regenerate at 1024 \u00d7 1024 for print \u2014 the squares stay sharp at poster sizes."
+}
+},
+{
+"@type": "Question",
+"name": "Can I put my logo in the middle of the code?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Not with this generator \u2014 it produces clean, standard codes. If you add a logo yourself in an image editor, keep it small, centered, and test-scan the result thoroughly; covering too many squares makes codes unreadable."
+}
+}
+]
+}
 </script>
 </head>
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
-  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+  <nav class="main"><a href="../">Home</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
 </div></header>
 
 <div class="wrap">
   <p class="crumb"><a href="../">Home</a> › QR Code Generator</p>
   <div class="pagehead">
     <h1>QR Code Generator</h1>
-    <p class="lead">Turn any link or text into a scannable QR code in seconds. Perfect for restaurant menus, business cards, Wi-Fi sharing, event posters and product packaging — then download a clean PNG.</p>
+    <p class="lead">Turn any link or piece of text into a clean, scannable QR code in seconds — then download it as a PNG for menus, flyers, business cards, packaging and posters. No account, no scan limits, no expiry dates, because the code carries your information itself.</p>
   </div>
 
   <div class="toolbox">
@@ -42,23 +91,43 @@
   </div>
 
   <section class="block">
+    <h2>What a QR Code Actually Is</h2>
+    <p>A QR code is a two-dimensional barcode: the black-and-white squares encode your text directly into the image. When a phone camera reads the pattern, it recovers exactly what you put in — most often a website address. That design has a consequence people love: a QR code generated here is <strong>static</strong>. It doesn't route through ToolNova or any middleman service, so there is nothing to expire, no subscription keeping it alive, and no limit on how many times it can be scanned. The code you download today will still work in ten years, provided the page it points to is still there.</p>
+<p>Who uses it? Restaurants putting digital menus on table tents. Cafés sharing Wi-Fi details without a chalkboard full of typos. Shop owners linking to their Google reviews page — scans climb because customers no longer have to type a long address. Realtors on yard signs, teachers on worksheets, event organizers linking to RSVP forms, market stalls taking payments. Anywhere a long URL, password or set of details would otherwise be read out loud or typed by hand, a QR code earns its square inch.</p>
     <h2>How to Use the QR Code Generator</h2>
     <ol>
-      <li>Type or paste the URL or text you want the code to contain.</li>
-      <li>Pick a size — 512 × 512 is plenty for most documents and screens; choose 1024 for print.</li>
-      <li>Click “Generate QR Code” and test it with your phone’s camera.</li>
-      <li>Click “Download PNG” and use the image anywhere: menus, flyers, labels, slides.</li>
-    </ol>
-    <h2>Smart Ways People Use QR Codes</h2>
-    <p>Restaurants link codes on tables to digital menus, cafés share Wi-Fi without spelling out passwords, and realtors put codes on yard signs that open the full listing. Small shops print one on the counter for Google reviews — scans jump review counts because nobody has to type a long URL. Teachers add codes to worksheets, and event organizers link straight to RSVP pages. One rule of thumb: keep the destination short and mobile-friendly, place the code where people can reach it with a phone, and always test your printed code before a big print run. A quiet border of white space around the code helps every scanner read it reliably.</p>
+<li>Type or paste the URL or text the code should contain. For a website, include the full address starting with https://.</li>
+<li>Pick a size. The size controls the downloaded image's resolution — 512 × 512 suits documents and screens; choose 1024 × 1024 for anything you'll print large. On your phone screen the preview always displays at a comfortable fixed size.</li>
+<li>Click "Generate QR Code" and test it immediately: point your own phone camera at the screen and confirm it opens the right destination.</li>
+<li>Click "Download PNG". The file comes with a clean white border (the "quiet zone") already included, which scanners need to read the code reliably.</li>
+</ol>
+    <h2>A Worked Example</h2>
+    <div class="example"><p>A small bakery wants customers to leave Google reviews. The review link is a 60-character tangle nobody will ever type. The owner pastes it here, generates a code at 1024 × 1024, downloads the PNG, and prints it on a small counter card: "Enjoyed your cake? Scan to review us."</p>
+<p>Result: instead of hoping people search for the bakery later (they don't), the review is two taps away while the experience is fresh. The same card works forever — there's no monthly fee keeping the code alive, because the link lives inside the printed squares themselves. If the bakery ever changes the link, it simply generates and prints a new card.</p></div>
+    <h2>Tips for QR Codes That Scan First Time</h2>
+    <ul>
+<li><strong>Keep the destination short.</strong> The more text a code holds, the denser and harder to scan it becomes. Use a short URL where you can, and never encode a whole paragraph.</li>
+<li><strong>Mind the quiet zone.</strong> Scanners need that empty white margin around the code. Don't crop it, and don't print the code on a busy or dark background.</li>
+<li><strong>Size it for the scanning distance.</strong> A useful rule is a 10:1 ratio — a code scanned from 1 meter away should be at least 10 cm wide. Table cards can be small (around 2.5 cm / 1 inch minimum); posters need to be much bigger.</li>
+<li><strong>Always test the final print.</strong> Scan the actual printed piece, in the lighting where it will live, before ordering 500 of them.</li>
+</ul>
+    <h2>Common Mistakes to Avoid</h2>
+    <ul>
+<li><strong>Encoding a link that later dies.</strong> The code never expires, but the page it opens can. Point codes at addresses you control and keep them alive — a scanned code that lands on a 404 is a wasted customer.</li>
+<li><strong>Changing the destination after printing.</strong> With a static code, the content is fixed at print time. If you need changeable destinations, that's what (paid) dynamic QR services are for — for most menus, cards and signs, static is simpler and free forever.</li>
+<li><strong>Reversing the colors.</strong> Codes are designed dark-on-light. White squares on a black background fail on many scanners.</li>
+<li><strong>Placing codes out of reach.</strong> A beautiful code on a window too high to scan, or behind reflective glass, helps nobody. Think about where the phone will actually be.</li>
+</ul>
   </section>
 
   <section class="block">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq"><h3>Do QR codes generated here expire?</h3><p>No. The code encodes your text directly in the image, so it works forever as long as the link stays valid.</p></div>
-    <div class="faq"><h3>What size should I print?</h3><p>At least 1 inch (2.5 cm) square for close-up scanning — larger for posters viewed from a distance.</p></div>
-    <div class="faq"><h3>Can I encode a phone number or Wi-Fi details?</h3><p>Yes — paste any text, a tel: link or a URL. A scanner reads exactly what you entered.</p></div>
-    <div class="faq"><h3>Is there a scan limit or tracking?</h3><p>No scan limits and no tracking — the code points straight at your content, not through our site.</p></div>
+    <div class="faq"><h3>Do QR codes generated here expire?</h3><p>No. The code encodes your text or URL directly in the image, so it works forever — there's no service in the middle that could shut it off. The only thing that can break it is the destination itself changing or disappearing.</p></div>
+    <div class="faq"><h3>What size should I choose?</h3><p>The preview always shows at a comfortable size on screen; the size you pick is the resolution of the downloaded PNG. 256 is fine for a screen or document, 512 covers most uses, and 1024 gives print shops crisp edges for posters and signage.</p></div>
+    <div class="faq"><h3>Can I make a QR code for Wi-Fi or a phone number?</h3><p>Yes. Paste any text and the scanner will read exactly that. For a phone number use the tel: format (for example tel:+15551234567); plain text works for notes, serial numbers and instructions.</p></div>
+    <div class="faq"><h3>Is there a limit on how many times my code can be scanned?</h3><p>None at all. Scans aren't routed through ToolNova, so there's no tracking, no counter and no cap.</p></div>
+    <div class="faq"><h3>Why does my code look blurry when printed big?</h3><p>You probably downloaded the small 256 size and stretched it. Regenerate at 1024 × 1024 for print — the squares stay sharp at poster sizes.</p></div>
+    <div class="faq"><h3>Can I put my logo in the middle of the code?</h3><p>Not with this generator — it produces clean, standard codes. If you add a logo yourself in an image editor, keep it small, centered, and test-scan the result thoroughly; covering too many squares makes codes unreadable.</p></div>
     <h2>Related Tools</h2>
     <div class="related"><a href="../password-generator/">Password Generator</a><a href="../image-compressor/">Image Compressor</a><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a></div>
   </section>
@@ -68,6 +137,7 @@
   <div class="cols">
     <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
     <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../guides/bmi-explained/">BMI Explained</a><a href="../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a></div>
     <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
   </div>
   <p class="copy">© 2026 ToolNova. All rights reserved.</p>
