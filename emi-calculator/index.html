@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMI / Loan Calculator — Monthly Payment & Interest | ToolNova</title>
+<meta name="description" content="Free EMI and loan calculator. Enter loan amount, interest rate and term to get your monthly payment, total interest and total repayment — for mortgages, auto and personal loans.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/emi-calculator/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is EMI?","acceptedAnswer":{"@type":"Answer","text":"EMI (Equated Monthly Installment) is the fixed monthly payment on a loan. Each payment covers part interest and part principal, calculated so the loan is fully repaid by the end of the term."}},
+{"@type":"Question","name":"How is the monthly payment calculated?","acceptedAnswer":{"@type":"Answer","text":"The formula is P × r × (1+r)^n ÷ ((1+r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of monthly payments."}},
+{"@type":"Question","name":"Does a longer term lower my payment?","acceptedAnswer":{"@type":"Answer","text":"Yes, stretching the term lowers each monthly payment but increases the total interest you pay — often by a lot on mortgages. Compare both numbers before deciding."}},
+{"@type":"Question","name":"Can I use this for a mortgage or auto loan?","acceptedAnswer":{"@type":"Answer","text":"Yes. It works for any fixed-rate installment loan: mortgages, auto loans, personal loans and student loans. It does not include taxes, insurance or lender fees."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › EMI / Loan Calculator</p>
+  <div class="pagehead">
+    <h1>EMI / Loan Calculator</h1>
+    <p class="lead">Know your monthly payment before you sign anything. Enter the loan amount, interest rate and term to see the monthly EMI, the total interest, and the true total cost of borrowing.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="row">
+      <div><label for="amount">Loan amount ($)</label><input type="number" id="amount" value="25000" min="0" step="any"></div>
+      <div><label for="rate">Annual interest rate (%)</label><input type="number" id="rate" value="7.5" min="0" step="any"></div>
+      <div><label for="months">Term (months)</label><input type="number" id="months" value="60" min="1" step="1"></div>
+    </div>
+    <button class="btn" id="calcBtn">🏦 Calculate Payment</button>
+    <div class="stats">
+      <div class="stat"><b id="rEmi">—</b><span>Monthly payment</span></div>
+      <div class="stat"><b id="rInterest">—</b><span>Total interest</span></div>
+      <div class="stat"><b id="rTotal">—</b><span>Total repayment</span></div>
+      <div class="stat"><b id="rShare">—</b><span>Interest share</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Loan Calculator</h2>
+    <ol>
+      <li>Enter the amount you plan to borrow (the price minus any down payment).</li>
+      <li>Type the annual interest rate your lender quoted — check whether it is APR or a flat rate.</li>
+      <li>Set the term in months: 60 for a typical 5-year auto loan, 360 for a 30-year mortgage.</li>
+      <li>Compare scenarios — try a shorter term and watch total interest fall.</li>
+    </ol>
+    <h2>Why Total Interest Deserves Your Attention</h2>
+    <p>Monthly payments hide the real price of a loan. Borrow $300,000 at 7% for 30 years and the payment is about $1,996 — but the interest alone totals roughly $418,000, more than the house price itself. Shortening the term to 15 years raises the payment to about $2,696 while cutting interest to about $185,000, saving over $230,000. The same math, smaller scale, applies to cars and personal loans: every extra year of term trades a lower payment for a higher total cost. Run two or three scenarios here before talking to a lender, and you will negotiate with your eyes open. This calculator uses the standard amortization formula and excludes taxes, insurance and fees, so treat results as close estimates.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>What is EMI?</h3><p>An Equated Monthly Installment — the fixed monthly payment that repays a loan, part interest and part principal, by the end of the term.</p></div>
+    <div class="faq"><h3>How is the monthly payment calculated?</h3><p>With P × r × (1+r)ⁿ ÷ ((1+r)ⁿ − 1), where r is the monthly rate and n the number of payments.</p></div>
+    <div class="faq"><h3>Does a longer term save money?</h3><p>It lowers the monthly payment but increases total interest — often dramatically on mortgages.</p></div>
+    <div class="faq"><h3>Can I use it for mortgages and auto loans?</h3><p>Yes — any fixed-rate installment loan. Taxes, insurance and lender fees are not included.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../percentage-calculator/">Percentage Calculator</a><a href="../age-calculator/">Age Calculator</a><a href="../bmi-calculator/">BMI Calculator</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+function money(n){return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calc(){
+  var P=parseFloat(document.getElementById('amount').value);
+  var annual=parseFloat(document.getElementById('rate').value);
+  var n=parseInt(document.getElementById('months').value,10);
+  var msg=document.getElementById('msg');
+  if(!P||P<0||isNaN(annual)||annual<0||!n||n<1){msg.innerHTML='<span class="err">Please enter a valid amount, rate (0 or more) and a term of at least 1 month.</span>';return;}
+  var r=annual/1200, emi;
+  if(r===0){emi=P/n;}
+  else{var f=Math.pow(1+r,n);emi=P*r*f/(f-1);}
+  var total=emi*n, interest=total-P;
+  document.getElementById('rEmi').textContent=money(emi);
+  document.getElementById('rInterest').textContent=money(interest);
+  document.getElementById('rTotal').textContent=money(total);
+  document.getElementById('rShare').textContent=(total>0? (interest/total*100).toFixed(1):'0')+'%';
+  msg.innerHTML='<span class="ok">'+n+' monthly payments of '+money(emi)+'.</span> Estimate only — excludes taxes, insurance and fees.';
+}
+document.getElementById('calcBtn').addEventListener('click',calc);
+['amount','rate','months'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});
+calc();
+</script>
+</body>
+</html>
