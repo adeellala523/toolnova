@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adeellala523.github.io/toolnova/sitemap.xml
+Sitemap: https://trytoolnova.com/sitemap.xml
