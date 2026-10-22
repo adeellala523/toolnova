@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Generator — Create Strong Random Passwords | ToolNova</title>
+<meta name="description" content="Free strong password generator. Create random, secure passwords with a length slider and toggles for uppercase, numbers and symbols. Includes a strength hint and one-click copy.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/password-generator/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How long should my password be?","acceptedAnswer":{"@type":"Answer","text":"Security experts recommend at least 12–16 characters for important accounts. Length matters more than complexity, so a 20-character password with letters and numbers is very strong."}},
+{"@type":"Question","name":"Are the passwords generated here safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. Passwords are generated locally in your browser using the Web Crypto API (crypto.getRandomValues), a cryptographically secure random source. Nothing is sent to a server or stored."}},
+{"@type":"Question","name":"Should I use the same password everywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Use a unique password for every account so one leaked password cannot unlock the rest. A password manager makes this easy."}},
+{"@type":"Question","name":"What does the strength hint mean?","acceptedAnswer":{"@type":"Answer","text":"It estimates how hard the password is to guess based on its length and the mix of character types (entropy). 'Very strong' passwords would take centuries to crack by brute force."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Password Generator</p>
+  <div class="pagehead">
+    <h1>Password Generator</h1>
+    <p class="lead">Generate strong, truly random passwords in one click. Choose the length, mix in uppercase letters, numbers and symbols, and copy the result straight into your password manager.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="pwd">Your new password</label>
+    <input type="text" id="pwd" readonly style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.05rem">
+    <p style="margin-top:8px">Strength: <b id="strength">—</b> · <span id="entropy" style="color:var(--muted)"></span></p>
+    <label for="len">Length: <span id="lenVal">16</span> characters</label>
+    <input type="range" id="len" min="4" max="64" value="16">
+    <label>Include</label>
+    <div class="checks">
+      <label><input type="checkbox" id="cLower" checked> lowercase (a–z)</label>
+      <label><input type="checkbox" id="cUpper" checked> UPPERCASE (A–Z)</label>
+      <label><input type="checkbox" id="cNum" checked> Numbers (0–9)</label>
+      <label><input type="checkbox" id="cSym" checked> Symbols (!@#$…)</label>
+    </div>
+    <button class="btn" id="genBtn">🔄 Generate New Password</button>
+    <button class="btn teal" id="copyBtn">📋 Copy Password</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Password Generator</h2>
+    <ol>
+      <li>Drag the length slider — 16 characters is a great default for most accounts.</li>
+      <li>Tick the character types you want. Some sites disallow symbols; untick them if needed.</li>
+      <li>Click “Generate New Password” until you like the result (every one is equally random).</li>
+      <li>Click “Copy Password” and paste it into the sign-up form and your password manager.</li>
+    </ol>
+    <h2>Why Random Passwords Matter</h2>
+    <p>Weak, reused passwords are behind most account break-ins. Attackers try leaked password lists and common patterns like “Summer2026!” across thousands of sites — a trick called credential stuffing. A unique, randomly generated password defeats it completely because there is no pattern to guess and nothing to reuse. Pair long random passwords with a password manager (so you only memorize one master password) and turn on two-factor authentication for email and banking. The passwords from this tool are created with your browser’s cryptographic random generator — the same quality of randomness operating systems use — and they never travel over the internet.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How long should my password be?</h3><p>At least 12–16 characters for important accounts. Length matters more than complexity, so a 20-character password is extremely strong.</p></div>
+    <div class="faq"><h3>Are passwords generated here safe?</h3><p>Yes. They are generated locally using the Web Crypto API (crypto.getRandomValues), a cryptographically secure source. Nothing is sent to a server or stored.</p></div>
+    <div class="faq"><h3>Should I reuse one strong password everywhere?</h3><p>No. Use a unique password per account so a single leak cannot unlock the rest. A password manager makes this painless.</p></div>
+    <div class="faq"><h3>What does the strength hint mean?</h3><p>It estimates guessing difficulty from length and character mix (entropy). “Very strong” passwords would take centuries to brute-force.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../json-formatter/">JSON Formatter</a><a href="../qr-code-generator/">QR Code Generator</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var LOWER='abcdefghijklmnopqrstuvwxyz',UPPER='ABCDEFGHIJKLMNOPQRSTUVWXYZ',NUM='0123456789',SYM='!@#$%^&*()-_=+[]{};:,.?';
+function gen(){
+  var sets=[];
+  if(document.getElementById('cLower').checked)sets.push(LOWER);
+  if(document.getElementById('cUpper').checked)sets.push(UPPER);
+  if(document.getElementById('cNum').checked)sets.push(NUM);
+  if(document.getElementById('cSym').checked)sets.push(SYM);
+  var out=document.getElementById('pwd'),msg=document.getElementById('msg');
+  if(!sets.length){out.value='';msg.innerHTML='<span class="err">Please tick at least one character type.</span>';return;}
+  var len=parseInt(document.getElementById('len').value,10);
+  var all=sets.join(''),chars=[];
+  var buf=new Uint32Array(len*2);crypto.getRandomValues(buf);var bi=0;
+  function rnd(n){return buf[bi++]%n;}
+  sets.forEach(function(s){ if(chars.length<len) chars.push(s[rnd(s.length)]); });
+  while(chars.length<len)chars.push(all[rnd(all.length)]);
+  for(var i=chars.length-1;i>0;i--){var j=rnd(i+1);var tmp=chars[i];chars[i]=chars[j];chars[j]=tmp;}
+  out.value=chars.join('');
+  var bits=Math.round(len*Math.log2(all.length));
+  var label=bits<40?'Weak':bits<60?'Fair':bits<90?'Strong':'Very strong';
+  document.getElementById('strength').textContent=label;
+  document.getElementById('entropy').textContent='about '+bits+' bits of entropy';
+  msg.textContent='';
+}
+document.getElementById('len').addEventListener('input',function(){document.getElementById('lenVal').textContent=this.value;gen();});
+['cLower','cUpper','cNum','cSym'].forEach(function(id){document.getElementById(id).addEventListener('change',gen);});
+document.getElementById('genBtn').addEventListener('click',gen);
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var v=document.getElementById('pwd').value,msg=document.getElementById('msg');
+  if(!v){msg.innerHTML='<span class="err">Generate a password first.</span>';return;}
+  function done(){msg.innerHTML='<span class="ok">Copied to clipboard ✔</span>';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done,function(){fallback();});}else{fallback();}
+  function fallback(){var p=document.getElementById('pwd');p.select();document.execCommand('copy');done();}
+});
+gen();
+</script>
+</body>
+</html>
