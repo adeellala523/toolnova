@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter — Format, Validate & Minify JSON | ToolNova</title>
+<meta name="description" content="Free JSON formatter and validator. Beautify JSON with indentation, minify it for production, and get clear error messages with line hints when JSON is invalid.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/json-formatter/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does a JSON formatter do?","acceptedAnswer":{"@type":"Answer","text":"It takes raw JSON — often one long unreadable line from an API — and rewrites it with consistent indentation and line breaks so humans can read, review and debug it."}},
+{"@type":"Question","name":"How does validation work here?","acceptedAnswer":{"@type":"Answer","text":"Your browser's built-in JSON parser checks the text. If it is invalid, we show the parser's error message so you can find problems like missing commas, unquoted keys or trailing commas."}},
+{"@type":"Question","name":"What is minified JSON used for?","acceptedAnswer":{"@type":"Answer","text":"Minifying removes all unnecessary whitespace, shrinking the payload for API responses, config files and storage where every kilobyte counts."}},
+{"@type":"Question","name":"Is my JSON data sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Formatting and validation run 100% in your browser, so API keys, tokens or private payloads in your JSON stay on your device."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › JSON Formatter</p>
+  <div class="pagehead">
+    <h1>JSON Formatter & Validator</h1>
+    <p class="lead">Paste messy JSON and turn it into clean, readable, properly indented output — or minify it down to one compact line. If the JSON is broken, you get a helpful error message instead of a silent failure.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="input">Input JSON</label>
+    <textarea id="input" placeholder='{"name":"ToolNova","tools":15,"free":true}' style="font-family:ui-monospace,Menlo,Consolas,monospace;min-height:150px"></textarea>
+    <label for="indent">Indentation</label>
+    <select id="indent"><option value="2">2 spaces</option><option value="4">4 spaces</option><option value="tab">Tab</option></select>
+    <div>
+      <button class="btn" id="formatBtn">{ } Format / Beautify</button>
+      <button class="btn" id="minBtn">Minify</button>
+      <button class="btn alt" id="validateBtn">✔ Validate Only</button>
+    </div>
+    <label for="output" style="margin-top:16px">Output</label>
+    <textarea id="output" readonly placeholder="Formatted JSON will appear here…" style="font-family:ui-monospace,Menlo,Consolas,monospace;min-height:150px"></textarea>
+    <button class="btn teal" id="copyBtn">📋 Copy Output</button>
+    <button class="btn alt" id="clearBtn">Clear</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the JSON Formatter</h2>
+    <ol>
+      <li>Paste your JSON into the input box — from an API response, a config file or a log.</li>
+      <li>Choose 2 spaces, 4 spaces or tabs for indentation.</li>
+      <li>Click “Format / Beautify” for readable output, or “Minify” for a compact single line.</li>
+      <li>If something is wrong, read the error message, fix the input, and try again. “Validate Only” checks without changing anything.</li>
+    </ol>
+    <h2>Common JSON Errors This Catches</h2>
+    <p>Most broken JSON fails for a handful of reasons: a missing comma between items, keys written without double quotes, single quotes instead of double quotes, or a trailing comma after the last item (allowed in JavaScript, but not in strict JSON). Comments are also not allowed in pure JSON files. The browser parser stops at the first problem it finds and reports its position, which is why validating here first beats debugging a failed API call later. Because everything runs locally, this formatter is safe for payloads that contain tokens, customer data or internal URLs — nothing leaves your machine, unlike many server-based formatters.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>What does a JSON formatter do?</h3><p>It rewrites raw JSON with consistent indentation and line breaks so humans can read and debug it easily.</p></div>
+    <div class="faq"><h3>How does validation work?</h3><p>The browser’s built-in JSON parser checks your text and we display its error message, pointing at missing commas, unquoted keys and similar issues.</p></div>
+    <div class="faq"><h3>What is minified JSON for?</h3><p>Minifying strips whitespace to shrink payloads for APIs, configs and storage.</p></div>
+    <div class="faq"><h3>Is my JSON sent to a server?</h3><p>No — everything runs in your browser, so sensitive payloads stay on your device.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../password-generator/">Password Generator</a><a href="../word-counter/">Word Counter</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var inp=document.getElementById('input'),out=document.getElementById('output'),msg=document.getElementById('msg');
+function parse(){
+  var v=inp.value.trim();
+  if(!v){msg.innerHTML='<span class="err">Please paste some JSON first.</span>';return null;}
+  try{return JSON.parse(v);}
+  catch(e){msg.innerHTML='<span class="err">Invalid JSON: '+e.message+'</span>';out.value='';return null;}
+}
+document.getElementById('formatBtn').addEventListener('click',function(){
+  var obj=parse();if(obj===null&&inp.value.trim()==='')return;
+  if(obj===null)return;
+  var ind=document.getElementById('indent').value;
+  out.value=JSON.stringify(obj,null,ind==='tab'?'\t':parseInt(ind,10));
+  msg.innerHTML='<span class="ok">Valid JSON ✔ formatted below.</span>';
+});
+document.getElementById('minBtn').addEventListener('click',function(){
+  var obj=parse();if(obj===null)return;
+  out.value=JSON.stringify(obj);
+  msg.innerHTML='<span class="ok">Valid JSON ✔ minified below.</span>';
+});
+document.getElementById('validateBtn').addEventListener('click',function(){
+  var obj=parse();if(obj===null)return;
+  msg.innerHTML='<span class="ok">Valid JSON ✔ — no errors found.</span>';
+});
+document.getElementById('clearBtn').addEventListener('click',function(){inp.value='';out.value='';msg.textContent='';});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  if(!out.value){msg.innerHTML='<span class="err">Nothing to copy yet — format something first.</span>';return;}
+  function done(){msg.innerHTML='<span class="ok">Output copied ✔</span>';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out.value).then(done,function(){out.select();document.execCommand('copy');done();});}
+  else{out.select();document.execCommand('copy');done();}
+});
+</script>
+</body>
+</html>
