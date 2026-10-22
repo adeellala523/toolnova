@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder / Decoder — Encode & Decode Online | ToolNova</title>
+<meta name="description" content="Free Base64 encoder and decoder. Convert text to Base64 and back instantly, with full UTF-8 support for accented characters, symbols and emoji.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/base64-encoder-decoder/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Base64 used for?","acceptedAnswer":{"@type":"Answer","text":"Base64 converts binary or special-character data into plain ASCII text so it can travel safely through email, URLs, JSON and APIs. Common uses include embedding small images in HTML/CSS, basic auth headers and encoding tokens."}},
+{"@type":"Question","name":"Is Base64 encryption?","acceptedAnswer":{"@type":"Answer","text":"No. Base64 is an encoding, not encryption — anyone can decode it instantly. Never rely on Base64 to protect passwords or secrets."}},
+{"@type":"Question","name":"Does this tool support Unicode and emoji?","acceptedAnswer":{"@type":"Answer","text":"Yes. Text is first encoded as UTF-8, so accented letters, Arabic, Chinese characters and emoji all round-trip correctly."}},
+{"@type":"Question","name":"Why does decoded text sometimes fail?","acceptedAnswer":{"@type":"Answer","text":"The input may not be valid Base64 (missing padding, extra spaces or line breaks from an email). The tool trims whitespace and reports a clear error when the data still cannot be decoded."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Base64 Encoder / Decoder</p>
+  <div class="pagehead">
+    <h1>Base64 Encoder / Decoder</h1>
+    <p class="lead">Convert plain text to Base64, or decode Base64 back into readable text. Fully UTF-8 safe, so accented characters, non-Latin scripts and emoji survive the round trip.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="input">Input</label>
+    <textarea id="input" placeholder="Type text to encode, or paste Base64 to decode…" style="font-family:ui-monospace,Menlo,Consolas,monospace"></textarea>
+    <div>
+      <button class="btn" id="encBtn">➡️ Encode to Base64</button>
+      <button class="btn" id="decBtn">⬅️ Decode from Base64</button>
+      <button class="btn alt" id="swapBtn">⇅ Use Output as Input</button>
+    </div>
+    <label for="output" style="margin-top:16px">Output</label>
+    <textarea id="output" readonly placeholder="Your result will appear here…" style="font-family:ui-monospace,Menlo,Consolas,monospace"></textarea>
+    <button class="btn teal" id="copyBtn">📋 Copy Output</button>
+    <button class="btn alt" id="clearBtn">Clear</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Base64 Tool</h2>
+    <ol>
+      <li>Paste or type your text in the input box.</li>
+      <li>Click “Encode to Base64” to produce the encoded string, or “Decode from Base64” to convert back.</li>
+      <li>Copy the output, or click “Use Output as Input” to chain another conversion.</li>
+    </ol>
+    <h2>What Base64 Actually Is</h2>
+    <p>Base64 represents data using 64 safe characters (A–Z, a–z, 0–9, + and /), with “=” padding at the end. It was designed so binary data could pass through systems built for text only — early email servers being the classic example. You will meet it in data URIs (small images embedded directly in web pages), in HTTP Basic authentication headers, in JWT tokens (which use a URL-safe variant), and inside JSON or XML payloads. The trade-off is size: encoding grows data by about 33%. And remember the golden rule — Base64 hides nothing. It is a translation, not a lock, so never use it to “protect” a password or API key.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>What is Base64 used for?</h3><p>It turns binary or special-character data into plain ASCII so it can travel safely through email, URLs, JSON and APIs — and embed small images in web pages.</p></div>
+    <div class="faq"><h3>Is Base64 encryption?</h3><p>No. Anyone can decode Base64 instantly. Never use it to protect passwords or secrets.</p></div>
+    <div class="faq"><h3>Does it support Unicode and emoji?</h3><p>Yes — text is UTF-8 encoded first, so accented letters, Arabic, Chinese and emoji all work.</p></div>
+    <div class="faq"><h3>Why did decoding fail?</h3><p>The input was probably not valid Base64 — the tool trims stray whitespace and shows a clear error when it still can’t decode.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../json-formatter/">JSON Formatter</a><a href="../password-generator/">Password Generator</a><a href="../color-converter/">Color Converter</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var inp=document.getElementById('input'),out=document.getElementById('output'),msg=document.getElementById('msg');
+function b64encode(str){
+  var bytes=new TextEncoder().encode(str);
+  var bin='';bytes.forEach(function(b){bin+=String.fromCharCode(b);});
+  return btoa(bin);
+}
+function b64decode(b64){
+  var bin=atob(b64);
+  var bytes=new Uint8Array(bin.length);
+  for(var i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  return new TextDecoder('utf-8',{fatal:true}).decode(bytes);
+}
+document.getElementById('encBtn').addEventListener('click',function(){
+  if(!inp.value){msg.innerHTML='<span class="err">Please enter some text first.</span>';return;}
+  out.value=b64encode(inp.value);
+  msg.innerHTML='<span class="ok">Encoded ✔</span>';
+});
+document.getElementById('decBtn').addEventListener('click',function(){
+  var v=inp.value.replace(/\s/g,'');
+  if(!v){msg.innerHTML='<span class="err">Please paste some Base64 first.</span>';return;}
+  try{out.value=b64decode(v);msg.innerHTML='<span class="ok">Decoded ✔</span>';}
+  catch(e){out.value='';msg.innerHTML='<span class="err">Could not decode: the input is not valid Base64 text.</span>';}
+});
+document.getElementById('swapBtn').addEventListener('click',function(){if(out.value){inp.value=out.value;out.value='';msg.textContent='';}});
+document.getElementById('clearBtn').addEventListener('click',function(){inp.value='';out.value='';msg.textContent='';});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  if(!out.value){msg.innerHTML='<span class="err">Nothing to copy yet.</span>';return;}
+  function done(){msg.innerHTML='<span class="ok">Output copied ✔</span>';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out.value).then(done,function(){out.select();document.execCommand('copy');done();});}
+  else{out.select();document.execCommand('copy');done();}
+});
+</script>
+</body>
+</html>
