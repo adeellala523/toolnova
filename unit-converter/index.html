@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Converter — Length, Weight & Temperature | ToolNova</title>
+<meta name="description" content="Free unit converter for length (meters, feet, inches, miles), weight (kg, pounds, ounces) and temperature (Celsius, Fahrenheit, Kelvin). Instant, accurate results.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/unit-converter/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I convert Celsius to Fahrenheit?","acceptedAnswer":{"@type":"Answer","text":"Multiply the Celsius value by 9/5 and add 32. For example, 20°C = 68°F. The temperature category above does it instantly, including Kelvin."}},
+{"@type":"Question","name":"How many inches are in a foot, and feet in a meter?","acceptedAnswer":{"@type":"Answer","text":"One foot is exactly 12 inches. One meter equals about 3.281 feet, and one inch is exactly 2.54 centimeters by international definition."}},
+{"@type":"Question","name":"How do I convert pounds to kilograms?","acceptedAnswer":{"@type":"Answer","text":"Divide pounds by 2.20462 — or multiply kilograms by 2.20462 to go the other way. One pound is exactly 0.45359237 kilograms."}},
+{"@type":"Question","name":"Are the conversions exact?","acceptedAnswer":{"@type":"Answer","text":"Yes. The converter uses the official international definitions (1 inch = 2.54 cm, 1 pound = 0.45359237 kg) and shows results to 6 significant decimals."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Unit Converter</p>
+  <div class="pagehead">
+    <h1>Unit Converter</h1>
+    <p class="lead">Convert between metric and imperial units without the mental math. Length, weight and temperature — pick a category, enter a value, and swap direction with one click.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="cat">Category</label>
+    <select id="cat">
+      <option value="length">Length</option>
+      <option value="weight">Weight</option>
+      <option value="temperature">Temperature</option>
+    </select>
+    <div class="row">
+      <div><label for="val">Value</label><input type="number" id="val" value="1" step="any"></div>
+      <div><label for="from">From</label><select id="from"></select></div>
+      <div><label for="to">To</label><select id="to"></select></div>
+    </div>
+    <button class="btn alt" id="swapBtn">⇅ Swap Units</button>
+    <p class="result" id="out" style="font-size:1.15rem"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Unit Converter</h2>
+    <ol>
+      <li>Select a category: length, weight or temperature.</li>
+      <li>Type the value and choose the “from” and “to” units.</li>
+      <li>Read the result instantly — it updates as you type.</li>
+      <li>Use “Swap Units” to reverse the conversion without re-entering anything.</li>
+    </ol>
+    <h2>Quick Reference</h2>
+    <table class="legal">
+      <tr><th>Conversion</th><th>Equals</th></tr>
+      <tr><td>1 inch</td><td>2.54 cm (exact)</td></tr>
+      <tr><td>1 foot</td><td>30.48 cm · 12 inches</td></tr>
+      <tr><td>1 mile</td><td>1.609 km</td></tr>
+      <tr><td>1 pound</td><td>0.4536 kg · 16 ounces</td></tr>
+      <tr><td>1 kilogram</td><td>2.205 pounds</td></tr>
+      <tr><td>0°C</td><td>32°F · 273.15 K</td></tr>
+      <tr><td>100°C</td><td>212°F · 373.15 K</td></tr>
+    </table>
+    <p>The United States is one of the few countries still using imperial units daily, while science, medicine and most of the world run on metric — so conversions pop up everywhere: recipes in grams vs. cups and ounces, height on a driver’s license in feet and inches, luggage limits in kilograms, and weather forecasts in Fahrenheit. Bookmark this page and the back-and-forth stops being a chore.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How do I convert Celsius to Fahrenheit?</h3><p>Multiply by 9/5 and add 32. Example: 20°C = 68°F. The temperature mode also handles Kelvin.</p></div>
+    <div class="faq"><h3>How many feet are in a meter?</h3><p>About 3.281 feet. One inch is exactly 2.54 cm by international definition.</p></div>
+    <div class="faq"><h3>How do I convert pounds to kilograms?</h3><p>Divide pounds by 2.20462. One pound is exactly 0.45359237 kg.</p></div>
+    <div class="faq"><h3>Are results exact?</h3><p>Yes — official definitions are used, with up to 6 decimal places shown.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../bmi-calculator/">BMI Calculator</a><a href="../percentage-calculator/">Percentage Calculator</a><a href="../image-compressor/">Image Compressor</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var UNITS={
+  length:{base:'meter',units:{millimeter:0.001,centimeter:0.01,meter:1,kilometer:1000,inch:0.0254,foot:0.3048,yard:0.9144,mile:1609.344},
+    labels:{millimeter:'Millimeters (mm)',centimeter:'Centimeters (cm)',meter:'Meters (m)',kilometer:'Kilometers (km)',inch:'Inches (in)',foot:'Feet (ft)',yard:'Yards (yd)',mile:'Miles (mi)'},def:['meter','foot']},
+  weight:{base:'kilogram',units:{gram:0.001,kilogram:1,ounce:0.028349523125,pound:0.45359237,stone:6.35029318,'metric ton':1000},
+    labels:{gram:'Grams (g)',kilogram:'Kilograms (kg)',ounce:'Ounces (oz)',pound:'Pounds (lb)',stone:'Stone (st)','metric ton':'Metric tons (t)'},def:['kilogram','pound']},
+  temperature:{units:{celsius:'Celsius (°C)',fahrenheit:'Fahrenheit (°F)',kelvin:'Kelvin (K)'},def:['celsius','fahrenheit']}
+};
+function fillUnits(){
+  var cat=document.getElementById('cat').value;
+  var from=document.getElementById('from'),to=document.getElementById('to');
+  from.innerHTML='';to.innerHTML='';
+  var labels=UNITS[cat].labels||UNITS[cat].units;
+  Object.keys(labels).forEach(function(k){
+    var o1=document.createElement('option');o1.value=k;o1.textContent=labels[k];from.appendChild(o1);
+    var o2=document.createElement('option');o2.value=k;o2.textContent=labels[k];to.appendChild(o2);
+  });
+  from.value=UNITS[cat].def[0];to.value=UNITS[cat].def[1];
+}
+function fmtNum(n){
+  if(!isFinite(n))return '—';
+  var r=Math.round(n*1e6)/1e6;
+  return r.toLocaleString('en-US',{maximumFractionDigits:6});
+}
+function convert(){
+  var cat=document.getElementById('cat').value;
+  var v=parseFloat(document.getElementById('val').value);
+  var f=document.getElementById('from').value,t=document.getElementById('to').value;
+  var out=document.getElementById('out');
+  if(isNaN(v)){out.textContent='Enter a number to convert.';return;}
+  var res;
+  if(cat==='temperature'){
+    var c; if(f==='celsius')c=v; else if(f==='fahrenheit')c=(v-32)*5/9; else c=v-273.15;
+    if(t==='celsius')res=c; else if(t==='fahrenheit')res=c*9/5+32; else res=c+273.15;
+  }else{
+    var u=UNITS[cat].units;
+    res=v*u[f]/u[t];
+  }
+  out.innerHTML='<b>'+fmtNum(v)+'</b> '+(document.getElementById('from').selectedOptions[0].textContent)+' = <b style="color:var(--accent2)">'+fmtNum(res)+'</b> '+document.getElementById('to').selectedOptions[0].textContent;
+}
+document.getElementById('cat').addEventListener('change',function(){fillUnits();convert();});
+document.getElementById('val').addEventListener('input',convert);
+document.getElementById('from').addEventListener('change',convert);
+document.getElementById('to').addEventListener('change',convert);
+document.getElementById('swapBtn').addEventListener('click',function(){
+  var f=document.getElementById('from'),t=document.getElementById('to'),tmp=f.value;f.value=t.value;t.value=tmp;convert();
+});
+fillUnits();convert();
+</script>
+</body>
+</html>
