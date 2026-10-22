@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Converter — HEX, RGB & HSL Picker | ToolNova</title>
+<meta name="description" content="Free color converter. Pick any color and instantly get its HEX, RGB and HSL values, or type a HEX code to convert it. One-click copy for CSS and design work.">
+<link rel="canonical" href="https://adeellala523.github.io/toolnova/color-converter/">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the difference between HEX, RGB and HSL?","acceptedAnswer":{"@type":"Answer","text":"HEX is a compact code used in web design (#7C5CFF). RGB mixes red, green and blue light from 0–255. HSL describes hue, saturation and lightness, which humans find more intuitive for adjusting colors."}},
+{"@type":"Question","name":"How do I find the HEX code of a color?","acceptedAnswer":{"@type":"Answer","text":"Click the color swatch above and pick your color, or paste a HEX value into the text field — the RGB and HSL equivalents appear instantly."}},
+{"@type":"Question","name":"Which format should I use in CSS?","acceptedAnswer":{"@type":"Answer","text":"All three work in modern CSS. HEX is shortest for solid colors, RGB(A) is handy when you need transparency, and HSL is best when building shades and tints of one hue."}},
+{"@type":"Question","name":"Can I copy the values for my design tool?","acceptedAnswer":{"@type":"Answer","text":"Yes — each value has a copy button. The values work in Figma, Photoshop, Illustrator and directly in CSS code."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › Color Converter</p>
+  <div class="pagehead">
+    <h1>Color Converter</h1>
+    <p class="lead">Pick a color once and get every format you need — HEX for the web, RGB for screens, HSL for building shades. Type a code instead, and the picker follows. Copy any value with a click.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="row" style="align-items:flex-end">
+      <div style="flex:0 0 auto"><label for="picker">Pick a color</label><input type="color" id="picker" value="#7c5cff"></div>
+      <div><label for="hexIn">HEX code</label><input type="text" id="hexIn" value="#7C5CFF" spellcheck="false"></div>
+    </div>
+    <div id="swatch" style="height:90px;border-radius:12px;border:1px solid var(--line);margin-top:14px;background:#7c5cff"></div>
+    <div class="stats">
+      <div class="stat"><b id="vHex" style="font-size:1.05rem">#7C5CFF</b><span>HEX</span><br><button class="btn alt" data-copy="vHex" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
+      <div class="stat"><b id="vRgb" style="font-size:1.05rem">rgb(124, 92, 255)</b><span>RGB</span><br><button class="btn alt" data-copy="vRgb" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
+      <div class="stat"><b id="vHsl" style="font-size:1.05rem">hsl(253, 100%, 68%)</b><span>HSL</span><br><button class="btn alt" data-copy="vHsl" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
+    </div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>How to Use the Color Converter</h2>
+    <ol>
+      <li>Click the color swatch and choose any color, or type a HEX code in the field.</li>
+      <li>The HEX, RGB and HSL values update together, with a large preview.</li>
+      <li>Click a Copy button to grab exactly the format your tool or CSS needs.</li>
+    </ol>
+    <h2>HEX, RGB and HSL — When to Use Each</h2>
+    <p><strong>HEX</strong> (#7C5CFF) is the shorthand of the web: six hexadecimal digits encoding red, green and blue. Designers share brand colors in HEX because it is short and unambiguous. <strong>RGB</strong> spells the same mix out as three numbers from 0–255, and its cousin RGBA adds an alpha channel for transparency — essential for overlays and shadows. <strong>HSL</strong> thinks like a human: pick a hue (the color family on a 0–360° wheel), then saturation (how vivid) and lightness (how bright). Need a darker button hover state? Keep the hue, drop lightness by 10% — that is why CSS custom properties and design systems increasingly start from HSL.</p>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>What is the difference between HEX, RGB and HSL?</h3><p>HEX is a compact code (#7C5CFF), RGB mixes red/green/blue from 0–255, and HSL uses hue, saturation and lightness — easier for humans to adjust.</p></div>
+    <div class="faq"><h3>How do I find a color’s HEX code?</h3><p>Pick the color with the swatch, or paste a HEX in the field — all other formats appear instantly.</p></div>
+    <div class="faq"><h3>Which format should I use in CSS?</h3><p>All work. HEX is shortest, RGB(A) supports transparency, HSL is best for generating shades and tints.</p></div>
+    <div class="faq"><h3>Do the values work in Figma or Photoshop?</h3><p>Yes — copy and paste them into any design tool’s color panel.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../json-formatter/">JSON Formatter</a><a href="../image-compressor/">Image Compressor</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+var picker=document.getElementById('picker'),hexIn=document.getElementById('hexIn'),msg=document.getElementById('msg');
+function hexToRgb(hex){
+  hex=hex.replace('#','');
+  if(hex.length===3)hex=hex.split('').map(function(c){return c+c;}).join('');
+  var n=parseInt(hex,16);
+  return {r:(n>>16)&255,g:(n>>8)&255,b:n&255};
+}
+function rgbToHsl(r,g,b){
+  r/=255;g/=255;b/=255;
+  var max=Math.max(r,g,b),min=Math.min(r,g,b),h=0,s=0,l=(max+min)/2;
+  if(max!==min){
+    var d=max-min;
+    s=l>0.5? d/(2-max-min):d/(max+min);
+    if(max===r)h=(g-b)/d+(g<b?6:0);else if(max===g)h=(b-r)/d+2;else h=(r-g)/d+4;
+    h*=60;
+  }
+  return {h:Math.round(h),s:Math.round(s*100),l:Math.round(l*100)};
+}
+function update(hex){
+  hex='#'+hex.replace('#','').toUpperCase();
+  var rgb=hexToRgb(hex),hsl=rgbToHsl(rgb.r,rgb.g,rgb.b);
+  document.getElementById('vHex').textContent=hex;
+  document.getElementById('vRgb').textContent='rgb('+rgb.r+', '+rgb.g+', '+rgb.b+')';
+  document.getElementById('vHsl').textContent='hsl('+hsl.h+', '+hsl.s+'%, '+hsl.l+'%)';
+  document.getElementById('swatch').style.background=hex;
+  picker.value=hex.toLowerCase();
+  hexIn.value=hex;
+  msg.textContent='';
+}
+picker.addEventListener('input',function(){update(picker.value);});
+hexIn.addEventListener('input',function(){
+  var v=hexIn.value.trim();
+  if(/^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(v)){update(v);}
+  else{msg.innerHTML='<span class="err">Enter a valid HEX code, like #7C5CFF or #F00.</span>';}
+});
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var txt=document.getElementById(b.getAttribute('data-copy')).textContent;
+    function done(){msg.innerHTML='<span class="ok">Copied: '+txt+' ✔</span>';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,done);}
+  });
+});
+update('#7C5CFF');
+</script>
+</body>
+</html>
