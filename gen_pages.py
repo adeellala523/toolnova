@@ -6,6 +6,15 @@ import re, json, os, html as ihtml
 BASE = os.path.dirname(os.path.abspath(__file__))
 BASEURL = "https://trytoolnova.com/"
 
+GA_HEAD = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>"""
+
 def extract(path):
     s = open(path, encoding="utf-8").read()
     title = re.search(r"<title>(.*?)</title>", s, re.S).group(1)
@@ -64,6 +73,7 @@ def build_page(slug, data, ex):
     page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+{GA_HEAD}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{ex['title']}</title>
