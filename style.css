@@ -112,3 +112,19 @@ table.legal td,table.legal th{border:1px solid var(--line);padding:9px 12px;text
   table.legal td,table.legal th{padding:7px 9px;font-size:.88rem;word-break:break-word}
   footer.site .cols{gap:20px}
 }
+/* OmniTools-style homepage anatomy — ToolNova colours */
+.trustpill{display:inline-block;background:var(--tint);border:1px solid #cfe7ea;color:var(--accent-dark);font-weight:700;font-size:.88rem;padding:7px 16px;border-radius:999px;margin-bottom:18px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.badge{background:#fff;border:1px solid var(--line);color:var(--text);font-size:.85rem;font-weight:600;padding:7px 13px;border-radius:999px;box-shadow:0 2px 8px rgba(14,124,134,.05)}
+.card .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.card .chips span{background:var(--tint);border:1px solid #d5e9ec;color:var(--accent-dark);font-size:.76rem;font-weight:700;padding:4px 9px;border-radius:999px}
+.targets-label{text-align:center;font-weight:800;color:var(--text);font-size:1.02rem;letter-spacing:.2px}
+.targets{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.targets a{background:#fff;border:1px solid var(--line);color:var(--text);font-size:.9rem;font-weight:600;padding:9px 15px;border-radius:999px;box-shadow:0 2px 8px rgba(14,124,134,.05)}
+.targets a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:16px}
+.feature{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.feature .ic{font-size:1.6rem}
+.feature h3{margin:8px 0 6px;font-size:1.05rem;color:var(--text)}
+.feature p{color:var(--muted);font-size:.92rem}
+@media(max-width:640px){.badges{gap:6px}.badge{font-size:.8rem;padding:6px 11px}}
