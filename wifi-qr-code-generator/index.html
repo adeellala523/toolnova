@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WiFi QR Code Generator — Share WiFi Without Typing the Password | ToolNova</title>
+<meta name="description" content="Create a free WiFi QR code in seconds — guests scan it and join your network instantly, no typing the password. Works for WPA, WEP and open networks. No sign-up, nothing uploaded.">
+<link rel="canonical" href="https://trytoolnova.com/wifi-qr-code-generator/">
+<link rel="stylesheet" href="../style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"WiFi QR Code Generator — ToolNova","url":"https://trytoolnova.com/wifi-qr-code-generator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript. Requires HTML5.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free online tool that creates a QR code for a WiFi network: guests scan it with their phone camera and join instantly, without typing the password. Supports WPA/WPA2, WEP and open networks."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trytoolnova.com/"},{"@type":"ListItem","position":2,"name":"WiFi QR Code Generator","item":"https://trytoolnova.com/wifi-qr-code-generator/"}]}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How do I create a QR code for my WiFi?",
+"acceptedAnswer": {"@type": "Answer","text": "Type your network name (SSID) above, pick the security type (usually WPA/WPA2), enter the password, and click Generate. Print the code or show it on a screen — anyone who scans it joins the network without typing anything."}
+},
+{
+"@type": "Question",
+"name": "Do guests need a special app to scan a WiFi QR code?",
+"acceptedAnswer": {"@type": "Answer","text": "No. On iPhones (iOS 11 and later) and most Android phones, the built-in camera app reads the code and offers a Join button. No app download, no extra step."}
+},
+{
+"@type": "Question",
+"name": "Is my WiFi password safe in a QR code?",
+"acceptedAnswer": {"@type": "Answer","text": "The password is encoded inside the code itself — anyone who scans it can join, so only share the printed code with people you would give the password to anyway. Nothing is uploaded or stored here: the code is generated entirely in your browser."}
+},
+{
+"@type": "Question",
+"name": "Does a WiFi QR code work for a hidden network?",
+"acceptedAnswer": {"@type": "Answer","text": "Yes — tick the 'Hidden network' box above. The code then carries a flag telling the phone the network is not broadcasting its name, so it connects instead of searching for a visible network."}
+},
+{
+"@type": "Question",
+"name": "What if my network has no password?",
+"acceptedAnswer": {"@type": "Answer","text": "Choose 'No password (open network)' as the security type. The code will connect guests straight to the open network. Only do this for genuinely public networks, since open WiFi has no encryption."}
+},
+{
+"@type": "Question",
+"name": "Does a WiFi QR code expire?",
+"acceptedAnswer": {"@type": "Answer","text": "No. The code is static — it keeps working as long as your network name and password stay the same. If you change the WiFi password, generate and print a new code."}
+},
+{
+"@type": "Question",
+"name": "What size should I print a WiFi QR code?",
+"acceptedAnswer": {"@type": "Answer","text": "For a table card or a framed sign scanned from arm's length, about 2.5 cm (1 inch) square is enough. For a poster scanned from a few steps away, go bigger — a useful rule is 10:1, so a code scanned from 1 meter away should be at least 10 cm wide. Download at 1024 × 1024 for print."}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../"><span class="logobox">⚡</span><span class="wordmark">Tool<span>Nova</span></span></a>
+  <nav class="main"><a href="../word-counter/"><span class="nic">📝</span>Word Counter</a><a href="../password-generator/"><span class="nic">🔐</span>Password</a><a href="../qr-code-generator/"><span class="nic">🔳</span>QR Code</a><a href="../image-compressor/"><span class="nic">🖼️</span>Image</a><a href="../bmi-calculator/"><span class="nic">⚖️</span>BMI</a><a href="../emi-calculator/"><span class="nic">🏦</span>Loan</a></nav>
+  <div class="headright"><a class="circbtn" href="../#toolGrid" aria-label="All tools">⊞</a><button class="burger" aria-label="Menu" onclick="this.closest('header').classList.toggle('open')">☰</button></div>
+</div>
+<div class="mobilenav"><a href="../word-counter/">📝 Word Counter</a><a href="../password-generator/">🔐 Password Generator</a><a href="../qr-code-generator/">🔳 QR Code Generator</a><a href="../image-compressor/">🖼️ Image Compressor</a><a href="../bmi-calculator/">⚖️ BMI Calculator</a><a href="../emi-calculator/">🏦 EMI / Loan Calculator</a><a href="../guides/">📚 Guides</a><a href="../about/">ℹ️ About</a><a href="../contact/">✉️ Contact</a></div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › WiFi QR Code Generator</p>
+  <div class="pagehead">
+    <h1>WiFi QR Code Generator</h1>
+    <p class="lead">Let guests join your WiFi by <strong>scanning a code — no typing the password, no spelling it out loud, no typos</strong>. Fill in your network details, print the code, and stick it on the wall. Free, instant, <strong>100% local in your browser · no sign-up</strong>.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="ssid">WiFi network name (SSID)</label>
+    <input type="text" id="ssid" placeholder="e.g. CafeLuna_Guest" autocomplete="off">
+    <label for="security">Security type</label>
+    <select id="security"><option value="WPA" selected>WPA / WPA2 (most home &amp; business routers)</option><option value="WEP">WEP (older routers)</option><option value="nopass">No password (open network)</option></select>
+    <div id="pwWrap">
+      <label for="wifipw">WiFi password</label>
+      <input type="password" id="wifipw" placeholder="Your WiFi password" autocomplete="off">
+      <label style="font-weight:400;font-size:.92rem"><input type="checkbox" id="showPw"> Show password</label>
+    </div>
+    <label style="font-weight:400;font-size:.92rem"><input type="checkbox" id="hiddenNet"> Hidden network (SSID not broadcast)</label>
+    <label for="qrSize">Download size</label>
+    <select id="qrSize"><option value="256">256 × 256</option><option value="512" selected>512 × 512</option><option value="1024">1024 × 1024 (best for print)</option></select>
+    <div style="text-align:center;margin-top:16px">
+      <div id="qrBox" style="display:inline-block;background:#fff;padding:14px;border-radius:12px;line-height:0"></div>
+    </div>
+    <div style="text-align:center"><button class="btn" id="genBtn">📶 Generate WiFi QR Code</button><button class="btn teal" id="dlBtn">⬇️ Download PNG</button></div>
+    <p class="result" id="msg"></p>
+    <p id="payload" style="display:none;color:var(--muted);font-size:.82rem;word-break:break-all;text-align:center;margin-top:8px"></p>
+  </div>
+
+  <section class="block">
+    <h2>Why a WiFi QR Code Beats Reading the Password Out Loud</h2>
+    <p>Every café owner, Airbnb host, office manager and homeowner knows the ritual: a guest asks for the WiFi, you recite a 16-character password full of capitals, digits and symbols, they mistype it twice, and you both lose a minute. A printed WiFi QR code ends that ritual. The guest points their phone camera at the code, taps "Join", and they're online — no typing, no misheard characters, no password written on a sticky note for the whole room to read.</p>
+<p>It also solves a quieter problem: the password itself stays out of sight. Guests never see the actual characters, so they can't pass them on by accident — or by text message to someone you never invited onto the network. And because the code is static, it works forever: print it once for the guest room, the café table, or the office lobby, and it keeps working until you change the network name or password.</p>
+    <h2>How a WiFi QR Code Works</h2>
+    <ol>
+<li>Type your network name exactly as it appears on the router — WiFi names are case-sensitive, so "CafeLuna" and "cafeluna" are different networks.</li>
+<li>Pick the security type. Almost every modern router uses WPA/WPA2; only choose WEP for genuinely old equipment, and "No password" only for a truly public network.</li>
+<li>Enter the password (or tick "Hidden network" if your router doesn't broadcast the name), then click "Generate WiFi QR Code".</li>
+<li>Test it with your own phone camera before printing: it should offer to join the network immediately. Then download the PNG and print it wherever guests will see it.</li>
+</ol>
+<p>Behind the scenes, the code stores a short text string in the standard format phones understand — for example <code>WIFI:T:WPA;S:CafeLuna_Guest;P:coff33time!;H:false;;</code> — with special characters escaped so the phone reads the name and password exactly. The code above shows you the exact string it generated, so you can check it before you print.</p>
+    <h2>A Worked Example</h2>
+    <div class="example"><p>A small café's guest network is called <strong>CafeLuna_Guest</strong>, password <strong>coff33time!</strong>, WPA2 security. The owner types those details here, generates the code at 1024 × 1024, downloads the PNG, and prints it on a small framed card for each table: "Free WiFi — scan to join."</p>
+<p>Result: new customers connect in about five seconds instead of flagging down staff and misspelling the password. Staff stop repeating the password all day, guests stop asking, and the password itself is never displayed in plain text. When the café eventually changes the password, the owner generates a fresh code and swaps the cards — a two-minute job.</p></div>
+    <h2>Tips for WiFi QR Codes That Connect First Time</h2>
+    <ul>
+<li><strong>Copy the network name exactly — including capitals, spaces and symbols.</strong> A single wrong character means the phone tries to join a network that doesn't exist. Double-check against the router label or your phone's WiFi settings.</li>
+<li><strong>Test on both an iPhone and an Android phone if you can.</strong> Both read WiFi codes from the built-in camera, but older Android models sometimes need the code scanned from Google Lens instead.</li>
+<li><strong>Print at 1024 × 1024 for anything on paper.</strong> Small downloads look fine on screen but go soft when printed; the large size keeps the squares crisp on cards, frames and posters.</li>
+<li><strong>Keep the quiet zone.</strong> The white border around the code is part of the code — don't crop it off and don't print on a dark or busy background.</li>
+<li><strong>Put the code where the phone will actually be.</strong> Table cards, the reception desk, the guest-room nightstand — not behind glass, not above head height, not in dim light.</li>
+</ul>
+    <h2>Common Mistakes to Avoid</h2>
+    <ul>
+<li><strong>Typing the password from memory instead of copying it.</strong> Passwords with look-alike characters (0/O, 1/l) are easy to get wrong. Copy it from the router label or your saved network settings.</li>
+<li><strong>Forgetting the hidden-network tick.</strong> If your router hides its name and you skip the box, phones will look for a visible network and fail to connect.</li>
+<li><strong>Sharing a code for your private network with the public.</strong> A printed code in a shop window gives everyone in range a free connection. Use a separate guest network for public codes and keep your main network private.</li>
+<li><strong>Using an open network for a home or office.</strong> "No password" codes are fine for a genuinely public hotspot, but at home or work they leave every device on the network unprotected.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How do I create a QR code for my WiFi?</h3><p>Type your network name (SSID) above, pick the security type (usually WPA/WPA2), enter the password, and click Generate. Print the code or show it on a screen — anyone who scans it joins the network without typing anything.</p></div>
+    <div class="faq"><h3>Do guests need a special app to scan a WiFi QR code?</h3><p>No. On iPhones (iOS 11 and later) and most Android phones, the built-in camera app reads the code and offers a Join button. No app download, no extra step.</p></div>
+    <div class="faq"><h3>Is my WiFi password safe in a QR code?</h3><p>The password is encoded inside the code itself — anyone who scans it can join, so only share the printed code with people you would give the password to anyway. Nothing is uploaded or stored here: the code is generated entirely in your browser.</p></div>
+    <div class="faq"><h3>Does a WiFi QR code work for a hidden network?</h3><p>Yes — tick the 'Hidden network' box above. The code then carries a flag telling the phone the network is not broadcasting its name, so it connects instead of searching for a visible network.</p></div>
+    <div class="faq"><h3>What if my network has no password?</h3><p>Choose 'No password (open network)' as the security type. The code will connect guests straight to the open network. Only do this for genuinely public networks, since open WiFi has no encryption.</p></div>
+    <div class="faq"><h3>Does a WiFi QR code expire?</h3><p>No. The code is static — it keeps working as long as your network name and password stay the same. If you change the WiFi password, generate and print a new code.</p></div>
+    <div class="faq"><h3>What size should I print a WiFi QR code?</h3><p>For a table card or a framed sign scanned from arm's length, about 2.5 cm (1 inch) square is enough. For a poster scanned from a few steps away, go bigger — a useful rule is 10:1, so a code scanned from 1 meter away should be at least 10 cm wide. Download at 1024 × 1024 for print.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../qr-code-generator/">QR Code Generator</a><a href="../password-generator/">Password Generator</a><a href="../jpg-to-pdf/">JPG to PDF</a><a href="../image-compressor/">Image Compressor</a><a href="../guides/">📚 All Guides</a><a href="../compress-image-to-50kb/">Compress Image to 50KB</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../guides/bmi-explained/">BMI Explained</a><a href="../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+function escWifi(s){
+  return s.replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/:/g,'\\:').replace(/"/g,'\\"');
+}
+function buildPayload(){
+  var ssid=document.getElementById('ssid').value.trim();
+  var sec=document.getElementById('security').value;
+  var pw=document.getElementById('wifipw').value;
+  var hidden=document.getElementById('hiddenNet').checked;
+  if(sec==='nopass'){ return 'WIFI:T:nopass;S:'+escWifi(ssid)+';;'; }
+  var p='WIFI:T:'+sec+';S:'+escWifi(ssid)+';P:'+escWifi(pw)+';';
+  if(hidden){ p+='H:true;'; }
+  return p+';';
+}
+function make(){
+  var ssid=document.getElementById('ssid').value.trim();
+  var sec=document.getElementById('security').value;
+  var pw=document.getElementById('wifipw').value;
+  var size=parseInt(document.getElementById('qrSize').value,10);
+  var box=document.getElementById('qrBox'),msg=document.getElementById('msg'),pl=document.getElementById('payload');
+  if(!ssid){msg.innerHTML='<span class="err">Enter your WiFi network name (SSID) first.</span>';box.innerHTML='';pl.style.display='none';return;}
+  if(sec!=='nopass'&&!pw){msg.innerHTML='<span class="err">Enter the WiFi password, or choose "No password (open network)".</span>';box.innerHTML='';pl.style.display='none';return;}
+  if(typeof QRCode==='undefined'){msg.innerHTML='<span class="err">The QR library could not load. Check your connection and try again.</span>';return;}
+  var payload=buildPayload();
+  box.innerHTML='';msg.textContent='';
+  new QRCode(box,{text:payload,width:size,height:size,correctLevel:QRCode.CorrectLevel.M});
+  pl.textContent='Encoded: '+payload;
+  pl.style.display='block';
+  msg.innerHTML='<span class="ok">WiFi QR code ready — scan it with your phone camera to test it.</span>';
+}
+function syncPwWrap(){
+  var sec=document.getElementById('security').value;
+  document.getElementById('pwWrap').style.display=(sec==='nopass')?'none':'block';
+}
+document.getElementById('genBtn').addEventListener('click',make);
+document.getElementById('security').addEventListener('change',function(){syncPwWrap();make();});
+document.getElementById('showPw').addEventListener('change',function(){
+  document.getElementById('wifipw').type=this.checked?'text':'password';
+});
+document.getElementById('ssid').addEventListener('input',make);
+document.getElementById('wifipw').addEventListener('input',make);
+document.getElementById('hiddenNet').addEventListener('change',make);
+document.getElementById('qrSize').addEventListener('change',make);
+document.getElementById('dlBtn').addEventListener('click',function(){
+  var msg=document.getElementById('msg');
+  var canvas=document.querySelector('#qrBox canvas');
+  var img=document.querySelector('#qrBox img');
+  var url=null;
+  if(canvas){url=canvas.toDataURL('image/png');}
+  else if(img&&img.src){url=img.src;}
+  if(!url){msg.innerHTML='<span class="err">Generate a WiFi QR code first, then download it.</span>';return;}
+  var src=new Image();
+  src.onload=function(){
+    var pad=Math.round(src.width*0.06);
+    var c=document.createElement('canvas');c.width=src.width+pad*2;c.height=src.height+pad*2;
+    var ctx=c.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,c.width,c.height);
+    ctx.drawImage(src,pad,pad);
+    var a=document.createElement('a');a.download='toolnova-wifi-qr-code.png';a.href=c.toDataURL('image/png');a.click();
+    msg.innerHTML='<span class="ok">PNG downloaded ✔</span>';
+  };
+  src.src=url;
+});
+syncPwWrap();
+</script>
+</body>
+</html>
