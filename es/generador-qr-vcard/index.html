@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de código QR vCard gratis | ToolNova</title>
+<meta name="description" content="Convierte tus datos de contacto en un código QR vCard gratis: quien lo escanee guarda tu nombre, teléfono, correo y empresa en su agenda al instante. Sin registro.">
+<link rel="canonical" href="https://trytoolnova.com/es/generador-qr-vcard/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/generador-qr-vcard/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/vcard-qr-code-generator/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/vcard-qr-code-generator/">
+<link rel="stylesheet" href="../../style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Generador de código QR vCard",
+"url": "https://trytoolnova.com/es/generador-qr-vcard/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Generador de código QR vCard",
+"item": "https://trytoolnova.com/es/generador-qr-vcard/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿La otra persona necesita una aplicación especial?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. La cámara del teléfono lee el código y ofrece guardar el contacto directamente. No hace falta instalar nada ni tener cuenta en ningún servicio."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué datos incluye el código QR vCard?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Nombre y apellidos, empresa, cargo, teléfono, correo electrónico y sitio web. Solo se incluyen los campos que rellenas: los opcionales pueden dejarse en blanco."
+}
+},
+{
+"@type": "Question",
+"name": "¿Funciona en iPhone y Android?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Ambos sistemas importan vCards desde la cámara desde hace años, así que el mismo código sirve para todos los visitantes."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo cambiar los datos después de imprimir el código?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No: el código es estático y guarda los datos de ese momento. Si cambias de teléfono, correo o empresa, genera un código nuevo y sustituye el impreso."
+}
+},
+{
+"@type": "Question",
+"name": "¿Mis datos se suben a algún servidor?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. El código se genera en tu navegador con JavaScript. Nada se transmite ni se guarda en ningún servidor: cierra la pestaña y tus datos desaparecen con ella."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué tamaño de descarga elijo?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "512 × 512 basta para compartir en pantalla o por mensaje. Para imprimir en tarjetas, carteles o folletos, elige 1024 × 1024 para que la impresión salga nítida."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../vcard-qr-code-generator/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Generador de código QR vCard</p>
+  <div class="pagehead">
+    <h1>Generador de código QR vCard</h1>
+    <p class="lead">Convierte tus datos de contacto en un código QR vCard y deja de dictar números de teléfono. Quien escanee el código guarda tu nombre, teléfono, correo y empresa en su agenda al instante, sin escribir nada y sin errores de copia.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="firstName">Nombre</label>
+    <input type="text" id="firstName" placeholder="p. ej. Emma" autocomplete="off">
+    <label for="lastName">Apellidos</label>
+    <input type="text" id="lastName" placeholder="p. ej. Rodriguez" autocomplete="off">
+    <label for="org">Empresa u organización (opcional)</label>
+    <input type="text" id="org" placeholder="p. ej. Rodriguez Realty" autocomplete="off">
+    <label for="jobTitle">Cargo (opcional)</label>
+    <input type="text" id="jobTitle" placeholder="p. ej. Agente inmobiliario" autocomplete="off">
+    <label for="phone">Teléfono</label>
+    <input type="text" id="phone" placeholder="p. ej. +34 612 345 678" autocomplete="off">
+    <label for="email">Correo electrónico</label>
+    <input type="text" id="email" placeholder="p. ej. emma@rodriguezrealty.com" autocomplete="off">
+    <label for="website">Sitio web (opcional)</label>
+    <input type="text" id="website" placeholder="p. ej. https://rodriguezrealty.com" autocomplete="off">
+    <label for="qrSize">Tamaño de descarga</label>
+    <select id="qrSize"><option value="256">256 × 256</option><option value="512" selected>512 × 512</option><option value="1024">1024 × 1024 (ideal para imprimir)</option></select>
+    <div style="text-align:center;margin-top:16px">
+      <div id="qrBox" style="display:inline-block;background:#fff;padding:14px;border-radius:12px;line-height:0"></div>
+    </div>
+    <div style="text-align:center"><button class="btn" id="genBtn">👤 Generar código QR vCard</button><button class="btn teal" id="dlBtn">⬇️ Descargar PNG</button></div>
+    <p class="result" id="msg"></p>
+    <p id="payload" style="display:none;color:var(--muted);font-size:.82rem;word-break:break-all;text-align:center;margin-top:8px;white-space:pre-wrap"></p>
+  </div>
+
+  <section class="block">
+    <h2>Qué es una vCard y por qué ahorra errores</h2>
+    <p>Una vCard es el formato estándar de tarjeta de contacto digital: un bloque de texto que cualquier teléfono sabe interpretar. Cuando la cámara escanea un código QR vCard, el teléfono reconoce los campos (nombre, teléfono, correo, empresa) y ofrece guardarlos como un contacto nuevo, sin que nadie tenga que teclear un solo dígito. Eso elimina la fuente de error más común al compartir un número: la transcripción manual.</p>
+<p>El formato que genera esta herramienta es vCard 3.0, compatible con iPhone y Android desde hace años. No depende de ninguna aplicación ni servicio: el código es solo texto, y el teléfono hace el resto.</p>
+    <h2>Cómo usar el generador</h2>
+    <ol>
+<li>Escribe tu nombre y apellidos. Son los únicos campos obligatorios junto con un teléfono o un correo.</li>
+<li>Añade empresa, cargo, teléfono, correo y sitio web si quieres que aparezcan en el contacto guardado.</li>
+<li>Haz clic en «Generar código QR vCard» y pruébalo con tu propio teléfono: deberías ver tu nombre y tus datos listos para guardar.</li>
+<li>Descarga el PNG en 512 × 512 para pantalla o 1024 × 1024 para imprimir en tarjetas, carteles o folletos.</li>
+</ol>
+    <h2>Ejemplo práctico: la tarjeta de la agente inmobiliaria</h2>
+    <p>Emma Rodríguez, agente inmobiliaria, pone un código QR en el cartel de una jornada de puertas abiertas. Sus datos son: Inmobiliaria Rodríguez, teléfono +34 612 345 678, correo emma@inmobiliariarodriguez.com y web inmobiliariarodriguez.com. El código guarda esta vCard:</p>
+<div class="example"><p><code>BEGIN:VCARD<br>VERSION:3.0<br>N:Rodríguez;Emma<br>FN:Emma Rodríguez<br>ORG:Inmobiliaria Rodríguez<br>TITLE:Agente inmobiliario<br>TEL;TYPE=CELL:+34 612 345 678<br>EMAIL;TYPE=INTERNET:emma@inmobiliariarodriguez.com<br>URL:https://inmobiliariarodriguez.com<br>END:VCARD</code></p>
+<p>El visitante escanea el cartel y guarda el contacto en segundos, sin pedir una tarjeta de papel que luego se pierde en un bolsillo.</p></div>
+    <h2>Consejos para un QR de contacto útil</h2>
+    <ul>
+<li><strong>Comparte solo lo que quieres que cualquiera tenga.</strong> Un código impreso en un cartel público es, en la práctica, público. Incluye tu teléfono profesional, no el personal, si prefieres separarlos.</li>
+<li><strong>Prueba el escaneo antes de imprimir.</strong> Comprueba que el nombre aparece correctamente y que el teléfono y el correo son los actuales.</li>
+<li><strong>Úsalo donde la gente ya tiene el móvil en la mano:</strong> tarjetas de visita, carteles de eventos, folletos, la firma de tus presentaciones o la mesa de una feria.</li>
+<li><strong>Mantén los datos al día.</strong> El código es estático: si cambias de número, genera uno nuevo.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Generar un contacto vacío.</strong> Sin teléfono ni correo, el contacto guardado no sirve para nada. La herramienta te avisa si faltan ambos.</li>
+<li><strong>Datos desactualizados.</strong> Un número antiguo en un código impreso es peor que no tener código: la gente llama y nadie contesta.</li>
+<li><strong>Imprimirlo demasiado pequeño.</strong> En una tarjeta de visita, el código debe ocupar al menos un par de centímetros; diminuto, la cámara no lo enfoca.</li>
+<li><strong>Tapar los cuadrados con un logotipo.</strong> Los códigos QR toleran cierto daño, pero un logo grande en el centro puede hacerlos ilegibles.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿La otra persona necesita una aplicación especial?</h3><p>No. La cámara del teléfono lee el código y ofrece guardar el contacto directamente. No hace falta instalar nada ni tener cuenta en ningún servicio.</p></div>
+    <div class="faq"><h3>¿Qué datos incluye el código QR vCard?</h3><p>Nombre y apellidos, empresa, cargo, teléfono, correo electrónico y sitio web. Solo se incluyen los campos que rellenas: los opcionales pueden dejarse en blanco.</p></div>
+    <div class="faq"><h3>¿Funciona en iPhone y Android?</h3><p>Sí. Ambos sistemas importan vCards desde la cámara desde hace años, así que el mismo código sirve para todos los visitantes.</p></div>
+    <div class="faq"><h3>¿Puedo cambiar los datos después de imprimir el código?</h3><p>No: el código es estático y guarda los datos de ese momento. Si cambias de teléfono, correo o empresa, genera un código nuevo y sustituye el impreso.</p></div>
+    <div class="faq"><h3>¿Mis datos se suben a algún servidor?</h3><p>No. El código se genera en tu navegador con JavaScript. Nada se transmite ni se guarda en ningún servidor: cierra la pestaña y tus datos desaparecen con ella.</p></div>
+    <div class="faq"><h3>¿Qué tamaño de descarga elijo?</h3><p>512 × 512 basta para compartir en pantalla o por mensaje. Para imprimir en tarjetas, carteles o folletos, elige 1024 × 1024 para que la impresión salga nítida.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../contador-de-palabras/">Contador de palabras</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+function escVcard(s){
+  return s.replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/;/g,'\\;').replace(/,/g,'\\,');
+}
+function buildVcard(){
+  var first=document.getElementById('firstName').value.trim();
+  var last=document.getElementById('lastName').value.trim();
+  var org=document.getElementById('org').value.trim();
+  var title=document.getElementById('jobTitle').value.trim();
+  var phone=document.getElementById('phone').value.trim();
+  var email=document.getElementById('email').value.trim();
+  var website=document.getElementById('website').value.trim();
+  var lines=['BEGIN:VCARD','VERSION:3.0'];
+  lines.push('N:'+escVcard(last)+';'+escVcard(first)+';;;');
+  var full=[first,last].filter(function(x){return x;}).join(' ');
+  lines.push('FN:'+escVcard(full));
+  if(org){ lines.push('ORG:'+escVcard(org)); }
+  if(title){ lines.push('TITLE:'+escVcard(title)); }
+  if(phone){ lines.push('TEL;TYPE=CELL:'+escVcard(phone)); }
+  if(email){ lines.push('EMAIL:'+escVcard(email)); }
+  if(website){ lines.push('URL:'+escVcard(website)); }
+  lines.push('END:VCARD');
+  return lines.join('\n');
+}
+function make(){
+  var first=document.getElementById('firstName').value.trim();
+  var last=document.getElementById('lastName').value.trim();
+  var phone=document.getElementById('phone').value.trim();
+  var email=document.getElementById('email').value.trim();
+  var size=parseInt(document.getElementById('qrSize').value,10);
+  var box=document.getElementById('qrBox'),msg=document.getElementById('msg'),pl=document.getElementById('payload');
+  if(!first && !last){msg.innerHTML='<span class="err">Escribe primero tu nombre.</span>';box.innerHTML='';pl.style.display='none';return;}
+  if(!phone && !email){msg.innerHTML='<span class="err">Escribe un teléfono o un correo electrónico, o el contacto guardado quedaría vacío.</span>';box.innerHTML='';pl.style.display='none';return;}
+  if(typeof QRCode==='undefined'){msg.innerHTML='<span class="err">No se pudo cargar la librería QR. Revisa tu conexión e inténtalo de nuevo.</span>';return;}
+  var payload=buildVcard();
+  box.innerHTML='';msg.textContent='';
+  new QRCode(box,{text:payload,width:size,height:size,correctLevel:QRCode.CorrectLevel.M});
+  pl.textContent='Codificado: '+payload;
+  pl.style.display='block';
+  msg.innerHTML='<span class="ok">Código QR vCard listo — escanéalo con la cámara de tu móvil para probarlo.</span>';
+}
+document.getElementById('genBtn').addEventListener('click',make);
+['firstName','lastName','org','jobTitle','phone','email','website'].forEach(function(id){
+  document.getElementById(id).addEventListener('input',make);
+});
+document.getElementById('qrSize').addEventListener('change',make);
+document.getElementById('dlBtn').addEventListener('click',function(){
+  var msg=document.getElementById('msg');
+  var canvas=document.querySelector('#qrBox canvas');
+  var img=document.querySelector('#qrBox img');
+  var url=null;
+  if(canvas){url=canvas.toDataURL('image/png');}
+  else if(img&&img.src){url=img.src;}
+  if(!url){msg.innerHTML='<span class="err">Genera primero un código QR vCard y luego descárgalo.</span>';return;}
+  var src=new Image();
+  src.onload=function(){
+    var pad=Math.round(src.width*0.06);
+    var c=document.createElement('canvas');c.width=src.width+pad*2;c.height=src.height+pad*2;
+    var ctx=c.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,c.width,c.height);
+    ctx.drawImage(src,pad,pad);
+    var a=document.createElement('a');a.download='toolnova-vcard-qr-code.png';a.href=c.toDataURL('image/png');a.click();
+    msg.innerHTML='<span class="ok">PNG descargado ✔</span>';
+  };
+  src.src=url;
+});
+</script>
+</body>
+</html>
