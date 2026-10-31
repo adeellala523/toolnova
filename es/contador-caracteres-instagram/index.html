@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador de caracteres de Instagram gratis | ToolNova</title>
+<meta name="description" content="Cuenta los caracteres de tu descripción o biografía de Instagram en vivo: límite de 2.200 para descripciones y 150 para la bio, con aviso de hashtags y vista previa del corte «… más».">
+<link rel="canonical" href="https://trytoolnova.com/es/contador-caracteres-instagram/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/contador-caracteres-instagram/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/instagram-character-counter/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/instagram-character-counter/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Contador de caracteres de Instagram",
+"url": "https://trytoolnova.com/es/contador-caracteres-instagram/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Contador de caracteres de Instagram",
+"item": "https://trytoolnova.com/es/contador-caracteres-instagram/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Cuántos caracteres permite una descripción de Instagram?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "2.200 caracteres como máximo. Todo lo que escribes en la descripción cuenta: letras, espacios, emojis, hashtags y menciones."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cuántos caracteres tiene la biografía de Instagram?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "150 caracteres. Es un límite estricto: si escribes más, el exceso se recorta al guardar."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cuántos hashtags puedo usar por publicación?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "30 como máximo por publicación. Pasarte de 30 puede impedir la publicación o reducir su alcance, así que este contador te avisa en cuanto los superas."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué es el corte «… más»?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "En el feed, Instagram solo muestra los primeros ~125 caracteres de una descripción; el resto queda oculto hasta que el lector toca «… más». Por eso conviene poner el mensaje importante al principio."
+}
+},
+{
+"@type": "Question",
+"name": "¿Los hashtags cuentan para el límite de caracteres?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Cada hashtag, con su almohadilla incluida, consume caracteres del límite de 2.200 igual que cualquier otra palabra."
+}
+},
+{
+"@type": "Question",
+"name": "¿Sirve también para las descripciones de Reels?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Las descripciones de Reels comparten el mismo límite de 2.200 caracteres que las publicaciones del feed, así que puedes prepararlas aquí de la misma forma."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../instagram-character-counter/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Contador de caracteres de Instagram</p>
+  <div class="pagehead">
+    <h1>Contador de caracteres de Instagram</h1>
+    <p class="lead">Cuenta los caracteres de tu descripción o biografía de Instagram en vivo y publica sin sorpresas: 2.200 caracteres para descripciones, 150 para la bio, aviso cuando pasas de 30 hashtags y vista previa de lo que se ve antes de «… más».</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="mode">¿Qué estás escribiendo?</label>
+    <select id="mode" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:12px">
+      <option value="2200">Descripción — límite de 2.200 caracteres</option>
+      <option value="150">Biografía — límite de 150 caracteres</option>
+    </select>
+    <label for="draft">Tu borrador</label>
+    <textarea id="draft" placeholder="Escribe o pega aquí tu descripción de Instagram… p. ej. Pan de masa madre al atardecer, recién salido del horno 🍞 ¡Nuestra hornada del sábado ya está lista! Pide antes de las 18:00 y evita la cola. Enlace en la bio. #masamadre #panaderia #panfresco #hornadas"></textarea>
+    <div class="stats">
+      <div class="stat"><b id="charCount">0</b><span>Caracteres</span></div>
+      <div class="stat"><b id="remaining">2200</b><span>Caracteres restantes</span></div>
+      <div class="stat"><b id="wordCount">0</b><span>Palabras</span></div>
+      <div class="stat"><b id="hashCount">0</b><span>Hashtags (máx. 30)</span></div>
+      <div class="stat"><b id="mentionCount">0</b><span>Menciones</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+    <p class="result" id="foldOut"></p>
+    <div style="text-align:center"><button class="btn teal" id="copyBtn">📋 Copiar borrador</button><button class="btn" id="clearBtn">🗑️ Limpiar</button></div>
+  </div>
+
+  <section class="block">
+    <h2>Por qué un contador normal no basta para Instagram</h2>
+    <p>Un contador genérico te dice cuántos caracteres tiene tu texto, pero Instagram tiene tres reglas propias que un contador normal ignora. Primera: la descripción permite 2.200 caracteres, pero la biografía solo 150, y superar ese límite recorta tu texto sin aviso. Segunda: una publicación admite como máximo 30 hashtags; pasar de ahí puede impedir la publicación o reducir su alcance. Tercera: en el feed solo se muestran unos 125 caracteres antes del corte «… más», así que una llamada a la acción enterrada al final puede no verla casi nadie.</p>
+<p>Este contador conoce las tres reglas. Cambia entre modo descripción y modo biografía, cuenta tus hashtags, te avisa cuando te pasas y te muestra exactamente qué parte de tu texto verá la gente antes de tocar «… más».</p>
+    <h2>Cómo usar el contador</h2>
+    <ol>
+<li>Elige qué estás escribiendo: «Descripción» (límite de 2.200 caracteres) o «Biografía» (límite de 150).</li>
+<li>Escribe o pega tu borrador. Los contadores de caracteres, palabras, hashtags y menciones se actualizan en vivo.</li>
+<li>Observa el aviso: «Cabe» con los caracteres restantes, o cuánto te pasas del límite si hay que recortar.</li>
+<li>Revisa la vista previa del corte: en modo descripción, verás qué se muestra antes de «… más».</li>
+<li>Copia el borrador con un clic cuando esté listo, o limpia el cuadro para empezar de nuevo.</li>
+</ol>
+    <h2>Ejemplo práctico: la descripción de la panadería</h2>
+    <p>Una panadería prepara esta descripción: «Pan de masa madre al atardecer, recién salido del horno 🍞 ¡Nuestra hornada del sábado ya está lista! Pide antes de las 18:00 y evita la cola. Enlace en la bio. #masamadre #panaderia #panfresco #hornadas». El contador mide <strong>203 caracteres, 35 palabras y 4 hashtags, con 1.997 caracteres restantes</strong> de los 2.200 permitidos: cabe sin problema.</p>
+<div class="example"><p>Pero la vista previa del corte revela un problema: en el feed solo se ve hasta «Pide antes de las 18:00» y luego aparece «… más». La frase «Enlace en la bio» queda oculta tras el corte. La solución es sencilla: mover la llamada a la acción antes de los primeros 125 caracteres, o acortar el inicio para que el enlace quede a la vista.</p></div>
+    <h2>Consejos para descripciones y bios que funcionan</h2>
+    <ul>
+<li><strong>Pon el gancho antes del corte.</strong> Las primeras 125 caracteres deciden si alguien toca «… más». El mensaje importante va primero; los detalles, después.</li>
+<li><strong>Deja los hashtags para el final.</strong> Cuentan para el límite igual que el resto del texto, pero no aportan nada a la lectura: al final no estorban y siguen funcionando.</li>
+<li><strong>En la bio, cada carácter cuenta.</strong> Con solo 150, escribe qué haces, para quién y qué debe hacer el visitante (por ejemplo, «Pide por WhatsApp»), y deja el enlace para el campo de enlace.</li>
+<li><strong>Deja siempre un pequeño margen.</strong> Los emojis y caracteres especiales pueden contar de forma distinta según la plataforma; si estás justo en el límite, recorta un poco.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Contar con una herramienta genérica e ignorar el corte.</strong> Tu texto puede «caber» en 2.200 caracteres y, aun así, esconder lo importante tras «… más».</li>
+<li><strong>Usar más de 30 hashtags.</strong> Instagram permite 30 por publicación; pasarse puede bloquear la publicación o limitar su alcance.</li>
+<li><strong>Escribir una bio de más de 150 caracteres.</strong> El exceso se recorta, a menudo justo en la llamada a la acción.</li>
+<li><strong>Publicar sin revisar la vista previa.</strong> Un salto de línea en mal sitio o un hashtag pegado al texto cambia lo que la gente ve primero.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Cuántos caracteres permite una descripción de Instagram?</h3><p>2.200 caracteres como máximo. Todo lo que escribes en la descripción cuenta: letras, espacios, emojis, hashtags y menciones.</p></div>
+    <div class="faq"><h3>¿Cuántos caracteres tiene la biografía de Instagram?</h3><p>150 caracteres. Es un límite estricto: si escribes más, el exceso se recorta al guardar.</p></div>
+    <div class="faq"><h3>¿Cuántos hashtags puedo usar por publicación?</h3><p>30 como máximo por publicación. Pasarte de 30 puede impedir la publicación o reducir su alcance, así que este contador te avisa en cuanto los superas.</p></div>
+    <div class="faq"><h3>¿Qué es el corte «… más»?</h3><p>En el feed, Instagram solo muestra los primeros ~125 caracteres de una descripción; el resto queda oculto hasta que el lector toca «… más». Por eso conviene poner el mensaje importante al principio.</p></div>
+    <div class="faq"><h3>¿Los hashtags cuentan para el límite de caracteres?</h3><p>Sí. Cada hashtag, con su almohadilla incluida, consume caracteres del límite de 2.200 igual que cualquier otra palabra.</p></div>
+    <div class="faq"><h3>¿Sirve también para las descripciones de Reels?</h3><p>Sí. Las descripciones de Reels comparten el mismo límite de 2.200 caracteres que las publicaciones del feed, así que puedes prepararlas aquí de la misma forma.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../contador-de-palabras/">Contador de palabras</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+function update(){
+  var limit = parseInt(document.getElementById('mode').value, 10);
+  var text = document.getElementById('draft').value;
+  var words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  var hashes = (text.match(/#[\w]+/g) || []).length;
+  var mentions = (text.match(/@[\w]+/g) || []).length;
+  document.getElementById('charCount').textContent = text.length;
+  document.getElementById('remaining').textContent = limit - text.length;
+  document.getElementById('wordCount').textContent = words;
+  document.getElementById('hashCount').textContent = hashes;
+  document.getElementById('mentionCount').textContent = mentions;
+  var msg = document.getElementById('msg');
+  var parts = [];
+  if(!text){ msg.textContent = ''; }
+  else {
+    if(text.length <= limit){ parts.push('<span class="ok">Cabe ✔ — ' + (limit - text.length) + ' caracteres restantes de ' + limit + '.</span>'); }
+    else { parts.push('<span class="err">Te pasas del límite por ' + (text.length - limit) + ' caracteres — acórtalo antes de publicar.</span>'); }
+    if(hashes > 30){ parts.push('<span class="err">Demasiados hashtags: ' + hashes + ' (Instagram permite 30 por publicación).</span>'); }
+    msg.innerHTML = parts.join(' ');
+  }
+  var fold = document.getElementById('foldOut');
+  if(!text || limit !== 2200){ fold.textContent = ''; }
+  else if(text.length > 125){ fold.innerHTML = '<strong>Vista previa (antes de "… más"):</strong> ' + escapeHtml(text.slice(0, 125)) + '… <em>más</em>'; }
+  else { fold.innerHTML = '<strong>Vista previa:</strong> se muestra toda la descripción: está por debajo del corte de ~125 caracteres.'; }
+}
+function escapeHtml(s){
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+document.getElementById('draft').addEventListener('input', update);
+document.getElementById('mode').addEventListener('change', update);
+document.getElementById('copyBtn').addEventListener('click', function(){
+  var text = document.getElementById('draft').value;
+  var msg = document.getElementById('msg');
+  if(!text){ msg.innerHTML = '<span class="err">No hay nada que copiar todavía.</span>'; return; }
+  if(navigator.clipboard){ navigator.clipboard.writeText(text).then(function(){ msg.innerHTML = '<span class="ok">Borrador copiado ✔</span>'; }); }
+  else { var t = document.getElementById('draft'); t.select(); document.execCommand('copy'); msg.innerHTML = '<span class="ok">Borrador copiado ✔</span>'; }
+});
+document.getElementById('clearBtn').addEventListener('click', function(){
+  document.getElementById('draft').value = '';
+  update();
+});
+update();
+</script>
+</body>
+</html>
