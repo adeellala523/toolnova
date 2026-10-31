@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de HEX a RGB gratis | ToolNova</title>
+<meta name="description" content="Convierte códigos de color HEX a RGB, RGBA y HSL al instante, con muestra de color en vivo y conversión inversa de RGB a HEX. Gratis y sin registro.">
+<link rel="canonical" href="https://trytoolnova.com/es/hex-a-rgb/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/hex-a-rgb/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/hex-to-rgb/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/hex-to-rgb/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Conversor de HEX a RGB",
+"url": "https://trytoolnova.com/es/hex-a-rgb/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Conversor de HEX a RGB",
+"item": "https://trytoolnova.com/es/hex-a-rgb/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Cómo se convierte HEX a RGB?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Se divide el código en tres pares hexadecimales y cada par se pasa a decimal: en #0e7c86, 0e es 14 (rojo), 7c es 124 (verde) y 86 es 134 (azul). El resultado es rgb(14, 124, 134)."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué es RGBA?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Es RGB más un canal alfa que indica la opacidad, de 0 (totalmente transparente) a 1 (totalmente opaco). rgba(14, 124, 134, 0.5) es el mismo verde azulado al 50% de opacidad."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo usar códigos HEX de 3 dígitos?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Cada dígito se duplica: #F53 se expande a #FF5533 y equivale a rgb(255, 85, 51). Es una abreviatura habitual en CSS."
+}
+},
+{
+"@type": "Question",
+"name": "¿HEX y RGB representan exactamente el mismo color?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Son dos notaciones del mismo color: HEX lo escribe en base 16 y RGB en tres valores decimales. Convertir de uno a otro no cambia el color."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué el conversor muestra también HSL?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Porque muchos diseñadores piensan en tono, saturación y luminosidad al ajustar un color. HSL hace intuitivo, por ejemplo, aclarar u oscurecer un color sin cambiar su tono."
+}
+},
+{
+"@type": "Question",
+"name": "¿Tengo que escribir la almohadilla (#)?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. El conversor acepta el código con o sin almohadilla (#0e7c86 o 0e7c86). En tu CSS, eso sí, el HEX debe llevarla delante."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../hex-to-rgb/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Conversor de HEX a RGB</p>
+  <div class="pagehead">
+    <h1>Conversor de HEX a RGB</h1>
+    <p class="lead">Convierte cualquier código de color HEX a RGB, RGBA y HSL al instante, con muestra de color en vivo y conversión inversa de RGB a HEX. Para diseñadores y desarrolladores que necesitan el mismo color en dos formatos distintos.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="hexInput">Código de color HEX</label>
+    <input id="hexInput" type="text" value="#0e7c86" placeholder="#0e7c86 o FF5733" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:12px">
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+      <label for="picker" style="margin:0">O elige un color:</label>
+      <input id="picker" type="color" value="#0e7c86" style="width:56px;height:40px;padding:2px;border:1px solid #ddd;border-radius:8px;cursor:pointer">
+      <div id="swatch" style="width:56px;height:40px;border-radius:8px;border:1px solid #ddd;background:#0e7c86"></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="rgbOut">rgb(14, 124, 134)</b><span>RGB</span></div>
+      <div class="stat"><b id="rgbaOut">rgba(14, 124, 134, 1)</b><span>RGBA</span></div>
+      <div class="stat"><b id="hslOut">hsl(185, 81%, 29%)</b><span>HSL</span></div>
+      <div class="stat"><b id="hexOut">#0E7C86</b><span>HEX (normalizado)</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+    <div style="text-align:center"><button class="btn teal" id="copyRgb">📋 Copiar RGB</button><button class="btn" id="copyCss">📋 Copiar CSS</button></div>
+    <hr style="border:none;border-top:1px solid #eee;margin:20px 0">
+    <p style="margin:0 0 10px"><strong>Inverso: RGB → HEX</strong></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input id="rIn" type="number" min="0" max="255" value="14" placeholder="R" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+      <input id="gIn" type="number" min="0" max="255" value="124" placeholder="G" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+      <input id="bIn" type="number" min="0" max="255" value="134" placeholder="B" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+    </div>
+    <p class="result" id="revOut"></p>
+  </div>
+
+  <section class="block">
+    <h2>Por qué necesitas RGB si ya tienes HEX</h2>
+    <p>HEX y RGB describen el mismo color, pero no sirven para lo mismo. HEX es compacto y es el formato habitual en paletas de diseño y guías de marca. RGB es el que necesitas cuando el color debe variar: sobre todo para la transparencia. En CSS, un color semitransparente se escribe con <code>rgba()</code>, y no existe equivalente directo en HEX clásico. Por eso, para superponer un color sobre una foto o crear un degradado suave, primero hay que convertirlo.</p>
+<p>HSL, el tercer formato que muestra esta herramienta, es el que usan muchos diseñadores para razonar sobre el color: tono (qué color es), saturación (qué intenso es) y luminosidad (qué claro u oscuro es). Cambiar la luminosidad de un HSL es más intuitivo que tocar tres números RGB.</p>
+    <h2>Cómo usar el conversor</h2>
+    <ol>
+<li>Escribe o pega un código HEX, con o sin almohadilla (#0e7c86 o 0e7c86): el resultado se actualiza al instante.</li>
+<li>O elige un color con el selector: verás la muestra y todos los formatos a la vez.</li>
+<li>Copia el valor RGB o la regla CSS completa con un clic.</li>
+<li>Para el camino inverso, escribe los valores R, G y B (de 0 a 255) en la sección «Inverso: RGB → HEX».</li>
+</ol>
+    <h2>Ejemplo práctico: el verde azulado de ToolNova</h2>
+    <p>El color principal de este sitio es <strong>#0e7c86</strong>. Al convertirlo, la herramienta muestra <strong>rgb(14, 124, 134)</strong>, <strong>hsl(185, 81%, 29%)</strong> y el HEX normalizado <strong>#0E7C86</strong>. Para una superposición semitransparente del mismo color sobre una imagen, basta con añadir el canal alfa: <code>rgba(14, 124, 134, 0.5)</code>.</p>
+<div class="example"><p>Otros dos casos útiles: <strong>#FF5733</strong> (un coral intenso) se convierte en <strong>rgb(255, 87, 51)</strong>, y el código abreviado <strong>#F53</strong> se expande primero a <strong>#FF5533</strong> y luego a <strong>rgb(255, 85, 51)</strong>. Cada par hexadecimal es un número en base 16: 0e es 14, 7c es 124 y 86 es 134.</p></div>
+    <h2>Consejos para trabajar con colores</h2>
+    <ul>
+<li><strong>Usa el selector para explorar.</strong> Mueve el color hasta que la muestra se parezca a lo que buscas y copia el formato que necesites, sin adivinar códigos.</li>
+<li><strong>Copia la regla CSS completa.</strong> El botón «Copiar CSS» entrega el valor listo para pegar en tu hoja de estilos, sin reescribir nada a mano.</li>
+<li><strong>Guarda el HEX normalizado.</strong> La herramienta muestra el código en mayúsculas y con almohadilla: es la forma canónica para guardarlo en una guía de marca.</li>
+<li><strong>Recuerda que solo RGBA tiene transparencia.</strong> Si necesitas un color al 50%, usa rgba() con alfa 0.5: rgb() no admite transparencia.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Escribir caracteres que no son hexadecimales.</strong> Solo valen los dígitos 0–9 y las letras a–f. Un «g» o una «z» hacen que el código no sea válido, y la herramienta te avisará.</li>
+<li><strong>Confundir el orden RGB.</strong> El primer par es rojo, el segundo verde y el tercero azul: #FF0000 es rojo puro, no azul.</li>
+<li><strong>Esperar transparencia de rgb().</strong> Sin el canal alfa no hay transparencia: para eso está rgba().</li>
+<li><strong>Olvidar la almohadilla en CSS.</strong> En una hoja de estilos el HEX lleva # delante; el conversor acepta el código con o sin ella, pero tu CSS la necesita.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Cómo se convierte HEX a RGB?</h3><p>Se divide el código en tres pares hexadecimales y cada par se pasa a decimal: en #0e7c86, 0e es 14 (rojo), 7c es 124 (verde) y 86 es 134 (azul). El resultado es rgb(14, 124, 134).</p></div>
+    <div class="faq"><h3>¿Qué es RGBA?</h3><p>Es RGB más un canal alfa que indica la opacidad, de 0 (totalmente transparente) a 1 (totalmente opaco). rgba(14, 124, 134, 0.5) es el mismo verde azulado al 50% de opacidad.</p></div>
+    <div class="faq"><h3>¿Puedo usar códigos HEX de 3 dígitos?</h3><p>Sí. Cada dígito se duplica: #F53 se expande a #FF5533 y equivale a rgb(255, 85, 51). Es una abreviatura habitual en CSS.</p></div>
+    <div class="faq"><h3>¿HEX y RGB representan exactamente el mismo color?</h3><p>Sí. Son dos notaciones del mismo color: HEX lo escribe en base 16 y RGB en tres valores decimales. Convertir de uno a otro no cambia el color.</p></div>
+    <div class="faq"><h3>¿Por qué el conversor muestra también HSL?</h3><p>Porque muchos diseñadores piensan en tono, saturación y luminosidad al ajustar un color. HSL hace intuitivo, por ejemplo, aclarar u oscurecer un color sin cambiar su tono.</p></div>
+    <div class="faq"><h3>¿Tengo que escribir la almohadilla (#)?</h3><p>No. El conversor acepta el código con o sin almohadilla (#0e7c86 o 0e7c86). En tu CSS, eso sí, el HEX debe llevarla delante.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+function parseHex(raw){
+  var h = raw.trim().replace(/^#/, '');
+  if(/^[0-9a-fA-F]{3}$/.test(h)){ h = h.split('').map(function(c){ return c + c; }).join(''); }
+  if(!/^[0-9a-fA-F]{6}$/.test(h)){ return null; }
+  return { r: parseInt(h.slice(0,2), 16), g: parseInt(h.slice(2,4), 16), b: parseInt(h.slice(4,6), 16), hex: '#' + h.toUpperCase() };
+}
+function rgbToHsl(r, g, b){
+  r /= 255; g /= 255; b /= 255;
+  var max = Math.max(r, g, b), min = Math.min(r, g, b), h = 0, s = 0, l = (max + min) / 2;
+  if(max !== min){
+    var d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    if(max === r){ h = (g - b) / d + (g < b ? 6 : 0); }
+    else if(max === g){ h = (b - r) / d + 2; }
+    else { h = (r - g) / d + 4; }
+    h *= 60;
+  }
+  return 'hsl(' + Math.round(h) + ', ' + Math.round(s * 100) + '%, ' + Math.round(l * 100) + '%)';
+}
+function update(){
+  var c = parseHex(document.getElementById('hexInput').value);
+  var msg = document.getElementById('msg');
+  if(!c){ msg.innerHTML = '<span class="err">Eso no parece un código hex: prueba con #0e7c86, FF5733 o un código de 3 dígitos como #F53.</span>'; return; }
+  msg.textContent = '';
+  document.getElementById('rgbOut').textContent = 'rgb(' + c.r + ', ' + c.g + ', ' + c.b + ')';
+  document.getElementById('rgbaOut').textContent = 'rgba(' + c.r + ', ' + c.g + ', ' + c.b + ', 1)';
+  document.getElementById('hslOut').textContent = rgbToHsl(c.r, c.g, c.b);
+  document.getElementById('hexOut').textContent = c.hex;
+  document.getElementById('swatch').style.background = c.hex;
+  if(document.getElementById('picker').value.toUpperCase() !== c.hex){ document.getElementById('picker').value = c.hex; }
+  document.getElementById('rIn').value = c.r;
+  document.getElementById('gIn').value = c.g;
+  document.getElementById('bIn').value = c.b;
+  updateReverse();
+}
+function updateReverse(){
+  var r = parseInt(document.getElementById('rIn').value, 10);
+  var g = parseInt(document.getElementById('gIn').value, 10);
+  var b = parseInt(document.getElementById('bIn').value, 10);
+  var out = document.getElementById('revOut');
+  if([r, g, b].some(function(v){ return isNaN(v) || v < 0 || v > 255; })){ out.innerHTML = '<span class="err">Cada valor RGB debe ser un número entero entre 0 y 255.</span>'; return; }
+  var hex = '#' + [r, g, b].map(function(v){ return v.toString(16).padStart(2, '0'); }).join('').toUpperCase();
+  out.innerHTML = '<span class="ok">HEX: ' + hex + ' — rgb(' + r + ', ' + g + ', ' + b + ')</span>';
+}
+function copyText(t, doneMsg){
+  var msg = document.getElementById('msg');
+  if(navigator.clipboard){ navigator.clipboard.writeText(t).then(function(){ msg.innerHTML = '<span class="ok">' + doneMsg + '</span>'; }); }
+  else { msg.innerHTML = '<span class="err">La copia no es compatible con este navegador: selecciona el valor manualmente.</span>'; }
+}
+document.getElementById('hexInput').addEventListener('input', update);
+document.getElementById('picker').addEventListener('input', function(){ document.getElementById('hexInput').value = this.value; update(); });
+document.getElementById('copyRgb').addEventListener('click', function(){ copyText(document.getElementById('rgbOut').textContent, 'RGB copiado ✔'); });
+document.getElementById('copyCss').addEventListener('click', function(){ copyText('color: ' + document.getElementById('rgbOut').textContent + ';', 'CSS copiado ✔'); });
+['rIn', 'gIn', 'bIn'].forEach(function(id){ document.getElementById(id).addEventListener('input', updateReverse); });
+update();
+</script>
+</body>
+</html>
