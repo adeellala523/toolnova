@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador de caracteres de X (Twitter) gratis | ToolNova</title>
+<meta name="description" content="Cuenta tus caracteres exactamente como los cuenta X: cada enlace vale 23 caracteres, límite de 280, con divisor de hilos que parte tu texto sin pasarse del límite.">
+<link rel="canonical" href="https://trytoolnova.com/es/contador-caracteres-twitter/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/contador-caracteres-twitter/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/twitter-character-counter/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/twitter-character-counter/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Contador de caracteres de X (Twitter)",
+"url": "https://trytoolnova.com/es/contador-caracteres-twitter/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Contador de caracteres de X (Twitter)",
+"item": "https://trytoolnova.com/es/contador-caracteres-twitter/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Cuántos caracteres permite X por publicación?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "280 caracteres. Es el límite para cuentas estándar; el contador te muestra en vivo cuántos te quedan."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cómo cuenta X los enlaces?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Cada enlace se acorta automáticamente con t.co y cuenta como 23 caracteres, sin importar su longitud real. Por eso un enlace de 70 caracteres solo «cuesta» 23."
+}
+},
+{
+"@type": "Question",
+"name": "¿Las imágenes o vídeos restan caracteres?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. Los archivos adjuntos (imágenes, vídeos, encuestas) no consumen caracteres del límite de 280; solo el texto, los enlaces, los hashtags y las menciones cuentan."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué pasa si me paso de 280 caracteres?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "X no permite publicar el tuit. Tienes dos opciones: recortarlo hasta que quepa, o dividirlo en un hilo con el botón «Dividir en un hilo»."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cómo funciona el divisor de hilos?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Parte tu texto por palabras, no a mitad de palabra, y deja un margen de 275 caracteres por parte para que la numeración del hilo (1/, 2/…) no empuje ninguna publicación por encima de 280."
+}
+},
+{
+"@type": "Question",
+"name": "¿Los hashtags y menciones cuentan para el límite?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí, como caracteres normales: cada letra, la almohadilla y la arroba incluidas. Solo los enlaces tienen la regla especial de 23 caracteres."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../twitter-character-counter/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Contador de caracteres de X (Twitter)</p>
+  <div class="pagehead">
+    <h1>Contador de caracteres de X (Twitter)</h1>
+    <p class="lead">Cuenta tus caracteres exactamente como los cuenta X: cada enlace vale 23 caracteres aunque sea mucho más largo, el límite es de 280 y, si te pasas, el divisor de hilos parte tu texto en publicaciones encadenadas sin que ninguna supere el límite.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="draft">Tu borrador de publicación</label>
+    <textarea id="draft" placeholder="Escribe o pega aquí tu tuit… p. ej. ¡Nuestra nueva guía ya está disponible! Aprende a comprimir imágenes sin perder calidad: https://trytoolnova.com/guides/compress-images-without-losing-quality/ #fotografía"></textarea>
+    <div class="stats">
+      <div class="stat"><b id="xCount">0</b><span>Caracteres en X (enlaces = 23)</span></div>
+      <div class="stat"><b id="remaining">280</b><span>Caracteres restantes</span></div>
+      <div class="stat"><b id="rawCount">0</b><span>Caracteres escritos</span></div>
+      <div class="stat"><b id="wordCount">0</b><span>Palabras</span></div>
+      <div class="stat"><b id="hashCount">0</b><span>Hashtags</span></div>
+      <div class="stat"><b id="mentionCount">0</b><span>Menciones</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+    <div style="text-align:center"><button class="btn" id="threadBtn">🧵 Dividir en un hilo</button><button class="btn teal" id="copyBtn">📋 Copiar borrador</button><button class="btn" id="clearBtn">🗑️ Limpiar</button></div>
+    <p class="result" id="threadOut"></p>
+  </div>
+
+  <section class="block">
+    <h2>Por qué un contador normal se equivoca en X</h2>
+    <p>X acorta todos los enlaces a través de su acortador t.co, y cada enlace acortado cuenta como 23 caracteres, sin importar que el enlace original tenga 20 o 200. Un contador normal cuenta la longitud real del enlace y te dice que te pasas del límite cuando en realidad cabes, o al revés. Este contador aplica la regla de X: sustituye cada enlace por 23 caracteres antes de contar.</p>
+<p>El límite es de 280 caracteres por publicación. Cuando tu borrador lo supera, no basta con saberlo: necesitas dividirlo. Por eso la herramienta incluye un divisor de hilos que parte tu texto por palabras, con un margen de seguridad para que la numeración del hilo no empuje ninguna parte por encima de 280.</p>
+    <h2>Cómo usar el contador</h2>
+    <ol>
+<li>Escribe o pega tu borrador. El contador muestra los caracteres en X (con enlaces a 23), los caracteres restantes, los caracteres escritos, palabras, hashtags y menciones.</li>
+<li>Si el borrador cabe, verás «Cabe en X» con los caracteres restantes. Si te pasas, verás por cuántos caracteres.</li>
+<li>Si te pasas, haz clic en «Dividir en un hilo»: tu texto se parte en publicaciones encadenadas, cada una dentro del límite.</li>
+<li>Copia el borrador con un clic cuando esté listo, o limpia el cuadro para empezar de nuevo.</li>
+</ol>
+    <h2>Ejemplo práctico: el anuncio de la guía</h2>
+    <p>Quieres anunciar una guía con este texto: «¡Nuestra nueva guía ya está disponible! Aprende a comprimir imágenes sin perder calidad: https://trytoolnova.com/guides/compress-images-without-losing-quality/ #fotografía». Un contador normal mide 171 caracteres escritos, pero eso engaña: el enlace tiene 70 caracteres y X lo cuenta como 23.</p>
+<div class="example"><p>El contador de X mide <strong>124 caracteres, con 156 restantes</strong> de los 280 permitidos, además de 15 palabras y 1 hashtag. El tuit cabe con margen, y lo sabes antes de abrir X, no después de que te rechace la publicación.</p></div>
+    <h2>Consejos para publicar en X</h2>
+    <ul>
+<li><strong>Acorta los enlaces aunque cuenten 23 igualmente.</strong> No cambia el conteo, pero un enlace corto se lee mejor y deja más espacio visual para tu mensaje.</li>
+<li><strong>Empieza el hilo con el gancho.</strong> El primer tuit decide si alguien sigue leyendo: la conclusión o la frase más fuerte va primero, los detalles después.</li>
+<li><strong>Usa hashtags con moderación.</strong> Cada hashtag cuesta caracteres como cualquier palabra; dos o tres bien elegidos rinden más que una ristra.</li>
+<li><strong>Deja margen para las menciones.</strong> Si vas a mencionar a alguien al publicar, esos caracteres también cuentan: no apures el límite a 280 exactos.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Fiarse del conteo bruto.</strong> Un borrador con dos enlaces largos puede parecer de 400 caracteres y medir 280 en X, o viceversa: cuenta como cuenta X.</li>
+<li><strong>Partir un hilo a mitad de palabra.</strong> El divisor de esta herramienta parte por palabras y deja margen para la numeración, para que ninguna parte se pase del límite.</li>
+<li><strong>Olvidar que menciones y hashtags también cuentan.</strong> Solo los archivos adjuntos (imágenes, vídeos) no consumen caracteres del límite.</li>
+<li><strong>Escribir el hilo directamente en X.</strong> Allí un error de conteo te obliga a reescribir; aquí lo ves antes de publicar.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Cuántos caracteres permite X por publicación?</h3><p>280 caracteres. Es el límite para cuentas estándar; el contador te muestra en vivo cuántos te quedan.</p></div>
+    <div class="faq"><h3>¿Cómo cuenta X los enlaces?</h3><p>Cada enlace se acorta automáticamente con t.co y cuenta como 23 caracteres, sin importar su longitud real. Por eso un enlace de 70 caracteres solo «cuesta» 23.</p></div>
+    <div class="faq"><h3>¿Las imágenes o vídeos restan caracteres?</h3><p>No. Los archivos adjuntos (imágenes, vídeos, encuestas) no consumen caracteres del límite de 280; solo el texto, los enlaces, los hashtags y las menciones cuentan.</p></div>
+    <div class="faq"><h3>¿Qué pasa si me paso de 280 caracteres?</h3><p>X no permite publicar el tuit. Tienes dos opciones: recortarlo hasta que quepa, o dividirlo en un hilo con el botón «Dividir en un hilo».</p></div>
+    <div class="faq"><h3>¿Cómo funciona el divisor de hilos?</h3><p>Parte tu texto por palabras, no a mitad de palabra, y deja un margen de 275 caracteres por parte para que la numeración del hilo (1/, 2/…) no empuje ninguna publicación por encima de 280.</p></div>
+    <div class="faq"><h3>¿Los hashtags y menciones cuentan para el límite?</h3><p>Sí, como caracteres normales: cada letra, la almohadilla y la arroba incluidas. Solo los enlaces tienen la regla especial de 23 caracteres.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../contador-de-palabras/">Contador de palabras</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+var URL_RE = /https?:\/\/\S+/g;
+function xCount(text){
+  var urls = text.match(URL_RE) || [];
+  var count = text.length;
+  urls.forEach(function(u){ count += 23 - u.length; });
+  return {count: count, urls: urls.length};
+}
+function update(){
+  var text = document.getElementById('draft').value;
+  var xc = xCount(text);
+  var words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  var hashes = (text.match(/#[\w]+/g) || []).length;
+  var mentions = (text.match(/@[\w]+/g) || []).length;
+  document.getElementById('xCount').textContent = xc.count;
+  document.getElementById('remaining').textContent = 280 - xc.count;
+  document.getElementById('rawCount').textContent = text.length;
+  document.getElementById('wordCount').textContent = words;
+  document.getElementById('hashCount').textContent = hashes;
+  document.getElementById('mentionCount').textContent = mentions;
+  var msg = document.getElementById('msg');
+  if(!text){ msg.textContent = ''; }
+  else if(xc.count <= 280){ msg.innerHTML = '<span class="ok">Cabe en X ✔ — ' + (280 - xc.count) + ' caracteres restantes (cada enlace cuenta como 23).</span>'; }
+  else { msg.innerHTML = '<span class="err">Te pasas del límite por ' + (xc.count - 280) + ' caracteres — recórtalo o divídelo en un hilo abajo.</span>'; }
+  document.getElementById('threadOut').textContent = '';
+}
+function splitThread(text){
+  var parts = [];
+  var words = text.split(/\s+/);
+  var cur = '';
+  words.forEach(function(w){
+    var trial = cur ? cur + ' ' + w : w;
+    if(xCount(trial).count > 275 && cur){ parts.push(cur); cur = w; }
+    else { cur = trial; }
+  });
+  if(cur){ parts.push(cur); }
+  return parts;
+}
+document.getElementById('draft').addEventListener('input', update);
+document.getElementById('threadBtn').addEventListener('click', function(){
+  var text = document.getElementById('draft').value.trim();
+  var out = document.getElementById('threadOut');
+  if(!text){ out.innerHTML = '<span class="err">Escribe o pega primero un borrador.</span>'; return; }
+  var parts = splitThread(text);
+  if(parts.length === 1){ out.innerHTML = '<span class="ok">Este borrador ya cabe en una sola publicación: no necesitas un hilo.</span>'; return; }
+  var label = parts.map(function(p, i){ return (i + 1) + '/' + parts.length + ' ' + p; }).join('\n\n');
+  out.textContent = label;
+});
+document.getElementById('copyBtn').addEventListener('click', function(){
+  var text = document.getElementById('draft').value;
+  var msg = document.getElementById('msg');
+  if(!text){ msg.innerHTML = '<span class="err">No hay nada que copiar todavía.</span>'; return; }
+  if(navigator.clipboard){ navigator.clipboard.writeText(text).then(function(){ msg.innerHTML = '<span class="ok">Borrador copiado ✔</span>'; }); }
+  else { var t = document.getElementById('draft'); t.select(); document.execCommand('copy'); msg.innerHTML = '<span class="ok">Borrador copiado ✔</span>'; }
+});
+document.getElementById('clearBtn').addEventListener('click', function(){
+  document.getElementById('draft').value = '';
+  update();
+});
+update();
+</script>
+</body>
+</html>
