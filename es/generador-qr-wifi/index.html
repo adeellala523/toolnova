@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de código QR WiFi gratis | ToolNova</title>
+<meta name="description" content="Crea un código QR para tu WiFi gratis: escribe el nombre de la red y la contraseña y genera un QR que conecta a tus visitas sin dictar la clave. Sin registro y sin subir tus datos.">
+<link rel="canonical" href="https://trytoolnova.com/es/generador-qr-wifi/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/generador-qr-wifi/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/wifi-qr-code-generator/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/wifi-qr-code-generator/">
+<link rel="stylesheet" href="../../style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Generador de código QR WiFi",
+"url": "https://trytoolnova.com/es/generador-qr-wifi/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Generador de código QR WiFi",
+"item": "https://trytoolnova.com/es/generador-qr-wifi/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿El código QR revela mi contraseña?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí, por diseño: el código contiene la contraseña para que el teléfono pueda conectarse sin escribirla. Eso significa que cualquiera que escanee el código puede entrar en tu red. Para visitas en casa o clientes en tu local es justo lo que quieres; para una red privada, no publiques el código en internet."
+}
+},
+{
+"@type": "Question",
+"name": "¿Funciona en iPhone y Android?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Los teléfonos modernos leen códigos QR de WiFi directamente con la cámara, sin instalar ninguna aplicación. Al escanear, el teléfono muestra el nombre de la red y un botón para unirse."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué pasa si cambio la contraseña del WiFi?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "El código QR queda obsoleto, porque guarda la contraseña de ese momento. Genera uno nuevo con la clave actual: lleva menos de un minuto."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué significan WPA, WEP y «sin contraseña»?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "WPA / WPA2 es el estándar de seguridad actual de la mayoría de routers domésticos y de empresa. WEP es un sistema antiguo y débil que solo deberías elegir si tu router no ofrece otra opción. «Sin contraseña» genera un código para redes abiertas, a las que cualquiera puede conectarse."
+}
+},
+{
+"@type": "Question",
+"name": "¿Funciona si mi red es oculta?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí: marca «Red oculta (SSID no difundido)» y el código incluirá esa marca para que el teléfono busque la red aunque no aparezca en la lista de redes disponibles."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo imprimir el código para mi negocio?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Descarga el PNG en 1024 × 1024, imprímelo en un tamaño visible sobre fondo blanco y pruébalo con tu propio teléfono antes de imprimir en lote."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../wifi-qr-code-generator/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Generador de código QR WiFi</p>
+  <div class="pagehead">
+    <h1>Generador de código QR WiFi</h1>
+    <p class="lead">Crea un código QR para tu WiFi y deja de dictar la contraseña letra por letra. Escribe el nombre de la red (SSID) y la clave, genera el código y cualquier visita lo escanea con la cámara del móvil y se conecta al instante, sin errores de tecleo y sin tener que decir la clave en voz alta.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="ssid">Nombre de la red WiFi (SSID)</label>
+    <input type="text" id="ssid" placeholder="p. ej. CafeLuna_Guest" autocomplete="off">
+    <label for="security">Tipo de seguridad</label>
+    <select id="security"><option value="WPA" selected>WPA / WPA2 (la mayoría de routers domésticos y de empresa)</option><option value="WEP">WEP (routers antiguos)</option><option value="nopass">Sin contraseña (red abierta)</option></select>
+    <div id="pwWrap">
+      <label for="wifipw">Contraseña del WiFi</label>
+      <input type="password" id="wifipw" placeholder="Tu contraseña del WiFi" autocomplete="off">
+      <label style="font-weight:400;font-size:.92rem"><input type="checkbox" id="showPw"> Mostrar contraseña</label>
+    </div>
+    <label style="font-weight:400;font-size:.92rem"><input type="checkbox" id="hiddenNet"> Red oculta (SSID no difundido)</label>
+    <label for="qrSize">Tamaño de descarga</label>
+    <select id="qrSize"><option value="256">256 × 256</option><option value="512" selected>512 × 512</option><option value="1024">1024 × 1024 (ideal para imprimir)</option></select>
+    <div style="text-align:center;margin-top:16px">
+      <div id="qrBox" style="display:inline-block;background:#fff;padding:14px;border-radius:12px;line-height:0"></div>
+    </div>
+    <div style="text-align:center"><button class="btn" id="genBtn">📶 Generar código QR de WiFi</button><button class="btn teal" id="dlBtn">⬇️ Descargar PNG</button></div>
+    <p class="result" id="msg"></p>
+    <p id="payload" style="display:none;color:var(--muted);font-size:.82rem;word-break:break-all;text-align:center;margin-top:8px"></p>
+  </div>
+
+  <section class="block">
+    <h2>Qué es un código QR de WiFi</h2>
+    <p>Un código QR de WiFi guarda los datos de tu red en un formato que el teléfono entiende al instante. Cuando la cámara lo escanea, el teléfono reconoce el tipo de seguridad, el nombre de la red y la contraseña, y se conecta sin que nadie tenga que escribir nada. El formato es un texto corto con este aspecto:</p>
+<div class="example"><p><code>WIFI:T:WPA;S:NombreDeLaRed;P:tu-contraseña;;</code></p>
+<p><strong>T</strong> es el tipo de seguridad (WPA, WEP o nopass para redes abiertas), <strong>S</strong> es el nombre de la red (SSID) y <strong>P</strong> es la contraseña. La <strong>H</strong> opcional marca las redes ocultas. Este generador construye ese texto por ti y lo convierte en un código QR descargable: tú solo escribes los datos, como los escribirías en cualquier formulario.</p></div>
+<p>La ventaja real no es tecnológica, es práctica. En una casa, evita el ritual de deletrear una contraseña larga a cada visita. En un café, un consultorio o una oficina, evita tener la clave escrita en un papel pegado en la pared. Y como el código lo lee la cámara del teléfono, no hace falta instalar ninguna aplicación.</p>
+    <h2>Cómo usar el generador</h2>
+    <ol>
+<li>Escribe el nombre de tu red WiFi (SSID) tal como aparece en tu teléfono, respetando mayúsculas y minúsculas.</li>
+<li>Elige el tipo de seguridad: WPA / WPA2 en la mayoría de los casos, WEP solo para routers muy antiguos, o «Sin contraseña» si tu red es abierta.</li>
+<li>Escribe la contraseña. Marca «Mostrar contraseña» si quieres comprobarla antes de generar, y «Red oculta» si tu red no difunde su nombre.</li>
+<li>Haz clic en «Generar código QR de WiFi» y pruébalo con tu propio teléfono antes de imprimirlo.</li>
+<li>Descarga el PNG en 512 × 512 para pantalla o 1024 × 1024 para imprimir.</li>
+</ol>
+    <h2>Ejemplo práctico: la tarjeta del café</h2>
+    <p>Un café quiere que sus clientes se conecten sin preguntar la clave en caja. Su red se llama <em>CafeLuna_Guest</em>, usa WPA y su contraseña es <em>CafeLuna2026!</em> (un ejemplo ilustrativo: nunca uses una contraseña publicada como ejemplo). El generador construye este texto:</p>
+<div class="example"><p><code>WIFI:T:WPA;S:CafeLuna_Guest;P:CafeLuna2026!;;</code></p>
+<p>El código resultante se imprime en una tarjeta sobre cada mesa. El cliente abre la cámara, apunta, toca «Unirse» y está conectado. Si la contraseña contiene punto y coma, coma, dos puntos, comillas o barra invertida, el generador los escapa automáticamente para que el código siga siendo válido.</p></div>
+    <h2>Consejos para un QR que funcione a la primera</h2>
+    <ul>
+<li><strong>Prueba el código con tu propio teléfono antes de imprimirlo.</strong> Un error de una sola letra en el SSID basta para que el código no conecte, y es más barato descubrirlo en pantalla que en cien tarjetas impresas.</li>
+<li><strong>Imprime en 1024 × 1024 y sobre fondo blanco.</strong> Los códigos QR necesitan una «zona tranquila» blanca alrededor; sobre fondos oscuros o estampados, muchas cámaras no los leen.</li>
+<li><strong>Respeta las mayúsculas del SSID.</strong> Los nombres de red distinguen entre mayúsculas y minúsculas: «MiWifi» y «miwifi» son redes distintas.</li>
+<li><strong>Si cambias la contraseña, genera un código nuevo.</strong> El QR es estático: guarda la contraseña de ese momento, no un enlace a tu router.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Un SSID con errata.</strong> Es el fallo más frecuente. Copia el nombre exactamente como aparece en los ajustes de WiFi de tu teléfono.</li>
+<li><strong>Elegir el tipo de seguridad equivocado.</strong> Si tu router usa WPA y eliges WEP (o al revés), el teléfono rechazará la conexión aunque la contraseña sea correcta.</li>
+<li><strong>Compartir el QR en internet sin pensarlo.</strong> Quien escanee el código puede conectarse a tu red. Para tu casa, compártelo en persona; para un negocio, es justo lo que quieres.</li>
+<li><strong>Imprimirlo demasiado pequeño o sobre un fondo oscuro.</strong> Un código diminuto en una tarjeta oscura es decoración, no una herramienta.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿El código QR revela mi contraseña?</h3><p>Sí, por diseño: el código contiene la contraseña para que el teléfono pueda conectarse sin escribirla. Eso significa que cualquiera que escanee el código puede entrar en tu red. Para visitas en casa o clientes en tu local es justo lo que quieres; para una red privada, no publiques el código en internet.</p></div>
+    <div class="faq"><h3>¿Funciona en iPhone y Android?</h3><p>Sí. Los teléfonos modernos leen códigos QR de WiFi directamente con la cámara, sin instalar ninguna aplicación. Al escanear, el teléfono muestra el nombre de la red y un botón para unirse.</p></div>
+    <div class="faq"><h3>¿Qué pasa si cambio la contraseña del WiFi?</h3><p>El código QR queda obsoleto, porque guarda la contraseña de ese momento. Genera uno nuevo con la clave actual: lleva menos de un minuto.</p></div>
+    <div class="faq"><h3>¿Qué significan WPA, WEP y «sin contraseña»?</h3><p>WPA / WPA2 es el estándar de seguridad actual de la mayoría de routers domésticos y de empresa. WEP es un sistema antiguo y débil que solo deberías elegir si tu router no ofrece otra opción. «Sin contraseña» genera un código para redes abiertas, a las que cualquiera puede conectarse.</p></div>
+    <div class="faq"><h3>¿Funciona si mi red es oculta?</h3><p>Sí: marca «Red oculta (SSID no difundido)» y el código incluirá esa marca para que el teléfono busque la red aunque no aparezca en la lista de redes disponibles.</p></div>
+    <div class="faq"><h3>¿Puedo imprimir el código para mi negocio?</h3><p>Sí. Descarga el PNG en 1024 × 1024, imprímelo en un tamaño visible sobre fondo blanco y pruébalo con tu propio teléfono antes de imprimir en lote.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../contador-de-palabras/">Contador de palabras</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+function escWifi(s){
+  return s.replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/:/g,'\\:').replace(/"/g,'\\"');
+}
+function buildPayload(){
+  var ssid=document.getElementById('ssid').value.trim();
+  var sec=document.getElementById('security').value;
+  var pw=document.getElementById('wifipw').value;
+  var hidden=document.getElementById('hiddenNet').checked;
+  if(sec==='nopass'){ return 'WIFI:T:nopass;S:'+escWifi(ssid)+';;'; }
+  var p='WIFI:T:'+sec+';S:'+escWifi(ssid)+';P:'+escWifi(pw)+';';
+  if(hidden){ p+='H:true;'; }
+  return p+';';
+}
+function make(){
+  var ssid=document.getElementById('ssid').value.trim();
+  var sec=document.getElementById('security').value;
+  var pw=document.getElementById('wifipw').value;
+  var size=parseInt(document.getElementById('qrSize').value,10);
+  var box=document.getElementById('qrBox'),msg=document.getElementById('msg'),pl=document.getElementById('payload');
+  if(!ssid){msg.innerHTML='<span class="err">Escribe primero el nombre de tu red WiFi (SSID).</span>';box.innerHTML='';pl.style.display='none';return;}
+  if(sec!=='nopass'&&!pw){msg.innerHTML='<span class="err">Escribe la contraseña del WiFi o elige "Sin contraseña (red abierta)".</span>';box.innerHTML='';pl.style.display='none';return;}
+  if(typeof QRCode==='undefined'){msg.innerHTML='<span class="err">No se pudo cargar la librería QR. Revisa tu conexión e inténtalo de nuevo.</span>';return;}
+  var payload=buildPayload();
+  box.innerHTML='';msg.textContent='';
+  new QRCode(box,{text:payload,width:size,height:size,correctLevel:QRCode.CorrectLevel.M});
+  pl.textContent='Codificado: '+payload;
+  pl.style.display='block';
+  msg.innerHTML='<span class="ok">Código QR de WiFi listo — escanéalo con la cámara de tu móvil para probarlo.</span>';
+}
+function syncPwWrap(){
+  var sec=document.getElementById('security').value;
+  document.getElementById('pwWrap').style.display=(sec==='nopass')?'none':'block';
+}
+document.getElementById('genBtn').addEventListener('click',make);
+document.getElementById('security').addEventListener('change',function(){syncPwWrap();make();});
+document.getElementById('showPw').addEventListener('change',function(){
+  document.getElementById('wifipw').type=this.checked?'text':'password';
+});
+document.getElementById('ssid').addEventListener('input',make);
+document.getElementById('wifipw').addEventListener('input',make);
+document.getElementById('hiddenNet').addEventListener('change',make);
+document.getElementById('qrSize').addEventListener('change',make);
+document.getElementById('dlBtn').addEventListener('click',function(){
+  var msg=document.getElementById('msg');
+  var canvas=document.querySelector('#qrBox canvas');
+  var img=document.querySelector('#qrBox img');
+  var url=null;
+  if(canvas){url=canvas.toDataURL('image/png');}
+  else if(img&&img.src){url=img.src;}
+  if(!url){msg.innerHTML='<span class="err">Genera primero un código QR de WiFi y luego descárgalo.</span>';return;}
+  var src=new Image();
+  src.onload=function(){
+    var pad=Math.round(src.width*0.06);
+    var c=document.createElement('canvas');c.width=src.width+pad*2;c.height=src.height+pad*2;
+    var ctx=c.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,c.width,c.height);
+    ctx.drawImage(src,pad,pad);
+    var a=document.createElement('a');a.download='toolnova-wifi-qr-code.png';a.href=c.toDataURL('image/png');a.click();
+    msg.innerHTML='<span class="ok">PNG descargado ✔</span>';
+  };
+  src.src=url;
+});
+syncPwWrap();
+</script>
+</body>
+</html>
