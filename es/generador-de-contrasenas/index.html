@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de contraseñas seguras online gratis | ToolNova</title>
+<meta name="description" content="Crea contraseñas fuertes y realmente aleatorias con la longitud y la mezcla de caracteres que elijas, generadas en tu propio dispositivo y sin enviarse a ningún servidor.">
+<link rel="canonical" href="https://trytoolnova.com/es/generador-de-contrasenas/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/generador-de-contrasenas/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/password-generator/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/password-generator/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Generador de contraseñas",
+"url": "https://trytoolnova.com/es/generador-de-contrasenas/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Generador de contraseñas",
+"item": "https://trytoolnova.com/es/generador-de-contrasenas/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Las contraseñas son realmente aleatorias?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. El generador construye cada contraseña con el generador de números aleatorios criptográficamente seguro de tu navegador (la API Web Crypto), no con Math.random. Ningún par de clics produce resultados relacionados, y nada se elige de una lista."
+}
+},
+{
+"@type": "Question",
+"name": "¿ToolNova ve o guarda mi contraseña?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. La generación ocurre por completo en tu dispositivo. La contraseña nunca se transmite, se registra ni se guarda: cierra la pestaña y solo existirá donde tú la guardaste."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué longitud debo elegir?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Dieciséis caracteres es un buen mínimo para el día a día. Usa de 20 a 24 para tu correo, tu banca y tus cuentas principales. Algunos sistemas antiguos limitan las contraseñas a 16 o incluso 12 caracteres: en ese caso usa el máximo permitido con todos los tipos de caracteres activos."
+}
+},
+{
+"@type": "Question",
+"name": "¿Debo incluir símbolos?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Si el sitio los permite, sí: los símbolos amplían el conjunto de caracteres posibles y añaden fuerza. Si un sitio rechaza los símbolos (algunos bancos lo hacen), desactívalos y añade unos cuantos caracteres más de longitud para compensar."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cada cuánto debo cambiar mis contraseñas?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "La orientación actual de organismos como el NIST es: cambiar ante evidencia de compromiso, no por calendario. Una contraseña larga, única y aleatoria puede permanecer segura durante años."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo usarlo para mi Wi-Fi o mi router?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Por supuesto, y deberías. Las contraseñas por defecto de los routers vienen impresas en manuales y son ampliamente conocidas. Una contraseña generada de 20 caracteres, guardada en tu gestor, es una guardiana mucho mejor."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../../about/">Acerca de</a><a href="../../contact/">Contacto</a><a href="../../privacy-policy/">Privacidad</a><a href="../../password-generator/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Generador de contraseñas</p>
+  <div class="pagehead">
+    <h1>Generador de contraseñas</h1>
+    <p class="lead">Crea contraseñas fuertes y realmente aleatorias con la longitud y la mezcla de caracteres que elijas, generadas en tu propio dispositivo y sin enviarse jamás a ningún servidor. Si todavía reutilizas una o dos contraseñas en todas tus cuentas (la mayoría de la gente lo hace), esta es la solución de cinco segundos.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="pwd">Tu nueva contraseña</label>
+    <input type="text" id="pwd" readonly style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.05rem">
+    <p style="margin-top:8px">Seguridad: <b id="strength">—</b> · <span id="entropy" style="color:var(--muted)"></span></p>
+    <label for="len">Longitud: <span id="lenVal">16</span> caracteres</label>
+    <input type="range" id="len" min="4" max="64" value="16">
+    <label>Incluir</label>
+    <div class="checks">
+      <label><input type="checkbox" id="cLower" checked> minúsculas (a–z)</label>
+      <label><input type="checkbox" id="cUpper" checked> MAYÚSCULAS (A–Z)</label>
+      <label><input type="checkbox" id="cNum" checked> Números (0–9)</label>
+      <label><input type="checkbox" id="cSym" checked> Símbolos (!@#$…)</label>
+    </div>
+    <button class="btn" id="genBtn">🔄 Generar nueva contraseña</button>
+    <button class="btn teal" id="copyBtn">📋 Copiar contraseña</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>Por qué lo aleatorio vence a lo ingenioso</h2>
+    <p>Las personas somos terribles siendo aleatorias. Pide a cien personas que inventen una contraseña "ingeniosa" y obtendrás estaciones del año, equipos de fútbol, recorridos de teclado como <em>qwerty123</em> y una mayúscula al inicio con un número y un signo de exclamación al final. Los atacantes lo saben. Su software de descifrado prueba exactamente esos patrones primero, miles de millones de veces por segundo, usando listas de contraseñas reales filtradas en brechas anteriores. Los informes de brechas del sector llevan años atribuyendo la mayoría de los accesos no autorizados a credenciales débiles, robadas o reutilizadas: la contraseña ingeniosa se siente segura y no lo es.</p>
+<p>Una contraseña generada por máquina no tiene ningún patrón que adivinar. No se basa en tu cumpleaños, tu mascota ni en ninguna palabra de diccionario, y el generador de esta página usa el generador aleatorio criptográficamente seguro de tu navegador — la misma clase de aleatoriedad en la que confían los sistemas operativos — en lugar de matemáticas simples y predecibles. Lo único que se interpone entre un atacante y una cuenta protegida así es la fuerza bruta: probar todas las combinaciones posibles. Haz la contraseña lo bastante larga y eso dejará de ser una amenaza realista.</p>
+    <h2>Cómo usar el generador de contraseñas</h2>
+    <ol>
+<li>Elige una longitud. Dieciséis caracteres es el valor por defecto y un buen mínimo; usa 20 o más para el correo, la banca y todo aquello que odiarías perder.</li>
+<li>Marca los tipos de caracteres que quieres: minúsculas, mayúsculas, números y símbolos. Déjalos todos activos a menos que un sitio web rechace los símbolos.</li>
+<li>Haz clic en "Generar nueva contraseña". ¿No te gusta? Genera otra: cada clic es un resultado nuevo e independiente, realmente aleatorio.</li>
+<li>Copia la contraseña directamente en el formulario de registro y en tu gestor de contraseñas al mismo tiempo. Nunca la dejes solo en el portapapeles.</li>
+</ol>
+    <h2>Ejemplo práctico: por qué gana la longitud</h2>
+    <div class="example"><p>Compara dos contraseñas. Una contraseña de 8 caracteres usando solo minúsculas tiene 26<sup>8</sup> combinaciones posibles: unos 200.000 millones. Suena mucho hasta que sabes que un equipo moderno de descifrado prueba alrededor de 10.000 millones de intentos por segundo: se agota en unos <strong>20 segundos</strong>.</p>
+<p>Ahora toma una contraseña de 16 caracteres de este generador con todos los tipos de caracteres activos (unos 95 caracteres posibles por posición). Eso es aproximadamente 2<sup>105</sup> combinaciones: la herramienta lo muestra como unos 105 bits de entropía. Al mismo ritmo de 10.000 millones de intentos por segundo, descifrarla llevaría del orden de <strong>100 billones de años</strong>. Duplicar la longitud no duplicó la seguridad; la multiplicó por un factor astronómico. Por eso todos los expertos dan el mismo consejo: primero la longitud, todo lo demás después.</p></div>
+    <h2>Consejos para contraseñas que de verdad te protejan</h2>
+    <ul>
+<li><strong>Una contraseña por cuenta, sin excepciones.</strong> Cuando un sitio filtra datos, solo esa cuenta queda expuesta. Reutilizar es como una cuenta olvidada de un foro se convierte en una cuenta de correo hackeada.</li>
+<li><strong>Usa un gestor de contraseñas.</strong> Nunca se pensó que memorizaras 60 contraseñas aleatorias. Un gestor las recuerda; tú recuerdas una sola contraseña maestra fuerte.</li>
+<li><strong>Activa la autenticación en dos pasos (2FA)</strong> para el correo, la banca y las redes sociales. Una contraseña robada por sí sola ya no bastará para entrar.</li>
+<li><strong>Cambia una contraseña cuando haya un motivo</strong>: un aviso de brecha, una cuenta compartida, un dispositivo perdido. Los cambios forzados por rutina empujan a la gente de vuelta a patrones predecibles.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>"Personalizar" una contraseña generada.</strong> Cambiarla por tus iniciales o tu año de nacimiento reintroduce exactamente los patrones que los atacantes prueban primero. Úsala tal como se generó.</li>
+<li><strong>Guardarla en una app de notas o en una foto.</strong> Las notas simples no están cifradas y se sincronizan en todas partes. Si aún no está en un gestor de contraseñas, escríbela en papel guardado en un lugar seguro, nunca en un mensaje de chat para ti mismo.</li>
+<li><strong>Generarla y perderla.</strong> Guarda la contraseña en la cuenta y en tu gestor en la misma sesión. Una contraseña brillante que no puedes recuperar es solo una puerta cerrada.</li>
+<li><strong>Usar la contraseña de tu correo en cualquier otro sitio.</strong> Tu bandeja de entrada es la llave maestra: allí llegan los restablecimientos de todo lo demás. Dale tu contraseña más larga y única de todas.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Las contraseñas son realmente aleatorias?</h3><p>Sí. El generador construye cada contraseña con el generador de números aleatorios criptográficamente seguro de tu navegador (la API Web Crypto), no con Math.random. Ningún par de clics produce resultados relacionados, y nada se elige de una lista.</p></div>
+    <div class="faq"><h3>¿ToolNova ve o guarda mi contraseña?</h3><p>No. La generación ocurre por completo en tu dispositivo. La contraseña nunca se transmite, se registra ni se guarda: cierra la pestaña y solo existirá donde tú la guardaste.</p></div>
+    <div class="faq"><h3>¿Qué longitud debo elegir?</h3><p>Dieciséis caracteres es un buen mínimo para el día a día. Usa de 20 a 24 para tu correo, tu banca y tus cuentas principales. Algunos sistemas antiguos limitan las contraseñas a 16 o incluso 12 caracteres: en ese caso usa el máximo permitido con todos los tipos de caracteres activos.</p></div>
+    <div class="faq"><h3>¿Debo incluir símbolos?</h3><p>Si el sitio los permite, sí: los símbolos amplían el conjunto de caracteres posibles y añaden fuerza. Si un sitio rechaza los símbolos (algunos bancos lo hacen), desactívalos y añade unos cuantos caracteres más de longitud para compensar.</p></div>
+    <div class="faq"><h3>¿Cada cuánto debo cambiar mis contraseñas?</h3><p>La orientación actual de organismos como el NIST es: cambiar ante evidencia de compromiso, no por calendario. Una contraseña larga, única y aleatoria puede permanecer segura durante años.</p></div>
+    <div class="faq"><h3>¿Puedo usarlo para mi Wi-Fi o mi router?</h3><p>Por supuesto, y deberías. Las contraseñas por defecto de los routers vienen impresas en manuales y son ampliamente conocidas. Una contraseña generada de 20 caracteres, guardada en tu gestor, es una guardiana mucho mejor.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a></div>
+    <div><h4>Sitio</h4><a href="../../about/">Acerca de</a><a href="../../contact/">Contacto</a><a href="../../privacy-policy/">Política de privacidad</a><a href="../../terms/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+var LOWER='abcdefghijklmnopqrstuvwxyz',UPPER='ABCDEFGHIJKLMNOPQRSTUVWXYZ',NUM='0123456789',SYM='!@#$%^&*()-_=+[]{};:,.?';
+function gen(){
+  var sets=[];
+  if(document.getElementById('cLower').checked)sets.push(LOWER);
+  if(document.getElementById('cUpper').checked)sets.push(UPPER);
+  if(document.getElementById('cNum').checked)sets.push(NUM);
+  if(document.getElementById('cSym').checked)sets.push(SYM);
+  var out=document.getElementById('pwd'),msg=document.getElementById('msg');
+  if(!sets.length){out.value='';msg.innerHTML='<span class="err">Marca al menos un tipo de carácter.</span>';return;}
+  var len=parseInt(document.getElementById('len').value,10);
+  var all=sets.join(''),chars=[];
+  var buf=new Uint32Array(len*2);crypto.getRandomValues(buf);var bi=0;
+  function rnd(n){return buf[bi++]%n;}
+  sets.forEach(function(s){ if(chars.length<len) chars.push(s[rnd(s.length)]); });
+  while(chars.length<len)chars.push(all[rnd(all.length)]);
+  for(var i=chars.length-1;i>0;i--){var j=rnd(i+1);var tmp=chars[i];chars[i]=chars[j];chars[j]=tmp;}
+  out.value=chars.join('');
+  var bits=Math.round(len*Math.log2(all.length));
+  var label=bits<40?'Débil':bits<60?'Aceptable':bits<90?'Fuerte':'Muy fuerte';
+  document.getElementById('strength').textContent=label;
+  document.getElementById('entropy').textContent='unos '+bits+' bits de entropía';
+  msg.textContent='';
+}
+document.getElementById('len').addEventListener('input',function(){document.getElementById('lenVal').textContent=this.value;gen();});
+['cLower','cUpper','cNum','cSym'].forEach(function(id){document.getElementById(id).addEventListener('change',gen);});
+document.getElementById('genBtn').addEventListener('click',gen);
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var v=document.getElementById('pwd').value,msg=document.getElementById('msg');
+  if(!v){msg.innerHTML='<span class="err">Genera una contraseña primero.</span>';return;}
+  function done(){msg.innerHTML='<span class="ok">Copiado al portapapeles ✔</span>';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done,function(){fallback();});}else{fallback();}
+  function fallback(){var p=document.getElementById('pwd');p.select();document.execCommand('copy');done();}
+});
+gen();
+</script>
+</body>
+</html>
