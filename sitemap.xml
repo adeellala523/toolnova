@@ -33,4 +33,10 @@
   <url><loc>https://trytoolnova.com/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://trytoolnova.com/terms/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://trytoolnova.com/disclaimer/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://trytoolnova.com/es/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://trytoolnova.com/es/contador-de-palabras/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://trytoolnova.com/es/generador-de-contrasenas/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://trytoolnova.com/es/generador-codigo-qr/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://trytoolnova.com/es/eliminar-lineas-duplicadas/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://trytoolnova.com/es/conversor-mayusculas-minusculas/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
