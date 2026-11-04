@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codificador y decodificador Base64 online gratis | ToolNova</title>
+<meta name="description" content="Codifica texto a Base64 y decodifica Base64 a texto al instante, en tu navegador y sin subir nada a ningún servidor. Gratis y sin registro.">
+<link rel="canonical" href="https://trytoolnova.com/es/codificador-decodificador-base64/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/codificador-decodificador-base64/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/base64-encoder-decoder/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/base64-encoder-decoder/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Codificador y decodificador Base64",
+"url": "https://trytoolnova.com/es/codificador-decodificador-base64/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Codificador y decodificador Base64",
+"item": "https://trytoolnova.com/es/codificador-decodificador-base64/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Base64 es lo mismo que cifrar?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. Cifrar requiere una clave y está pensado para que nadie sin ella pueda leer el contenido. Base64 solo cambia la representación de los datos para que viajen por canales de texto: cualquiera con un decodificador (como esta página) recupera el original al instante. Nunca lo uses como medida de seguridad."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué la salida Base64 es más larga que el texto original?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Porque cada grupo de 3 bytes (24 bits) se representa con 4 caracteres Base64 (6 bits cada uno). Eso hace que la salida sea aproximadamente un 33 % más larga que la entrada, más algún = de relleno al final si la longitud no es múltiplo de 3."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué significan los = del final?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Son relleno (padding). Cuando la cantidad de datos no es múltiplo de 3 bytes, se añaden uno o dos = para completar el último grupo de 4 caracteres. Al decodificar se ignoran, pero conviene conservarlos al copiar para que otras herramientas acepten la cadena."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo decodificar un token JWT aquí?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "En parte: un JWT son tres bloques Base64URL separados por puntos (cabecera, datos y firma). Puedes copiar el segundo bloque y decodificarlo aquí para ver los datos, aunque antes tendrás que sustituir - por + y _ por / si la herramienta te da error, porque los JWT usan la variante URL."
+}
+},
+{
+"@type": "Question",
+"name": "¿Es seguro pegar aquí textos con datos sensibles?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "La herramienta trabaja solo en tu navegador y no envía nada a ningún servidor, pero Base64 no oculta nada: si pegas una clave o una contraseña, cualquiera que vea la salida la leerá en claro. Por principio, no pegues secretos en ninguna herramienta online, ni siquiera en una local."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué me dice que la entrada no es Base64 válido?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Casi siempre por una de estas tres causas: la cadena está recortada al copiar, contiene caracteres fuera del alfabeto Base64 (por ejemplo, comillas pegadas desde un JSON o guiones de la variante URL), o le falta el relleno =. Revisa el principio y el final de la cadena y vuelve a copiarla completa."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../base64-encoder-decoder/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Codificador y decodificador Base64</p>
+  <div class="pagehead">
+    <h1>Codificador y decodificador Base64</h1>
+    <p class="lead">Escribe cualquier texto y conviértelo a Base64, o pega una cadena Base64 y recupere el texto original, todo en un clic y sin salir de tu navegador. Es la herramienta que necesitas cuando una API te devuelve datos codificados, cuando tienes que incrustar texto en una URL o un JSON, o cuando quieres comprobar qué esconde realmente esa cadena larga que parece indescifrable.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="input">Entrada</label>
+    <textarea id="input" placeholder="Escribe texto para codificar, o pega Base64 para decodificar…" style="font-family:ui-monospace,Menlo,Consolas,monospace"></textarea>
+    <div>
+      <button class="btn" id="encBtn">➡️ Codificar a Base64</button>
+      <button class="btn" id="decBtn">⬅️ Decodificar desde Base64</button>
+      <button class="btn alt" id="swapBtn">⇅ Usar la salida como entrada</button>
+    </div>
+    <label for="output" style="margin-top:16px">Salida</label>
+    <textarea id="output" readonly placeholder="Tu resultado aparecerá aquí…" style="font-family:ui-monospace,Menlo,Consolas,monospace"></textarea>
+    <button class="btn teal" id="copyBtn">📋 Copiar salida</button>
+    <button class="btn alt" id="clearBtn">Limpiar</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>Qué es Base64 y para qué sirve</h2>
+    <p>Base64 es un sistema de codificación, no un cifrado: toma cualquier texto o dato binario y lo representa usando solo 64 caracteres seguros (las letras A–Z y a–z, los dígitos 0–9, y los signos + y /), con el signo = como relleno al final cuando hace falta. El resultado es texto plano que puede viajar sin romperse por sitios donde los caracteres especiales dan problemas: URLs, cabeceras HTTP, archivos JSON, correos electrónicos y tokens de autenticación.</p>
+<p>Lo verás en todas partes aunque no te des cuenta. Los archivos adjuntos de correo viajan en Base64. Las imágenes incrustadas en una página web empiezan por <em>data:image/png;base64,</em>. Los tokens JWT que usan tantas APIs son tres bloques Base64 separados por puntos. Y muchos sistemas lo usan para guardar contraseñas o datos binarios dentro de campos de texto. Saber codificar y decodificar a mano es, para quien trabaja con APIs o con web, tan básico como saber qué es una URL.</p>
+    <h2>Cómo usar el codificador y decodificador</h2>
+    <ol>
+<li>Escribe o pega tu texto en el cuadro de entrada. Si vas a decodificar, pega la cadena Base64 tal cual, con sus = del final si los tiene.</li>
+<li>Haz clic en "Codificar a Base64" para convertir texto en Base64, o en "Decodificar desde Base64" para el camino inverso.</li>
+<li>Copia el resultado con "Copiar salida". Si quieres seguir trabajando con él, "Usar la salida como entrada" lo mueve al cuadro superior para codificarlo o decodificarlo de nuevo.</li>
+<li>"Limpiar" borra ambos cuadros. Todo ocurre en tu navegador: nada de lo que escribas sale de tu dispositivo.</li>
+</ol>
+    <h2>Ejemplo práctico</h2>
+    <div class="example"><p>Escribe <strong>Hola, mundo!</strong> y pulsa codificar. El resultado es:</p>
+<p><strong>SG9sYSwgbXVuZG8h</strong></p>
+<p>Ahora pega esa misma cadena y pulsa decodificar: vuelves a <strong>Hola, mundo!</strong>. Fíjate en dos detalles. Primero, la salida es más larga que la entrada: 12 caracteres de texto se convierten en 16 de Base64, porque la codificación agrupa los datos de 3 en 3 bytes y los representa con 4 caracteres. Segundo, las tildes y las ñ funcionan sin problema: esta herramienta codifica en UTF-8, así que <em>café</em> o <em>mañana</em> se codifican y decodifican sin caracteres extraños, algo que las herramientas antiguas, que solo entendían ASCII, hacían mal.</p></div>
+    <h2>Consejos prácticos</h2>
+    <ul>
+<li><strong>Decodifica antes de confiar.</strong> Si un enlace, un token o un archivo te llega con una cadena Base64 sospechosa, decodifícala aquí primero: muchas veces esconde una URL o un texto perfectamente legible.</li>
+<li><strong>Conserva los = del final al copiar.</strong> Son relleno, no decoración: sin ellos, algunas herramientas rechazan la cadena o decodifican mal el último carácter.</li>
+<li><strong>Los saltos de línea no importan.</strong> Al decodificar, la herramienta ignora espacios y saltos de línea, así que puedes pegar una cadena partida en varias líneas tal cual te llegó por correo o por chat.</li>
+<li><strong>Para imágenes, usa la herramienta específica.</strong> Esta página trabaja con texto; para convertir una imagen a Base64 (o al revés) tienes el conversor de imagen a Base64 y el de Base64 a imagen, que detectan el formato automáticamente.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Creer que Base64 protege algo.</strong> Es codificación, no cifrado: cualquiera puede decodificarlo en un segundo. Nunca lo uses para "ocultar" contraseñas, claves de API o datos personales.</li>
+<li><strong>Pegar solo una parte de la cadena.</strong> Es la causa más frecuente del error de decodificación. Las cadenas largas se cortan al copiar desde un chat o un PDF: comprueba que empieza y termina donde debe.</li>
+<li><strong>Confundir Base64 con Base64URL.</strong> Algunas APIs (los JWT, por ejemplo) usan una variante que sustituye + por - y / por _. Si una cadena así falla, prueba a devolver esos dos caracteres a su forma clásica antes de decodificar.</li>
+<li><strong>Decodificar dos veces sin querer.</strong> Un texto ya decodificado puede parecer otra cadena codificada. Si el resultado sale con símbolos raros, probablemente ya estaba en texto plano.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Base64 es lo mismo que cifrar?</h3><p>No. Cifrar requiere una clave y está pensado para que nadie sin ella pueda leer el contenido. Base64 solo cambia la representación de los datos para que viajen por canales de texto: cualquiera con un decodificador (como esta página) recupera el original al instante. Nunca lo uses como medida de seguridad.</p></div>
+    <div class="faq"><h3>¿Por qué la salida Base64 es más larga que el texto original?</h3><p>Porque cada grupo de 3 bytes (24 bits) se representa con 4 caracteres Base64 (6 bits cada uno). Eso hace que la salida sea aproximadamente un 33 % más larga que la entrada, más algún = de relleno al final si la longitud no es múltiplo de 3.</p></div>
+    <div class="faq"><h3>¿Qué significan los = del final?</h3><p>Son relleno (padding). Cuando la cantidad de datos no es múltiplo de 3 bytes, se añaden uno o dos = para completar el último grupo de 4 caracteres. Al decodificar se ignoran, pero conviene conservarlos al copiar para que otras herramientas acepten la cadena.</p></div>
+    <div class="faq"><h3>¿Puedo decodificar un token JWT aquí?</h3><p>En parte: un JWT son tres bloques Base64URL separados por puntos (cabecera, datos y firma). Puedes copiar el segundo bloque y decodificarlo aquí para ver los datos, aunque antes tendrás que sustituir - por + y _ por / si la herramienta te da error, porque los JWT usan la variante URL.</p></div>
+    <div class="faq"><h3>¿Es seguro pegar aquí textos con datos sensibles?</h3><p>La herramienta trabaja solo en tu navegador y no envía nada a ningún servidor, pero Base64 no oculta nada: si pegas una clave o una contraseña, cualquiera que vea la salida la leerá en claro. Por principio, no pegues secretos en ninguna herramienta online, ni siquiera en una local.</p></div>
+    <div class="faq"><h3>¿Por qué me dice que la entrada no es Base64 válido?</h3><p>Casi siempre por una de estas tres causas: la cadena está recortada al copiar, contiene caracteres fuera del alfabeto Base64 (por ejemplo, comillas pegadas desde un JSON o guiones de la variante URL), o le falta el relleno =. Revisa el principio y el final de la cadena y vuelve a copiarla completa.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../base64-a-imagen/">Base64 a imagen</a><a href="../imagen-a-base64/">Imagen a Base64</a><a href="../formateador-json/">Formateador JSON</a><a href="../conversor-de-colores/">Conversor de colores</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+var inp=document.getElementById('input'),out=document.getElementById('output'),msg=document.getElementById('msg');
+function b64encode(str){
+  var bytes=new TextEncoder().encode(str);
+  var bin='';bytes.forEach(function(b){bin+=String.fromCharCode(b);});
+  return btoa(bin);
+}
+function b64decode(b64){
+  var bin=atob(b64);
+  var bytes=new Uint8Array(bin.length);
+  for(var i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  return new TextDecoder('utf-8',{fatal:true}).decode(bytes);
+}
+document.getElementById('encBtn').addEventListener('click',function(){
+  if(!inp.value){msg.innerHTML='<span class="err">Escribe primero algún texto.</span>';return;}
+  out.value=b64encode(inp.value);
+  msg.innerHTML='<span class="ok">Codificado ✔</span>';
+});
+document.getElementById('decBtn').addEventListener('click',function(){
+  var v=inp.value.replace(/\s/g,'');
+  if(!v){msg.innerHTML='<span class="err">Pega primero algún texto en Base64.</span>';return;}
+  try{out.value=b64decode(v);msg.innerHTML='<span class="ok">Decodificado ✔</span>';}
+  catch(e){out.value='';msg.innerHTML='<span class="err">No se pudo decodificar: la entrada no es texto Base64 válido.</span>';}
+});
+document.getElementById('swapBtn').addEventListener('click',function(){if(out.value){inp.value=out.value;out.value='';msg.textContent='';}});
+document.getElementById('clearBtn').addEventListener('click',function(){inp.value='';out.value='';msg.textContent='';});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  if(!out.value){msg.innerHTML='<span class="err">No hay nada que copiar todavía.</span>';return;}
+  function done(){msg.innerHTML='<span class="ok">Salida copiada ✔</span>';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(out.value).then(done,function(){out.select();document.execCommand('copy');done();});}
+  else{out.select();document.execCommand('copy');done();}
+});
+</script>
+</body>
+</html>
