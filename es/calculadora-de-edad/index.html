@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de edad exacta online gratis | ToolNova</title>
+<meta name="description" content="Calcula tu edad exacta en años, meses y días, con los días totales vividos, el día de la semana en que naciste y la cuenta atrás para tu próximo cumpleaños.">
+<link rel="canonical" href="https://trytoolnova.com/es/calculadora-de-edad/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/calculadora-de-edad/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/age-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/age-calculator/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Calculadora de edad",
+"url": "https://trytoolnova.com/es/calculadora-de-edad/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Calculadora de edad",
+"item": "https://trytoolnova.com/es/calculadora-de-edad/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Cómo se calcula la edad exacta?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Se comparan año, mes y día de la fecha de nacimiento con los de la fecha elegida, ajustando hacia atrás cuando el día o el mes actual aún no alcanzan al del nacimiento. Así salen los años completos, los meses completos restantes y los días restantes, en lugar de una simple resta de años."
+}
+},
+{
+"@type": "Question",
+"name": "¿La calculadora tiene en cuenta los años bisiestos?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. El conteo de días totales se hace sobre el calendario real, incluyendo cada 29 de febrero vivido. Por eso el total de días no coincide con multiplicar los años por 365."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo calcular la edad en una fecha pasada o futura?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Cambia la «edad en la fecha» a cualquier día: el inicio de un curso, la fecha de un examen, una jubilación. Es la forma de saber si alguien cumplirá un requisito de edad justo a tiempo."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué los días totales no son los años multiplicados por 365?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Porque los años bisiestos añaden un día cada cuatro años (con excepciones) y porque la edad en años cumplidos no incluye los meses y días parciales del año en curso. A los 30 años, la diferencia ronda una semana."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cómo sé en qué día de la semana nací?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "La calculadora lo muestra automáticamente al calcular: el día de la semana de la fecha de nacimiento. Es un dato curioso para cumpleaños, pero también útil para verificar fechas antiguas en documentos."
+}
+},
+{
+"@type": "Question",
+"name": "¿El resultado sirve para trámites oficiales?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sirve como cálculo orientativo y casi siempre coincide con el oficial, porque sigue las mismas reglas del calendario. Para un trámite, la fecha que vale es la de tu documento de identidad o acta de nacimiento."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../age-calculator/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Calculadora de edad</p>
+  <div class="pagehead">
+    <h1>Calculadora de edad</h1>
+    <p class="lead">Escribe una fecha de nacimiento y obtén al instante la edad exacta en años, meses y días, además de los días y semanas totales vividos, el día de la semana en que naciste y cuántos días faltan para tu próximo cumpleaños. Sirve para formularios, requisitos de edad y para resolver de una vez esa discusión familiar sobre quién es mayor por días.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="row">
+      <div><label for="dob">Fecha de nacimiento</label><input type="date" id="dob"></div>
+      <div><label for="atDate">Edad en la fecha</label><input type="date" id="atDate"></div>
+    </div>
+    <button class="btn" id="calcBtn">🎂 Calcular edad</button>
+    <div class="stats">
+      <div class="stat"><b id="rYears">—</b><span>Años</span></div>
+      <div class="stat"><b id="rMonths">—</b><span>Meses</span></div>
+      <div class="stat"><b id="rDays">—</b><span>Días</span></div>
+      <div class="stat"><b id="rTotalDays">—</b><span>Días totales</span></div>
+      <div class="stat"><b id="rWeeks">—</b><span>Semanas totales</span></div>
+      <div class="stat"><b id="rBorn">—</b><span>Nació un</span></div>
+      <div class="stat"><b id="rNext">—</b><span>Próximo cumpleaños en</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>Por qué «¿cuántos años tengo?» es más difícil de lo que parece</h2>
+    <p>Restar años es fácil; la edad exacta, no. Entre medias están los años bisiestos (con su regla incómoda: los años divisibles entre 100 no son bisiestos, salvo que también lo sean entre 400), meses de cuatro duraciones distintas y la pregunta clave de si el cumpleaños de este año ya pasó o no. Por eso los formularios que piden una edad exacta — admisión escolar, solicitudes de seguro o de visa, inscripciones en ligas deportivas, jubilación — no aceptan un «más o menos 34».</p>
+<p>Esta calculadora hace bien la aritmética del calendario. Además del resultado principal en años, meses y días, muestra los días y semanas totales vividos (una cifra que sorprende a todo el mundo: la mayoría de las personas de 30 años ya pasaron los 10.000 días sin darse cuenta), el día de la semana del nacimiento y los días que faltan para el próximo cumpleaños. Y puedes fijar la «edad en la fecha» en cualquier día, pasado o futuro, que es lo que la hace realmente útil para plazos: no solo cuántos años tiene alguien hoy, sino cuántos tendrá el día que importa.</p>
+    <h2>Cómo usar la calculadora de edad</h2>
+    <ol>
+<li>Escribe la fecha de nacimiento con el selector de fecha.</li>
+<li>Deja la «edad en la fecha» en hoy, o elige cualquier otra fecha: el primer día de clases, la fecha límite de una competición, una fecha de jubilación.</li>
+<li>Pulsa «Calcular edad» y lee el desglose completo: años, meses, días, totales, día de nacimiento y cuenta atrás del próximo cumpleaños.</li>
+<li>Pruébala con familiares: a los niños les fascina descubrir su número de «días totales».</li>
+</ol>
+    <h2>Ejemplo resuelto</h2>
+    <div class="example"><p>Toma a alguien nacido el <strong>10 de junio de 1998</strong> y pregunta su edad el <strong>22 de octubre de 2026</strong>. La calculadora responde: <strong>28 años, 4 meses y 12 días</strong>, con <strong>10.361 días vividos (1.480 semanas)</strong>, nacido un <strong>miércoles</strong> y <strong>231 días</strong> para su próximo cumpleaños.</p>
+<p>Ahora mueve la «edad en la fecha» al <strong>1 de septiembre de 2026</strong>, un corte escolar típico. Un niño nacido el 28 de agosto de 2020 tiene 6 años y 4 días: apenas cumple el requisito. Uno nacido el 3 de septiembre de 2020 tiene 5 años, 11 meses y 29 días: le faltan dos días y espera un año. Por eso existen las calculadoras exactas: «cumple seis en septiembre» no basta cuando quien decide es una fecha límite.</p></div>
+    <h2>Consejos para respuestas exactas</h2>
+    <ul>
+<li><strong>Usa la fecha de los documentos oficiales.</strong> Sorprende cuántos cumpleaños que se celebran en familia difieren en un día (o un año) de la fecha registrada. Para un trámite, manda el documento.</li>
+<li><strong>Pregunta lo que el formulario realmente pregunta.</strong> «Edad» suele significar la edad hoy, pero muchos requisitos se refieren a la edad en una fecha concreta: el día de un examen, el inicio de un curso, el 31 de diciembre. Fija esa fecha explícitamente.</li>
+<li><strong>Recuerda la regla del cumpleaños.</strong> Cumples un año más el día de tu cumpleaños, no el 1 de enero. Alguien nacido en diciembre tiene la edad menor durante casi todo el año natural.</li>
+<li><strong>Los días totales son un hito divertido.</strong> El día 10.000 de vida llega alrededor de los 27 años y 4 meses. No necesita regalos, pero merece tarta.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Restar solo los años y parar ahí.</strong> 2026 menos 1998 son 28, pero hasta que pase el cumpleaños de junio esa persona sigue teniendo 27. En los meses y días es donde viven los errores.</li>
+<li><strong>Ignorar los bisiestos al contar días.</strong> Estimar con 365 × años se queda corto un día por cada 29 de febrero vivido: siete u ocho días a los 30 años.</li>
+<li><strong>Mezclar formatos de fecha.</strong> 03/04/2000 es el 3 de abril en gran parte del mundo y el 4 de marzo en Estados Unidos. El selector de fecha de esta calculadora evita esa ambigüedad: úsalo en vez de escribir la fecha a mano.</li>
+<li><strong>Usar la fecha que se celebra en vez de la registrada.</strong> Para una fiesta da igual; para una admisión o un seguro, un día de diferencia puede dejarte fuera.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Cómo se calcula la edad exacta?</h3><p>Se comparan año, mes y día de la fecha de nacimiento con los de la fecha elegida, ajustando hacia atrás cuando el día o el mes actual aún no alcanzan al del nacimiento. Así salen los años completos, los meses completos restantes y los días restantes, en lugar de una simple resta de años.</p></div>
+    <div class="faq"><h3>¿La calculadora tiene en cuenta los años bisiestos?</h3><p>Sí. El conteo de días totales se hace sobre el calendario real, incluyendo cada 29 de febrero vivido. Por eso el total de días no coincide con multiplicar los años por 365.</p></div>
+    <div class="faq"><h3>¿Puedo calcular la edad en una fecha pasada o futura?</h3><p>Sí. Cambia la «edad en la fecha» a cualquier día: el inicio de un curso, la fecha de un examen, una jubilación. Es la forma de saber si alguien cumplirá un requisito de edad justo a tiempo.</p></div>
+    <div class="faq"><h3>¿Por qué los días totales no son los años multiplicados por 365?</h3><p>Porque los años bisiestos añaden un día cada cuatro años (con excepciones) y porque la edad en años cumplidos no incluye los meses y días parciales del año en curso. A los 30 años, la diferencia ronda una semana.</p></div>
+    <div class="faq"><h3>¿Cómo sé en qué día de la semana nací?</h3><p>La calculadora lo muestra automáticamente al calcular: el día de la semana de la fecha de nacimiento. Es un dato curioso para cumpleaños, pero también útil para verificar fechas antiguas en documentos.</p></div>
+    <div class="faq"><h3>¿El resultado sirve para trámites oficiales?</h3><p>Sirve como cálculo orientativo y casi siempre coincide con el oficial, porque sigue las mismas reglas del calendario. Para un trámite, la fecha que vale es la de tu documento de identidad o acta de nacimiento.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../calculadora-imc/">Calculadora de IMC</a><a href="../calculadora-de-porcentajes/">Calculadora de porcentajes</a><a href="../conversor-de-unidades/">Conversor de unidades</a><a href="../contador-de-palabras/">Contador de palabras</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+function pad(n){return (n<10?'0':'')+n;}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+document.getElementById('atDate').value=todayStr();
+function parseLocal(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function calc(){
+  var dobV=document.getElementById('dob').value, atV=document.getElementById('atDate').value;
+  var msg=document.getElementById('msg');
+  if(!dobV){msg.innerHTML='<span class="err">Elige primero una fecha de nacimiento.</span>';return;}
+  if(!atV)atV=todayStr();
+  var dob=parseLocal(dobV), at=parseLocal(atV);
+  if(at<dob){msg.innerHTML='<span class="err">La «edad en la fecha» es anterior a la fecha de nacimiento. Revisa las fechas.</span>';return;}
+  var y=at.getFullYear()-dob.getFullYear();
+  var m=at.getMonth()-dob.getMonth();
+  var d=at.getDate()-dob.getDate();
+  if(d<0){ m--; var prev=new Date(at.getFullYear(),at.getMonth(),0); d+=prev.getDate(); }
+  if(m<0){ y--; m+=12; }
+  var totalDays=Math.floor((at-dob)/86400000);
+  var weeks=Math.floor(totalDays/7);
+  var days=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  var next=new Date(at.getFullYear(),dob.getMonth(),dob.getDate());
+  if(next<=at)next.setFullYear(next.getFullYear()+1);
+  var toNext=Math.ceil((next-at)/86400000);
+  document.getElementById('rYears').textContent=y;
+  document.getElementById('rMonths').textContent=m;
+  document.getElementById('rDays').textContent=d;
+  document.getElementById('rTotalDays').textContent=totalDays.toLocaleString('es-ES');
+  document.getElementById('rWeeks').textContent=weeks.toLocaleString('es-ES');
+  document.getElementById('rBorn').textContent=days[dob.getDay()];
+  document.getElementById('rNext').textContent=toNext+' días';
+  msg.innerHTML='<span class="ok">Edad exacta: '+y+' años, '+m+' meses y '+d+' días.</span>';
+}
+document.getElementById('calcBtn').addEventListener('click',calc);
+document.getElementById('dob').addEventListener('change',calc);
+document.getElementById('atDate').addEventListener('change',calc);
+</script>
+</body>
+</html>
