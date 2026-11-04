@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Calculator Widget — ToolNova</title>
+<link rel="canonical" href="https://trytoolnova.com/embed/percentage-calculator/">
+<style>
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f9fb;color:#1f2937}
+  .w{max-width:520px;margin:0 auto;padding:16px}
+  .card{background:#fff;border:1px solid #e5edf3;border-radius:16px;padding:18px;box-shadow:0 4px 16px rgba(13,80,110,.07)}
+  h1{font-size:20px;margin:0 0 4px} p.sub{color:#64748b;font-size:13px;margin:0 0 14px}
+  h2{font-size:15px;margin:18px 0 8px} h2:first-of-type{margin-top:0}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  label{font-size:12px;color:#64748b;display:block;margin-bottom:2px}
+  input{width:110px;padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px}
+  .res{font-weight:700;font-size:17px;color:#0e7c86;min-height:24px;margin:8px 0 0}
+  .foot{margin-top:14px;text-align:center;font-size:12px;color:#64748b}
+  .foot a{color:#0e7c86;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="w"><div class="card">
+  <h1>Percentage Calculator</h1>
+  <p class="sub">Three everyday percentage problems, solved instantly.</p>
+  <h2>What is X% of Y?</h2>
+  <div class="row"><div><label>Percent (%)</label><input type="number" id="a1" placeholder="20" step="any"></div><span>of</span><div><label>Number</label><input type="number" id="a2" placeholder="150" step="any"></div></div>
+  <p class="res" id="r1"></p>
+  <h2>X is what percent of Y?</h2>
+  <div class="row"><div><label>Number (X)</label><input type="number" id="b1" placeholder="30" step="any"></div><span>is what % of</span><div><label>Number (Y)</label><input type="number" id="b2" placeholder="150" step="any"></div></div>
+  <p class="res" id="r2"></p>
+  <h2>Percentage change from X to Y</h2>
+  <div class="row"><div><label>From (old)</label><input type="number" id="c1" placeholder="80" step="any"></div><span>to</span><div><label>To (new)</label><input type="number" id="c2" placeholder="100" step="any"></div></div>
+  <p class="res" id="r3"></p>
+  <div class="foot">Powered by <a href="https://trytoolnova.com/" target="_blank" rel="noopener">ToolNova</a> · <a href="https://trytoolnova.com/percentage-calculator/" target="_blank" rel="noopener">Full calculator</a></div>
+</div></div>
+<script>
+function num(id){var v=parseFloat(document.getElementById(id).value);return isNaN(v)?null:v;}
+function fmt(n){return Math.round(n*10000)/10000;}
+function calc1(){var p=num('a1'),y=num('a2'),r=document.getElementById('r1');r.textContent=(p===null||y===null)?'':fmt(p/100*y);}
+function calc2(){var x=num('b1'),y=num('b2'),r=document.getElementById('r2');r.textContent=(x===null||y===null||y===0)?'':fmt(x/y*100)+'%';}
+function calc3(){var x=num('c1'),y=num('c2'),r=document.getElementById('r3');r.textContent=(x===null||y===null||x===0)?'':fmt((y-x)/x*100)+'%';}
+['a1','a2'].forEach(function(id){document.getElementById(id).addEventListener('input',calc1);});
+['b1','b2'].forEach(function(id){document.getElementById(id).addEventListener('input',calc2);});
+['c1','c2'].forEach(function(id){document.getElementById(id).addEventListener('input',calc3);});
+</script>
+</body>
+</html>
