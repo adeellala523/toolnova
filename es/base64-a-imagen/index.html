@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convertir Base64 a imagen online gratis | ToolNova</title>
+<meta name="description" content="Pega una cadena Base64 o una data URI y recupera la imagen original en PNG, JPG, GIF, WebP o SVG. Gratis, sin registro y sin subir nada.">
+<link rel="canonical" href="https://trytoolnova.com/es/base64-a-imagen/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/base64-a-imagen/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/base64-to-image/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/base64-to-image/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Base64 a imagen",
+"url": "https://trytoolnova.com/es/base64-a-imagen/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Base64 a imagen",
+"item": "https://trytoolnova.com/es/base64-a-imagen/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Qué formatos de imagen detecta la herramienta?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "PNG, JPEG, GIF, WebP, BMP y SVG. La detección se hace leyendo la firma de los primeros bytes del archivo, así que funciona aunque la cadena venga sin data URI o con un tipo declarado incorrecto."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo pegar una data URI completa, con el prefijo data:image/...?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Si pega una data URI, la herramienta separa el prefijo, comprueba que incluya ;base64 y decodifica solo la parte Base64. También acepta la cadena Base64 sola, sin prefijo."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué dice que los bytes no son una imagen si la cadena parece Base64 válido?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Porque decodificar con éxito no basta: los bytes resultantes deben empezar con la firma de un formato de imagen conocido. Si pegaste un texto codificado, un token o una clave, decodifica bien pero no es una foto, y la herramienta te lo dice así."
+}
+},
+{
+"@type": "Question",
+"name": "¿La imagen se sube a algún servidor?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. La decodificación y la vista previa ocurren en tu navegador con JavaScript. La cadena que pegas no sale de tu dispositivo, así que puedes usarla con imágenes privadas sin preocuparte."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo convertir un JPG a PNG con esta herramienta?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí: una vez decodificada la imagen, el botón «Descargar como PNG» la vuelve a codificar en PNG. Ten en cuenta que el PNG resultante pesará más que el JPG original, porque PNG no usa compresión con pérdida."
+}
+},
+{
+"@type": "Question",
+"name": "¿Hay un límite de tamaño para la cadena Base64?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No hay un límite establecido, pero las imágenes muy grandes (varias decenas de MB en Base64) pueden tardar un momento en procesarse y en mostrar la vista previa, sobre todo en un móvil. Para imágenes enormes, mejor descárgalas como archivo original en lugar de convertirlas a PNG en el navegador."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../base64-to-image/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Base64 a imagen</p>
+  <div class="pagehead">
+    <h1>Base64 a imagen</h1>
+    <p class="lead">Pega una cadena Base64 o una data URI completa y recupera la imagen original al instante: verás su formato, su tamaño y sus dimensiones, y podrás descargarla tal cual o convertida a PNG. Es la herramienta que necesitas cuando una API, un JSON o un correo te entrega una imagen como un muro de letras y números en lugar de un archivo.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="b64input">Pega tu cadena Base64 (también vale una data URI completa)</label>
+    <textarea id="b64input" placeholder="Pega aquí el Base64, o una data URI como data:image/png;base64,iVBORw0KGgo…" style="font-family:ui-monospace,Menlo,Consolas,monospace"></textarea>
+    <button class="btn teal" id="convertBtn">🖼️ Convertir a imagen</button>
+    <button class="btn alt" id="sampleBtn">Probar un ejemplo</button>
+    <button class="btn alt" id="clearBtn">Limpiar</button>
+    <div class="stats">
+      <div class="stat"><b id="fmt">—</b><span>Formato</span></div>
+      <div class="stat"><b id="imgSize">—</b><span>Tamaño de la imagen</span></div>
+      <div class="stat"><b id="dims">—</b><span>Dimensiones</span></div>
+      <div class="stat"><b id="b64len">—</b><span>Caracteres Base64</span></div>
+    </div>
+    <div id="previewRow" style="display:none;gap:14px;flex-wrap:wrap;margin-top:14px">
+      <div style="flex:1;min-width:200px"><p style="color:var(--muted);font-size:.88rem;margin-bottom:6px">Imagen decodificada</p><img id="imgOut" alt="Imagen decodificada" style="max-width:100%;border-radius:10px;border:1px solid var(--line)"></div>
+    </div>
+    <button class="btn teal" id="dlBtn" disabled>⬇️ Descargar imagen original</button>
+    <button class="btn alt" id="dlPngBtn" disabled>⬇️ Descargar como PNG</button>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>De dónde salen las imágenes en Base64</h2>
+    <p>Cuando un sistema no puede enviar un archivo binario, convierte la imagen a texto Base64 y la envía como texto. Por eso las imágenes en Base64 aparecen en respuestas de APIs, dentro de archivos JSON, en el código fuente de páginas web (como <em>data:image/png;base64,…</em>), en correos y en bases de datos. El problema es que ese texto no se puede abrir como foto: hay que decodificarlo de vuelta a bytes y reconocer qué formato de imagen es. Eso es exactamente lo que hace esta herramienta, en tu navegador y sin subir la cadena a ningún servidor.</p>
+<p>¿Quién la usa? Desarrolladores que reciben imágenes desde una API y quieren comprobar qué contienen. Diseñadores a los que un cliente envía una imagen pegada en un documento en vez de un archivo. Estudiantes y personal de soporte que rescatan imágenes incrustadas en HTML o en correos. Y cualquiera que se haya encontrado un <em>data:image/…</em> larguísimo y se pregunte qué hay dentro.</p>
+    <h2>Cómo convertir Base64 a imagen</h2>
+    <ol>
+<li>Pega la cadena Base64 en el cuadro. Vale tanto la cadena sola como la data URI completa (la que empieza por <em>data:image/png;base64,</em>).</li>
+<li>Haz clic en "Convertir a imagen". La herramienta detecta el formato real leyendo la firma de los primeros bytes, no la extensión que diga la cadena.</li>
+<li>Revisa la vista previa y los datos: formato, tamaño del archivo, dimensiones en píxeles y número de caracteres Base64.</li>
+<li>Descarga con "Descargar imagen original" para quedarte el archivo tal cual, o con "Descargar como PNG" para convertirla a PNG (por ejemplo, un JPG o un WebP pasado a PNG).</li>
+</ol>
+    <h2>Ejemplo práctico</h2>
+    <div class="example"><p>Supón que una API te devuelve un JSON con un campo <em>avatar</em> que empieza así:</p>
+<p><strong>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA…</strong></p>
+<p>Copias todo ese valor y lo pegas aquí. La herramienta reconoce la firma PNG en los primeros bytes, muestra la imagen, y te dice su tamaño y sus dimensiones. Un clic en "Descargar imagen original" y ya tienes el archivo <em>toolnova-image.png</em> listo para usar, sin tener que escribir ni una línea de código para decodificarlo. Si no tienes ninguna cadena a mano, pulsa "Probar un ejemplo" y verás el proceso completo con una imagen de muestra.</p></div>
+    <h2>Consejos prácticos</h2>
+    <ul>
+<li><strong>Pega la cadena completa, incluido el relleno =.</strong> Una cadena recortada al final es la causa más común de error: los chats y los PDF cortan las líneas largas sin avisar.</li>
+<li><strong>Si viene de un JSON, quita las comillas.</strong> Las comillas que rodean el valor en el JSON no forman parte del Base64 y hacen que la validación falle.</li>
+<li><strong>Confía en el formato detectado, no en el que dice la cadena.</strong> Una data URI puede decir <em>image/png</em> y contener en realidad un JPEG; la herramienta lee la firma real de los bytes y te dice la verdad.</li>
+<li><strong>Convierte a PNG solo cuando lo necesites.</strong> El PNG no pierde calidad, pero pesa más que un JPG o un WebP. Si solo quieres guardar la imagen, la descarga original conserva el formato y el tamaño de origen.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Pegar una data URI sin ;base64.</strong> Algunas data URI llevan el contenido en texto plano o codificado para URL, no en Base64. La herramienta te avisará: en ese caso necesitas la versión con <em>;base64</em> o la cadena Base64 sola.</li>
+<li><strong>Intentar convertir texto o un token.</strong> Si la cadena decodifica bien pero no es una imagen, verás el aviso de que no se encontró ninguna firma de imagen. Un token JWT o un texto codificado no son fotos, aunque parezcan cadenas Base64.</li>
+<li><strong>Usar la variante URL sin convertirla.</strong> Algunas APIs usan Base64URL, con - y _ en lugar de + y /. Esta herramienta ya convierte esos dos caracteres automáticamente, pero si tu cadena viene con otros añadidos, revísala antes de pegarla.</li>
+<li><strong>Descargar como PNG un SVG.</strong> Los SVG son vectores, no píxeles, así que el botón de PNG se desactiva para ellos: descarga el original y conviértelo con un editor vectorial si lo necesitas en PNG.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Qué formatos de imagen detecta la herramienta?</h3><p>PNG, JPEG, GIF, WebP, BMP y SVG. La detección se hace leyendo la firma de los primeros bytes del archivo, así que funciona aunque la cadena venga sin data URI o con un tipo declarado incorrecto.</p></div>
+    <div class="faq"><h3>¿Puedo pegar una data URI completa, con el prefijo data:image/...?</h3><p>Sí. Si pega una data URI, la herramienta separa el prefijo, comprueba que incluya ;base64 y decodifica solo la parte Base64. También acepta la cadena Base64 sola, sin prefijo.</p></div>
+    <div class="faq"><h3>¿Por qué dice que los bytes no son una imagen si la cadena parece Base64 válido?</h3><p>Porque decodificar con éxito no basta: los bytes resultantes deben empezar con la firma de un formato de imagen conocido. Si pegaste un texto codificado, un token o una clave, decodifica bien pero no es una foto, y la herramienta te lo dice así.</p></div>
+    <div class="faq"><h3>¿La imagen se sube a algún servidor?</h3><p>No. La decodificación y la vista previa ocurren en tu navegador con JavaScript. La cadena que pegas no sale de tu dispositivo, así que puedes usarla con imágenes privadas sin preocuparte.</p></div>
+    <div class="faq"><h3>¿Puedo convertir un JPG a PNG con esta herramienta?</h3><p>Sí: una vez decodificada la imagen, el botón «Descargar como PNG» la vuelve a codificar en PNG. Ten en cuenta que el PNG resultante pesará más que el JPG original, porque PNG no usa compresión con pérdida.</p></div>
+    <div class="faq"><h3>¿Hay un límite de tamaño para la cadena Base64?</h3><p>No hay un límite establecido, pero las imágenes muy grandes (varias decenas de MB en Base64) pueden tardar un momento en procesarse y en mostrar la vista previa, sobre todo en un móvil. Para imágenes enormes, mejor descárgalas como archivo original en lugar de convertirlas a PNG en el navegador.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../codificador-decodificador-base64/">Codificador y decodificador Base64</a><a href="../imagen-a-base64/">Imagen a Base64</a><a href="../compresor-de-imagenes/">Compresor de imágenes</a><a href="../jpg-a-pdf/">JPG a PDF</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+var SAMPLE="iVBORw0KGgoAAAANSUhEUgAAAPAAAAB4CAIAAABD1OhwAAABZ0lEQVR4nO3UwQnAIAAEwZgCrNh32jZNCMIyU8E9lhtzfQ9UvLcHwEmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNClj7317AxzjoUkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJmXM9d3eAMd4aFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFJ+g9wGC0QVCQQAAAAASUVORK5CYII=";
+var outBlob=null,outMime="",outExt="png",outImg=null;
+function fmt(bytes){ if(!bytes&&bytes!==0)return '—'; if(bytes<1024)return bytes+' B'; if(bytes<1048576)return (bytes/1024).toFixed(1)+' KB'; return (bytes/1048576).toFixed(2)+' MB'; }
+function detect(bytes){
+  if(bytes.length>=8&&bytes[0]===0x89&&bytes[1]===0x50&&bytes[2]===0x4E&&bytes[3]===0x47)return {fmt:"PNG",mime:"image/png",ext:"png"};
+  if(bytes.length>=3&&bytes[0]===0xFF&&bytes[1]===0xD8&&bytes[2]===0xFF)return {fmt:"JPEG",mime:"image/jpeg",ext:"jpg"};
+  if(bytes.length>=6&&(bytes[0]===0x47&&bytes[1]===0x49&&bytes[2]===0x46))return {fmt:"GIF",mime:"image/gif",ext:"gif"};
+  if(bytes.length>=12&&bytes[0]===0x52&&bytes[1]===0x49&&bytes[2]===0x46&&bytes[3]===0x46&&bytes[8]===0x57&&bytes[9]===0x45&&bytes[10]===0x42&&bytes[11]===0x50)return {fmt:"WebP",mime:"image/webp",ext:"webp"};
+  if(bytes.length>=2&&bytes[0]===0x42&&bytes[1]===0x4D)return {fmt:"BMP",mime:"image/bmp",ext:"bmp"};
+  if(bytes.length>=5&&bytes[0]===0x3C)return {fmt:"SVG",mime:"image/svg+xml",ext:"svg"};
+  return null;
+}
+function convert(){
+  var msg=document.getElementById('msg'),raw=document.getElementById('b64input').value.trim();
+  if(!raw){msg.innerHTML='<span class="err">Pega primero una cadena Base64, o haz clic en Probar un ejemplo.</span>';return;}
+  var mimeHint="";
+  var m=raw.match(/^data:([^;,]+)?(;base64)?,/i);
+  if(m){ if(!m[2]){msg.innerHTML='<span class="err">Esa data URI no está codificada en Base64. Pega una data URI que contenga ;base64, o la cadena Base64 sin más.</span>';return;} mimeHint=m[1]||""; raw=raw.slice(m[0].length); }
+  var s=raw.replace(/\s+/g,"").replace(/-/g,"+").replace(/_/g,"/");
+  document.getElementById('b64len').textContent=s.length.toLocaleString();
+  if(!/^[A-Za-z0-9+/]*={0,2}$/.test(s)||s.length%4===1){msg.innerHTML='<span class="err">Eso no parece Base64 válido. Revisa si está recortado al final, si trae comillas de un JSON o caracteres fuera del alfabeto Base64.</span>';return;}
+  while(s.length%4!==0)s+="=";
+  var bin;
+  try{ bin=atob(s); }catch(e){ msg.innerHTML='<span class="err">No se pudo decodificar esta cadena. Copia la cadena completa, incluido el relleno = del final, e inténtalo de nuevo.</span>'; return; }
+  var bytes=new Uint8Array(bin.length);
+  for(var i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  var d=detect(bytes);
+  if(!d){msg.innerHTML='<span class="err">Se decodificó bien, pero estos bytes no son una imagen (no se encontró firma PNG, JPEG, GIF, WebP, BMP ni SVG). Asegúrate de que la cadena venga de una imagen, no de un texto o un token.</span>';return;}
+  outBlob=new Blob([bytes],{type:d.mime}); outMime=d.mime; outExt=d.ext;
+  var url=URL.createObjectURL(outBlob);
+  var img=new Image();
+  img.onload=function(){
+    outImg=img;
+    document.getElementById('imgOut').src=url;
+    document.getElementById('previewRow').style.display='flex';
+    document.getElementById('fmt').textContent=d.fmt;
+    document.getElementById('imgSize').textContent=fmt(bytes.length);
+    document.getElementById('dims').textContent=(img.naturalWidth&&img.naturalHeight)?(img.naturalWidth+' × '+img.naturalHeight):'—';
+    document.getElementById('dlBtn').disabled=false;
+    document.getElementById('dlPngBtn').disabled=(d.fmt==="SVG");
+    msg.innerHTML='<span class="ok">Decodificado: '+d.fmt+' imagen, '+fmt(bytes.length)+' a partir de '+s.length.toLocaleString()+' caracteres Base64.</span>';
+  };
+  img.onerror=function(){ msg.innerHTML='<span class="err">Los bytes parecen '+d.fmt+' pero el navegador no pudo mostrarlos: la cadena podría estar truncada o dañada.</span>'; };
+  img.src=url;
+}
+document.getElementById('convertBtn').addEventListener('click',convert);
+document.getElementById('sampleBtn').addEventListener('click',function(){ document.getElementById('b64input').value="data:image/png;base64,"+SAMPLE; convert(); });
+document.getElementById('clearBtn').addEventListener('click',function(){ document.getElementById('b64input').value=""; document.getElementById('msg').textContent=""; document.getElementById('previewRow').style.display='none'; document.getElementById('dlBtn').disabled=true; document.getElementById('dlPngBtn').disabled=true; ['fmt','imgSize','dims','b64len'].forEach(function(id){document.getElementById(id).textContent='—';}); });
+document.getElementById('dlBtn').addEventListener('click',function(){ if(!outBlob)return; var a=document.createElement('a'); a.download='toolnova-image.'+outExt; a.href=URL.createObjectURL(outBlob); a.click(); });
+document.getElementById('dlPngBtn').addEventListener('click',function(){
+  if(!outImg)return;
+  var c=document.createElement('canvas'); c.width=outImg.naturalWidth; c.height=outImg.naturalHeight;
+  var ctx=c.getContext('2d'); ctx.drawImage(outImg,0,0);
+  c.toBlob(function(b){ if(!b)return; var a=document.createElement('a'); a.download='toolnova-image.png'; a.href=URL.createObjectURL(b); a.click(); },'image/png');
+});
+</script>
+</body>
+</html>
