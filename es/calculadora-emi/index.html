@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de EMI y cuotas de préstamo online gratis | ToolNova</title>
+<meta name="description" content="Calcula la cuota mensual, los intereses totales y el coste total de cualquier préstamo — hipoteca, coche o personal — antes de firmar nada.">
+<link rel="canonical" href="https://trytoolnova.com/es/calculadora-emi/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/calculadora-emi/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/emi-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/emi-calculator/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Calculadora de EMI",
+"url": "https://trytoolnova.com/es/calculadora-emi/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Calculadora de EMI",
+"item": "https://trytoolnova.com/es/calculadora-emi/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Qué es una EMI?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Es la cuota mensual fija de un préstamo: la misma cantidad cada mes hasta saldar la deuda. Cada cuota combina intereses y capital, con más intereses al principio y más capital al final."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cuál es la fórmula de la EMI?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Cuota = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1), donde P es la cantidad prestada, r la tasa de interés mensual (tasa anual dividida entre 1200) y n el número de cuotas. La calculadora la aplica automáticamente."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué pasa si la tasa de interés es 0 %?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Entonces no hay intereses que repartir y la cuota es simplemente la cantidad dividida entre los meses: un préstamo de 12.000 $ a 24 meses sale a 500 $ al mes."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué las primeras cuotas son casi todo intereses?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Porque los intereses se calculan sobre el saldo pendiente, que al principio es máximo. A medida que el capital baja, la parte de intereses de cada cuota también baja y la de capital sube."
+}
+},
+{
+"@type": "Question",
+"name": "¿Conviene pagar cuotas extra o adelantar pagos?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Normalmente sí: cada pago extra reduce el capital y, con él, todos los intereses futuros. Pero primero verifica que tu préstamo no cobre penalización por pago anticipado."
+}
+},
+{
+"@type": "Question",
+"name": "¿La calculadora incluye impuestos, seguros y comisiones?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. El resultado es solo capital más intereses. En una hipoteca real, impuestos, seguros y comisiones se suman aparte a la cuota mensual."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../emi-calculator/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Calculadora de EMI</p>
+  <div class="pagehead">
+    <h1>Calculadora de EMI</h1>
+    <p class="lead">Consulta tu cuota mensual exacta, los intereses totales y el coste total de cualquier préstamo — hipoteca, coche, personal o de negocio — antes de firmar nada. Cambia la cantidad, la tasa o el plazo y observa lo que cada uno cuesta de verdad. La herramienta muestra el símbolo $ de forma genérica: la matemática es idéntica en dólares, euros, pesos o cualquier otra moneda.</p>
+  </div>
+
+  <div class="toolbox">
+    <div class="row">
+      <div><label for="amount">Cantidad del préstamo ($)</label><input type="number" id="amount" value="25000" min="0" step="any"></div>
+      <div><label for="rate">Tasa de interés anual (%)</label><input type="number" id="rate" value="7.5" min="0" step="any"></div>
+      <div><label for="months">Plazo (meses)</label><input type="number" id="months" value="60" min="1" step="1"></div>
+    </div>
+    <button class="btn" id="calcBtn">🏦 Calcular cuota</button>
+    <div class="stats">
+      <div class="stat"><b id="rEmi">—</b><span>Cuota mensual</span></div>
+      <div class="stat"><b id="rInterest">—</b><span>Intereses totales</span></div>
+      <div class="stat"><b id="rTotal">—</b><span>Total a pagar</span></div>
+      <div class="stat"><b id="rShare">—</b><span>Porcentaje de intereses</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>La EMI, explicada sin jerga</h2>
+    <p>EMI son las siglas en inglés de <em>Equated Monthly Installment</em>: la cuota mensual fija que pagas al prestamista hasta saldar un préstamo. Cada cuota tiene una parte de intereses y otra de capital (la cantidad que pediste prestada). Las primeras cuotas son sobre todo intereses; las últimas, sobre todo capital. Ese reparto cambia mes a mes y se llama amortización.</p>
+<p>Los datos siempre son los mismos tres: cuánto pides, la tasa de interés anual y el plazo en meses. Pero el resultado que más importa no es la cuota mensual: es el <strong>interés total</strong>, el precio real de pedir prestado, que nunca aparece en la publicidad. Úsala para hipotecas, préstamos de coche, personales, de estudios y créditos de negocio. Úsala antes de hablar con un prestamista, al comparar dos ofertas que suenan «asequibles», y cada vez que un vendedor te presente un plazo más largo como si fuera un descuento. Normalmente no lo es: es interés disfrazado de cuota amigable.</p>
+    <h2>Cómo usar la calculadora de EMI</h2>
+    <ol>
+<li>Escribe la cantidad del préstamo: lo que realmente vas a pedir, después de cualquier entrada inicial.</li>
+<li>Escribe la tasa de interés anual. Si tienes la TAE real de la oferta, úsala; no una tasa promocional de los primeros meses.</li>
+<li>Escribe el plazo en meses: 12 por año, así que un préstamo a 5 años son 60 meses y una hipoteca a 30 años son 360.</li>
+<li>Pulsa «Calcular cuota» y estudia los cuatro resultados: cuota mensual, intereses totales, total a pagar y porcentaje de intereses, es decir, qué parte de todo lo que pagas no compra nada.</li>
+</ol>
+    <h2>Ejemplo resuelto</h2>
+    <div class="example"><p>Pide <strong>25.000 $ al 7,5 % durante 60 meses</strong> (los valores por defecto de la herramienta: un préstamo de coche típico). La cuota mensual es de <strong>500,95 $</strong>. Suena manejable… hasta que lees los totales: devolverás <strong>30.057 $</strong>, es decir, <strong>5.057 $ de intereses</strong>, alrededor del 17 % de todo lo que pagas.</p>
+<p>Ahora prueba la sugerencia del vendedor: estirar a 84 meses y la cuota baja a unos 383 $, pero los intereses totales suben a unos 7.200 $. «Ahorraste» 118 $ al mes y pagaste unos 2.150 $ extra por el privilegio. Prueba el mismo préstamo a 36 meses y los intereses caen a unos 3.000 $. El mismo coche, la misma tasa: solo el plazo mueve el coste en miles. Ese es el experimento que conviene hacer con cada oferta de préstamo que recibas.</p>
+<p>La fórmula que hay detrás es: cuota = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1), donde P es la cantidad prestada, r la tasa mensual (tasa anual ÷ 1200) y n el número de cuotas.</p></div>
+    <h2>Consejos para pedir prestado más barato</h2>
+    <ul>
+<li><strong>Acorta el plazo antes de achicar la cuota.</strong> Si puedes permitirte la cuota mensual más alta, un plazo más corto es el mayor ahorro de intereses que existe.</li>
+<li><strong>Compara intereses totales, no cuotas mensuales.</strong> La cuota es el número con el que el prestamista quiere que juzgues, porque cualquier préstamo puede parecer barato si se estira lo suficiente.</li>
+<li><strong>Una entrada inicial mayor vence a un descuento en la tasa.</strong> Reduce el capital desde el primer día: cada unidad no pedida es una unidad que nunca genera intereses.</li>
+<li><strong>Observa el efecto de la tasa a escala hipotecaria.</strong> En un préstamo de 300.000 $ a 30 años, el 6 % cuesta unos 347.500 $ en intereses; el 7 %, unos 418.500 $. Un punto porcentual: alrededor de 71.000 $. Negocia en consecuencia.</li>
+<li><strong>Revisa las penalizaciones por pago anticipado</strong> antes de planear cuotas extra: algunos préstamos cobran por el favor de pagar antes.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Poner años donde van meses.</strong> El plazo de esta herramienta va en meses. Un «30» significa un préstamo de 2 años y medio, no de 30 años: para una hipoteca a 30 años escribe 360.</li>
+<li><strong>Usar la tasa promocional en vez de la TAE.</strong> Una tasa de bienvenida baja que luego sube hace que la cuota real sea muy distinta de la calculada.</li>
+<li><strong>Olvidar que la estimación no lo incluye todo.</strong> El resultado excluye impuestos, seguros y comisiones, que en una hipoteca real pueden sumar una cantidad importante a la cuota.</li>
+<li><strong>Juzgar solo por «me cabe en el mes».</strong> Una cuota cómoda durante más años puede costar miles más en intereses. Mira siempre el total a pagar.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Qué es una EMI?</h3><p>Es la cuota mensual fija de un préstamo: la misma cantidad cada mes hasta saldar la deuda. Cada cuota combina intereses y capital, con más intereses al principio y más capital al final.</p></div>
+    <div class="faq"><h3>¿Cuál es la fórmula de la EMI?</h3><p>Cuota = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1), donde P es la cantidad prestada, r la tasa de interés mensual (tasa anual dividida entre 1200) y n el número de cuotas. La calculadora la aplica automáticamente.</p></div>
+    <div class="faq"><h3>¿Qué pasa si la tasa de interés es 0 %?</h3><p>Entonces no hay intereses que repartir y la cuota es simplemente la cantidad dividida entre los meses: un préstamo de 12.000 $ a 24 meses sale a 500 $ al mes.</p></div>
+    <div class="faq"><h3>¿Por qué las primeras cuotas son casi todo intereses?</h3><p>Porque los intereses se calculan sobre el saldo pendiente, que al principio es máximo. A medida que el capital baja, la parte de intereses de cada cuota también baja y la de capital sube.</p></div>
+    <div class="faq"><h3>¿Conviene pagar cuotas extra o adelantar pagos?</h3><p>Normalmente sí: cada pago extra reduce el capital y, con él, todos los intereses futuros. Pero primero verifica que tu préstamo no cobre penalización por pago anticipado.</p></div>
+    <div class="faq"><h3>¿La calculadora incluye impuestos, seguros y comisiones?</h3><p>No. El resultado es solo capital más intereses. En una hipoteca real, impuestos, seguros y comisiones se suman aparte a la cuota mensual.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../calculadora-de-porcentajes/">Calculadora de porcentajes</a><a href="../calculadora-de-edad/">Calculadora de edad</a><a href="../calculadora-imc/">Calculadora de IMC</a><a href="../conversor-de-unidades/">Conversor de unidades</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+function money(n){return '$'+n.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calc(){
+  var P=parseFloat(document.getElementById('amount').value);
+  var annual=parseFloat(document.getElementById('rate').value);
+  var n=parseInt(document.getElementById('months').value,10);
+  var msg=document.getElementById('msg');
+  if(!P||P<0||isNaN(annual)||annual<0||!n||n<1){msg.innerHTML='<span class="err">Escribe una cantidad válida, una tasa (0 o más) y un plazo de al menos 1 mes.</span>';return;}
+  var r=annual/1200, emi;
+  if(r===0){emi=P/n;}
+  else{var f=Math.pow(1+r,n);emi=P*r*f/(f-1);}
+  var total=emi*n, interest=total-P;
+  document.getElementById('rEmi').textContent=money(emi);
+  document.getElementById('rInterest').textContent=money(interest);
+  document.getElementById('rTotal').textContent=money(total);
+  document.getElementById('rShare').textContent=(total>0? (interest/total*100).toFixed(1):'0')+'%';
+  msg.innerHTML='<span class="ok">'+n+' cuotas mensuales de '+money(emi)+'.</span> Solo una estimación: no incluye impuestos, seguros ni comisiones.';
+}
+document.getElementById('calcBtn').addEventListener('click',calc);
+['amount','rate','months'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});
+calc();
+</script>
+</body>
+</html>
