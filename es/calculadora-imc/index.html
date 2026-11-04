@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de IMC online gratis | ToolNova</title>
+<meta name="description" content="Calcula tu índice de masa corporal en kilos y centímetros o en libras, pies y pulgadas, con tu categoría y el rango de peso saludable para tu estatura.">
+<link rel="canonical" href="https://trytoolnova.com/es/calculadora-imc/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/calculadora-imc/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/bmi-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/bmi-calculator/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Calculadora de IMC",
+"url": "https://trytoolnova.com/es/calculadora-imc/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Calculadora de IMC",
+"item": "https://trytoolnova.com/es/calculadora-imc/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Cuál es la fórmula del IMC?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "En unidades métricas: peso en kilos dividido entre la estatura en metros al cuadrado (kg/m²). Por ejemplo, 70 kg y 1,75 m dan 70 ÷ 3,0625 = 22,9. La calculadora hace la conversión automáticamente si usas libras, pies y pulgadas."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cuáles son las categorías del IMC?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Según la OMS: menos de 18,5 es bajo peso; de 18,5 a 24,9, saludable; de 25 a 29,9, sobrepeso; y 30 o más, obesidad. Son cortes de población, no diagnósticos individuales."
+}
+},
+{
+"@type": "Question",
+"name": "¿Un IMC alto significa siempre mala salud?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. El IMC no distingue músculo de grasa, así que una persona muy musculosa puede salir en «sobrepeso» estando sana. Por eso conviene interpretarlo junto con la cintura, la actividad física, la tensión y los análisis."
+}
+},
+{
+"@type": "Question",
+"name": "¿Sirve el IMC para niños y adolescentes?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No con estos cortes. En menores se usan percentiles por edad y sexo, porque un mismo valor cambia de significado según la etapa de crecimiento. Consulta al pediatra para interpretarlo en niños."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cada cuánto debería calcular mi IMC?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Cada pocas semanas o cada mes basta. El peso diario fluctúa por agua y comidas, así que los cambios reales solo se ven en la tendencia a lo largo de meses."
+}
+},
+{
+"@type": "Question",
+"name": "¿El IMC es un diagnóstico médico?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. Es una herramienta de cribado, un primer número para orientar una conversación con un profesional de la salud. Nunca sustituye una valoración médica completa."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../bmi-calculator/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Calculadora de IMC</p>
+  <div class="pagehead">
+    <h1>Calculadora de IMC</h1>
+    <p class="lead">Calcula tu índice de masa corporal (IMC) en unidades métricas o imperiales y descubre en qué categoría cae — bajo peso, saludable, sobrepeso u obesidad — junto con el rango de peso saludable para tu estatura. Un primer contexto rápido para tu salud, con explicaciones honestas sobre lo que el IMC puede decirte y lo que no.</p>
+  </div>
+
+  <div class="toolbox">
+    <label>Unidades</label>
+    <div class="checks">
+      <label><input type="radio" name="units" value="metric" checked> Métrico (kg / cm)</label>
+      <label><input type="radio" name="units" value="imperial"> Imperial (lb / pies + pulgadas)</label>
+    </div>
+    <div id="metricBox">
+      <div class="row">
+        <div><label for="kg">Peso (kg)</label><input type="number" id="kg" placeholder="p. ej. 70" min="0" step="any"></div>
+        <div><label for="cm">Altura (cm)</label><input type="number" id="cm" placeholder="p. ej. 175" min="0" step="any"></div>
+      </div>
+    </div>
+    <div id="imperialBox" style="display:none">
+      <div class="row">
+        <div><label for="lb">Peso (lb)</label><input type="number" id="lb" placeholder="p. ej. 154" min="0" step="any"></div>
+        <div><label for="ft">Altura (pies)</label><input type="number" id="ft" placeholder="p. ej. 5" min="0" step="any"></div>
+        <div><label for="inch">Altura (pulgadas)</label><input type="number" id="inch" placeholder="p. ej. 9" min="0" step="any"></div>
+      </div>
+    </div>
+    <button class="btn" id="calcBtn">⚖️ Calcular IMC</button>
+    <div class="stats">
+      <div class="stat"><b id="rBmi">—</b><span>Tu IMC</span></div>
+      <div class="stat"><b id="rCat">—</b><span>Categoría</span></div>
+      <div class="stat"><b id="rRange">—</b><span>Rango saludable para ti</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>Qué es el IMC y qué no es</h2>
+    <p>El IMC es una fórmula sencilla con una larga historia: tu peso en kilos dividido entre el cuadrado de tu estatura en metros. La ideó en la década de 1830 el estadístico belga Adolphe Quetelet y se adoptó en todo el mundo porque solo necesita una báscula y una cinta métrica. Médicos y aseguradoras la usan como primer filtro: en poblaciones grandes, el IMC se correlaciona razonablemente bien con la grasa corporal y con el riesgo de afecciones como la diabetes tipo 2 y las enfermedades del corazón.</p>
+<p>Y aquí va la parte honesta, porque importa: el IMC no sabe nada de ti en particular. No distingue músculo de grasa, así que un deportista de fuerza puede caer en «sobrepeso» con poca grasa corporal. No muestra dónde se acumula la grasa, se comporta distinto según la edad y el origen étnico, y nunca se diseñó para diagnosticar nada. Bien usado, es un punto de partida para conversar con un médico, junto con la cintura, la tensión, la actividad y los antecedentes familiares. Mal usado, como veredicto sobre la salud de una persona, engaña. Esta calculadora te da el número y el contexto juntos.</p>
+    <h2>Cómo usar la calculadora de IMC</h2>
+    <ol>
+<li>Elige tus unidades: métrico (kilos y centímetros) o imperial (libras, pies y pulgadas).</li>
+<li>Escribe tu peso y tu estatura. Para un número más estable, pésate por la mañana y mide tu estatura descalzo: la mayoría somos un poco más bajos al final del día.</li>
+<li>Pulsa «Calcular IMC» para ver tu puntuación, su categoría y el rango de peso saludable calculado para tu estatura.</li>
+<li>Revísalo con el tiempo, no a diario. El peso fluctúa de forma natural uno o dos kilos con el agua y las comidas; lo que cuenta es la tendencia a lo largo de meses.</li>
+</ol>
+    <h2>Ejemplo resuelto</h2>
+    <div class="example"><p>Un caso típico: <strong>70 kg y 175 cm</strong>. La cuenta es 70 ÷ 1,75² = 70 ÷ 3,0625 = <strong>22,9</strong>, cómodamente dentro de la franja saludable de 18,5 a 24,9. La calculadora también invierte la fórmula: para 175 cm, el rango de peso saludable es de <strong>56,7 kg a 76,3 kg</strong>.</p>
+<p>La misma persona con 85 kg obtiene un IMC de 27,8 («sobrepeso») y puede ver que necesitaría perder unos 8,7 kg para llegar a lo alto del rango saludable. Con 52 kg, el IMC baja a 17,0 («bajo peso»), un recordatorio de que la báscula tiene un suelo saludable además de un techo, y de que estar por debajo también conlleva sus propios riesgos.</p></div>
+    <h2>Qué significa tu número</h2>
+    <ul>
+<li><strong>Bajo peso (menos de 18,5):</strong> puede indicar una alimentación insuficiente o alguna afección subyacente. Vale la pena comentarlo con un médico, sobre todo si la pérdida no fue buscada.</li>
+<li><strong>Saludable (18,5–24,9):</strong> la franja asociada al menor riesgo a nivel de población. Mantenerse activo importa también aquí: un IMC saludable con cero ejercicio no es el panorama completo.</li>
+<li><strong>Sobrepeso (25–29,9):</strong> un empujón, no una alarma. Muchas personas en esta franja son metabólicamente sanas, pero el riesgo empieza a subir, y la circunferencia de cintura añade contexto útil.</li>
+<li><strong>Obesidad (30 o más):</strong> el riesgo de varias enfermedades crónicas sube con más fuerza. Un médico puede ayudarte a separar lo que el número significa para ti en persona y qué hacer al respecto.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Usar el IMC en niños y adolescentes.</strong> Los menores de 20 años necesitan tablas de percentiles por edad y sexo, no los cortes de adultos. Un IMC de 22 significa algo distinto a los 12 años que a los 32.</li>
+<li><strong>Tratarlo como un porcentaje de grasa corporal.</strong> No lo es. Dos personas con el mismo IMC pueden tener composiciones corporales muy distintas.</li>
+<li><strong>Pesarse cada día y reaccionar a cada gramo.</strong> El agua, la sal y las comidas mueven la báscula a diario. Pésate en las mismas condiciones y mira la tendencia semanal o mensual.</li>
+<li><strong>Medir la estatura con zapatos o encorvado.</strong> Un par de centímetros de error cambia el resultado más de lo que parece, porque la estatura va al cuadrado en la fórmula.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Cuál es la fórmula del IMC?</h3><p>En unidades métricas: peso en kilos dividido entre la estatura en metros al cuadrado (kg/m²). Por ejemplo, 70 kg y 1,75 m dan 70 ÷ 3,0625 = 22,9. La calculadora hace la conversión automáticamente si usas libras, pies y pulgadas.</p></div>
+    <div class="faq"><h3>¿Cuáles son las categorías del IMC?</h3><p>Según la OMS: menos de 18,5 es bajo peso; de 18,5 a 24,9, saludable; de 25 a 29,9, sobrepeso; y 30 o más, obesidad. Son cortes de población, no diagnósticos individuales.</p></div>
+    <div class="faq"><h3>¿Un IMC alto significa siempre mala salud?</h3><p>No. El IMC no distingue músculo de grasa, así que una persona muy musculosa puede salir en «sobrepeso» estando sana. Por eso conviene interpretarlo junto con la cintura, la actividad física, la tensión y los análisis.</p></div>
+    <div class="faq"><h3>¿Sirve el IMC para niños y adolescentes?</h3><p>No con estos cortes. En menores se usan percentiles por edad y sexo, porque un mismo valor cambia de significado según la etapa de crecimiento. Consulta al pediatra para interpretarlo en niños.</p></div>
+    <div class="faq"><h3>¿Cada cuánto debería calcular mi IMC?</h3><p>Cada pocas semanas o cada mes basta. El peso diario fluctúa por agua y comidas, así que los cambios reales solo se ven en la tendencia a lo largo de meses.</p></div>
+    <div class="faq"><h3>¿El IMC es un diagnóstico médico?</h3><p>No. Es una herramienta de cribado, un primer número para orientar una conversación con un profesional de la salud. Nunca sustituye una valoración médica completa.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../calculadora-de-edad/">Calculadora de edad</a><a href="../calculadora-de-porcentajes/">Calculadora de porcentajes</a><a href="../conversor-de-unidades/">Conversor de unidades</a><a href="../contador-de-palabras/">Contador de palabras</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+var radios=document.querySelectorAll('input[name=units]');
+function units(){for(var i=0;i<radios.length;i++)if(radios[i].checked)return radios[i].value;return 'metric';}
+radios.forEach(function(r){r.addEventListener('change',function(){
+  var u=units();
+  document.getElementById('metricBox').style.display=u==='metric'?'':'none';
+  document.getElementById('imperialBox').style.display=u==='imperial'?'':'none';
+});});
+function calc(){
+  var msg=document.getElementById('msg'),kg,meters;
+  if(units()==='metric'){
+    kg=parseFloat(document.getElementById('kg').value);
+    var cm=parseFloat(document.getElementById('cm').value);
+    meters=cm/100;
+  }else{
+    var lb=parseFloat(document.getElementById('lb').value);
+    var ft=parseFloat(document.getElementById('ft').value)||0;
+    var inch=parseFloat(document.getElementById('inch').value)||0;
+    kg=lb*0.45359237;
+    meters=(ft*12+inch)*0.0254;
+  }
+  if(!kg||!meters||kg<=0||meters<=0){msg.innerHTML='<span class="err">Escribe un peso y una altura válidos.</span>';return;}
+  var bmi=kg/(meters*meters);
+  var cat=bmi<18.5?'Bajo peso':bmi<25?'Saludable':bmi<30?'Sobrepeso':'Obesidad';
+  var lo=(18.5*meters*meters),hi=(24.9*meters*meters);
+  var rangeTxt=units()==='metric'? lo.toFixed(1)+'–'+hi.toFixed(1)+' kg' : (lo/0.45359237).toFixed(0)+'–'+(hi/0.45359237).toFixed(0)+' lb';
+  document.getElementById('rBmi').textContent=bmi.toFixed(1);
+  document.getElementById('rCat').textContent=cat;
+  document.getElementById('rRange').textContent=rangeTxt;
+  msg.innerHTML='<span class="ok">Tu IMC es '+bmi.toFixed(1)+' — categoría: '+cat+'.</span> Es solo una orientación general, no un consejo médico.';
+}
+document.getElementById('calcBtn').addEventListener('click',calc);
+['kg','cm','lb','ft','inch'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});
+</script>
+</body>
+</html>
