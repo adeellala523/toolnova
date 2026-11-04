@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convertir imagen a Base64 online gratis | ToolNova</title>
+<meta name="description" content="Convierte cualquier imagen a Base64 y obtén su data URI, su etiqueta HTML o su CSS listos para pegar. Gratis, sin registro y sin subir tu imagen.">
+<link rel="canonical" href="https://trytoolnova.com/es/imagen-a-base64/">
+<link rel="alternate" hreflang="es" href="https://trytoolnova.com/es/imagen-a-base64/">
+<link rel="alternate" hreflang="en" href="https://trytoolnova.com/image-to-base64/">
+<link rel="alternate" hreflang="x-default" href="https://trytoolnova.com/image-to-base64/">
+<link rel="stylesheet" href="../../style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Imagen a Base64",
+"url": "https://trytoolnova.com/es/imagen-a-base64/",
+"applicationCategory": "UtilitiesApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Inicio",
+"item": "https://trytoolnova.com/es/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Imagen a Base64",
+"item": "https://trytoolnova.com/es/imagen-a-base64/"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "¿Cuánto crece una imagen al convertirla a Base64?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Alrededor de un 33 %. Cada 3 bytes de la imagen se representan con 4 caracteres de texto. El ejemplo de esta página lo muestra con cifras reales: un PNG de 416 bytes produce 556 caracteres Base64, y la data URI completa, con su prefijo, mide 578 caracteres."
+}
+},
+{
+"@type": "Question",
+"name": "¿Qué diferencia hay entre la data URI y el Base64 solo?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "La data URI es la cadena Base64 precedida de data:[tipo];base64, (por ejemplo data:image/png;base64,). Los navegadores necesitan ese prefijo para saber qué tipo de archivo es. Las APIs, en cambio, suelen pedir solo la cadena, porque ellas ya saben qué formato esperan."
+}
+},
+{
+"@type": "Question",
+"name": "¿Puedo pegar el resultado directamente en mi página web?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Sí. Elige el formato «Etiqueta HTML img» y pega el resultado tal cual en tu HTML, o elige «CSS background-image» para usarlo en tu hoja de estilos. Funciona sin subir ningún archivo, porque la imagen viaja dentro del propio código."
+}
+},
+{
+"@type": "Question",
+"name": "¿Mi imagen se sube a algún servidor?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. La lectura y la conversión ocurren en tu navegador con JavaScript. La imagen nunca sale de tu dispositivo, así que puedes convertir fotos privadas o de trabajo sin riesgo."
+}
+},
+{
+"@type": "Question",
+"name": "¿Hay un límite de tamaño para la imagen?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No hay un límite establecido, pero las imágenes muy grandes generan cadenas enormes que pueden hacer lento el navegador al copiarlas o al pegarlas en un editor. Para imágenes grandes, comprime primero y convierte después."
+}
+},
+{
+"@type": "Question",
+"name": "¿Por qué a veces no se muestra la vista previa?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Algunos formatos de imagen no se pueden previsualizar en todos los navegadores, aunque la conversión a Base64 se haya hecho correctamente. En ese caso verás el aviso de vista previa no disponible, pero la cadena generada sigue siendo válida y copiable."
+}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../">⚡ Tool<span>Nova</span></a>
+  <nav class="main"><a href="../">Inicio</a><a href="../../guides/">Guías</a><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Privacidad</a><a href="../../image-to-base64/">🌐 English</a></nav>
+</div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Inicio</a> › Imagen a Base64</p>
+  <div class="pagehead">
+    <h1>Imagen a Base64</h1>
+    <p class="lead">Elige una imagen y obtén al instante su versión en Base64: como data URI completa para HTML y CSS, como Base64 sin más para APIs y JSON, o ya envuelta en una etiqueta <em>img</em> o en un <em>background-image</em>. Todo se procesa en tu navegador, así que tu imagen nunca se sube a ningún servidor.</p>
+  </div>
+
+  <div class="toolbox">
+    <label for="imgInput">Elige una imagen (PNG, JPG, GIF, WebP o cualquier archivo de imagen)</label>
+    <input type="file" id="imgInput" accept="image/*" style="display:block;margin-bottom:12px">
+    <label for="outFormat">Formato de salida</label>
+    <select id="outFormat" style="display:block;margin-bottom:12px;max-width:320px">
+      <option value="datauri">Data URI completa (para HTML / CSS)</option>
+      <option value="raw">Solo Base64 sin más (para APIs / JSON)</option>
+      <option value="html">Etiqueta HTML &lt;img&gt;</option>
+      <option value="css">CSS background-image</option>
+    </select>
+    <button class="btn teal" id="sampleBtn">Probar una imagen de ejemplo</button>
+    <button class="btn alt" id="copyBtn" disabled>📋 Copiar salida</button>
+    <button class="btn alt" id="dlBtn" disabled>⬇️ Descargar como .txt</button>
+    <button class="btn alt" id="clearBtn">Limpiar</button>
+    <div class="stats">
+      <div class="stat"><b id="fmt">—</b><span>Formato</span></div>
+      <div class="stat"><b id="origSize">—</b><span>Tamaño original</span></div>
+      <div class="stat"><b id="dims">—</b><span>Dimensiones</span></div>
+      <div class="stat"><b id="b64len">—</b><span>Caracteres Base64</span></div>
+    </div>
+    <div id="previewRow" style="display:none;gap:14px;flex-wrap:wrap;margin-top:14px">
+      <div style="flex:1;min-width:200px"><p style="color:var(--muted);font-size:.88rem;margin-bottom:6px">Tu imagen</p><img id="imgOut" alt="Vista previa de la imagen subida" style="max-width:100%;border-radius:10px;border:1px solid var(--line)"></div>
+    </div>
+    <label for="b64output" style="display:block;margin-top:14px">Salida Base64</label>
+    <textarea id="b64output" readonly placeholder="Tu salida Base64 aparecerá aquí después de elegir una imagen, o haz clic en Probar una imagen de ejemplo." style="font-family:ui-monospace,Menlo,Consolas,monospace"></textarea>
+    <p class="result" id="msg"></p>
+  </div>
+
+  <section class="block">
+    <h2>Para qué convertir una imagen a Base64</h2>
+    <p>Convertir una imagen a Base64 sirve para meter la imagen dentro de un archivo de texto. En lugar de un archivo separado que hay que enlazar, subir y mantener, la imagen viaja como una cadena de texto dentro del propio HTML, del CSS, de un JSON o de un correo. Eso es útil en prototipos rápidos, en plantillas de correo (donde los archivos adjuntos se bloquean con frecuencia), en APIs que solo aceptan JSON y en documentos HTML de un solo archivo que deben funcionar sin depender de ninguna carpeta de imágenes.</p>
+<p>También es el formato que muchas APIs esperan cuando les envías una imagen: en vez de un archivo, reciben una cadena Base64 dentro del JSON. Y es la forma habitual de incrustar iconos pequeños y logos en CSS sin una petición extra al servidor por cada imagen. Eso sí: solo compensa con imágenes pequeñas. Una foto grande en Base64 pesa un tercio más que el archivo original y hace que la página cargue más lenta, así que para fotos grandes sigue siendo mejor enlazar el archivo.</p>
+    <h2>Cómo convertir una imagen a Base64</h2>
+    <ol>
+<li>Haz clic en elegir archivo y selecciona tu imagen: PNG, JPG, GIF, WebP o cualquier otro formato de imagen.</li>
+<li>Elige el formato de salida: data URI completa (para HTML y CSS), solo Base64 (para APIs y JSON), etiqueta HTML <em>img</em> o CSS <em>background-image</em>.</li>
+<li>Revisa los datos: formato detectado, tamaño original, dimensiones y número de caracteres Base64 generados.</li>
+<li>Copia la salida con "Copiar salida" o descárgala como archivo .txt para guardarla o enviarla.</li>
+</ol>
+    <h2>Ejemplo práctico</h2>
+    <div class="example"><p>Pulsa "Probar una imagen de ejemplo" y verás un caso real: un PNG de <strong>416 bytes</strong> se convierte en <strong>556 caracteres Base64</strong>. La data URI completa mide 578 caracteres, porque añade el prefijo <em>data:image/png;base64,</em> delante de la cadena.</p>
+<p>Es decir, la imagen crece aproximadamente un <strong>33,7 %</strong> al pasar a Base64. Con una imagen de muestra tan pequeña el aumento es de apenas 140 caracteres; con una foto de 2 MB serían unos 2,7 MB de texto. Ese es el cálculo que debes hacer antes de incrustar una imagen grande en una página: el ahorro de una petición al servidor rara vez compensa ese peso extra.</p></div>
+    <h2>Consejos prácticos</h2>
+    <ul>
+<li><strong>Elige bien el formato de salida.</strong> Para pegar en HTML usa la data URI o la etiqueta <em>img</em> ya generada; para enviar a una API, el Base64 solo, porque la mayoría de APIs no quieren el prefijo <em>data:…</em> y lo rechazan.</li>
+<li><strong>Comprime antes de convertir.</strong> Si la imagen va a una web, pásala primero por el compresor de imágenes: cada kilobyte que recortes antes se traduce en un 33 % menos de texto después.</li>
+<li><strong>Usa Base64 para iconos y logos pequeños, no para fotos.</strong> La regla práctica: por debajo de unos pocos KB, incrustar compensa; por encima, enlaza el archivo y deja que el navegador lo cachee.</li>
+<li><strong>Guarda la salida en .txt si es larga.</strong> Una cadena de miles de caracteres es fácil de romper al copiarla desde un chat. El archivo descargado conserva cada carácter intacto.</li>
+</ul>
+    <h2>Errores comunes que debes evitar</h2>
+    <ul>
+<li><strong>Enviar la data URI completa a una API que pide Base64 solo.</strong> Es el error más habitual: la API espera la cadena y recibe <em>data:image/png;base64,…</em> delante, y la rechaza. Cambia el formato de salida a "Solo Base64" antes de copiar.</li>
+<li><strong>Incrustar fotos grandes en HTML.</strong> Una foto de 3 MB se convierte en 4 MB de texto dentro del HTML, la página no se puede cachear bien y cada visita vuelve a descargar esos 4 MB. Para fotos, enlaza el archivo.</li>
+<li><strong>Olvidar que el Base64 no es privado.</strong> Cualquiera que vea la cadena puede decodificarla y recuperar la imagen. No uses este método para "ocultar" imágenes sensibles.</li>
+<li><strong>Elegir un archivo que no es una imagen.</strong> Si seleccionas un PDF o un documento, la herramienta te avisará de que no es una imagen: solo acepta archivos de imagen reales.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq"><h3>¿Cuánto crece una imagen al convertirla a Base64?</h3><p>Alrededor de un 33 %. Cada 3 bytes de la imagen se representan con 4 caracteres de texto. El ejemplo de esta página lo muestra con cifras reales: un PNG de 416 bytes produce 556 caracteres Base64, y la data URI completa, con su prefijo, mide 578 caracteres.</p></div>
+    <div class="faq"><h3>¿Qué diferencia hay entre la data URI y el Base64 solo?</h3><p>La data URI es la cadena Base64 precedida de data:[tipo];base64, (por ejemplo data:image/png;base64,). Los navegadores necesitan ese prefijo para saber qué tipo de archivo es. Las APIs, en cambio, suelen pedir solo la cadena, porque ellas ya saben qué formato esperan.</p></div>
+    <div class="faq"><h3>¿Puedo pegar el resultado directamente en mi página web?</h3><p>Sí. Elige el formato «Etiqueta HTML img» y pega el resultado tal cual en tu HTML, o elige «CSS background-image» para usarlo en tu hoja de estilos. Funciona sin subir ningún archivo, porque la imagen viaja dentro del propio código.</p></div>
+    <div class="faq"><h3>¿Mi imagen se sube a algún servidor?</h3><p>No. La lectura y la conversión ocurren en tu navegador con JavaScript. La imagen nunca sale de tu dispositivo, así que puedes convertir fotos privadas o de trabajo sin riesgo.</p></div>
+    <div class="faq"><h3>¿Hay un límite de tamaño para la imagen?</h3><p>No hay un límite establecido, pero las imágenes muy grandes generan cadenas enormes que pueden hacer lento el navegador al copiarlas o al pegarlas en un editor. Para imágenes grandes, comprime primero y convierte después.</p></div>
+    <div class="faq"><h3>¿Por qué a veces no se muestra la vista previa?</h3><p>Algunos formatos de imagen no se pueden previsualizar en todos los navegadores, aunque la conversión a Base64 se haya hecho correctamente. En ese caso verás el aviso de vista previa no disponible, pero la cadena generada sigue siendo válida y copiable.</p></div>
+    <h2>Herramientas relacionadas</h2>
+    <div class="related"><a href="../base64-a-imagen/">Base64 a imagen</a><a href="../codificador-decodificador-base64/">Codificador y decodificador Base64</a><a href="../compresor-de-imagenes/">Compresor de imágenes</a><a href="../jpg-a-pdf/">JPG a PDF</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Herramientas online gratuitas para tareas de todos los días. Rápidas, privadas y sin registro.</p></div>
+    <div><h4>Herramientas en español</h4><a href="../contador-de-palabras/">Contador de palabras</a><a href="../generador-de-contrasenas/">Generador de contraseñas</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../eliminar-lineas-duplicadas/">Eliminar líneas duplicadas</a><a href="../conversor-mayusculas-minusculas/">Conversor de mayúsculas y minúsculas</a><a href="../generador-qr-wifi/">Generador de código QR WiFi</a><a href="../generador-qr-vcard/">Generador de código QR vCard</a><a href="../contador-caracteres-instagram/">Contador de caracteres de Instagram</a><a href="../contador-caracteres-twitter/">Contador de caracteres de X (Twitter)</a><a href="../hex-a-rgb/">Conversor de HEX a RGB</a></div>
+    <div><h4>Guías</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a></div>
+    <div><h4>Sitio</h4><a href="../acerca-de/">Acerca de</a><a href="../contacto/">Contacto</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos de uso</a><a href="../../disclaimer/">Aviso legal</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. Todos los derechos reservados.</p>
+</div></footer>
+
+<script>
+var SAMPLE="iVBORw0KGgoAAAANSUhEUgAAAPAAAAB4CAIAAABD1OhwAAABZ0lEQVR4nO3UwQnAIAAEwZgCrNh32jZNCMIyU8E9lhtzfQ9UvLcHwEmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNClj7317AxzjoUkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJmXM9d3eAMd4aFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFJ+g9wGC0QVCQQAAAAASUVORK5CYII=";
+var curMime="",curB64="",curName="toolnova-image";
+function fmt(bytes){ if(!bytes&&bytes!==0)return '—'; if(bytes<1024)return bytes+' B'; if(bytes<1048576)return (bytes/1024).toFixed(1)+' KB'; return (bytes/1048576).toFixed(2)+' MB'; }
+function fmtName(mime){
+  if(mime==="image/png")return "PNG";
+  if(mime==="image/jpeg")return "JPEG";
+  if(mime==="image/gif")return "GIF";
+  if(mime==="image/webp")return "WebP";
+  if(mime==="image/bmp")return "BMP";
+  if(mime==="image/svg+xml")return "SVG";
+  return mime.replace("image/","").toUpperCase();
+}
+function renderOutput(){
+  if(!curB64)return;
+  var mode=document.getElementById('outFormat').value;
+  var uri="data:"+curMime+";base64,"+curB64;
+  var out=uri;
+  if(mode==="raw")out=curB64;
+  else if(mode==="html")out='<img src="'+uri+'" alt="'+curName+'">';
+  else if(mode==="css")out='background-image: url("'+uri+'");';
+  document.getElementById('b64output').value=out;
+}
+function showResult(mime,b64,origBytes,dimsText,msgText){
+  curMime=mime; curB64=b64;
+  document.getElementById('fmt').textContent=fmtName(mime);
+  document.getElementById('origSize').textContent=fmt(origBytes);
+  document.getElementById('dims').textContent=dimsText;
+  document.getElementById('b64len').textContent=b64.length.toLocaleString();
+  document.getElementById('imgOut').src="data:"+mime+";base64,"+b64;
+  document.getElementById('previewRow').style.display='flex';
+  document.getElementById('copyBtn').disabled=false;
+  document.getElementById('dlBtn').disabled=false;
+  renderOutput();
+  document.getElementById('msg').innerHTML='<span class="ok">'+msgText+'</span>';
+}
+document.getElementById('imgInput').addEventListener('change',function(){
+  var file=this.files[0]; if(!file)return;
+  var msg=document.getElementById('msg');
+  if(file.type.indexOf('image/')!==0){ msg.innerHTML='<span class="err">Ese archivo no es una imagen. Elige un PNG, JPG, GIF, WebP u otro archivo de imagen.</span>'; return; }
+  curName=file.name.replace(/\.[^.]+$/,'')||'toolnova-image';
+  var reader=new FileReader();
+  reader.onload=function(){
+    var uri=reader.result, parts=uri.split(',');
+    var b64=parts[1]||'';
+    var img=new Image();
+    img.onload=function(){ showResult(file.type,b64,file.size,(img.naturalWidth+' × '+img.naturalHeight),'Codificado: '+fmtName(file.type)+' imagen, '+fmt(file.size)+' → '+b64.length.toLocaleString()+' caracteres Base64.'); };
+    img.onerror=function(){ showResult(file.type,b64,file.size,'—','Codificado: '+fmtName(file.type)+' imagen, '+fmt(file.size)+' → '+b64.length.toLocaleString()+' caracteres Base64. (Vista previa no disponible para este formato.)'); };
+    img.src=uri;
+  };
+  reader.readAsDataURL(file);
+});
+document.getElementById('outFormat').addEventListener('change',renderOutput);
+document.getElementById('sampleBtn').addEventListener('click',function(){
+  curName='toolnova-sample';
+  showResult('image/png',SAMPLE,416,'240 × 120','Ejemplo codificado: PNG, 416 bytes → 556 caracteres Base64 (data URI de 578 caracteres, un 33,7 % más grande).');
+});
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var ta=document.getElementById('b64output'); var msg=document.getElementById('msg');
+  function done(){ msg.innerHTML='<span class="ok">Copiado al portapapeles.</span>'; }
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(ta.value).then(done).catch(function(){ ta.select(); document.execCommand('copy'); done(); }); }
+  else { ta.select(); document.execCommand('copy'); done(); }
+});
+document.getElementById('dlBtn').addEventListener('click',function(){
+  if(!curB64)return;
+  var blob=new Blob([document.getElementById('b64output').value],{type:'text/plain'});
+  var a=document.createElement('a'); a.download='toolnova-image-base64.txt'; a.href=URL.createObjectURL(blob); a.click();
+});
+document.getElementById('clearBtn').addEventListener('click',function(){
+  document.getElementById('imgInput').value=''; document.getElementById('b64output').value='';
+  document.getElementById('msg').textContent=''; document.getElementById('previewRow').style.display='none';
+  document.getElementById('copyBtn').disabled=true; document.getElementById('dlBtn').disabled=true;
+  ['fmt','origSize','dims','b64len'].forEach(function(id){document.getElementById(id).textContent='—';});
+  curMime=''; curB64='';
+});
+</script>
+</body>
+</html>
