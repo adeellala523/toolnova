@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator Widget — ToolNova</title>
+<link rel="canonical" href="https://trytoolnova.com/embed/bmi-calculator/">
+<style>
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f9fb;color:#1f2937}
+  .w{max-width:520px;margin:0 auto;padding:16px}
+  .card{background:#fff;border:1px solid #e5edf3;border-radius:16px;padding:18px;box-shadow:0 4px 16px rgba(13,80,110,.07)}
+  h1{font-size:20px;margin:0 0 4px} p.sub{color:#64748b;font-size:13px;margin:0 0 14px}
+  .row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}
+  label{font-size:12px;color:#64748b;display:block;margin-bottom:2px}
+  input,select{padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px}
+  input{width:130px}
+  .res{font-weight:700;font-size:19px;color:#0e7c86;min-height:26px;margin:12px 0 0}
+  .cat{font-size:14px;color:#475569;margin-top:2px;min-height:20px}
+  .foot{margin-top:14px;text-align:center;font-size:12px;color:#64748b}
+  .foot a{color:#0e7c86;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="w"><div class="card">
+  <h1>BMI Calculator</h1>
+  <p class="sub">Body Mass Index from weight and height — instantly.</p>
+  <div class="row">
+    <div><label>Units</label><select id="u"><option value="m">kg / cm</option><option value="i">lb / in</option></select></div>
+    <div><label>Weight</label><input type="number" id="w" placeholder="70" step="any"></div>
+    <div><label>Height</label><input type="number" id="h" placeholder="175" step="any"></div>
+  </div>
+  <p class="res" id="r"></p>
+  <p class="cat" id="c"></p>
+  <div class="foot">Powered by <a href="https://trytoolnova.com/" target="_blank" rel="noopener">ToolNova</a> · <a href="https://trytoolnova.com/bmi-calculator/" target="_blank" rel="noopener">Full calculator</a></div>
+</div></div>
+<script>
+function cat(b){if(b<18.5)return 'Underweight';if(b<25)return 'Healthy weight';if(b<30)return 'Overweight';return 'Obese';}
+function calc(){var w=parseFloat(document.getElementById('w').value),h=parseFloat(document.getElementById('h').value),u=document.getElementById('u').value,r=document.getElementById('r'),c=document.getElementById('c');if(isNaN(w)||isNaN(h)||h===0){r.textContent='';c.textContent='';return;}var m,kg;if(u==='m'){kg=w;m=h/100;}else{kg=w*0.453592;m=h*0.0254;}var b=kg/(m*m);r.textContent='BMI: '+(Math.round(b*10)/10);c.textContent=cat(b)+'  ·  Healthy range for your height: '+(Math.round(18.5*m*m*10)/10)+'–'+(Math.round(24.9*m*m*10)/10)+' kg';}
+['w','h','u'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});
+</script>
+</body>
+</html>
