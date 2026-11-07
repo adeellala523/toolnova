@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Calculate Percentage Increase Between Two Numbers | ToolNova Guides</title>
+<meta name="description" content="The percentage increase formula, worked out step by step: ((New − Old) ÷ Old) × 100. Salary raises, price rises, rent hikes, percentage points vs percent, and how to reverse an increase — with real numbers checked.">
+<link rel="canonical" href="https://trytoolnova.com/guides/how-to-calculate-percentage-increase/">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate Percentage Increase Between Two Numbers","author":{"@type":"Organization","name":"ToolNova"},"publisher":{"@type":"Organization","name":"ToolNova"},"datePublished":"2026-11-07","description":"The percentage increase formula, worked out step by step: ((New − Old) ÷ Old) × 100 — with salary, price and rent examples, percentage points vs percent, and how to reverse an increase."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trytoolnova.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://trytoolnova.com/guides/"},{"@type":"ListItem","position":3,"name":"How to Calculate Percentage Increase","item":"https://trytoolnova.com/guides/how-to-calculate-percentage-increase/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Subtract the old value from the new value, divide that difference by the old value, then multiply by 100. For example, a salary going from $50,000 to $55,000 is (55,000 − 50,000) ÷ 50,000 × 100 = 10%."}},{"@type":"Question","name":"What is the formula for percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Percentage increase = ((New value − Old value) ÷ Old value) × 100. The old value — the starting number — always goes in the denominator, because the increase is measured relative to where you started."}},{"@type":"Question","name":"How do you calculate percentage increase between two numbers in Excel?","acceptedAnswer":{"@type":"Answer","text":"If the old value is in A2 and the new value in B2, type =(B2-A2)/A2 and format the cell as a percentage. That gives the same result as the formula: a salary from 50000 to 55000 shows 10%."}},{"@type":"Question","name":"What is the difference between percentage increase and percentage points?","acceptedAnswer":{"@type":"Answer","text":"Percentage points measure the plain difference between two percentages; percentage increase measures the relative change. An interest rate rising from 20% to 25% is up 5 percentage points, but that is a 25% relative increase, because 5 ÷ 20 = 0.25."}},{"@type":"Question","name":"Can percentage increase be more than 100%?","acceptedAnswer":{"@type":"Answer","text":"Yes. A value that more than doubles has increased by more than 100%: going from 100 to 250 is a 150% increase, because (250 − 100) ÷ 100 × 100 = 150. A 100% increase exactly doubles the original value."}},{"@type":"Question","name":"How do you calculate percentage increase from zero?","acceptedAnswer":{"@type":"Answer","text":"You can't — the formula divides by the old value, and dividing by zero is undefined. If something goes from 0 to any positive number, report the absolute change instead (for example, 'up by 40 units'), or say it started from zero, rather than inventing a percentage."}},{"@type":"Question","name":"How do you reverse a percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Divide the increased value by 1 plus the rate as a decimal. If a price is $120 after a 20% increase, the original was 120 ÷ 1.20 = $100. Do not subtract 20% of $120 ($24) — that gives $96, which is wrong, because the 20% was calculated on the original $100, not on $120."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../"><span class="logobox">⚡</span><span class="wordmark">Tool<span>Nova</span></span></a>
+  <nav class="main"><a href="../../word-counter/"><span class="nic">📝</span>Word Counter</a><a href="../../password-generator/"><span class="nic">🔐</span>Password</a><a href="../../qr-code-generator/"><span class="nic">🔳</span>QR Code</a><a href="../../image-compressor/"><span class="nic">🖼️</span>Image</a><a href="../../bmi-calculator/"><span class="nic">⚖️</span>BMI</a><a href="../../emi-calculator/"><span class="nic">🏦</span>Loan</a></nav>
+  <div class="headright"><a class="circbtn" href="../../#toolGrid" aria-label="All tools">⊞</a><button class="burger" aria-label="Menu" onclick="this.closest('header').classList.toggle('open')">☰</button></div>
+</div>
+<div class="mobilenav"><a href="../../word-counter/">📝 Word Counter</a><a href="../../password-generator/">🔐 Password Generator</a><a href="../../qr-code-generator/">🔳 QR Code Generator</a><a href="../../image-compressor/">🖼️ Image Compressor</a><a href="../../bmi-calculator/">⚖️ BMI Calculator</a><a href="../../emi-calculator/">🏦 EMI / Loan Calculator</a><a href="../../guides/">📚 Guides</a><a href="../../about/">ℹ️ About</a><a href="../../contact/">✉️ Contact</a></div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../../">Home</a> › <a href="../../guides/">Guides</a> › Percentage Increase</p>
+  <div class="pagehead">
+    <h1>How to Calculate Percentage Increase Between Two Numbers</h1>
+    <p class="article-meta">ToolNova Guides · 6 minute read</p>
+    <p class="lead">A salary goes up, a price goes up, the rent goes up — and the number everyone asks for is "by what percent?" The calculation takes three steps and one formula, and once you see it worked with real numbers you will never need to look it up again. This guide works through the formula, three everyday examples, the two mistakes that catch almost everyone, and the reverse calculation for finding the original price after a rise.</p>
+    <p><strong>Want the answer in seconds?</strong> Use the free <a href="../../percentage-calculator/">ToolNova Percentage Calculator</a> — type the old and new numbers and it reports the increase or decrease instantly, on your device, with nothing uploaded.</p>
+  </div>
+
+  <section class="block">
+    <h2>The Formula</h2>
+    <p>Percentage increase = ((New value − Old value) ÷ Old value) × 100. That is the whole method, in three steps:</p>
+    <p><strong>Step 1 — find the difference:</strong> subtract the old value from the new value. This is how much the number actually grew, in its own units — dollars, points, kilograms.</p>
+    <p><strong>Step 2 — divide by the old value:</strong> this is the step people skip, and it is the whole point of a percentage. Dividing by where you started turns an absolute change into a relative one, so a $5,000 raise on a $50,000 salary and a $5,000 raise on a $500,000 salary stop looking like the same event. They are not: one is 10%, the other is 1%.</p>
+    <p><strong>Step 3 — multiply by 100:</strong> this converts the decimal into a percentage. A result of 0.10 becomes 10%. If you forget this step you will report "0.10%" instead of "10%" — a hundredfold error, and the most common slip in the whole calculation.</p>
+    <p>The old value — the starting number — always goes in the denominator. If you divide by the new value instead, every answer comes out too small, and the error grows as the increase gets bigger.</p>
+
+    <h2>Worked Example 1: A Salary Raise</h2>
+    <p>Your salary goes from $50,000 to $55,000. How big is the raise in percent?</p>
+    <div class="example">
+    <p><strong>Difference:</strong> 55,000 − 50,000 = 5,000.</p>
+    <p><strong>Divide by the old value:</strong> 5,000 ÷ 50,000 = 0.10.</p>
+    <p><strong>Multiply by 100:</strong> 0.10 × 100 = <strong>10%</strong>.</p>
+    </div>
+    <p>So the raise is 10%. Notice the check that keeps you honest: 10% of $50,000 is $5,000, and $50,000 + $5,000 = $55,000 — the new salary. If that reverse check doesn't land on the new value, something went wrong upstream.</p>
+
+    <h2>Worked Example 2: A Price Rise</h2>
+    <p>A jacket costs $80 last season and $100 this season. The increase is $20 — but as a percentage of what?</p>
+    <div class="example">
+    <p><strong>Difference:</strong> 100 − 80 = 20.</p>
+    <p><strong>Divide by the old value:</strong> 20 ÷ 80 = 0.25.</p>
+    <p><strong>Multiply by 100:</strong> 0.25 × 100 = <strong>25%</strong>.</p>
+    </div>
+    <p>The price rose 25%. This is the example that surprises people: the dollar change ($20) looks small, but relative to an $80 starting price it is a quarter more. That is exactly why shops, landlords and employers quote percentages — the same $20 means something completely different on a $20 item (a 100% rise) than on a $2,000 item (a 1% rise).</p>
+
+    <h2>Worked Example 3: A Rent Hike (With a Decimal Answer)</h2>
+    <p>Monthly rent goes from $1,200 to $1,350. The numbers are less round, but the method is identical.</p>
+    <div class="example">
+    <p><strong>Difference:</strong> 1,350 − 1,200 = 150.</p>
+    <p><strong>Divide by the old value:</strong> 150 ÷ 1,200 = 0.125.</p>
+    <p><strong>Multiply by 100:</strong> 0.125 × 100 = <strong>12.5%</strong>.</p>
+    </div>
+    <p>Rent rose 12.5%. Two decimals of precision is usually plenty for a percentage like this — rounding to 13% would overstate the rise by half a point, which on $1,200 a month is $6 a month, or $72 a year. Keep one decimal place when the answer isn't a whole number; it costs nothing and it keeps the figure honest.</p>
+
+    <h2>The Same Formula Measures a Decrease</h2>
+    <p>Nothing changes when the number falls — the formula just returns a negative answer, and the minus sign is the decrease. A stock that drops from $200 to $150: (150 − 200) ÷ 200 × 100 = −25%, a 25% decrease. A grocery bill that falls from $640 to $544 is a 15% decrease, because (544 − 640) ÷ 640 = −0.15. One formula, both directions; the sign tells you which way the number moved. The <a href="../../percentage-calculator/">Percentage Calculator</a> labels the result "increase" or "decrease" for you, so you don't have to read the sign yourself.</p>
+
+    <h2>Percentage Points Are Not Percent</h2>
+    <p>This is the confusion that news headlines exploit most. If an interest rate rises from 20% to 25%, it has gone up by <strong>5 percentage points</strong> — that is the plain subtraction, 25 − 20. But the <strong>percentage increase</strong> is 25%, because the rate itself grew by 5 relative to its starting value of 20: 5 ÷ 20 = 0.25. Both statements are true; they measure different things. When someone says "up 5%" about a rate that moved from 20% to 25%, they are understating the change fivefold — and when a politician says a rate "rose 25%" about the same move, they are not lying, they are just using the relative figure. Always ask which one is meant.</p>
+
+    <h2>Reversing an Increase: Finding the Original Price</h2>
+    <p>The question that trips people up after a rise: a price is $120 <em>after</em> a 20% increase — what was it before? The tempting answer is to subtract 20% of $120, which gives $96. That is wrong, because the 20% was calculated on the original price, not on $120. The correct move is to divide by 1 plus the rate as a decimal:</p>
+    <div class="example">
+    <p><strong>Original = New ÷ (1 + rate):</strong> 120 ÷ 1.20 = <strong>$100</strong>.</p>
+    <p><strong>Check:</strong> 20% of $100 is $20, and $100 + $20 = $120. ✓</p>
+    <p><strong>Same trick, different numbers:</strong> a bill of $115 after a 15% rise started at 115 ÷ 1.15 = $100.</p>
+    </div>
+    <p>Remember it as "divide, don't subtract." Subtracting a percentage of the new value always undershoots the original, because the new value is bigger than the base the percentage was taken from.</p>
+
+    <h2>Successive Increases Multiply — They Don't Add</h2>
+    <p>A 10% raise followed by another 10% raise is not a 20% total increase. The second raise applies to the already-raised salary, so the total is 1.10 × 1.10 = 1.21 — a <strong>21%</strong> increase. The same compounding works in reverse: a price that rises 20% and then falls 20% does not return to where it started. 1.20 × 0.80 = 0.96, so it ends up <strong>4% below</strong> the original. This is why "20% off, then 20% back on" is a losing deal for the buyer, and why two small annual raises beat one raise of the same nominal size spread over the same period.</p>
+
+    <h2>Quick-Reference Table</h2>
+    <p>A few changes worth knowing at a glance — each one worked out with the same formula above:</p>
+    <div class="example">
+    <p><strong>5 → 6:</strong> (6 − 5) ÷ 5 × 100 = <strong>20% increase</strong>.</p>
+    <p><strong>40 → 60:</strong> (60 − 40) ÷ 40 × 100 = <strong>50% increase</strong>.</p>
+    <p><strong>100 → 250:</strong> (250 − 100) ÷ 100 × 100 = <strong>150% increase</strong> — more than doubling, so more than 100%.</p>
+    <p><strong>800 increased by 12.5%:</strong> 800 × 1.125 = <strong>900</strong>.</p>
+    <p><strong>10% of 240:</strong> 0.10 × 240 = <strong>24</strong>. <strong>25% of 80:</strong> 0.25 × 80 = <strong>20</strong>.</p>
+    </div>
+
+    <h2>Mistakes to Avoid</h2>
+    <ul>
+      <li><strong>Dividing by the new value.</strong> The increase is always relative to where you started. Dividing by the new number understates every rise.</li>
+      <li><strong>Forgetting the × 100.</strong> 0.10 is a decimal, not a percent. Without the final multiplication you report "0.10%" for a 10% rise.</li>
+      <li><strong>Adding successive percentages.</strong> Two 10% rises are 21%, not 20%; a 20% rise followed by a 20% cut leaves you 4% down, not back where you started.</li>
+      <li><strong>Confusing percentage points with percent.</strong> A rate moving from 20% to 25% is up 5 percentage points — and up 25% in relative terms.</li>
+      <li><strong>Subtracting a percent of the new value to reverse a rise.</strong> Divide by (1 + rate) instead: $120 after a 20% rise was $100, not $96.</li>
+      <li><strong>Dividing by zero.</strong> An increase from 0 has no percentage — the formula is undefined. Report the absolute change instead.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How do you calculate percentage increase?</strong><br>Subtract the old value from the new value, divide that difference by the old value, then multiply by 100. For example, a salary going from $50,000 to $55,000 is (55,000 − 50,000) ÷ 50,000 × 100 = 10%.</p>
+    <p><strong>What is the formula for percentage increase?</strong><br>Percentage increase = ((New value − Old value) ÷ Old value) × 100. The old value — the starting number — always goes in the denominator, because the increase is measured relative to where you started.</p>
+    <p><strong>How do you calculate percentage increase between two numbers in Excel?</strong><br>If the old value is in A2 and the new value in B2, type =(B2-A2)/A2 and format the cell as a percentage. That gives the same result as the formula: a salary from 50000 to 55000 shows 10%.</p>
+    <p><strong>What is the difference between percentage increase and percentage points?</strong><br>Percentage points measure the plain difference between two percentages; percentage increase measures the relative change. An interest rate rising from 20% to 25% is up 5 percentage points, but that is a 25% relative increase, because 5 ÷ 20 = 0.25.</p>
+    <p><strong>Can percentage increase be more than 100%?</strong><br>Yes. A value that more than doubles has increased by more than 100%: going from 100 to 250 is a 150% increase, because (250 − 100) ÷ 100 × 100 = 150. A 100% increase exactly doubles the original value.</p>
+    <p><strong>How do you calculate percentage increase from zero?</strong><br>You can't — the formula divides by the old value, and dividing by zero is undefined. If something goes from 0 to any positive number, report the absolute change instead (for example, 'up by 40 units'), or say it started from zero, rather than inventing a percentage.</p>
+    <p><strong>How do you reverse a percentage increase?</strong><br>Divide the increased value by 1 plus the rate as a decimal. If a price is $120 after a 20% increase, the original was 120 ÷ 1.20 = $100. Do not subtract 20% of $120 ($24) — that gives $96, which is wrong, because the 20% was calculated on the original $100, not on $120.</p>
+
+    <p><strong>Put it into practice:</strong> check any of the numbers above in seconds with the free <a href="../../percentage-calculator/">ToolNova Percentage Calculator</a> — percent of, what percent, and increase or decrease between two numbers, all calculated on your own device. For the loan side of percentages, see our <a href="../../emi-calculator/">EMI Calculator</a>; for the measurement side, <a href="../../unit-converter/">Unit Converter</a>.</p>
+
+    <h2>Related</h2>
+    <div class="related"><a href="../../percentage-calculator/">Percentage Calculator</a><a href="../../emi-calculator/">EMI Calculator</a><a href="../../unit-converter/">Unit Converter</a><a href="../bmi-explained/">Guide: BMI Explained</a><a href="../compress-images-without-losing-quality/">Guide: Compress Images Without Losing Quality</a></div>
+  </section>
+</div>
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../../word-counter/">Word Counter</a><a href="../../password-generator/">Password Generator</a><a href="../../qr-code-generator/">QR Code Generator</a><a href="../../bmi-calculator/">BMI Calculator</a><a href="../../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a><a href="../../guides/how-to-calculate-percentage-increase/">How to Calculate Percentage Increase</a></div>
+    <div><h4>Site</h4><a href="../../about/">About Us</a><a href="../../contact/">Contact</a><a href="../../privacy-policy/">Privacy Policy</a><a href="../../terms/">Terms of Service</a><a href="../../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+</body>
+</html>
