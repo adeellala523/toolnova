@@ -71,6 +71,22 @@
 "@type": "Answer",
 "text": "Screens vary in calibration, brightness and color gamut, and some colors in the HEX/RGB space sit outside what a given display can reproduce. The code is the ground truth; the rendering is an approximation. For brand-critical work, check on a calibrated monitor."
 }
+},
+{
+"@type": "Question",
+"name": "What color is #0e7c86?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A deep teal. #0e7c86 converts to rgb(14, 124, 134) and hsl(185, 81%, 29%) \u2014 a blue-green teal, darker than turquoise and greener than navy. It is the brand color used across ToolNova. Paste it into the converter above to see it with its swatch and copy-ready values."
+}
+},
+{
+"@type": "Question",
+"name": "How do I convert HEX to RGB?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Split the code into three pairs \u2014 one each for red, green and blue \u2014 and convert each pair from hexadecimal (base 16) to decimal. For example, #FF5733 splits into FF, 57 and 33, which are 255, 87 and 51 in decimal, so the RGB value is rgb(255, 87, 51). This page shows the RGB value for any color you pick or type, and the dedicated HEX to RGB converter converts in both directions."
+}
 }
 ]
 }
@@ -99,8 +115,8 @@
     <div id="swatch" style="height:90px;border-radius:12px;border:1px solid var(--line);margin-top:14px;background:#0e7c86"></div>
     <div class="stats">
       <div class="stat"><b id="vHex" style="font-size:1.05rem">#0E7C86</b><span>HEX</span><br><button class="btn alt" data-copy="vHex" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
-      <div class="stat"><b id="vRgb" style="font-size:1.05rem">rgb(124, 92, 255)</b><span>RGB</span><br><button class="btn alt" data-copy="vRgb" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
-      <div class="stat"><b id="vHsl" style="font-size:1.05rem">hsl(253, 100%, 68%)</b><span>HSL</span><br><button class="btn alt" data-copy="vHsl" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
+      <div class="stat"><b id="vRgb" style="font-size:1.05rem">rgb(14, 124, 134)</b><span>RGB</span><br><button class="btn alt" data-copy="vRgb" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
+      <div class="stat"><b id="vHsl" style="font-size:1.05rem">hsl(185, 81%, 29%)</b><span>HSL</span><br><button class="btn alt" data-copy="vHsl" style="padding:5px 12px;font-size:.85rem">Copy</button></div>
     </div>
     <p class="result" id="msg"></p>
   </div>
@@ -118,10 +134,18 @@
 </ol>
     <h2>A Worked Example</h2>
     <div class="example"><p>The classic reference color: pure red. In HEX it's <strong>#FF0000</strong>. In RGB it's <strong>rgb(255, 0, 0)</strong> — maximum red, no green, no blue. In HSL it's <strong>hsl(0, 100%, 50%)</strong>: hue 0 (red sits at the top of the wheel), full saturation, and halfway lightness.</p>
-<p>Now use HSL's superpower. Keep hue 0 and saturation 100%, drop lightness to 25% and you've designed maroon. Raise lightness to 75% and you get a soft pastel pink-red. Same hue family, three coordinated colors — the practical way designers build palettes, and it took ten seconds because HSL separates “which color” from “how strong” and “how light”.</p></div>
+<p>Now use HSL's superpower. Keep hue 0 and saturation 100%, drop lightness to 25% and you've designed maroon — hsl(0, 100%, 25%) is #800000, rgb(128, 0, 0). Raise lightness to 75% and you get a soft pastel pink-red — hsl(0, 100%, 75%) is #FF8080, rgb(255, 128, 128). Same hue family, three coordinated colors — the practical way designers build palettes, and it took ten seconds because HSL separates “which color” from “how strong” and “how light”.</p></div>
+    <h2>Build a Palette from One Color</h2>
+    <p>One base color plus three HSL moves gives you a whole working palette — no guessing, no muddy accidents. Take ToolNova's own teal, <strong>#0E7C86</strong> (rgb(14, 124, 134), hsl(185, 81%, 29%)), and change only one number at a time:</p>
+    <ul>
+<li><strong>Darker shade:</strong> lightness 29% → 19%, hue and saturation untouched — hsl(185, 81%, 19%) is <strong>#095158</strong>, rgb(9, 81, 88). Use it for headers, footers and pressed-button states.</li>
+<li><strong>Lighter tint:</strong> lightness 29% → 39% — hsl(185, 81%, 39%) is <strong>#13A7B4</strong>, rgb(19, 167, 180). Use it for hover states, highlights and links on a dark background.</li>
+<li><strong>Muted version:</strong> saturation 81% → 40%, lightness untouched — hsl(185, 40%, 29%) is <strong>#2C6368</strong>, rgb(44, 99, 104). Use it for large background areas and secondary text where the full-strength teal would shout.</li>
+</ul>
+<p>Three colors, one hue family, zero clashes — and every value above is one you can check in the converter: type any of the three hex codes in and the RGB and HSL panels confirm it.</p>
     <h2>When to Use Each Format</h2>
     <ul>
-<li><strong>HEX:</strong> CSS, design handoffs, brand guidelines, anywhere brevity wins. Add two more digits (like #0E7C86CC) and it carries transparency too — that's the alpha channel, 0–255 written in hex.</li>
+<li><strong>HEX:</strong> CSS, design handoffs, brand guidelines, anywhere brevity wins. Add two more digits (like #0E7C86CC) and it carries transparency too — that's the alpha channel, 0–255 written in hex. To turn a hex code into RGB numbers, use our <a href="../hex-to-rgb/">HEX to RGB converter</a>.</li>
 <li><strong>RGB / RGBA:</strong> when you need transparency in CSS (rgba(14, 124, 134, 0.5)), when matching values shown in photo editors, or when a tool asks for the three channels separately.</li>
 <li><strong>HSL / HSLA:</strong> building hover states, shades and tints (adjust lightness ±10%), accessible variants, and design systems where a whole palette derives from one hue.</li>
 <li><strong>Named colors</strong> (“teal”, “crimson”): fine in conversation, unreliable in production. Always pin the actual code — one person's teal is another's turquoise.</li>
@@ -143,8 +167,10 @@
     <div class="faq"><h3>What does the A in RGBA or HSLA mean?</h3><p>Alpha — transparency. It runs from 0 (fully transparent) to 1 (fully opaque) in RGBA/HSLA, or 00–FF as an extra pair in 8-digit HEX. A shadow or overlay color is usually a semi-transparent black, like rgba(0, 0, 0, 0.25).</p></div>
     <div class="faq"><h3>Can I enter a color I found as RGB and get its HEX?</h3><p>Yes — the panels stay in sync. Adjust via the picker or the HEX field and all three formats update together; there's always a copy button for the one your destination needs.</p></div>
     <div class="faq"><h3>Why does my color look different on another screen?</h3><p>Screens vary in calibration, brightness and color gamut, and some colors in the HEX/RGB space sit outside what a given display can reproduce. The code is the ground truth; the rendering is an approximation. For brand-critical work, check on a calibrated monitor.</p></div>
+    <div class="faq"><h3>What color is #0e7c86?</h3><p>A deep teal. #0e7c86 converts to rgb(14, 124, 134) and hsl(185, 81%, 29%) — a blue-green teal, darker than turquoise and greener than navy. It is the brand color used across ToolNova. Paste it into the converter above to see it with its swatch and copy-ready values.</p></div>
+    <div class="faq"><h3>How do I convert HEX to RGB?</h3><p>Split the code into three pairs — one each for red, green and blue — and convert each pair from hexadecimal (base 16) to decimal. For example, #FF5733 splits into FF, 57 and 33, which are 255, 87 and 51 in decimal, so the RGB value is rgb(255, 87, 51). This page shows the RGB value for any color you pick or type, and the dedicated HEX to RGB converter converts in both directions.</p></div>
     <h2>Related Tools</h2>
-    <div class="related"><a href="../image-compressor/">Image Compressor</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../hex-to-rgb/">HEX to RGB Converter</a></div>
+    <div class="related"><a href="../image-compressor/">Image Compressor</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../hex-to-rgb/">HEX to RGB Converter</a><a href="../lorem-ipsum-generator/">Lorem Ipsum Generator</a></div>
   </section>
 </div>
 
