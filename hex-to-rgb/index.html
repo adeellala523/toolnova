@@ -62,6 +62,11 @@
 "@type": "Question",
 "name": "Is my color data uploaded or stored anywhere?",
 "acceptedAnswer": {"@type": "Answer","text": "No. The conversion happens entirely in your browser and nothing you type leaves your device. You can convert brand colors or unreleased palette codes here without anything being sent or saved anywhere."}
+},
+{
+"@type": "Question",
+"name": "What are the RGB values of black and white?",
+"acceptedAnswer": {"@type": "Answer","text": "White is #FFFFFF, which is rgb(255, 255, 255) \u2014 full red, green and blue light at once. Black is #000000, which is rgb(0, 0, 0) \u2014 no light in any channel. Every other color sits between those two extremes."}
 }
 ]
 }
@@ -120,11 +125,28 @@
     <h2>A Worked Example</h2>
     <div class="example"><p>A designer hands a developer the brand teal <strong>#0e7c86</strong> and asks for a semi-transparent version for a button hover. First, convert: the pairs 0e, 7c and 86 become <strong>rgb(14, 124, 134)</strong> — 0e is 14, 7c is 124, 86 is 134 in decimal. Paste it above and the converter confirms exactly that, with hsl(185, 81%, 29%) alongside.</p>
 <p>Then the transparency step writes itself: take the RGB numbers and add an alpha value, giving <strong>rgba(14, 124, 134, 0.5)</strong> for a 50% teal overlay. That is the whole reason RGB matters even when you already have the hex code — CSS opacity lives in the rgba() form, and it needs these three numbers. A second check with a warm accent, #FF5733, gives rgb(255, 87, 51); and the shorthand #F53 expands to #FF5533, which is rgb(255, 85, 51).</p></div>
+    <h2>Common Colors: HEX to RGB Quick Reference</h2>
+    <p>The colors people look up most, converted and checked — paste any of these into the converter above to confirm them:</p>
+    <table class="legal">
+      <tr><th>Color</th><th>HEX</th><th>RGB</th></tr>
+      <tr><td>White</td><td>#FFFFFF</td><td>rgb(255, 255, 255)</td></tr>
+      <tr><td>Black</td><td>#000000</td><td>rgb(0, 0, 0)</td></tr>
+      <tr><td>Red</td><td>#FF0000</td><td>rgb(255, 0, 0)</td></tr>
+      <tr><td>Green</td><td>#00FF00</td><td>rgb(0, 255, 0)</td></tr>
+      <tr><td>Blue</td><td>#0000FF</td><td>rgb(0, 0, 255)</td></tr>
+      <tr><td>Yellow</td><td>#FFFF00</td><td>rgb(255, 255, 0)</td></tr>
+      <tr><td>Orange</td><td>#FFA500</td><td>rgb(255, 165, 0)</td></tr>
+      <tr><td>Purple</td><td>#800080</td><td>rgb(128, 0, 128)</td></tr>
+      <tr><td>Pink</td><td>#FFC0CB</td><td>rgb(255, 192, 203)</td></tr>
+      <tr><td>Gray</td><td>#808080</td><td>rgb(128, 128, 128)</td></tr>
+      <tr><td>Teal</td><td>#0E7C86</td><td>rgb(14, 124, 134)</td></tr>
+      <tr><td>Coral</td><td>#FF5733</td><td>rgb(255, 87, 51)</td></tr>
+    </table>
     <h2>Tips for Using HEX and RGB Together</h2>
     <ul>
 <li><strong>Use RGBA for overlays, shadows and hovers.</strong> rgba(14, 124, 134, 0.5) tints without hiding what sits underneath; a flat hex color cannot do that.</li>
 <li><strong>Keep the hex code as the source of truth.</strong> Hex is shorter to store in a style guide, and RGB is derived from it in one step — never maintain two separate lists that can drift apart.</li>
-<li><strong>Check the swatch, not just the numbers.</strong> A typo in one hex digit can shift a color subtly (7c vs 7d is invisible in numbers, visible on screen). The live swatch above catches it at a glance.</li>
+<li><strong>Check the swatch, not just the numbers.</strong> A typo in one hex digit can shift a color subtly (7c vs 7d is invisible in numbers, visible on screen). The live swatch above catches it at a glance — or open the full <a href="../color-converter/">Color Converter</a> to compare HEX, RGB and HSL side by side.</li>
 <li><strong>Remember the shorthand rule.</strong> #F53 is not a different color family from #FF5533 — it is the same color written shorter. Expanding first avoids wrong conversions.</li>
 <li><strong>Copy the CSS, don't retype it.</strong> One transposed digit turns a brand teal into a stranger's blue. The copy buttons above paste the exact value.</li>
 </ul>
@@ -142,10 +164,11 @@
     <div class="faq"><h3>How do I convert HEX to RGB?</h3><p>Split the hex code into three pairs of digits — one pair each for red, green and blue — and convert each pair from hexadecimal (base 16) to decimal (base 10). For example, #FF5733 splits into FF, 57 and 33, which are 255, 87 and 51 in decimal, so the RGB value is rgb(255, 87, 51). The converter above does this instantly for any code you paste in.</p></div>
     <div class="faq"><h3>What is the RGB value of #0e7c86?</h3><p>rgb(14, 124, 134). The hex pairs 0e, 7c and 86 convert to 14, 124 and 134 in decimal — a deep teal. Paste #0e7c86 into the converter above to see it with its RGBA and HSL values and a live swatch.</p></div>
     <div class="faq"><h3>Can I convert a 3-digit hex code like #F53 to RGB?</h3><p>Yes. A 3-digit hex code is shorthand: each digit is doubled to make the 6-digit code. #F53 becomes #FF5533, which converts to rgb(255, 85, 51). The converter above accepts 3-digit codes and expands them automatically.</p></div>
-    <div class="faq"><h3>Do I need the # symbol when converting HEX to RGB?</h3><p>No. #FF5733 and FF5733 mean the same color — the # is just a marker that says "this is a hex code". The converter above accepts codes with or without it, with or without spaces.</p></div>
+    <div class="faq"><h3>Do I need the # symbol when converting HEX to RGB?</h3><p>No. #FF5733 and FF5733 mean the same color — the # is just a marker that says 'this is a hex code'. The converter above accepts codes with or without it, with or without spaces.</p></div>
     <div class="faq"><h3>Why would I need RGB when I already have the HEX code?</h3><p>Because CSS transparency needs RGB. You cannot write a semi-transparent hex color as #FF573380 in older browsers, but rgba(255, 87, 51, 0.5) works everywhere — and it needs the RGB numbers. Design tools and app code also commonly ask for RGB, so converting is a daily step for designers and developers.</p></div>
     <div class="faq"><h3>How do I convert RGB back to HEX?</h3><p>Convert each RGB number (0–255) to a two-digit hexadecimal number and join them with a # in front. For example, rgb(255, 87, 51) becomes #FF5733, because 255 is FF, 87 is 57 and 51 is 33 in hex. The converter above has an RGB-to-HEX section that does this for you.</p></div>
     <div class="faq"><h3>Is my color data uploaded or stored anywhere?</h3><p>No. The conversion happens entirely in your browser and nothing you type leaves your device. You can convert brand colors or unreleased palette codes here without anything being sent or saved anywhere.</p></div>
+    <div class="faq"><h3>What are the RGB values of black and white?</h3><p>White is #FFFFFF, which is rgb(255, 255, 255) — full red, green and blue light at once. Black is #000000, which is rgb(0, 0, 0) — no light in any channel. Every other color sits between those two extremes.</p></div>
     <h2>Related Tools</h2>
     <div class="related"><a href="../color-converter/">Color Converter</a><a href="../image-compressor/">Image Compressor</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../case-converter/">Case Converter</a><a href="../remove-duplicate-lines/">Remove Duplicate Lines</a></div>
   </section>
