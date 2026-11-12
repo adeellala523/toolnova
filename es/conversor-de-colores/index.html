@@ -106,6 +106,22 @@
 "@type": "Answer",
 "text": "No. Todo el cálculo ocurre en tu navegador en el momento y no se envía ni se guarda nada. Puedes convertir colores de marca o de clientes sin preocuparte."
 }
+},
+{
+"@type": "Question",
+"name": "¿De qué color es #0e7c86?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Un verde azulado oscuro. #0e7c86 se convierte en rgb(14, 124, 134) y hsl(185, 81%, 29%): un verde azulado, más oscuro que el turquesa y más verde que el azul marino. Es el color de marca que se usa en todo ToolNova. Pégalo en el conversor de arriba para verlo con su muestra y sus valores listos para copiar."
+}
+},
+{
+"@type": "Question",
+"name": "¿Cómo convierto HEX a RGB?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Divide el código en tres pares, uno para el rojo, el verde y el azul, y convierte cada par de hexadecimal (base 16) a decimal. Por ejemplo, #FF5733 se divide en FF, 57 y 33, que son 255, 87 y 51 en decimal, así que el valor RGB es rgb(255, 87, 51). Esta página muestra el valor RGB de cualquier color que elijas o escribas, y el conversor de HEX a RGB convierte en ambas direcciones."
+}
 }
 ]
 }
@@ -153,6 +169,14 @@
     <div class="example"><p>Un cliente te pasa el color corporativo de su marca: <strong>#0E7C86</strong>, un verde azulado. Lo escribes en el conversor y obtienes:</p>
 <p><strong>RGB: rgb(14, 124, 134)</strong> — 14 de rojo, 124 de verde y 134 de azul.<br><strong>HSL: hsl(185, 81%, 29%)</strong> — tono 185 (entre el cian y el azul), saturación 81 % y luminosidad 29 %, un color bastante oscuro e intenso.</p>
 <p>Con el HSL ya sabes cómo crear la paleta: sube la luminosidad al 40 % para un botón en hover más claro, o bájala al 20 % para el pie de página, manteniendo el mismo tono 185 para que toda la marca siga siendo coherente. Y con el RGB puedes pasarlo tal cual a cualquier programa de imagen.</p></div>
+    <h2>Crear una paleta a partir de un solo color</h2>
+    <p>Un color base más tres movimientos en HSL te dan toda una paleta de trabajo, sin adivinar y sin accidentes turbios. Toma el propio verde azulado de ToolNova, <strong>#0E7C86</strong> (rgb(14, 124, 134), hsl(185, 81%, 29%)), y cambia solo un número cada vez:</p>
+<ul>
+<li><strong>Tono más oscuro:</strong> luminosidad del 29 % al 19 %, con el tono y la saturación intactos: hsl(185, 81%, 19%) es <strong>#095158</strong>, rgb(9, 81, 88). Úsalo para encabezados, pies de página y estados de botón pulsado.</li>
+<li><strong>Tono más claro:</strong> luminosidad del 29 % al 39 %: hsl(185, 81%, 39%) es <strong>#13A7B4</strong>, rgb(19, 167, 180). Úsalo para estados hover, destacados y enlaces sobre fondo oscuro.</li>
+<li><strong>Versión apagada:</strong> saturación del 81 % al 40 %, con la luminosidad intacta: hsl(185, 40%, 29%) es <strong>#2C6368</strong>, rgb(44, 99, 104). Úsala para zonas grandes de fondo y texto secundario, donde el verde azulado a plena intensidad gritaría demasiado.</li>
+</ul>
+<p>Tres colores, una sola familia de tonos, cero choques, y todos los valores de arriba puedes comprobarlos en el conversor: escribe cualquiera de los tres códigos HEX y los paneles RGB y HSL lo confirman.</p>
     <h2>Consejos prácticos</h2>
     <ul>
 <li><strong>Usa el código de 3 dígitos como atajo.</strong> #F00 es lo mismo que #FF0000, y #0E7 es lo mismo que #00EE77: cada dígito se duplica. Sirve para los colores simples; para un color corporativo exacto, usa siempre los 6 dígitos.</li>
@@ -177,6 +201,8 @@
     <div class="faq"><h3>¿Puedo usar códigos HEX de 3 dígitos?</h3><p>Sí. Un código de 3 dígitos es un atajo: cada dígito se duplica para formar el de 6. #F00 equivale a #FF0000 y #0E7 a #00EE77. Esta herramienta acepta ambos formatos al escribir.</p></div>
     <div class="faq"><h3>¿Por qué el color se ve distinto en pantalla y en papel?</h3><p>Porque son sistemas distintos: las pantallas crean color con luz (RGB) y el papel con tinta (CMYK). Algunos colores RGB intensos no se pueden reproducir con tinta y salen más apagados. Para impresión, convierte el color en tu programa de diseño y pide una prueba impresa.</p></div>
     <div class="faq"><h3>¿El conversor guarda los colores que consulto?</h3><p>No. Todo el cálculo ocurre en tu navegador en el momento y no se envía ni se guarda nada. Puedes convertir colores de marca o de clientes sin preocuparte.</p></div>
+    <div class="faq"><h3>¿De qué color es #0e7c86?</h3><p>Un verde azulado oscuro. #0e7c86 se convierte en rgb(14, 124, 134) y hsl(185, 81%, 29%): un verde azulado, más oscuro que el turquesa y más verde que el azul marino. Es el color de marca que se usa en todo ToolNova. Pégalo en el conversor de arriba para verlo con su muestra y sus valores listos para copiar.</p></div>
+    <div class="faq"><h3>¿Cómo convierto HEX a RGB?</h3><p>Divide el código en tres pares, uno para el rojo, el verde y el azul, y convierte cada par de hexadecimal (base 16) a decimal. Por ejemplo, #FF5733 se divide en FF, 57 y 33, que son 255, 87 y 51 en decimal, así que el valor RGB es rgb(255, 87, 51). Esta página muestra el valor RGB de cualquier color que elijas o escribas, y el conversor de HEX a RGB convierte en ambas direcciones.</p></div>
     <h2>Herramientas relacionadas</h2>
     <div class="related"><a href="../hex-a-rgb/">Conversor de HEX a RGB</a><a href="../compresor-de-imagenes/">Compresor de imágenes</a><a href="../generador-codigo-qr/">Generador de código QR</a><a href="../contador-de-palabras/">Contador de palabras</a><a href="../">🌐 Ver todas las herramientas en español</a></div>
   </section>
