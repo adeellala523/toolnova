@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGB to HSL Converter — Convert RGB Colors to HSL Instantly | ToolNova</title>
+<meta name="description" content="Free RGB to HSL converter: type any RGB color (14, 124, 134) and get its exact HSL, HSLA and HEX values with a live swatch and copy-ready CSS. Works both ways — HSL back to RGB too. No sign-up, nothing uploaded.">
+<link rel="canonical" href="https://trytoolnova.com/rgb-to-hsl/">
+<link rel="stylesheet" href="../style.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"RGB to HSL Converter — ToolNova","url":"https://trytoolnova.com/rgb-to-hsl/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript. Requires HTML5.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free online RGB to HSL converter: converts any RGB color to its exact HSL, HSLA and HEX values with copy-ready CSS, and converts HSL back to RGB. Nothing is uploaded or stored."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trytoolnova.com/"},{"@type":"ListItem","position":2,"name":"RGB to HSL Converter","item":"https://trytoolnova.com/rgb-to-hsl/"}]}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How do I convert RGB to HSL?",
+"acceptedAnswer": {"@type": "Answer","text": "Divide each RGB number by 255 so red, green and blue are all on a 0-to-1 scale, then find the largest and smallest of the three. Lightness is the average of the largest and smallest. Saturation comes from the gap between them, and hue comes from which channel is largest and how far apart the other two are. For example, rgb(14, 124, 134) converts to hsl(185, 81%, 29%). The converter above does the whole calculation instantly for any color you enter."}
+},
+{
+"@type": "Question",
+"name": "What is the HSL value of rgb(14, 124, 134)?",
+"acceptedAnswer": {"@type": "Answer","text": "hsl(185, 81%, 29%). That is ToolNova's deep teal: a hue of 185 degrees (a blue-green), 81% saturation (a vivid, pure color) and 29% lightness (fairly dark). Paste 14, 124, 134 into the converter above to see it with its HSLA and HEX values and a live swatch."}
+},
+{
+"@type": "Question",
+"name": "What is the difference between HSL and HSV?",
+"acceptedAnswer": {"@type": "Answer","text": "Both describe a color with a hue angle, but they measure the other two parts differently. HSL uses saturation and lightness: 100% lightness is white and 0% is black, with the pure color at 50% lightness. HSV (also called HSB) uses saturation and value (brightness): 100% value is the brightest version of the color and 0% value is black. The same RGB color has different S and L/V numbers in the two systems, so always check which one a tool is showing — this converter uses HSL."}
+},
+{
+"@type": "Question",
+"name": "Why does another tool show a slightly different HSL value for the same RGB color?",
+"acceptedAnswer": {"@type": "Answer","text": "Rounding. HSL values are usually shown as whole numbers, so a hue of 10.6 degrees becomes 11 and a lightness of 49.4% becomes 49%. Two tools can round the same exact value differently by one step, and converting a rounded HSL value back to RGB can shift a channel by 1 — for example, hsl(11, 100%, 60%) converts back to rgb(255, 88, 51) instead of the original rgb(255, 87, 51). A difference of one step in one channel is invisible on screen."}
+},
+{
+"@type": "Question",
+"name": "How do I convert HSL back to RGB?",
+"acceptedAnswer": {"@type": "Answer","text": "Work out the chroma (the color's intensity) from saturation and lightness, then use the hue angle to find how much of each channel the color needs, and add back the lightness offset. The converter above has an HSL-to-RGB section that does this for you: hsl(185, 81%, 29%) converts back to exactly rgb(14, 124, 134). Note the rounding caveat — a rounded HSL value can come back one step off in a channel, which is normal and invisible."}
+},
+{
+"@type": "Question",
+"name": "What are the HSL values of black, white and gray?",
+"acceptedAnswer": {"@type": "Answer","text": "White is hsl(0, 0%, 100%) and black is hsl(0, 0%, 0%) — both have 0% saturation because there is no color in them at all. Any gray, such as rgb(128, 128, 128), is hsl(0, 0%, 50%). When saturation is 0%, the hue number is meaningless (it is shown as 0 by convention) because a gray has no hue — only lightness changes as you go from black to white."}
+},
+{
+"@type": "Question",
+"name": "Is my color data uploaded or stored anywhere?",
+"acceptedAnswer": {"@type": "Answer","text": "No. The conversion happens entirely in your browser and nothing you type leaves your device. You can convert brand colors or unreleased palette codes here without anything being sent or saved anywhere."}
+}
+]
+}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../"><span class="logobox">⚡</span><span class="wordmark">Tool<span>Nova</span></span></a>
+  <nav class="main"><a href="../word-counter/"><span class="nic">📝</span>Word Counter</a><a href="../password-generator/"><span class="nic">🔐</span>Password</a><a href="../qr-code-generator/"><span class="nic">🔳</span>QR Code</a><a href="../image-compressor/"><span class="nic">🖼️</span>Image</a><a href="../bmi-calculator/"><span class="nic">⚖️</span>BMI</a><a href="../emi-calculator/"><span class="nic">🏦</span>Loan</a></nav>
+  <div class="headright"><a class="circbtn" href="../#toolGrid" aria-label="All tools">⊞</a><button class="burger" aria-label="Menu" onclick="this.closest('header').classList.toggle('open')">☰</button></div>
+</div>
+<div class="mobilenav"><a href="../word-counter/">📝 Word Counter</a><a href="../password-generator/">🔐 Password Generator</a><a href="../qr-code-generator/">🔳 QR Code Generator</a><a href="../image-compressor/">🖼️ Image Compressor</a><a href="../bmi-calculator/">⚖️ BMI Calculator</a><a href="../emi-calculator/">🏦 EMI / Loan Calculator</a><a href="../guides/">📚 Guides</a><a href="../about/">ℹ️ About</a><a href="../contact/">✉️ Contact</a></div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../">Home</a> › RGB to HSL Converter</p>
+  <div class="pagehead">
+    <h1>RGB to HSL Converter</h1>
+    <p class="lead">Your design tool gave you an RGB color but your CSS needs HSL? Type any RGB values below — <strong>14, 124, 134</strong> for example — and get its exact <strong>HSL, HSLA and HEX</strong> values plus copy-ready CSS, with a live swatch so you can see the color as you convert. Works both ways: <strong>HSL back to RGB</strong> too. Free, instant, <strong>100% local in your browser · no sign-up</strong>.</p>
+  </div>
+
+  <div class="toolbox">
+    <p style="margin:0 0 10px"><strong>RGB color</strong></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input id="rIn" type="number" min="0" max="255" value="14" placeholder="R" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+      <input id="gIn" type="number" min="0" max="255" value="124" placeholder="G" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+      <input id="bIn" type="number" min="0" max="255" value="134" placeholder="B" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+    </div>
+    <div style="margin-top:12px">
+      <label for="rRange" style="display:block;margin:0 0 4px">Red <span id="rVal">14</span></label>
+      <input id="rRange" type="range" min="0" max="255" value="14" style="width:100%">
+      <label for="gRange" style="display:block;margin:0 0 4px">Green <span id="gVal">124</span></label>
+      <input id="gRange" type="range" min="0" max="255" value="124" style="width:100%">
+      <label for="bRange" style="display:block;margin:0 0 4px">Blue <span id="bVal">134</span></label>
+      <input id="bRange" type="range" min="0" max="255" value="134" style="width:100%">
+    </div>
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0">
+      <label for="picker" style="margin:0">Or pick a color:</label>
+      <input id="picker" type="color" value="#0e7c86" style="width:56px;height:40px;padding:2px;border:1px solid #ddd;border-radius:8px;cursor:pointer">
+      <div id="swatch" style="width:56px;height:40px;border-radius:8px;border:1px solid #ddd;background:#0e7c86"></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="hslOut">hsl(185, 81%, 29%)</b><span>HSL</span></div>
+      <div class="stat"><b id="hslaOut">hsla(185, 81%, 29%, 1)</b><span>HSLA</span></div>
+      <div class="stat"><b id="hexOut">#0E7C86</b><span>HEX</span></div>
+      <div class="stat"><b id="rgbOut">rgb(14, 124, 134)</b><span>RGB (input)</span></div>
+    </div>
+    <p class="result" id="msg"></p>
+    <div style="text-align:center"><button class="btn teal" id="copyHsl">📋 Copy HSL</button><button class="btn" id="copyCss">📋 Copy CSS</button></div>
+    <hr style="border:none;border-top:1px solid #eee;margin:20px 0">
+    <p style="margin:0 0 10px"><strong>Reverse: HSL → RGB</strong></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input id="hIn" type="number" min="0" max="360" value="185" placeholder="H (0–360)" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+      <input id="sIn" type="number" min="0" max="100" value="81" placeholder="S % (0–100)" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+      <input id="lIn" type="number" min="0" max="100" value="29" placeholder="L % (0–100)" style="flex:1;min-width:70px;padding:10px;border:1px solid #ddd;border-radius:8px">
+    </div>
+    <p class="result" id="revOut"></p>
+  </div>
+
+  <section class="block">
+    <h2>How RGB to HSL Conversion Works</h2>
+    <p>RGB describes a color by how much red, green and blue light it contains, each from 0 to 255. HSL describes the same color by its <strong>hue</strong> (the angle around the color wheel, 0–360°), <strong>saturation</strong> (how pure the color is, 0–100%) and <strong>lightness</strong> (how dark or bright it is, 0–100%). Converting is a matter of rescaling the RGB numbers and reading off which channel dominates.</p>
+<ol>
+<li><strong>Scale RGB to 0–1.</strong> Divide each channel by 255. For rgb(14, 124, 134) that gives red 0.055, green 0.486 and blue 0.525.</li>
+<li><strong>Find the largest and smallest.</strong> Here the largest is blue (0.525) and the smallest is red (0.055). The gap between them is 0.470.</li>
+<li><strong>Lightness is the average of the two.</strong> (0.525 + 0.055) ÷ 2 = 0.29, so lightness is 29%.</li>
+<li><strong>Saturation comes from the gap.</strong> Because lightness is below 50%, saturation is the gap divided by the sum of the largest and smallest: 0.470 ÷ 0.580 = 0.81, so saturation is 81%.</li>
+<li><strong>Hue comes from which channel is largest.</strong> Blue is largest, so hue is 60 × (4 + (red − green) ÷ gap) = 60 × (4 + (0.055 − 0.486) ÷ 0.470) = 60 × 3.083 = 185°. (When red is largest the formula starts from green minus blue; when green is largest it starts from blue minus red plus 2.)</li>
+</ol>
+    <h2>A Worked Example</h2>
+    <div class="example"><p>A designer hands a developer the brand teal <strong>rgb(14, 124, 134)</strong> and asks for a lighter hover shade. HSL is the right tool for that job, because lightness is a single number you can raise — so first convert: following the steps above, the color becomes <strong>hsl(185, 81%, 29%)</strong> — a hue of 185° (blue-green), 81% saturation (vivid), 29% lightness (fairly dark). Paste it above and the converter confirms exactly that, with #0E7C86 alongside.</p>
+<p>Then the hover shade writes itself: raise the lightness from 29% to 39% and you get hsl(185, 81%, 39%), which is #13A7B4 — the same teal, just lighter. That is the whole reason HSL matters even when you already have the RGB numbers: adjusting a color in RGB means guessing three numbers at once, while in HSL you change one. A second check with a warm accent, rgb(255, 87, 51), gives hsl(11, 100%, 60%); and a muted steel blue, rgb(70, 130, 180), gives hsl(207, 44%, 49%). Converting the teal back from hsl(185, 81%, 29%) returns exactly rgb(14, 124, 134) — though a rounded HSL value can come back one step off in a channel, as with hsl(11, 100%, 60%) returning rgb(255, 88, 51) instead of rgb(255, 87, 51).</p></div>
+    <h2>Common Colors: RGB to HSL Quick Reference</h2>
+    <p>The colors people look up most, converted and checked — paste any of these into the converter above to confirm them:</p>
+    <table class="legal">
+      <tr><th>Color</th><th>RGB</th><th>HSL</th></tr>
+      <tr><td>White</td><td>rgb(255, 255, 255)</td><td>hsl(0, 0%, 100%)</td></tr>
+      <tr><td>Black</td><td>rgb(0, 0, 0)</td><td>hsl(0, 0%, 0%)</td></tr>
+      <tr><td>Red</td><td>rgb(255, 0, 0)</td><td>hsl(0, 100%, 50%)</td></tr>
+      <tr><td>Green</td><td>rgb(0, 255, 0)</td><td>hsl(120, 100%, 50%)</td></tr>
+      <tr><td>Blue</td><td>rgb(0, 0, 255)</td><td>hsl(240, 100%, 50%)</td></tr>
+      <tr><td>Yellow</td><td>rgb(255, 255, 0)</td><td>hsl(60, 100%, 50%)</td></tr>
+      <tr><td>Orange</td><td>rgb(255, 165, 0)</td><td>hsl(39, 100%, 50%)</td></tr>
+      <tr><td>Purple</td><td>rgb(128, 0, 128)</td><td>hsl(300, 100%, 25%)</td></tr>
+      <tr><td>Pink</td><td>rgb(255, 192, 203)</td><td>hsl(350, 100%, 88%)</td></tr>
+      <tr><td>Gray</td><td>rgb(128, 128, 128)</td><td>hsl(0, 0%, 50%)</td></tr>
+      <tr><td>Teal</td><td>rgb(14, 124, 134)</td><td>hsl(185, 81%, 29%)</td></tr>
+      <tr><td>Coral</td><td>rgb(255, 87, 51)</td><td>hsl(11, 100%, 60%)</td></tr>
+    </table>
+    <h2>Tips for Using RGB and HSL Together</h2>
+    <ul>
+<li><strong>Use HSL to lighten or darken a color.</strong> Keep the hue and saturation, change only the lightness — hsl(185, 81%, 39%) is the same teal as hsl(185, 81%, 29%), just lighter. In RGB you would have to guess all three numbers.</li>
+<li><strong>Use HSL to mute a color.</strong> Lower the saturation and the color fades toward gray without changing its hue — handy for backgrounds that must not compete with text. Or open the full <a href="../color-converter/">Color Converter</a> to compare HEX, RGB and HSL side by side.</li>
+<li><strong>Remember hue is a circle.</strong> 0° and 360° are both red, so a hue of 350° (pink) is only 10° away from red, not 350° away. Sliders that wrap around are doing it right.</li>
+<li><strong>Check the swatch, not just the numbers.</strong> A typo in one RGB digit can shift a color subtly (124 vs 142 is invisible in numbers, visible on screen). The live swatch above catches it at a glance.</li>
+<li><strong>Copy the CSS, don't retype it.</strong> One transposed digit turns a brand teal into a stranger's blue. The copy buttons above paste the exact value.</li>
+</ul>
+    <h2>Common Mistakes to Avoid</h2>
+    <ul>
+<li><strong>Confusing HSL with HSV/HSB.</strong> They share the hue angle but measure the rest differently — hsl(185, 81%, 29%) is not the same color description as hsv(185, 90%, 53%). Check which system a tool uses before copying values across.</li>
+<li><strong>Expecting the reverse conversion to be exact.</strong> HSL values are rounded to whole numbers, so converting back can shift an RGB channel by 1 (rgb(255, 87, 51) comes back as rgb(255, 88, 51)). That is rounding, not an error — the colors are visually identical.</li>
+<li><strong>Reading hue as a percentage.</strong> Hue is an angle from 0 to 360 degrees; saturation and lightness are the percentages. Writing hsl(185%, 81%, 29%) is wrong — the first number has no % sign.</li>
+<li><strong>Forgetting that gray has no hue.</strong> When saturation is 0%, every hue value describes the same gray — hsl(0, 0%, 50%) and hsl(200, 0%, 50%) are the same color. Don't hunt for the "right" hue of a gray.</li>
+</ul>
+  </section>
+
+  <section class="block">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq"><h3>How do I convert RGB to HSL?</h3><p>Divide each RGB number by 255 so red, green and blue are all on a 0-to-1 scale, then find the largest and smallest of the three. Lightness is the average of the largest and smallest. Saturation comes from the gap between them, and hue comes from which channel is largest and how far apart the other two are. For example, rgb(14, 124, 134) converts to hsl(185, 81%, 29%). The converter above does the whole calculation instantly for any color you enter.</p></div>
+    <div class="faq"><h3>What is the HSL value of rgb(14, 124, 134)?</h3><p>hsl(185, 81%, 29%). That is ToolNova's deep teal: a hue of 185 degrees (a blue-green), 81% saturation (a vivid, pure color) and 29% lightness (fairly dark). Paste 14, 124, 134 into the converter above to see it with its HSLA and HEX values and a live swatch.</p></div>
+    <div class="faq"><h3>What is the difference between HSL and HSV?</h3><p>Both describe a color with a hue angle, but they measure the other two parts differently. HSL uses saturation and lightness: 100% lightness is white and 0% is black, with the pure color at 50% lightness. HSV (also called HSB) uses saturation and value (brightness): 100% value is the brightest version of the color and 0% value is black. The same RGB color has different S and L/V numbers in the two systems, so always check which one a tool is showing — this converter uses HSL.</p></div>
+    <div class="faq"><h3>Why does another tool show a slightly different HSL value for the same RGB color?</h3><p>Rounding. HSL values are usually shown as whole numbers, so a hue of 10.6 degrees becomes 11 and a lightness of 49.4% becomes 49%. Two tools can round the same exact value differently by one step, and converting a rounded HSL value back to RGB can shift a channel by 1 — for example, hsl(11, 100%, 60%) converts back to rgb(255, 88, 51) instead of the original rgb(255, 87, 51). A difference of one step in one channel is invisible on screen.</p></div>
+    <div class="faq"><h3>How do I convert HSL back to RGB?</h3><p>Work out the chroma (the color's intensity) from saturation and lightness, then use the hue angle to find how much of each channel the color needs, and add back the lightness offset. The converter above has an HSL-to-RGB section that does this for you: hsl(185, 81%, 29%) converts back to exactly rgb(14, 124, 134). Note the rounding caveat — a rounded HSL value can come back one step off in a channel, which is normal and invisible.</p></div>
+    <div class="faq"><h3>What are the HSL values of black, white and gray?</h3><p>White is hsl(0, 0%, 100%) and black is hsl(0, 0%, 0%) — both have 0% saturation because there is no color in them at all. Any gray, such as rgb(128, 128, 128), is hsl(0, 0%, 50%). When saturation is 0%, the hue number is meaningless (it is shown as 0 by convention) because a gray has no hue — only lightness changes as you go from black to white.</p></div>
+    <div class="faq"><h3>Is my color data uploaded or stored anywhere?</h3><p>No. The conversion happens entirely in your browser and nothing you type leaves your device. You can convert brand colors or unreleased palette codes here without anything being sent or saved anywhere.</p></div>
+    <h2>Related Tools</h2>
+    <div class="related"><a href="../color-converter/">Color Converter</a><a href="../hex-to-rgb/">HEX to RGB Converter</a><a href="../image-compressor/">Image Compressor</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../base64-encoder-decoder/">Base64 Encoder / Decoder</a><a href="../case-converter/">Case Converter</a></div>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../word-counter/">Word Counter</a><a href="../password-generator/">Password Generator</a><a href="../qr-code-generator/">QR Code Generator</a><a href="../bmi-calculator/">BMI Calculator</a><a href="../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../guides/bmi-explained/">BMI Explained</a><a href="../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a></div>
+    <div><h4>Site</h4><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../terms/">Terms of Service</a><a href="../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+
+<script>
+function rgbToHsl(r, g, b){
+  r /= 255; g /= 255; b /= 255;
+  var max = Math.max(r, g, b), min = Math.min(r, g, b), h = 0, s = 0, l = (max + min) / 2;
+  if(max !== min){
+    var d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    if(max === r){ h = (g - b) / d + (g < b ? 6 : 0); }
+    else if(max === g){ h = (b - r) / d + 2; }
+    else { h = (r - g) / d + 4; }
+    h *= 60;
+  }
+  return { h: Math.round(h), s: Math.round(s * 100), l: Math.round(l * 100) };
+}
+function hslToRgb(h, s, l){
+  s /= 100; l /= 100;
+  var c = (1 - Math.abs(2 * l - 1)) * s;
+  var x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  var m = l - c / 2;
+  var r = 0, g = 0, b = 0;
+  if(h < 60){ r = c; g = x; }
+  else if(h < 120){ r = x; g = c; }
+  else if(h < 180){ g = c; b = x; }
+  else if(h < 240){ g = x; b = c; }
+  else if(h < 300){ r = x; b = c; }
+  else { r = c; b = x; }
+  return { r: Math.round((r + m) * 255), g: Math.round((g + m) * 255), b: Math.round((b + m) * 255) };
+}
+function clamp255(v){
+  if(isNaN(v)){ return null; }
+  return Math.max(0, Math.min(255, Math.round(v)));
+}
+function update(){
+  var r = clamp255(parseInt(document.getElementById('rIn').value, 10));
+  var g = clamp255(parseInt(document.getElementById('gIn').value, 10));
+  var b = clamp255(parseInt(document.getElementById('bIn').value, 10));
+  var msg = document.getElementById('msg');
+  if(r === null || g === null || b === null){
+    msg.innerHTML = '<span class="err">Each RGB value must be a whole number from 0 to 255.</span>';
+    return;
+  }
+  msg.textContent = '';
+  document.getElementById('rIn').value = r;
+  document.getElementById('gIn').value = g;
+  document.getElementById('bIn').value = b;
+  document.getElementById('rRange').value = r;
+  document.getElementById('gRange').value = g;
+  document.getElementById('bRange').value = b;
+  document.getElementById('rVal').textContent = r;
+  document.getElementById('gVal').textContent = g;
+  document.getElementById('bVal').textContent = b;
+  var hsl = rgbToHsl(r, g, b);
+  var hex = '#' + [r, g, b].map(function(v){ return v.toString(16).padStart(2, '0'); }).join('').toUpperCase();
+  document.getElementById('hslOut').textContent = 'hsl(' + hsl.h + ', ' + hsl.s + '%, ' + hsl.l + '%)';
+  document.getElementById('hslaOut').textContent = 'hsla(' + hsl.h + ', ' + hsl.s + '%, ' + hsl.l + '%, 1)';
+  document.getElementById('hexOut').textContent = hex;
+  document.getElementById('rgbOut').textContent = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  document.getElementById('swatch').style.background = hex;
+  if(document.getElementById('picker').value.toUpperCase() !== hex){ document.getElementById('picker').value = hex; }
+  updateReverse();
+}
+function updateReverse(){
+  var h = parseFloat(document.getElementById('hIn').value);
+  var s = parseFloat(document.getElementById('sIn').value);
+  var l = parseFloat(document.getElementById('lIn').value);
+  var out = document.getElementById('revOut');
+  if(isNaN(h) || isNaN(s) || isNaN(l) || h < 0 || h > 360 || s < 0 || s > 100 || l < 0 || l > 100){
+    out.innerHTML = '<span class="err">Hue must be 0–360 and saturation and lightness 0–100.</span>';
+    return;
+  }
+  var c = hslToRgb(h, s, l);
+  var hex = '#' + [c.r, c.g, c.b].map(function(v){ return v.toString(16).padStart(2, '0'); }).join('').toUpperCase();
+  out.innerHTML = '<span class="ok">RGB: rgb(' + c.r + ', ' + c.g + ', ' + c.b + ') — HEX: ' + hex + '</span>';
+}
+function copyText(t, doneMsg){
+  var msg = document.getElementById('msg');
+  if(navigator.clipboard){ navigator.clipboard.writeText(t).then(function(){ msg.innerHTML = '<span class="ok">' + doneMsg + '</span>'; }); }
+  else { msg.innerHTML = '<span class="err">Copy not supported in this browser — select the value manually.</span>'; }
+}
+['rIn', 'gIn', 'bIn'].forEach(function(id){ document.getElementById(id).addEventListener('input', update); });
+[['rRange', 'rIn'], ['gRange', 'gIn'], ['bRange', 'bIn']].forEach(function(pair){
+  document.getElementById(pair[0]).addEventListener('input', function(){ document.getElementById(pair[1]).value = this.value; update(); });
+});
+document.getElementById('picker').addEventListener('input', function(){
+  var v = this.value;
+  document.getElementById('rIn').value = parseInt(v.slice(1, 3), 16);
+  document.getElementById('gIn').value = parseInt(v.slice(3, 5), 16);
+  document.getElementById('bIn').value = parseInt(v.slice(5, 7), 16);
+  update();
+});
+document.getElementById('copyHsl').addEventListener('click', function(){ copyText(document.getElementById('hslOut').textContent, 'HSL copied ✔'); });
+document.getElementById('copyCss').addEventListener('click', function(){ copyText('color: ' + document.getElementById('hslOut').textContent + ';', 'CSS copied ✔'); });
+['hIn', 'sIn', 'lIn'].forEach(function(id){ document.getElementById(id).addEventListener('input', updateReverse); });
+update();
+</script>
+</body>
+</html>
