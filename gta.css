@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* ============================================================
+   ToolNova GTA VI design system — Vice City / official GTA VI look.
+   Original CSS + SVG only. No Rockstar assets, logos or key art.
+   Load AFTER style.css on GTA pages only, with <body class="gta">.
+   ============================================================ */
+
+body.gta{
+  --bg:#12081f; --bg2:#1c0e33; --card:#1e0f38; --line:#3d2066;
+  --text:#f5eefc; --muted:#c9b8e8; --accent:#ff2e88; --accent-dark:#d61a6e; --accent2:#a855f7;
+  --tint:#2a1650; --radius:16px;
+  --shadow:0 10px 34px rgba(0,0,0,.45);
+  background:
+    radial-gradient(1100px 520px at 50% -8%, rgba(168,85,247,.28), rgba(18,8,31,0) 62%),
+    radial-gradient(900px 480px at 92% 108%, rgba(255,122,24,.16), rgba(18,8,31,0) 60%),
+    #12081f;
+  color:var(--text);
+}
+body.gta::after{
+  content:""; position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Header + footer go dark, same markup and links */
+body.gta header.site{background:#160a2a;border-bottom:1px solid #3d2066}
+body.gta .logo{color:#f5eefc}
+body.gta .logo .logobox{background:linear-gradient(135deg,#ff2e88,#a855f7);box-shadow:0 4px 14px rgba(255,46,136,.4)}
+body.gta .logo .wordmark span{color:#ff5ea8}
+body.gta nav.main a{color:#c9b8e8}
+body.gta nav.main a:hover{color:#ff5ea8}
+body.gta .circbtn,body.gta .burger{background:#1e0f38;border-color:#3d2066;color:#f5eefc}
+body.gta .mobilenav{background:#160a2a;border-top:1px solid #3d2066}
+body.gta .mobilenav a{color:#f5eefc;border-bottom:1px solid #2a1650}
+body.gta footer.site{background:#160a2a;border-top:1px solid #3d2066}
+body.gta footer.site h4{color:#f5eefc}
+body.gta footer.site a{color:#c9b8e8}
+body.gta footer.site a:hover{color:#ff5ea8}
+body.gta footer.site .copy{color:#9b83c4}
+
+body.gta a{color:#ff5ea8}
+body.gta .crumb{color:#b9a5dd}
+body.gta .crumb a{color:#ff8fbf}
+
+/* Sunset band: Vice City gradient + original palm silhouettes */
+body.gta .sunset-band{
+  position:relative; overflow:hidden;
+  background:linear-gradient(115deg,#ff2e88 0%,#c026d3 38%,#7c3aed 62%,#ff7a18 100%);
+  border-radius:22px; padding:40px 26px 30px; margin-top:22px;
+  box-shadow:0 14px 40px rgba(255,46,136,.28);
+}
+body.gta .sunset-band .palm{position:absolute; bottom:-6px; width:118px; height:158px; opacity:.92; pointer-events:none}
+body.gta .sunset-band .palm.left{left:-8px}
+body.gta .sunset-band .palm.right{right:-8px; transform:scaleX(-1)}
+body.gta .sunset-band .pagehead{padding:0; position:relative; z-index:2; text-align:center}
+body.gta .sunset-band h1{
+  font-family:'Anton','Arial Narrow',sans-serif; font-weight:400; text-transform:uppercase;
+  font-size:clamp(2rem,6.2vw,3.4rem); line-height:1.08; letter-spacing:.5px; color:#fff;
+  text-shadow:0 3px 0 rgba(60,5,45,.35), 0 8px 26px rgba(0,0,0,.35);
+}
+body.gta .sunset-band .lead{color:rgba(255,255,255,.93); margin-left:auto; margin-right:auto; text-align:center}
+body.gta .sunset-band .lead strong{color:#fff}
+
+/* Display headings everywhere on GTA pages */
+body.gta section.block h2{
+  font-family:'Anton','Arial Narrow',sans-serif; font-weight:400; text-transform:uppercase;
+  letter-spacing:.6px; font-size:clamp(1.35rem,3.6vw,1.8rem); color:#fff;
+}
+body.gta section.block h2:first-child{margin-top:0}
+body.gta section.block p,body.gta section.block li{color:#c9b8e8}
+body.gta section.block p strong,body.gta section.block li strong{color:#fff}
+body.gta section.block h3{color:#fff}
+
+/* Countdown / tool panel: dark glass, gradient border, neon digits */
+body.gta .toolbox{
+  background:linear-gradient(#1e0f38,#1e0f38) padding-box,
+    linear-gradient(120deg,#ff2e88,#a855f7 50%,#ff7a18) border-box;
+  border:2px solid transparent; box-shadow:0 14px 44px rgba(0,0,0,.5);
+}
+body.gta .toolbox p{color:#c9b8e8}
+body.gta .toolbox strong{color:#fff}
+body.gta #statusLine{
+  font-family:'Anton','Arial Narrow',sans-serif; font-weight:400; letter-spacing:.6px;
+  font-size:clamp(1.25rem,4vw,1.7rem); color:#ff5ea8;
+  text-shadow:0 0 18px rgba(255,46,136,.65), 0 0 42px rgba(168,85,247,.35);
+}
+body.gta .stat{background:#2a1650;border:1px solid #4a2a7d}
+body.gta .stat b{
+  font-family:'Anton','Arial Narrow',sans-serif; font-weight:400; letter-spacing:.5px;
+  font-size:1.85rem; color:#ff5ea8; text-shadow:0 0 16px rgba(255,46,136,.65);
+}
+body.gta .stat span{color:#c9b8e8}
+body.gta .result{background:#2a1650;border:1px solid #4a2a7d;color:#f5eefc}
+body.gta .btn{background:linear-gradient(135deg,#ff2e88,#ff7a18);box-shadow:0 6px 20px rgba(255,46,136,.35)}
+body.gta .btn.alt{background:transparent;border-color:#ff5ea8;color:#ff5ea8}
+body.gta .btn.alt:hover{background:rgba(255,46,136,.12)}
+body.gta .btn.teal{background:linear-gradient(135deg,#ff2e88,#ff7a18)}
+body.gta input[type=text],body.gta input[type=number],body.gta input[type=date],body.gta input[type=url],body.gta select,body.gta textarea{
+  background:#160a2a;border-color:#4a2a7d;color:#f5eefc;
+}
+body.gta input:focus,body.gta select:focus,body.gta textarea:focus{border-color:#ff5ea8;outline-color:rgba(255,46,136,.25)}
+body.gta .ok{color:#7ef0b2}
+body.gta .err{color:#ff8f9e}
+
+/* Content blocks */
+body.gta table.legal td,body.gta table.legal th{border-color:#3d2066;background:#1e0f38;color:#c9b8e8}
+body.gta table.legal th{background:#2a1650;color:#fff}
+body.gta table.legal td strong,body.gta table.legal th strong{color:#fff}
+body.gta .example{background:#2a1650;border:1px solid #ff2e88}
+body.gta .example p{color:#f5eefc}
+body.gta .faq{background:#1e0f38;border-color:#3d2066;box-shadow:0 3px 14px rgba(0,0,0,.35)}
+body.gta .faq h3{color:#fff}
+body.gta .faq p{color:#c9b8e8}
+body.gta .related a{background:#1e0f38;border-color:#3d2066;color:#f5eefc}
+body.gta .related a:hover{border-color:#ff2e88;color:#ff5ea8}
+body.gta code{background:#2a1650;color:#ffd7ea}
+body.gta .card{background:#1e0f38;border-color:#3d2066;color:#f5eefc}
+body.gta .card p{color:#c9b8e8}
+body.gta .card:hover{border-color:#ff2e88}
+
+/* GTA quiz / checker result panels (used by the long-tail pages) */
+body.gta .verdict{border-radius:16px;padding:18px 20px;margin:14px 0;font-size:1.05rem}
+body.gta .verdict.good{background:rgba(34,197,94,.14);border:1px solid #22c55e;color:#d9f9e6}
+body.gta .verdict.mid{background:rgba(255,176,32,.12);border:1px solid #ffb020;color:#ffedbe}
+body.gta .verdict.bad{background:rgba(255,46,136,.12);border:1px solid #ff2e88;color:#ffd7ea}
+body.gta .quiz-opt{display:block;width:100%;text-align:left;background:#160a2a;border:1px solid #4a2a7d;color:#f5eefc;border-radius:12px;padding:13px 16px;margin:8px 0;font-size:1rem;font-family:inherit;cursor:pointer}
+body.gta .quiz-opt:hover{border-color:#ff5ea8;background:#241243}
+body.gta .map-region{cursor:pointer}
+body.gta .map-region:hover{filter:brightness(1.25)}
+body.gta .map-region.active{filter:brightness(1.35) drop-shadow(0 0 10px rgba(255,46,136,.8))}
+
+@media(max-width:640px){
+  body.gta .sunset-band{padding:28px 16px 22px;border-radius:16px}
+  body.gta .sunset-band .palm{width:74px;height:100px;opacity:.55}
+  body.gta .stat b{font-size:1.5rem}
+}
