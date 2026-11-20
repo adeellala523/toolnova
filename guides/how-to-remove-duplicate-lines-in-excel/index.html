@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Remove Duplicates in Excel (5 Methods) | ToolNova Guides</title>
+<meta name="description" content="Remove duplicates in Excel five ways: the Remove Duplicates button, UNIQUE, Advanced Filter, Power Query and COUNTIF — with a worked example and the traps that leave duplicates behind.">
+<link rel="canonical" href="https://trytoolnova.com/guides/how-to-remove-duplicate-lines-in-excel/">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Remove Duplicates in Excel (5 Methods)","author":{"@type":"Organization","name":"ToolNova"},"publisher":{"@type":"Organization","name":"ToolNova"},"datePublished":"2026-11-20","description":"Remove duplicates in Excel five ways: the Remove Duplicates button, UNIQUE, Advanced Filter, Power Query and COUNTIF — with a worked example and the traps that leave duplicates behind."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trytoolnova.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://trytoolnova.com/guides/"},{"@type":"ListItem","position":3,"name":"How to Remove Duplicates in Excel","item":"https://trytoolnova.com/guides/how-to-remove-duplicate-lines-in-excel/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I remove duplicates in Excel?","acceptedAnswer":{"@type":"Answer","text":"Select your data, go to the Data tab and click Remove Duplicates. Tick 'My data has headers' if the first row is a header, choose which columns to check, and click OK. Excel deletes every repeated row after the first occurrence and tells you how many duplicates it removed and how many unique values remain."}},{"@type":"Question","name":"How do I remove duplicates in Excel but keep the first occurrence?","acceptedAnswer":{"@type":"Answer","text":"That is exactly what Remove Duplicates does by default: it keeps the first time a value appears and deletes the later copies. The UNIQUE function works the same way — =UNIQUE(A2:A13) returns each value once, in the order it first appears."}},{"@type":"Question","name":"How do I remove duplicates in Excel without deleting data?","acceptedAnswer":{"@type":"Answer","text":"Use a method that writes the clean list somewhere new instead of deleting rows. Type =UNIQUE(A2:A13) in an empty column, or use Data → Advanced Filter with 'Copy to another location' and 'Unique records only' ticked. Your original list stays untouched."}},{"@type":"Question","name":"Why is Excel Remove Duplicates not working?","acceptedAnswer":{"@type":"Answer","text":"The usual causes are invisible differences: a trailing space makes 'ana@example.com ' a different value from 'ana@example.com', a number stored as text differs from the same number stored as a number, and merged cells or a filter hiding rows can block the tool. Clean the data with TRIM first, check the cell formats match, unmerge cells and clear filters, then run it again."}},{"@type":"Question","name":"How do I remove duplicates in Excel using a formula?","acceptedAnswer":{"@type":"Answer","text":"For modern Excel (Microsoft 365 or Excel 2021 and later), type =UNIQUE(A2:A13) in an empty cell and the clean list spills out below it. On older Excel, add a helper column with =IF(COUNTIF($A$2:A2,A2)>1,\"Duplicate\",\"Unique\"), copy it down, filter for 'Duplicate' and delete those rows."}},{"@type":"Question","name":"How do I find duplicates in Excel before removing them?","acceptedAnswer":{"@type":"Answer","text":"Select the range, then go to Home → Conditional Formatting → Highlight Cells Rules → Duplicate Values. Every repeated value lights up in the colour you choose, so you can see what will be removed — and spot the near-duplicates (trailing spaces, different cases) before you commit."}},{"@type":"Question","name":"How do I remove duplicate rows based on one column only?","acceptedAnswer":{"@type":"Answer","text":"In the Remove Duplicates dialog, untick every column except the one that defines a duplicate — for example, untick everything except Email. Excel then deletes any row whose email repeats, even if the other columns in that row are different. Be careful: the whole row is deleted, not just the email cell."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../"><span class="logobox">⚡</span><span class="wordmark">Tool<span>Nova</span></span></a>
+  <nav class="main"><a href="../../word-counter/"><span class="nic">📝</span>Word Counter</a><a href="../../password-generator/"><span class="nic">🔐</span>Password</a><a href="../../qr-code-generator/"><span class="nic">🔳</span>QR Code</a><a href="../../image-compressor/"><span class="nic">🖼️</span>Image</a><a href="../../bmi-calculator/"><span class="nic">⚖️</span>BMI</a><a href="../../emi-calculator/"><span class="nic">🏦</span>Loan</a></nav>
+  <div class="headright"><a class="circbtn" href="../../#toolGrid" aria-label="All tools">⊞</a><button class="burger" aria-label="Menu" onclick="this.closest('header').classList.toggle('open')">☰</button></div>
+</div>
+<div class="mobilenav"><a href="../../word-counter/">📝 Word Counter</a><a href="../../password-generator/">🔐 Password Generator</a><a href="../../qr-code-generator/">🔳 QR Code Generator</a><a href="../../image-compressor/">🖼️ Image Compressor</a><a href="../../bmi-calculator/">⚖️ BMI Calculator</a><a href="../../emi-calculator/">🏦 EMI / Loan Calculator</a><a href="../../guides/">📚 Guides</a><a href="../../about/">ℹ️ About</a><a href="../../contact/">✉️ Contact</a></div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../../">Home</a> › <a href="../../guides/">Guides</a> › Remove Duplicates in Excel</p>
+  <div class="pagehead">
+    <h1>How to Remove Duplicates in Excel (5 Methods)</h1>
+    <p class="article-meta">ToolNova Guides · 7 minute read</p>
+    <p class="lead">A mailing list with the same address three times. A sales export where one customer appears on five rows. A class register pasted together from two sheets. Duplicates creep into every spreadsheet, and Excel has five different ways to get rid of them — each best at a different job. This guide works through all five with a real example, explains when to use which, and covers the invisible traps (trailing spaces, text-vs-number) that make Excel insist two identical-looking values are different.</p>
+    <p><strong>Duplicates in plain text, not a spreadsheet?</strong> Use the free <a href="../../remove-duplicate-lines/">ToolNova Remove Duplicate Lines tool</a> — paste the list, get the clean list back instantly, on your device, with nothing uploaded.</p>
+  </div>
+
+  <section class="block">
+    <h2>The Worked Example</h2>
+    <p>Every method below runs on the same list: 12 email addresses in cells A2:A13, with 4 of them repeated. The correct answer is 8 unique addresses and 4 removed — keep that in mind as a check, because a method that reports a different number is telling you it found a difference you can't see.</p>
+    <div class="example">
+    <p>ana@example.com · ben@example.com · <strong>ana@example.com</strong> · cara@example.com · dan@example.com · <strong>ben@example.com</strong> · emma@example.com · finn@example.com · <strong>cara@example.com</strong> · grace@example.com · <strong>ana@example.com</strong> · henry@example.com</p>
+    <p><strong>Unique (8):</strong> ana, ben, cara, dan, emma, finn, grace, henry. <strong>Removed (4):</strong> the 2nd and 3rd ana, the 2nd ben, the 2nd cara.</p>
+    </div>
+
+    <h2>Method 1: The Remove Duplicates Button (Fastest)</h2>
+    <p>This is the method for most jobs — one click, no formulas, done in seconds.</p>
+    <p><strong>Step 1 —</strong> click any cell inside your list (or select the whole range A2:A13).</p>
+    <p><strong>Step 2 —</strong> go to the <strong>Data</strong> tab and click <strong>Remove Duplicates</strong>.</p>
+    <p><strong>Step 3 —</strong> tick <strong>"My data has headers"</strong> if your first row is a header (Email, Name…) rather than data. If you forget this, Excel will treat your header as a value — and if a data row happens to match the header text, the header itself gets deleted.</p>
+    <p><strong>Step 4 —</strong> choose which columns define a duplicate. Tick only <strong>Email</strong> if one repeated email means the whole row is a duplicate. Tick several columns and Excel only removes rows where <em>all</em> ticked columns match.</p>
+    <p><strong>Step 5 —</strong> click OK. Excel reports what it did: on our example, "4 duplicate values found and removed; 8 unique values remain."</p>
+    <p>Two things to know: it keeps the <strong>first</strong> occurrence and deletes the later ones, and it is <strong>permanent</strong> — the rows are gone, so work on a copy of the sheet if the original matters. Undo (Ctrl+Z) works immediately afterwards, but only until you save and close.</p>
+
+    <h2>Method 2: The UNIQUE Function (Keeps the Original)</h2>
+    <p>If you want the clean list <em>without</em> touching the original — or a list that updates itself when the source changes — use UNIQUE. It needs Microsoft 365 or Excel 2021 or later.</p>
+    <div class="example">
+    <p>In an empty cell, type: <strong>=UNIQUE(A2:A13)</strong></p>
+    <p>The 8 unique addresses spill out below the formula, in the order they first appear: ana, ben, cara, dan, emma, finn, grace, henry.</p>
+    </div>
+    <p>The result is <strong>live</strong>: add a new address to the source list and it appears in the clean list; fix a typo and the clean list follows. The trade-off is that the spilled cells are formula results, not typed values — if you need a standalone list to paste elsewhere, copy the spill range and use Paste Special → Values first. To sort the result at the same time, wrap it: =SORT(UNIQUE(A2:A13)).</p>
+
+    <h2>Method 3: Advanced Filter (Clean Copy Elsewhere)</h2>
+    <p>Advanced Filter is the old-school answer and the only one of the five that works on every Excel version, including older ones without UNIQUE.</p>
+    <p><strong>Step 1 —</strong> click any cell inside your list.</p>
+    <p><strong>Step 2 —</strong> go to <strong>Data → Advanced</strong> (in the Sort &amp; Filter group).</p>
+    <p><strong>Step 3 —</strong> choose <strong>"Copy to another location"</strong>, set the "Copy to" box to an empty cell, and tick <strong>"Unique records only"</strong>.</p>
+    <p><strong>Step 4 —</strong> click OK. The 8 unique addresses appear at the new location; the original list is untouched.</p>
+    <p>Choose "Filter the list, in-place" instead and Excel hides the duplicate rows rather than copying anything — useful for a quick look, but the hidden rows are still there, so don't use it when you need a genuinely clean list.</p>
+
+    <h2>Method 4: Power Query (For Lists You Clean Every Week)</h2>
+    <p>If the same messy export lands on your desk every Monday, Power Query turns the cleanup into a one-click repeat instead of a weekly chore.</p>
+    <p><strong>Step 1 —</strong> click inside the list, then <strong>Data → From Table/Range</strong> and confirm the table dialog.</p>
+    <p><strong>Step 2 —</strong> in the Power Query editor, select the column and go to <strong>Home → Remove Rows → Remove Duplicates</strong>.</p>
+    <p><strong>Step 3 —</strong> click <strong>Close &amp; Load</strong>. The clean table lands on a new sheet.</p>
+    <p>Next week, paste the new export over the old source table and click <strong>Data → Refresh All</strong> — the same steps run again automatically. Power Query also has a "Remove Errors" and "Trim" step in the same editor, so trailing spaces (the number-one cause of surviving duplicates) can be cleaned in the same pass. The cost is setup time: for a one-off list, Method 1 is faster.</p>
+
+    <h2>Method 5: A COUNTIF Helper Formula (Works on Any Excel)</h2>
+    <p>When you need to <em>see</em> which rows are duplicates before deleting anything — or you're on an old Excel without UNIQUE — a helper column does the job.</p>
+    <div class="example">
+    <p>In B2, type: <strong>=IF(COUNTIF($A$2:A2,A2)&gt;1,"Duplicate","Unique")</strong> and copy it down to B13.</p>
+    <p>The formula counts how many times the current value has appeared <em>so far</em> — the $ locks the start of the range while the end moves down with the row. First occurrences say "Unique"; the 2nd ana, 2nd ben, 2nd cara and 3rd ana say "Duplicate". Filter column B for "Duplicate" and delete those rows, or filter for "Unique" and copy what remains.</p>
+    </div>
+    <p>The $A$2:A2 expanding range is the whole trick: without the $ on the start, the count restarts on every row and every value looks unique. The same COUNTIF idea works as a conditional-formatting rule if you only want the duplicates highlighted rather than listed.</p>
+
+    <h2>Find Duplicates First: Conditional Formatting</h2>
+    <p>Before removing anything, it's worth looking at what Excel thinks is duplicated — especially when the count comes back different from what you expected. Select the range, then <strong>Home → Conditional Formatting → Highlight Cells Rules → Duplicate Values</strong>, pick a colour, and every repeated value lights up. In our example, all three anas, both bens and both caras highlight — 7 cells in total, which is the 4 removed rows plus the 3 first occurrences they duplicate. If a value you <em>know</em> is repeated doesn't light up, you have an invisible difference: check the next section.</p>
+
+    <h2>Why Duplicates Survive: The Invisible Differences</h2>
+    <p>Excel compares values exactly, and "exactly" includes things your eyes skip:</p>
+    <ul>
+      <li><strong>Trailing spaces.</strong> "ana@example.com " with a space at the end is a different value from "ana@example.com". This is the most common cause by far. Fix it with =TRIM(A2) in a helper column, or Power Query's Trim step, before removing duplicates.</li>
+      <li><strong>Case doesn't matter — but only in Excel.</strong> Remove Duplicates and UNIQUE are both case-insensitive: "Ana@example.com" and "ana@example.com" count as the same value. If case matters to you, the COUNTIF helper is case-insensitive too — you need an EXACT-based array formula instead.</li>
+      <li><strong>Numbers stored as text.</strong> The number 42 and the text "42" look identical in a cell but are different values to Excel. Convert with Text to Columns or by multiplying by 1 in a helper column.</li>
+      <li><strong>Extra columns selected.</strong> If you tick Name as well as Email in the Remove Duplicates dialog, a row only counts as a duplicate when <em>both</em> match — so "ana@example.com / Ana" and "ana@example.com / A. Smith" both survive. Tick only the column that defines the duplicate.</li>
+      <li><strong>Filtered or hidden rows.</strong> Remove Duplicates works on the visible data it can see; clear filters first, or the hidden rows keep their duplicates.</li>
+      <li><strong>Merged cells.</strong> Merged cells block Remove Duplicates outright. Unmerge first (Home → Merge &amp; Center → Unmerge Cells).</li>
+    </ul>
+
+    <h2>Which Method Should You Use?</h2>
+    <div class="example">
+    <p><strong>One-off cleanup, original can go:</strong> Method 1, Remove Duplicates — fastest, nothing to learn.</p>
+    <p><strong>Original must stay, or the list keeps changing:</strong> Method 2, UNIQUE — live, but needs Microsoft 365 / Excel 2021+.</p>
+    <p><strong>Old Excel, or a clean copy in a new spot:</strong> Method 3, Advanced Filter — works everywhere.</p>
+    <p><strong>Same messy export every week:</strong> Method 4, Power Query — set it up once, refresh forever.</p>
+    <p><strong>You need to inspect before deleting:</strong> Method 5, COUNTIF helper — shows every duplicate first.</p>
+    </div>
+    <p>A note on Google Sheets, since the question comes up constantly: Sheets has the same idea under <strong>Data → Data cleanup → Remove duplicates</strong>, and =UNIQUE(A2:A13) works there too. The steps differ in name only — the traps (trailing spaces, text-vs-number) are identical.</p>
+
+    <h2>Mistakes to Avoid</h2>
+    <ul>
+      <li><strong>Running Remove Duplicates on the only copy.</strong> It deletes rows permanently. Duplicate the sheet first — it takes two seconds and has saved more data than any other habit in this guide.</li>
+      <li><strong>Forgetting "My data has headers".</strong> Your header row gets treated as a value, and if any data row matches it, the header is deleted with the duplicates.</li>
+      <li><strong>Ticking every column in the dialog.</strong> A row only counts as a duplicate when all ticked columns match. Tick only the column that defines the duplicate.</li>
+      <li><strong>Trusting your eyes over TRIM.</strong> Trailing spaces are invisible and are the top reason duplicates "don't work". Clean first, deduplicate second.</li>
+      <li><strong>Pasting a UNIQUE spill as formulas.</strong> The spilled cells are live formula results. Copy → Paste Special → Values before sending the list anywhere else.</li>
+      <li><strong>Deleting "Duplicate" rows while a filter is on.</strong> Hidden rows stay hidden — clear the filter and check the count (8 unique, 4 removed in our example) before calling the job done.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How do I remove duplicates in Excel?</strong><br>Select your data, go to the Data tab and click Remove Duplicates. Tick 'My data has headers' if the first row is a header, choose which columns to check, and click OK. Excel deletes every repeated row after the first occurrence and tells you how many duplicates it removed and how many unique values remain.</p>
+    <p><strong>How do I remove duplicates in Excel but keep the first occurrence?</strong><br>That is exactly what Remove Duplicates does by default: it keeps the first time a value appears and deletes the later copies. The UNIQUE function works the same way — =UNIQUE(A2:A13) returns each value once, in the order it first appears.</p>
+    <p><strong>How do I remove duplicates in Excel without deleting data?</strong><br>Use a method that writes the clean list somewhere new instead of deleting rows. Type =UNIQUE(A2:A13) in an empty column, or use Data → Advanced Filter with 'Copy to another location' and 'Unique records only' ticked. Your original list stays untouched.</p>
+    <p><strong>Why is Excel Remove Duplicates not working?</strong><br>The usual causes are invisible differences: a trailing space makes 'ana@example.com ' a different value from 'ana@example.com', a number stored as text differs from the same number stored as a number, and merged cells or a filter hiding rows can block the tool. Clean the data with TRIM first, check the cell formats match, unmerge cells and clear filters, then run it again.</p>
+    <p><strong>How do I remove duplicates in Excel using a formula?</strong><br>For modern Excel (Microsoft 365 or Excel 2021 and later), type =UNIQUE(A2:A13) in an empty cell and the clean list spills out below it. On older Excel, add a helper column with =IF(COUNTIF($A$2:A2,A2)&gt;1,"Duplicate","Unique"), copy it down, filter for 'Duplicate' and delete those rows.</p>
+    <p><strong>How do I find duplicates in Excel before removing them?</strong><br>Select the range, then go to Home → Conditional Formatting → Highlight Cells Rules → Duplicate Values. Every repeated value lights up in the colour you choose, so you can see what will be removed — and spot the near-duplicates (trailing spaces, different cases) before you commit.</p>
+    <p><strong>How do I remove duplicate rows based on one column only?</strong><br>In the Remove Duplicates dialog, untick every column except the one that defines a duplicate — for example, untick everything except Email. Excel then deletes any row whose email repeats, even if the other columns in that row are different. Be careful: the whole row is deleted, not just the email cell.</p>
+
+    <p><strong>Put it into practice:</strong> if the list is plain text rather than a spreadsheet, the free <a href="../../remove-duplicate-lines/">ToolNova Remove Duplicate Lines tool</a> does the same job in one paste — no Excel needed. For other text clean-up, see our <a href="../../word-counter/">Word Counter</a> and <a href="../../case-converter/">Case Converter</a>.</p>
+
+    <h2>Related</h2>
+    <div class="related"><a href="../../remove-duplicate-lines/">Remove Duplicate Lines</a><a href="../../word-counter/">Word Counter</a><a href="../../case-converter/">Case Converter</a><a href="../../json-formatter/">JSON Formatter</a><a href="../how-to-calculate-percentage-increase/">Guide: How to Calculate Percentage Increase</a></div>
+  </section>
+</div>
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../../word-counter/">Word Counter</a><a href="../../password-generator/">Password Generator</a><a href="../../qr-code-generator/">QR Code Generator</a><a href="../../bmi-calculator/">BMI Calculator</a><a href="../../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-calculate-percentage-increase/">How to Calculate Percentage Increase</a><a href="../../guides/how-to-remove-duplicate-lines-in-excel/">How to Remove Duplicates in Excel</a></div>
+    <div><h4>Site</h4><a href="../../about/">About Us</a><a href="../../contact/">Contact</a><a href="../../privacy-policy/">Privacy Policy</a><a href="../../terms/">Terms of Service</a><a href="../../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+</body>
+</html>
