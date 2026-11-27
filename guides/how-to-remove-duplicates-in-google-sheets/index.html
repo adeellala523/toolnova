@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFCP6M1MEB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZFCP6M1MEB');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Remove Duplicates in Google Sheets | ToolNova Guides</title>
+<meta name="description" content="Remove duplicates in Google Sheets five ways — Data cleanup, UNIQUE, COUNTIF, QUERY and Trim whitespace — with a worked example and the traps.">
+<link rel="canonical" href="https://trytoolnova.com/guides/how-to-remove-duplicates-in-google-sheets/">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Remove Duplicates in Google Sheets (5 Methods)","author":{"@type":"Organization","name":"ToolNova"},"publisher":{"@type":"Organization","name":"ToolNova"},"datePublished":"2026-11-27","description":"Remove duplicates in Google Sheets five ways — Data cleanup, UNIQUE, COUNTIF, QUERY and Trim whitespace — with a worked example and the traps."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trytoolnova.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://trytoolnova.com/guides/"},{"@type":"ListItem","position":3,"name":"How to Remove Duplicates in Google Sheets","item":"https://trytoolnova.com/guides/how-to-remove-duplicates-in-google-sheets/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I remove duplicates in Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Select your data, go to Data → Data cleanup → Remove duplicates. Tick 'Data has header row' if the first row holds column names, choose which columns to check, and click Remove duplicates. Sheets deletes every repeated row after the first occurrence and tells you how many duplicates it removed and how many unique values remain."}},{"@type":"Question","name":"How do I remove duplicates in Google Sheets without deleting data?","acceptedAnswer":{"@type":"Answer","text":"Use a method that writes the clean list somewhere new instead of deleting rows. Type =UNIQUE(A2:A13) in an empty cell and the 8 unique values spill out below it. Your original list stays untouched, and the clean list updates itself if the source changes."}},{"@type":"Question","name":"How do I remove duplicates in Google Sheets but keep the first occurrence?","acceptedAnswer":{"@type":"Answer","text":"That is exactly what Data cleanup → Remove duplicates does by default: it keeps the first time a value appears and deletes the later copies. The UNIQUE function works the same way — =UNIQUE(A2:A13) returns each value once, in the order it first appears."}},{"@type":"Question","name":"Why is Google Sheets Remove duplicates not working?","acceptedAnswer":{"@type":"Answer","text":"The usual causes are invisible differences: a trailing space makes 'ana@example.com ' a different value from 'ana@example.com', a number stored as text differs from the same number stored as a number, and a filter hiding rows can block the tool. Clean the data with Data → Data cleanup → Trim whitespace first, check the cell formats match and clear filters, then run it again."}},{"@type":"Question","name":"How do I remove duplicates in Google Sheets using a formula?","acceptedAnswer":{"@type":"Answer","text":"For a clean list that stays live, type =UNIQUE(A2:A13) in an empty cell. To see which rows are duplicates before deleting anything, add a helper column with =IF(COUNTIF($A$2:A2,A2)>1,\"Duplicate\",\"Unique\"), copy it down, filter for 'Duplicate' and delete those rows."}},{"@type":"Question","name":"How do I find duplicates in Google Sheets before removing them?","acceptedAnswer":{"@type":"Answer","text":"Select the range, then go to Format → Conditional formatting, pick 'Custom formula is' and enter =COUNTIF($A$2:$A$13,A2)>1 with a fill colour. Every value that appears more than once lights up, so you can see what will be removed — and spot the near-duplicates (trailing spaces, different cases) before you commit."}},{"@type":"Question","name":"How do I count how many times each value appears in Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Use QUERY: =QUERY(A2:A13,\"select A, count(A) where A is not null group by A label A 'Email', count(A) 'Count'\",0). It lists every value once with its count beside it, so any row with a count above 1 is a duplicate. The trailing ,0 tells QUERY the range has no header row."}},{"@type":"Question","name":"How do I remove duplicates in Google Sheets on mobile?","acceptedAnswer":{"@type":"Answer","text":"The Sheets mobile app does not offer the Remove duplicates tool. Open the spreadsheet in a desktop browser on your phone or tablet instead — Data → Data cleanup → Remove duplicates is there — or wait until you are at a computer. The =UNIQUE formula does work in the mobile app if you only need a clean copy."}}]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="../../"><span class="logobox">⚡</span><span class="wordmark">Tool<span>Nova</span></span></a>
+  <nav class="main"><a href="../../word-counter/"><span class="nic">📝</span>Word Counter</a><a href="../../password-generator/"><span class="nic">🔐</span>Password</a><a href="../../qr-code-generator/"><span class="nic">🔳</span>QR Code</a><a href="../../image-compressor/"><span class="nic">🖼️</span>Image</a><a href="../../bmi-calculator/"><span class="nic">⚖️</span>BMI</a><a href="../../emi-calculator/"><span class="nic">🏦</span>Loan</a></nav>
+  <div class="headright"><a class="circbtn" href="../../#toolGrid" aria-label="All tools">⊞</a><button class="burger" aria-label="Menu" onclick="this.closest('header').classList.toggle('open')">☰</button></div>
+</div>
+<div class="mobilenav"><a href="../../word-counter/">📝 Word Counter</a><a href="../../password-generator/">🔐 Password Generator</a><a href="../../qr-code-generator/">🔳 QR Code Generator</a><a href="../../image-compressor/">🖼️ Image Compressor</a><a href="../../bmi-calculator/">⚖️ BMI Calculator</a><a href="../../emi-calculator/">🏦 EMI / Loan Calculator</a><a href="../../guides/">📚 Guides</a><a href="../../about/">ℹ️ About</a><a href="../../contact/">✉️ Contact</a></div></header>
+
+<div class="wrap">
+  <p class="crumb"><a href="../../">Home</a> › <a href="../../guides/">Guides</a> › Remove Duplicates in Google Sheets</p>
+  <div class="pagehead">
+    <h1>How to Remove Duplicates in Google Sheets (5 Methods)</h1>
+    <p class="article-meta">ToolNova Guides · 7 minute read</p>
+    <p class="lead">A mailing list with the same address three times. A form-response sheet where one person submitted five times. A class register pasted together from two sheets. Duplicates creep into every spreadsheet, and Google Sheets has five different ways to get rid of them — each best at a different job. This guide works through all five with a real example, explains when to use which, and covers the invisible traps (trailing spaces, text-vs-number) that make Sheets insist two identical-looking values are different.</p>
+    <p><strong>Duplicates in plain text, not a spreadsheet?</strong> Use the free <a href="../../remove-duplicate-lines/">ToolNova Remove Duplicate Lines tool</a> — paste the list, get the clean list back instantly, on your device, with nothing uploaded.</p>
+  </div>
+
+  <section class="block">
+    <h2>The Worked Example</h2>
+    <p>Every method below runs on the same list: 12 email addresses in cells A2:A13, with 4 of them repeated. The correct answer is 8 unique addresses and 4 removed — keep that in mind as a check, because a method that reports a different number is telling you it found a difference you can't see.</p>
+    <div class="example">
+    <p>ana@example.com · ben@example.com · <strong>ana@example.com</strong> · cara@example.com · dan@example.com · <strong>ben@example.com</strong> · emma@example.com · finn@example.com · <strong>cara@example.com</strong> · grace@example.com · <strong>ana@example.com</strong> · henry@example.com</p>
+    <p><strong>Unique (8):</strong> ana, ben, cara, dan, emma, finn, grace, henry. <strong>Removed (4):</strong> the 2nd and 3rd ana, the 2nd ben, the 2nd cara.</p>
+    </div>
+
+    <h2>Method 1: Data Cleanup → Remove Duplicates (Fastest)</h2>
+    <p>This is the method for most jobs — a few clicks, no formulas, done in seconds.</p>
+    <p><strong>Step 1 —</strong> select the range to check (A2:A13 in our example, or the whole table).</p>
+    <p><strong>Step 2 —</strong> go to the <strong>Data</strong> menu, then <strong>Data cleanup</strong>, then <strong>Remove duplicates</strong>. (Google's help pages sometimes give the shorter path Data → Remove duplicates — look there if your menu doesn't show Data cleanup.)</p>
+    <p><strong>Step 3 —</strong> tick <strong>"Data has header row"</strong> if your first row holds column names (Email, Name…) rather than data. The box is <strong>off by default</strong>, so if you forget it, your header gets compared as if it were a data row — and if a data row happens to match the header text, the header itself gets deleted.</p>
+    <p><strong>Step 4 —</strong> choose which columns define a duplicate. Tick only <strong>Email</strong> if one repeated email means the whole row is a duplicate. Tick several columns and Sheets only removes rows where <em>all</em> ticked columns match.</p>
+    <p><strong>Step 5 —</strong> click <strong>Remove duplicates</strong>, then OK on the status window. On our example it reports "4 duplicate rows removed; 8 unique rows remain."</p>
+    <p>Two things to know: it keeps the <strong>first</strong> occurrence and deletes the later ones, and it is <strong>permanent</strong> — the rows are gone, so work on a copy of the sheet if the original matters. Undo (Ctrl+Z, or Cmd+Z on a Mac) works immediately afterwards. One more limit: the tool lives in the desktop menu, so on a phone or tablet open the sheet in a desktop browser instead — the Sheets mobile app doesn't offer it.</p>
+
+    <h2>Method 2: The UNIQUE Function (Keeps the Original)</h2>
+    <p>If you want the clean list <em>without</em> touching the original — or a list that updates itself when the source changes — use UNIQUE. It works in every Google Sheets, no add-on needed.</p>
+    <div class="example">
+    <p>In an empty cell, type: <strong>=UNIQUE(A2:A13)</strong></p>
+    <p>The 8 unique addresses spill out below the formula, in the order they first appear: ana, ben, cara, dan, emma, finn, grace, henry.</p>
+    </div>
+    <p>The result is <strong>live</strong>: add a new address to the source list and it appears in the clean list; fix a typo and the clean list follows. The trade-off is that the spilled cells are formula results, not typed values — if you need a standalone list to paste elsewhere, copy the spill range and use Paste Special → Paste values only first. To sort the result at the same time, wrap it: =SORT(UNIQUE(A2:A13)). UNIQUE has two extra tricks worth knowing: =UNIQUE(A2:A13,FALSE,TRUE) returns only the values that appear <em>exactly once</em> — the repeats vanish entirely, which is handy for finding one-off entries — and =UNIQUE(B2:D5,TRUE) compares columns instead of rows, for data arranged sideways.</p>
+
+    <h2>Method 3: A COUNTIF Helper Formula (Works on Any Sheet)</h2>
+    <p>When you need to <em>see</em> which rows are duplicates before deleting anything, a helper column does the job.</p>
+    <div class="example">
+    <p>In B2, type: <strong>=IF(COUNTIF($A$2:A2,A2)&gt;1,"Duplicate","Unique")</strong> and copy it down to B13.</p>
+    <p>The formula counts how many times the current value has appeared <em>so far</em> — the $ locks the start of the range while the end moves down with the row. First occurrences say "Unique"; the 2nd ana, 2nd ben, 2nd cara and 3rd ana say "Duplicate". Filter column B for "Duplicate" and delete those rows, or filter for "Unique" and copy what remains.</p>
+    </div>
+    <p>The $A$2:A2 expanding range is the whole trick: without the $ on the start, the count restarts on every row and every value looks unique. The same COUNTIF idea works as a conditional-formatting rule if you only want the duplicates highlighted rather than listed — see "Find Duplicates First" below.</p>
+
+    <h2>Method 4: QUERY Counts Every Value (Best for Auditing a Big List)</h2>
+    <p>Sometimes you don't want the clean list yet — you want to know <em>how bad</em> the problem is. QUERY counts every distinct value in one shot.</p>
+    <div class="example">
+    <p>In an empty cell, type: <strong>=QUERY(A2:A13,"select A, count(A) where A is not null group by A label A 'Email', count(A) 'Count'",0)</strong></p>
+    <p>The result is a small table: each email once, with its count beside it. ana shows 3, ben and cara show 2, the other five show 1. Any row with a count above 1 is a duplicate — and the total of (count − 1) across all rows is the 4 duplicates to remove.</p>
+    </div>
+    <p>The trailing <strong>,0</strong> matters: it tells QUERY the range has no header row, so it doesn't mistake your first email for a column name. The "where A is not null" part keeps blank cells out of the count. This method shines on big lists — a thousand-row export becomes a short table of the values that actually repeat, which is exactly the audit you want before running Method 1.</p>
+
+    <h2>Method 5: Trim Whitespace + Cleanup Suggestions (Fix the Ones That Won't Go)</h2>
+    <p>The fifth method isn't a deduplicator at all — it's the fix for the duplicates that survive the first four. Most "Remove duplicates didn't work" complaints come down to invisible spaces, and Sheets has a one-click fix built into the same menu.</p>
+    <p><strong>Step 1 —</strong> select the range, then go to <strong>Data → Data cleanup → Trim whitespace</strong>. It strips leading spaces, trailing spaces and double spaces inside cells. In our example, "ana@example.com " with a trailing space becomes "ana@example.com" — and only then does Remove duplicates recognise it as the same address.</p>
+    <p><strong>Step 2 —</strong> while you're in the menu, try <strong>Data → Data cleanup → Cleanup suggestions</strong>. Sheets scans the sheet and flags issues it can fix itself — stray spaces, inconsistent formats, blank rows — and applies the fixes you approve. It's the closest Sheets comes to a "clean this up for me" button.</p>
+    <p>The order matters: <strong>trim first, deduplicate second</strong>. Running Remove duplicates on untrimmed data leaves the spaced copies behind, and nothing in the report tells you why.</p>
+
+    <h2>Find Duplicates First: Conditional Formatting</h2>
+    <p>Before removing anything, it's worth looking at what Sheets thinks is duplicated — especially when the count comes back different from what you expected. Select the range, then go to <strong>Format → Conditional formatting</strong>, pick <strong>"Custom formula is"</strong> and enter <strong>=COUNTIF($A$2:$A$13,A2)&gt;1</strong>, then choose a fill colour. In our example, all three anas, both bens and both caras highlight — 7 cells in total, which is the 4 removed rows plus the 3 first occurrences they duplicate. If a value you <em>know</em> is repeated doesn't light up, you have an invisible difference: check the next section.</p>
+
+    <h2>Why Duplicates Survive: The Invisible Differences</h2>
+    <p>Sheets compares values exactly, and "exactly" includes things your eyes skip:</p>
+    <ul>
+      <li><strong>Trailing spaces.</strong> "ana@example.com " with a space at the end is a different value from "ana@example.com". This is the most common cause by far. Fix it with Data → Data cleanup → Trim whitespace (Method 5) before removing duplicates.</li>
+      <li><strong>Case doesn't matter — but only to the built-in tools.</strong> Remove duplicates treats "Ana@example.com" and "ana@example.com" as the same value — Google says cells count as duplicates even when their letter case differs. If case matters to you, the COUNTIF helper is case-insensitive too; use an EXACT-based helper instead: =IF(SUMPRODUCT(--EXACT($A$2:A2,A2))&gt;1,"Duplicate","Unique").</li>
+      <li><strong>Numbers stored as text.</strong> The number 42 and the text "42" look identical in a cell but are different values to Sheets. Convert with =VALUE(A2) in a helper column, or select the cells and use Format → Number.</li>
+      <li><strong>Extra columns selected.</strong> If you tick Name as well as Email in the Remove duplicates dialog, a row only counts as a duplicate when <em>both</em> match — so "ana@example.com / Ana" and "ana@example.com / A. Smith" both survive. Tick only the column that defines the duplicate.</li>
+      <li><strong>Filtered or hidden rows.</strong> Remove duplicates works on the data it can see; clear filters first (Data → Remove filter, or turn off any filter views), or the hidden rows keep their duplicates.</li>
+      <li><strong>The header box was left unticked.</strong> "Data has header row" is off by default. Leave it off with a header row present and your header is treated as a value — and if a data row matches it, the header is deleted with the duplicates.</li>
+    </ul>
+
+    <h2>Which Method Should You Use?</h2>
+    <div class="example">
+    <p><strong>One-off cleanup, original can go:</strong> Method 1, Remove duplicates — fastest, nothing to learn.</p>
+    <p><strong>Original must stay, or the list keeps changing:</strong> Method 2, UNIQUE — live, and it works in the mobile app too.</p>
+    <p><strong>You need to inspect before deleting:</strong> Method 3, COUNTIF helper — shows every duplicate first.</p>
+    <p><strong>Auditing a big list before cleaning it:</strong> Method 4, QUERY — one table of every value and its count.</p>
+    <p><strong>Duplicates that refuse to go:</strong> Method 5, Trim whitespace + Cleanup suggestions — fix the invisible differences, then run Method 1 again.</p>
+    </div>
+    <p>A note on Excel, since the question comes up constantly: Excel has the same idea under Data → Remove Duplicates, and =UNIQUE(A2:A13) works there too — we cover all five Excel methods in our <a href="../how-to-remove-duplicate-lines-in-excel/">How to Remove Duplicates in Excel</a> guide. The steps differ in name only — the traps (trailing spaces, text-vs-number) are identical.</p>
+
+    <h2>Mistakes to Avoid</h2>
+    <ul>
+      <li><strong>Running Remove duplicates on the only copy.</strong> It deletes rows permanently. Duplicate the sheet first (right-click the sheet tab → Duplicate) — it takes two seconds and has saved more data than any other habit in this guide.</li>
+      <li><strong>Forgetting "Data has header row".</strong> The box is off by default. Your header row gets treated as a value, and if any data row matches it, the header is deleted with the duplicates.</li>
+      <li><strong>Ticking every column in the dialog.</strong> A row only counts as a duplicate when all ticked columns match. Tick only the column that defines the duplicate.</li>
+      <li><strong>Trusting your eyes over Trim whitespace.</strong> Trailing spaces are invisible and are the top reason duplicates "don't work". Clean first, deduplicate second.</li>
+      <li><strong>Pasting a UNIQUE spill as formulas.</strong> The spilled cells are live formula results. Copy → Paste Special → Paste values only before sending the list anywhere else.</li>
+      <li><strong>Deleting "Duplicate" rows while a filter is on.</strong> Hidden rows stay hidden — clear the filter and check the count (8 unique, 4 removed in our example) before calling the job done.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How do I remove duplicates in Google Sheets?</strong><br>Select your data, go to Data → Data cleanup → Remove duplicates. Tick 'Data has header row' if the first row holds column names, choose which columns to check, and click Remove duplicates. Sheets deletes every repeated row after the first occurrence and tells you how many duplicates it removed and how many unique values remain.</p>
+    <p><strong>How do I remove duplicates in Google Sheets without deleting data?</strong><br>Use a method that writes the clean list somewhere new instead of deleting rows. Type =UNIQUE(A2:A13) in an empty cell and the 8 unique values spill out below it. Your original list stays untouched, and the clean list updates itself if the source changes.</p>
+    <p><strong>How do I remove duplicates in Google Sheets but keep the first occurrence?</strong><br>That is exactly what Data cleanup → Remove duplicates does by default: it keeps the first time a value appears and deletes the later copies. The UNIQUE function works the same way — =UNIQUE(A2:A13) returns each value once, in the order it first appears.</p>
+    <p><strong>Why is Google Sheets Remove duplicates not working?</strong><br>The usual causes are invisible differences: a trailing space makes 'ana@example.com ' a different value from 'ana@example.com', a number stored as text differs from the same number stored as a number, and a filter hiding rows can block the tool. Clean the data with Data → Data cleanup → Trim whitespace first, check the cell formats match and clear filters, then run it again.</p>
+    <p><strong>How do I remove duplicates in Google Sheets using a formula?</strong><br>For a clean list that stays live, type =UNIQUE(A2:A13) in an empty cell. To see which rows are duplicates before deleting anything, add a helper column with =IF(COUNTIF($A$2:A2,A2)&gt;1,"Duplicate","Unique"), copy it down, filter for 'Duplicate' and delete those rows.</p>
+    <p><strong>How do I find duplicates in Google Sheets before removing them?</strong><br>Select the range, then go to Format → Conditional formatting, pick 'Custom formula is' and enter =COUNTIF($A$2:$A$13,A2)&gt;1 with a fill colour. Every value that appears more than once lights up, so you can see what will be removed — and spot the near-duplicates (trailing spaces, different cases) before you commit.</p>
+    <p><strong>How do I count how many times each value appears in Google Sheets?</strong><br>Use QUERY: =QUERY(A2:A13,"select A, count(A) where A is not null group by A label A 'Email', count(A) 'Count'",0). It lists every value once with its count beside it, so any row with a count above 1 is a duplicate. The trailing ,0 tells QUERY the range has no header row.</p>
+    <p><strong>How do I remove duplicates in Google Sheets on mobile?</strong><br>The Sheets mobile app does not offer the Remove duplicates tool. Open the spreadsheet in a desktop browser on your phone or tablet instead — Data → Data cleanup → Remove duplicates is there — or wait until you are at a computer. The =UNIQUE formula does work in the mobile app if you only need a clean copy.</p>
+
+    <p><strong>Put it into practice:</strong> if the list is plain text rather than a spreadsheet, the free <a href="../../remove-duplicate-lines/">ToolNova Remove Duplicate Lines tool</a> does the same job in one paste — no Excel needed. For other text clean-up, see our <a href="../../word-counter/">Word Counter</a> and <a href="../../case-converter/">Case Converter</a>.</p>
+
+    <h2>Related</h2>
+    <div class="related"><a href="../../remove-duplicate-lines/">Remove Duplicate Lines</a><a href="../../word-counter/">Word Counter</a><a href="../../case-converter/">Case Converter</a><a href="../../json-formatter/">JSON Formatter</a><a href="../how-to-remove-duplicate-lines-in-excel/">Guide: How to Remove Duplicates in Excel</a><a href="../how-to-calculate-percentage-increase/">Guide: How to Calculate Percentage Increase</a></div>
+  </section>
+</div>
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><h4>⚡ ToolNova</h4><p style="color:var(--muted);font-size:.92rem;max-width:260px">Free online tools for everyday tasks. Fast, private and no sign-up required.</p></div>
+    <div><h4>Popular Tools</h4><a href="../../word-counter/">Word Counter</a><a href="../../password-generator/">Password Generator</a><a href="../../qr-code-generator/">QR Code Generator</a><a href="../../bmi-calculator/">BMI Calculator</a><a href="../../emi-calculator/">EMI Calculator</a></div>
+    <div><h4>Guides</h4><a href="../../guides/strong-password-you-can-remember/">Strong Passwords You Can Remember</a><a href="../../guides/how-to-create-strong-memorable-passwords/">How to Create Strong Memorable Passwords</a><a href="../../guides/bmi-explained/">BMI Explained</a><a href="../../guides/compress-images-without-losing-quality/">Compress Images Without Losing Quality</a><a href="../../guides/how-to-calculate-percentage-increase/">How to Calculate Percentage Increase</a><a href="../../guides/how-to-remove-duplicate-lines-in-excel/">How to Remove Duplicates in Excel</a><a href="../../guides/how-to-remove-duplicates-in-google-sheets/">How to Remove Duplicates in Google Sheets</a></div>
+    <div><h4>Site</h4><a href="../../about/">About Us</a><a href="../../contact/">Contact</a><a href="../../privacy-policy/">Privacy Policy</a><a href="../../terms/">Terms of Service</a><a href="../../disclaimer/">Disclaimer</a></div>
+  </div>
+  <p class="copy">© 2026 ToolNova. All rights reserved.</p>
+</div></footer>
+</body>
+</html>
